@@ -1,0 +1,81 @@
+#info ./psgen ncpp 17:18:36 Sep 24 2021 chuang3
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  C       
+                nuclear charge   6.00
+                  total charge   0.20
+         number of core states   0
+      number of valence states   3
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+      scalar-relativistic mode
+        parameters radial mesh   461     1.024700   0.104167E-02
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000         -275.9368           -10.1404
+<  2     2     0        2.0000          -15.9000            -0.5843
+<  3     2     1        1.8000           -7.3489            -0.2701
+
+                                  (Hartree a.u.)
+                  total energy         -37.71845
+                kinetic energy          37.62188
+                orbital energy         -21.93556
+                coulomb energy         -87.50708
+                hartree energy          17.18954
+   exchange-correlation energy          -5.02278
+           xc potential energy          -6.42944
+          number of iterations                20   convergence  0.0E+00
+           core kinetic energy           0.00000
+           core orbital energy           0.00000
+         core potential energy           0.00000
+            integrated density           5.80000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+ 
+ fhipp - all-electron atom done
+
+    === TROULLIER-MARTINS mode ===  t     
+
+  l  n     radius:     node      peak       default core
+x 0  1                0.001      0.171      1.500
+x 1  2                0.001      1.174      1.500
+x 2  3                0.001      0.001      1.500
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  t     1.4981530   1.5351573-275.9368146-275.9368248   1.0000850   0.9999648
+  0  troullier-martins                              -15.9000247  -3.6253671   (excited state!)
+  1  t     1.4981530   1.5351573  -7.3489288  -7.3489681   1.0000000   0.9999975
+  2  t     1.4981530   1.5351573  -7.3489288  -7.3488755   0.9999999   0.9999999
+ 
+  --- linearized core-valence XC ---
+        c-v equidensity radius           0.00104
+
+                                  (Hartree a.u.)
+                  total energy         -34.54824
+                kinetic energy          15.25691
+              potential energy         -60.60929
+                hartree energy          14.61513
+                     xc energy          -3.81099
+                      c energy          -0.16722
+    integrated valence density           5.80000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           0.000     (tolerance  1.0E-03)
+                  y range plot       -29   1   7
+ 
+ fhipp - done for input @
+ 
+@  6.00  0  3  6  0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   1.80
+@ 2  t                   : ltmx spptype
+@ 0   0.00   0.00E+00  t  : lt rct et spptype
+@ 1   0.00   0.00E+00  t
+@ 2   0.00   0.00E+00  t

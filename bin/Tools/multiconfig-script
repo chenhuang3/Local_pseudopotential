@@ -1,0 +1,113 @@
+#! /bin/csh -f
+#
+# generic script for collecting pseudopotential components or 
+# wavefunctions from two different reference states, e.g.
+# to obtain
+# - a bound pseudo wavefunction for the KB potential
+# - a semilocal pseudopotential component with the BHS recipe
+#
+# here for Pd: 
+# 1. run 1 - generate 4d, 5s, 5p components from the neutral atom
+# 2. run 2 - generate 4d, 5s, 5p components from an ion
+# 3. replace the 5p pseudo wavefunction from run 1 by that from run 2
+#    and put together the usual .cpi file
+
+cd  $cwd
+
+set INI      = pd-test
+set COMMENT  = "u_p from ionic configuration"
+set RC       = 0.0d0
+set XC       = 8
+
+#---------------- neutral configuration
+
+rm fort.* coredensity
+
+cat << otto >! $INI.ini 
+46.00 8 2 $XC $RC                   Z NC NV IEXC RNLC
+     1     0  2.0                   state N L occupied by F
+     2     0  2.0
+     2     1  6.0
+     3     0  2.0
+     3     1  6.0
+     3     2 10.0
+     4     0  2.0
+     4     1  6.0
+     4     2 10.0
+     5     0  0.0
+2 T
+otto
+
+psgen  -o $INI $INI.ini -g
+
+#---------------- store pseudopotential components
+
+mv fort.40 1.s
+mv fort.41 1.p
+mv fort.42 1.d
+
+#---------------- ionic configuration
+
+cat << akka >! wp.ini
+46.00 8 3 $XC $RC                   Z NC NV IEXC RNLC
+     1     0  2.0                   state N L occupied by F
+     2     0  2.0
+     2     1  6.0
+     3     0  2.0
+     3     1  6.0
+     3     2 10.0
+     4     0  2.0
+     4     1  6.0
+     4     2  8.0
+     5     0  0.5
+     5     1  0.5
+2 T
+akka
+
+psgen -xv -o wp wp.ini -g -fc $INI.fc
+
+#---------------- store pseudopotentials from ionic configuration
+
+mv fort.40 2.s
+mv fort.41 2.p
+mv fort.42 2.d
+cp fort.27 coredensity
+
+#---for p-component: use potential from calculation 1 
+#   and wavefunction from calc. 2
+#   the result is put into file 1.p
+#   in fort.40 etc:  $1 ... index, $2 ... radius, $3 ... wavefct, $4 ... potential
+
+paste 2.p 1.p | awk '{if (NR == 1) {print $0} else {print $1,$2,$3,$NF}}' >! junk 
+mv junk 1.p
+
+rm fort.*
+
+#---------------- assemble .cpi file for fhi96md code
+
+echo `grep 'integrated valence' $INI.dat | awk '{print $NF"E+00"}'` `ls 1.* | wc -l` >! ${INI}.cpi
+cat << unused_fit_parameters >>! ${INI}.cpi
+  0.0000    0.0000    0.0000   0.0000
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+unused_fit_parameters
+
+awk < 1.s '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi
+awk < 1.p '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi   # substitute only wfct
+#awk < 2.p '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi  # substitute pot & wfct
+awk < 1.d '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi
+cat coredensity >>! ${INI}.cpi
+
+if( $?COMMENT ) echo "comment: " $COMMENT >>! $INI.dat
+cat wp.dat    >>! ${INI}.dat
+
+rm fort.* coredensity 1.* 2.* *wp* *fc
+
+exit

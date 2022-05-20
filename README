@@ -1,0 +1,114 @@
+--------------------------------------------------------------------------------
+        REMARKS ON THE FHI PSEUDOPOTENTIAL PACKAGE fhi98PP [1]
+        Revision of 28-06-2003
+--------------------------------------------------------------------------------
+
+--- Description and Copyright ---
+
+a) Generate generalized norm-conserving pseudopotentials following the
+   schemes by Hamann [2] or by Troullier and Martins [3] within common
+   exchange-correlation schemes in density-functional theory.
+
+b) Check the transferability of (these) pseudopotentials, in particular search
+   for unphysical ghost states [4] of their fully separable (Kleinman-Bylander) 
+   representation [5].
+
+c) additional functionalities in a TEST STAGE are spin-polarized atom calculations
+   and pseudopotentials for exact exchange calculations (generated within the
+   KLI approximation, which should be very reasonable).
+
+UNIX c-shell scripts "psgen" and "pswatch" should serve as command-line
+interfaces to facilitate a) and b). They support output compatible with the
+input format of the fhimd packages [6,7] and provide graphics output for the 
+public domain XMGRACE graphics package. Use of the plain fortran programs 
+"fhipp.x" and "pslp.x" is possible though less comfortable.
+
+In its present from this package comes as it is used at the FHI. You are kindly
+asked to critically inspect any input parameters and output, and to report any
+bugs or inconsistencies you might encounter to the email address below. When
+publishing results obtained with pseudopotentials based on this package please 
+give proper credit as indicated below [1 - 5] and in the introductory comments
+of the routines "fhipp.f" and "pslp.f". 
+
+Use, copying, and redistribution of this software and its documentation is 
+subject to license provisions as provided by the source from which you 
+obtained this package. 
+
+--- Guide to the directories ---
+
+./bin/Elements ..... database of input files (do not use uncritically!)
+./bin/Elements/Ham . for Hamann type pseudopotentials 
+./bin/Elements/TM .. for Troullier-Martins type pseudopotentials 
+
+./bin/Platform ..... makefile archive
+                   
+./bin/Xmgrace ...... header files for XMGRACE compatible graphics output
+./bin/Tools ........ backup for shell scripts 
+
+./src .............. fortran source files
+
+./lib .............. archive of selected LAPACK routines (used as "libFree.a")
+./lib/src........... fortran source files
+
+./sample ........... sample run
+
+./work ............. testing ground
+
+./Dplay ............ hands-on tour's prepared playground w/ examples
+./Dplay/play.ps .... a short hands-on tour of the package 
+                   
+--- Installation ---
+
+a) Customize "Makefile" in "./src". You need to set compiler and linker flags
+   compatible to your platform. Some linear algebra package is required, and
+   you need to specify either use of the ESSL library or the libFREE library 
+   (an excerpt of the LAPACK package put into "./lib").
+
+b) If libFREE is used make should take automatically care of generating and
+   linking this library. Alternatively go to "./lib" and create the archive 
+   "libFree.a" using <make -f make.libFree>. Again you need to set appropriate 
+   compiler flags in "make.libFree" first. 
+
+c) In "/src" create the executables
+   "./src/fhipp.x" ... pseudopotential generating by <make fhipp.x>
+   "./src/pslp.x" .... pseudopotential generating by <make pslp.x>
+   If linking the library fails, the respective syntax for linking in 
+   the present "Makefile" might be incompatible with your platform. 
+   Corrections shoud be straightforward, however linking the objects
+   by hand is an alternative too.
+   
+d) Set appropriate paths for executables and graphics header files etc. in the
+   shell scripts "psgen" and "pswatch" (stored in ./bin/Tools). This can be
+   done by specifying the environment variable "FHIPP_PATH" which should point
+   to the directory fhi98PP.
+   For a list of the shell scripts' options enter <psgen -h> and <pswatch -h>.
+
+e) Verify that you can reproduce the results of the sample run given in
+   "./sample".
+
+--- References ---
+
+[1] M. Fuchs, M. Scheffler, Comput. Phys. Commun., to appear 1998/99
+    "Ab initio pseudopotentials for electronic structure calculations 
+     of poly-atomic systems using density-functional theory".
+[2] D. R. Hamann, Phys. Rev. B 40, 2980 (1989).
+[3] N. Troullier, J. L. Martins, Phys. Rev. B 43, 1993 (1991).
+[4] X. Gonze, R. Stumpf, M. Scheffler, Phys. Rev. B 44, 8503 (1991).
+[5] L. Kleinman, D.M. Bylander, Phys. Rev. B 48, 1425 (1982).
+[6] M. Bockstedte, A. Kley, J. Neugebauer, M. Scheffler, Comput. Phys.
+    Commun. 107, 187 (1997).
+
+Please send your bug-complaints, comments, suggestions & questions to
+--------------------------------------------------------------------------------
+Martin Fuchs
+Fritz-Haber-Institut der MPG
+Abteilung Theorie
+Faradayweg 4-6
+D-14195 Berlin
+Germany
+
+Tel      +30 8413 4802
+Fax      +30 8413 4701
+E-mail   fuchs@fhi-berlin.mpg.de
+--------------------------------------------------------------------------------
+27-01-2004

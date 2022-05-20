@@ -1,0 +1,4816 @@
+# Grace project file
+#
+@version 50112
+@page size 792, 612
+@page scroll 5%
+@page inout 5%
+@link page off
+@map font 0 to "Times-Roman", "Times-Roman"
+@map font 1 to "Times-Italic", "Times-Italic"
+@map font 2 to "Times-Bold", "Times-Bold"
+@map font 3 to "Times-BoldItalic", "Times-BoldItalic"
+@map font 4 to "Helvetica", "Helvetica"
+@map font 5 to "Helvetica-Oblique", "Helvetica-Oblique"
+@map font 6 to "Helvetica-Bold", "Helvetica-Bold"
+@map font 7 to "Helvetica-BoldOblique", "Helvetica-BoldOblique"
+@map font 8 to "Courier", "Courier"
+@map font 9 to "Courier-Oblique", "Courier-Oblique"
+@map font 10 to "Courier-Bold", "Courier-Bold"
+@map font 11 to "Courier-BoldOblique", "Courier-BoldOblique"
+@map font 12 to "Symbol", "Symbol"
+@map font 13 to "ZapfDingbats", "ZapfDingbats"
+@map color 0 to (255, 255, 255), "white"
+@map color 1 to (0, 0, 0), "black"
+@map color 2 to (255, 0, 0), "red"
+@map color 3 to (0, 255, 0), "green"
+@map color 4 to (0, 0, 255), "blue"
+@map color 5 to (255, 255, 0), "yellow"
+@map color 6 to (188, 143, 143), "brown"
+@map color 7 to (220, 220, 220), "grey"
+@map color 8 to (148, 0, 211), "violet"
+@map color 9 to (0, 255, 255), "cyan"
+@map color 10 to (255, 0, 255), "magenta"
+@map color 11 to (255, 165, 0), "orange"
+@map color 12 to (114, 33, 188), "indigo"
+@map color 13 to (103, 7, 72), "maroon"
+@map color 14 to (64, 224, 208), "turquoise"
+@map color 15 to (0, 139, 0), "green4"
+@reference date 0
+@date wrap off
+@date wrap year 1950
+@default linewidth 1.0
+@default linestyle 1
+@default color 1
+@default pattern 1
+@default font 2
+@default char size 1.000000
+@default symbol size 1.000000
+@default sformat "%16.8g"
+@background color 0
+@page background fill on
+@timestamp off
+@timestamp 0.03, 0.03
+@timestamp color 1
+@timestamp rot 0
+@timestamp font 0
+@timestamp char size 1.000000
+@timestamp def ""
+@with string
+@    string on
+@    string loctype view
+@    string 0.875, 0.66
+@    string color 1
+@    string rot 0
+@    string font 4
+@    string just 0
+@    string char size 1.000000
+@    string def "d"
+@with string
+@    string on
+@    string loctype view
+@    string 0.875, 0.41
+@    string color 1
+@    string rot 0
+@    string font 4
+@    string just 0
+@    string char size 1.000000
+@    string def "p"
+@with string
+@    string on
+@    string loctype view
+@    string 0.875, 0.16
+@    string color 1
+@    string rot 0
+@    string font 4
+@    string just 0
+@    string char size 1.000000
+@    string def "s"
+@r0 off
+@link r0 to g0
+@r0 type above
+@r0 linestyle 1
+@r0 linewidth 1.0
+@r0 color 1
+@r0 line 0, 0, 0, 0
+@r1 off
+@link r1 to g0
+@r1 type above
+@r1 linestyle 1
+@r1 linewidth 1.0
+@r1 color 1
+@r1 line 0, 0, 0, 0
+@r2 off
+@link r2 to g0
+@r2 type above
+@r2 linestyle 1
+@r2 linewidth 1.0
+@r2 color 1
+@r2 line 0, 0, 0, 0
+@r3 off
+@link r3 to g0
+@r3 type above
+@r3 linestyle 1
+@r3 linewidth 1.0
+@r3 color 1
+@r3 line 0, 0, 0, 0
+@r4 off
+@link r4 to g0
+@r4 type above
+@r4 linestyle 1
+@r4 linewidth 1.0
+@r4 color 1
+@r4 line 0, 0, 0, 0
+@g0 on
+@g0 hidden false
+@g0 type XY
+@g0 stacked false
+@g0 bar hgap 0.000000
+@g0 fixedpoint off
+@g0 fixedpoint type 0
+@g0 fixedpoint xy 0.000000, 0.000000
+@g0 fixedpoint format general general
+@g0 fixedpoint prec 6, 6
+@with g0
+@    world xmin -2
+@    world xmax 2
+@    world ymin -20
+@    world ymax 20
+@    stack world 0, 0, 0, 0
+@    znorm 1
+@    view xmin 0.150000
+@    view xmax 0.850000
+@    view ymin 0.100000
+@    view ymax 0.350000
+@    title ""
+@    title font 4
+@    title size 1.000000
+@    title color 1
+@    subtitle ""
+@    subtitle font 4
+@    subtitle size 0.600000
+@    subtitle color 1
+@    xaxes scale Normal
+@    yaxes scale Normal
+@    xaxes invert off
+@    yaxes invert off
+@    xaxis  on
+@    xaxis  type zero false
+@    xaxis  offset 0.000000 , 0.000000
+@    xaxis  bar off
+@    xaxis  bar color 1
+@    xaxis  bar linestyle 1
+@    xaxis  bar linewidth 1.0
+@    xaxis  label "\6E \4(hartree)"
+@    xaxis  label layout para
+@    xaxis  label place auto
+@    xaxis  label char size 1.000000
+@    xaxis  label font 4
+@    xaxis  label color 1
+@    xaxis  label place normal
+@    xaxis  tick on
+@    xaxis  tick major 1
+@    xaxis  tick minor ticks 9
+@    xaxis  tick default 6
+@    xaxis  tick place rounded true
+@    xaxis  tick in
+@    xaxis  tick major size 0.700000
+@    xaxis  tick major color 1
+@    xaxis  tick major linewidth 1.0
+@    xaxis  tick major linestyle 1
+@    xaxis  tick major grid off
+@    xaxis  tick minor color 1
+@    xaxis  tick minor linewidth 1.0
+@    xaxis  tick minor linestyle 1
+@    xaxis  tick minor grid off
+@    xaxis  tick minor size 0.500000
+@    xaxis  ticklabel on
+@    xaxis  ticklabel format decimal
+@    xaxis  ticklabel prec 0
+@    xaxis  ticklabel formula ""
+@    xaxis  ticklabel append ""
+@    xaxis  ticklabel prepend ""
+@    xaxis  ticklabel angle 0
+@    xaxis  ticklabel skip 0
+@    xaxis  ticklabel stagger 0
+@    xaxis  ticklabel place normal
+@    xaxis  ticklabel offset auto
+@    xaxis  ticklabel offset 0.000000 , 0.010000
+@    xaxis  ticklabel start type auto
+@    xaxis  ticklabel start 0.000000
+@    xaxis  ticklabel stop type auto
+@    xaxis  ticklabel stop 0.000000
+@    xaxis  ticklabel char size 1.000000
+@    xaxis  ticklabel font 4
+@    xaxis  ticklabel color 1
+@    xaxis  tick place normal
+@    xaxis  tick spec type none
+@    yaxis  on
+@    yaxis  type zero false
+@    yaxis  offset 0.000000 , 0.000000
+@    yaxis  bar off
+@    yaxis  bar color 1
+@    yaxis  bar linestyle 1
+@    yaxis  bar linewidth 1.0
+@    yaxis  label ""
+@    yaxis  label layout para
+@    yaxis  label place auto
+@    yaxis  label char size 1.000000
+@    yaxis  label font 4
+@    yaxis  label color 1
+@    yaxis  label place normal
+@    yaxis  tick on
+@    yaxis  tick major 100000
+@    yaxis  tick minor ticks 0
+@    yaxis  tick default 6
+@    yaxis  tick place rounded true
+@    yaxis  tick in
+@    yaxis  tick major size 0.700000
+@    yaxis  tick major color 1
+@    yaxis  tick major linewidth 1.0
+@    yaxis  tick major linestyle 1
+@    yaxis  tick major grid off
+@    yaxis  tick minor color 1
+@    yaxis  tick minor linewidth 1.0
+@    yaxis  tick minor linestyle 1
+@    yaxis  tick minor grid off
+@    yaxis  tick minor size 0.500000
+@    yaxis  ticklabel on
+@    yaxis  ticklabel format decimal
+@    yaxis  ticklabel prec 0
+@    yaxis  ticklabel formula ""
+@    yaxis  ticklabel append ""
+@    yaxis  ticklabel prepend ""
+@    yaxis  ticklabel angle 0
+@    yaxis  ticklabel skip 0
+@    yaxis  ticklabel stagger 0
+@    yaxis  ticklabel place normal
+@    yaxis  ticklabel offset auto
+@    yaxis  ticklabel offset 0.000000 , 0.010000
+@    yaxis  ticklabel start type auto
+@    yaxis  ticklabel start 0.000000
+@    yaxis  ticklabel stop type auto
+@    yaxis  ticklabel stop 0.000000
+@    yaxis  ticklabel char size 1.000000
+@    yaxis  ticklabel font 4
+@    yaxis  ticklabel color 1
+@    yaxis  tick place both
+@    yaxis  tick spec type both
+@    yaxis  tick spec 3
+@    yaxis  tick major 0,               10
+@    yaxis  ticklabel 0, " 10.0"
+@    yaxis  tick major 1,                0
+@    yaxis  ticklabel 1, "    0.0"
+@    yaxis  tick major 2,              -10
+@    yaxis  ticklabel 2, "-10.0"
+@    altxaxis  off
+@    altyaxis  off
+@    legend on
+@    legend loctype view
+@    legend 0.78, 0.98
+@    legend box color 1
+@    legend box pattern 0
+@    legend box linewidth 1.0
+@    legend box linestyle 1
+@    legend box fill color 0
+@    legend box fill pattern 1
+@    legend font 4
+@    legend char size 0.700000
+@    legend color 1
+@    legend length 4
+@    legend vgap 1
+@    legend hgap 1
+@    legend invert false
+@    frame type 0
+@    frame linestyle 1
+@    frame linewidth 1.0
+@    frame color 1
+@    frame pattern 1
+@    frame background color 0
+@    frame background pattern 0
+@    s0 hidden false
+@    s0 type xy
+@    s0 symbol 0
+@    s0 symbol size 1.000000
+@    s0 symbol color 1
+@    s0 symbol pattern 1
+@    s0 symbol fill color 1
+@    s0 symbol fill pattern 0
+@    s0 symbol linewidth 1.0
+@    s0 symbol linestyle 1
+@    s0 symbol char 0
+@    s0 symbol char font 2
+@    s0 symbol skip 0
+@    s0 line type 1
+@    s0 line linestyle 1
+@    s0 line linewidth 1.0
+@    s0 line color 4
+@    s0 line pattern 1
+@    s0 baseline type 0
+@    s0 baseline off
+@    s0 dropline off
+@    s0 fill type 0
+@    s0 fill rule 0
+@    s0 fill color 0
+@    s0 fill pattern 1
+@    s0 avalue off
+@    s0 avalue type 2
+@    s0 avalue char size 1.000000
+@    s0 avalue font 2
+@    s0 avalue color 1
+@    s0 avalue rot 0
+@    s0 avalue format general
+@    s0 avalue prec 3
+@    s0 avalue prepend ""
+@    s0 avalue append ""
+@    s0 avalue offset 0.000000 , 0.000000
+@    s0 errorbar on
+@    s0 errorbar place both
+@    s0 errorbar color 1
+@    s0 errorbar pattern 1
+@    s0 errorbar size 1.000000
+@    s0 errorbar linewidth 1.0
+@    s0 errorbar linestyle 1
+@    s0 errorbar riser linewidth 1.0
+@    s0 errorbar riser linestyle 1
+@    s0 errorbar riser clip off
+@    s0 errorbar riser clip length 0.100000
+@    s0 comment "ae s"
+@    s0 legend  "all-electron"
+@    s1 hidden false
+@    s1 type xy
+@    s1 symbol 0
+@    s1 symbol size 1.000000
+@    s1 symbol color 2
+@    s1 symbol pattern 1
+@    s1 symbol fill color 2
+@    s1 symbol fill pattern 0
+@    s1 symbol linewidth 1.0
+@    s1 symbol linestyle 1
+@    s1 symbol char 0
+@    s1 symbol char font 2
+@    s1 symbol skip 0
+@    s1 line type 1
+@    s1 line linestyle 3
+@    s1 line linewidth 1.0
+@    s1 line color 2
+@    s1 line pattern 1
+@    s1 baseline type 0
+@    s1 baseline off
+@    s1 dropline off
+@    s1 fill type 0
+@    s1 fill rule 0
+@    s1 fill color 0
+@    s1 fill pattern 1
+@    s1 avalue off
+@    s1 avalue type 2
+@    s1 avalue char size 1.000000
+@    s1 avalue font 2
+@    s1 avalue color 1
+@    s1 avalue rot 0
+@    s1 avalue format general
+@    s1 avalue prec 3
+@    s1 avalue prepend ""
+@    s1 avalue append ""
+@    s1 avalue offset 0.000000 , 0.000000
+@    s1 errorbar on
+@    s1 errorbar place both
+@    s1 errorbar color 2
+@    s1 errorbar pattern 1
+@    s1 errorbar size 1.000000
+@    s1 errorbar linewidth 1.0
+@    s1 errorbar linestyle 1
+@    s1 errorbar riser linewidth 1.0
+@    s1 errorbar riser linestyle 1
+@    s1 errorbar riser clip off
+@    s1 errorbar riser clip length 0.100000
+@    s1 comment "semilocal s"
+@    s1 legend  "semilocal"
+@    s2 hidden false
+@    s2 type xy
+@    s2 symbol 0
+@    s2 symbol size 1.000000
+@    s2 symbol color 3
+@    s2 symbol pattern 1
+@    s2 symbol fill color 3
+@    s2 symbol fill pattern 0
+@    s2 symbol linewidth 1.0
+@    s2 symbol linestyle 1
+@    s2 symbol char 0
+@    s2 symbol char font 2
+@    s2 symbol skip 0
+@    s2 line type 1
+@    s2 line linestyle 5
+@    s2 line linewidth 1.0
+@    s2 line color 1
+@    s2 line pattern 1
+@    s2 baseline type 0
+@    s2 baseline off
+@    s2 dropline off
+@    s2 fill type 0
+@    s2 fill rule 0
+@    s2 fill color 0
+@    s2 fill pattern 1
+@    s2 avalue off
+@    s2 avalue type 2
+@    s2 avalue char size 1.000000
+@    s2 avalue font 2
+@    s2 avalue color 1
+@    s2 avalue rot 0
+@    s2 avalue format general
+@    s2 avalue prec 3
+@    s2 avalue prepend ""
+@    s2 avalue append ""
+@    s2 avalue offset 0.000000 , 0.000000
+@    s2 errorbar on
+@    s2 errorbar place both
+@    s2 errorbar color 3
+@    s2 errorbar pattern 1
+@    s2 errorbar size 1.000000
+@    s2 errorbar linewidth 1.0
+@    s2 errorbar linestyle 1
+@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linestyle 1
+@    s2 errorbar riser clip off
+@    s2 errorbar riser clip length 0.100000
+@    s2 comment "separable s"
+@    s2 legend  "separable"
+@    s3 hidden false
+@    s3 type xy
+@    s3 symbol 7
+@    s3 symbol size 1.000000
+@    s3 symbol color 4
+@    s3 symbol pattern 1
+@    s3 symbol fill color 4
+@    s3 symbol fill pattern 1
+@    s3 symbol linewidth 1.0
+@    s3 symbol linestyle 1
+@    s3 symbol char 0
+@    s3 symbol char font 2
+@    s3 symbol skip 0
+@    s3 line type 1
+@    s3 line linestyle 1
+@    s3 line linewidth 0.0
+@    s3 line color 1
+@    s3 line pattern 1
+@    s3 baseline type 0
+@    s3 baseline off
+@    s3 dropline off
+@    s3 fill type 0
+@    s3 fill rule 0
+@    s3 fill color 0
+@    s3 fill pattern 1
+@    s3 avalue off
+@    s3 avalue type 2
+@    s3 avalue char size 1.000000
+@    s3 avalue font 2
+@    s3 avalue color 1
+@    s3 avalue rot 0
+@    s3 avalue format general
+@    s3 avalue prec 3
+@    s3 avalue prepend ""
+@    s3 avalue append ""
+@    s3 avalue offset 0.000000 , 0.000000
+@    s3 errorbar on
+@    s3 errorbar place both
+@    s3 errorbar color 4
+@    s3 errorbar pattern 1
+@    s3 errorbar size 1.000000
+@    s3 errorbar linewidth 1.0
+@    s3 errorbar linestyle 1
+@    s3 errorbar riser linewidth 1.0
+@    s3 errorbar riser linestyle 1
+@    s3 errorbar riser clip off
+@    s3 errorbar riser clip length 0.100000
+@    s3 comment "reference s"
+@    s3 legend  "reference state"
+@g1 on
+@g1 hidden false
+@g1 type XY
+@g1 stacked false
+@g1 bar hgap 0.000000
+@g1 fixedpoint off
+@g1 fixedpoint type 0
+@g1 fixedpoint xy 0.000000, 0.000000
+@g1 fixedpoint format general general
+@g1 fixedpoint prec 6, 6
+@with g1
+@    world xmin -2
+@    world xmax 2
+@    world ymin -20
+@    world ymax 20
+@    stack world 0, 0, 0, 0
+@    znorm 1
+@    view xmin 0.150000
+@    view xmax 0.850000
+@    view ymin 0.350000
+@    view ymax 0.600000
+@    title ""
+@    title font 4
+@    title size 1.000000
+@    title color 1
+@    subtitle ""
+@    subtitle font 4
+@    subtitle size 0.600000
+@    subtitle color 1
+@    xaxes scale Normal
+@    yaxes scale Normal
+@    xaxes invert off
+@    yaxes invert off
+@    xaxis  on
+@    xaxis  type zero false
+@    xaxis  offset 0.000000 , 0.000000
+@    xaxis  bar off
+@    xaxis  bar color 1
+@    xaxis  bar linestyle 1
+@    xaxis  bar linewidth 1.0
+@    xaxis  label ""
+@    xaxis  label layout para
+@    xaxis  label place auto
+@    xaxis  label char size 1.000000
+@    xaxis  label font 4
+@    xaxis  label color 1
+@    xaxis  label place normal
+@    xaxis  tick on
+@    xaxis  tick major 1
+@    xaxis  tick minor ticks 0
+@    xaxis  tick default 6
+@    xaxis  tick place rounded true
+@    xaxis  tick in
+@    xaxis  tick major size 0.700000
+@    xaxis  tick major color 1
+@    xaxis  tick major linewidth 1.0
+@    xaxis  tick major linestyle 1
+@    xaxis  tick major grid off
+@    xaxis  tick minor color 1
+@    xaxis  tick minor linewidth 1.0
+@    xaxis  tick minor linestyle 1
+@    xaxis  tick minor grid off
+@    xaxis  tick minor size 0.500000
+@    xaxis  ticklabel off
+@    xaxis  ticklabel format decimal
+@    xaxis  ticklabel prec 0
+@    xaxis  ticklabel formula ""
+@    xaxis  ticklabel append ""
+@    xaxis  ticklabel prepend ""
+@    xaxis  ticklabel angle 0
+@    xaxis  ticklabel skip 0
+@    xaxis  ticklabel stagger 0
+@    xaxis  ticklabel place normal
+@    xaxis  ticklabel offset auto
+@    xaxis  ticklabel offset 0.000000 , 0.010000
+@    xaxis  ticklabel start type auto
+@    xaxis  ticklabel start 0.000000
+@    xaxis  ticklabel stop type auto
+@    xaxis  ticklabel stop 0.000000
+@    xaxis  ticklabel char size 1.000000
+@    xaxis  ticklabel font 4
+@    xaxis  ticklabel color 1
+@    xaxis  tick place both
+@    xaxis  tick spec type none
+@    yaxis  on
+@    yaxis  type zero false
+@    yaxis  offset 0.000000 , 0.000000
+@    yaxis  bar off
+@    yaxis  bar color 1
+@    yaxis  bar linestyle 1
+@    yaxis  bar linewidth 1.0
+@    yaxis  label "\6D(E)  \4(arbitrary scale)"
+@    yaxis  label layout para
+@    yaxis  label place auto
+@    yaxis  label char size 1.000000
+@    yaxis  label font 4
+@    yaxis  label color 1
+@    yaxis  label place normal
+@    yaxis  tick on
+@    yaxis  tick major 10
+@    yaxis  tick minor ticks 0
+@    yaxis  tick default 6
+@    yaxis  tick place rounded true
+@    yaxis  tick in
+@    yaxis  tick major size 0.700000
+@    yaxis  tick major color 1
+@    yaxis  tick major linewidth 1.0
+@    yaxis  tick major linestyle 1
+@    yaxis  tick major grid off
+@    yaxis  tick minor color 1
+@    yaxis  tick minor linewidth 1.0
+@    yaxis  tick minor linestyle 1
+@    yaxis  tick minor grid off
+@    yaxis  tick minor size 0.500000
+@    yaxis  ticklabel on
+@    yaxis  ticklabel format decimal
+@    yaxis  ticklabel prec 0
+@    yaxis  ticklabel formula ""
+@    yaxis  ticklabel append ""
+@    yaxis  ticklabel prepend ""
+@    yaxis  ticklabel angle 0
+@    yaxis  ticklabel skip 0
+@    yaxis  ticklabel stagger 0
+@    yaxis  ticklabel place normal
+@    yaxis  ticklabel offset auto
+@    yaxis  ticklabel offset 0.000000 , 0.010000
+@    yaxis  ticklabel start type auto
+@    yaxis  ticklabel start 0.000000
+@    yaxis  ticklabel stop type auto
+@    yaxis  ticklabel stop 0.000000
+@    yaxis  ticklabel char size 1.000000
+@    yaxis  ticklabel font 4
+@    yaxis  ticklabel color 1
+@    yaxis  tick place both
+@    yaxis  tick spec type both
+@    yaxis  tick spec 3
+@    yaxis  tick major 0,               10
+@    yaxis  ticklabel 0, " 10.0"
+@    yaxis  tick major 1,                0
+@    yaxis  ticklabel 1, "    0.0"
+@    yaxis  tick major 2,              -10
+@    yaxis  ticklabel 2, "-10.0"
+@    altxaxis  off
+@    altyaxis  off
+@    legend on
+@    legend loctype view
+@    legend 0.78, 0.98
+@    legend box color 1
+@    legend box pattern 0
+@    legend box linewidth 0.8
+@    legend box linestyle 1
+@    legend box fill color 0
+@    legend box fill pattern 1
+@    legend font 4
+@    legend char size 0.700000
+@    legend color 1
+@    legend length 4
+@    legend vgap 1
+@    legend hgap 1
+@    legend invert false
+@    frame type 0
+@    frame linestyle 1
+@    frame linewidth 1.0
+@    frame color 1
+@    frame pattern 1
+@    frame background color 0
+@    frame background pattern 0
+@    s0 hidden false
+@    s0 type xy
+@    s0 symbol 0
+@    s0 symbol size 1.000000
+@    s0 symbol color 1
+@    s0 symbol pattern 1
+@    s0 symbol fill color 1
+@    s0 symbol fill pattern 0
+@    s0 symbol linewidth 1.0
+@    s0 symbol linestyle 1
+@    s0 symbol char 0
+@    s0 symbol char font 2
+@    s0 symbol skip 0
+@    s0 line type 1
+@    s0 line linestyle 1
+@    s0 line linewidth 1.0
+@    s0 line color 4
+@    s0 line pattern 1
+@    s0 baseline type 0
+@    s0 baseline off
+@    s0 dropline off
+@    s0 fill type 0
+@    s0 fill rule 0
+@    s0 fill color 0
+@    s0 fill pattern 1
+@    s0 avalue off
+@    s0 avalue type 2
+@    s0 avalue char size 1.000000
+@    s0 avalue font 2
+@    s0 avalue color 1
+@    s0 avalue rot 0
+@    s0 avalue format general
+@    s0 avalue prec 3
+@    s0 avalue prepend ""
+@    s0 avalue append ""
+@    s0 avalue offset 0.000000 , 0.000000
+@    s0 errorbar on
+@    s0 errorbar place both
+@    s0 errorbar color 1
+@    s0 errorbar pattern 1
+@    s0 errorbar size 1.000000
+@    s0 errorbar linewidth 1.0
+@    s0 errorbar linestyle 1
+@    s0 errorbar riser linewidth 1.0
+@    s0 errorbar riser linestyle 1
+@    s0 errorbar riser clip off
+@    s0 errorbar riser clip length 0.100000
+@    s0 comment "ae p"
+@    s0 legend  "all-electron"
+@    s1 hidden false
+@    s1 type xy
+@    s1 symbol 0
+@    s1 symbol size 1.000000
+@    s1 symbol color 2
+@    s1 symbol pattern 1
+@    s1 symbol fill color 2
+@    s1 symbol fill pattern 0
+@    s1 symbol linewidth 1.0
+@    s1 symbol linestyle 1
+@    s1 symbol char 0
+@    s1 symbol char font 2
+@    s1 symbol skip 0
+@    s1 line type 1
+@    s1 line linestyle 3
+@    s1 line linewidth 1.0
+@    s1 line color 2
+@    s1 line pattern 1
+@    s1 baseline type 0
+@    s1 baseline off
+@    s1 dropline off
+@    s1 fill type 0
+@    s1 fill rule 0
+@    s1 fill color 0
+@    s1 fill pattern 1
+@    s1 avalue off
+@    s1 avalue type 2
+@    s1 avalue char size 1.000000
+@    s1 avalue font 2
+@    s1 avalue color 1
+@    s1 avalue rot 0
+@    s1 avalue format general
+@    s1 avalue prec 3
+@    s1 avalue prepend ""
+@    s1 avalue append ""
+@    s1 avalue offset 0.000000 , 0.000000
+@    s1 errorbar on
+@    s1 errorbar place both
+@    s1 errorbar color 2
+@    s1 errorbar pattern 1
+@    s1 errorbar size 1.000000
+@    s1 errorbar linewidth 1.0
+@    s1 errorbar linestyle 1
+@    s1 errorbar riser linewidth 1.0
+@    s1 errorbar riser linestyle 1
+@    s1 errorbar riser clip off
+@    s1 errorbar riser clip length 0.100000
+@    s1 comment "semilocal p"
+@    s1 legend  "semilocal"
+@    s2 hidden false
+@    s2 type xy
+@    s2 symbol 0
+@    s2 symbol size 1.000000
+@    s2 symbol color 3
+@    s2 symbol pattern 1
+@    s2 symbol fill color 3
+@    s2 symbol fill pattern 0
+@    s2 symbol linewidth 1.0
+@    s2 symbol linestyle 1
+@    s2 symbol char 0
+@    s2 symbol char font 2
+@    s2 symbol skip 0
+@    s2 line type 1
+@    s2 line linestyle 5
+@    s2 line linewidth 1.0
+@    s2 line color 1
+@    s2 line pattern 1
+@    s2 baseline type 0
+@    s2 baseline off
+@    s2 dropline off
+@    s2 fill type 0
+@    s2 fill rule 0
+@    s2 fill color 0
+@    s2 fill pattern 1
+@    s2 avalue off
+@    s2 avalue type 2
+@    s2 avalue char size 1.000000
+@    s2 avalue font 2
+@    s2 avalue color 1
+@    s2 avalue rot 0
+@    s2 avalue format general
+@    s2 avalue prec 3
+@    s2 avalue prepend ""
+@    s2 avalue append ""
+@    s2 avalue offset 0.000000 , 0.000000
+@    s2 errorbar on
+@    s2 errorbar place both
+@    s2 errorbar color 3
+@    s2 errorbar pattern 1
+@    s2 errorbar size 1.000000
+@    s2 errorbar linewidth 1.0
+@    s2 errorbar linestyle 1
+@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linestyle 1
+@    s2 errorbar riser clip off
+@    s2 errorbar riser clip length 0.100000
+@    s2 comment "separable p"
+@    s2 legend  "separable"
+@    s3 hidden false
+@    s3 type xy
+@    s3 symbol 7
+@    s3 symbol size 1.000000
+@    s3 symbol color 4
+@    s3 symbol pattern 1
+@    s3 symbol fill color 4
+@    s3 symbol fill pattern 1
+@    s3 symbol linewidth 1.0
+@    s3 symbol linestyle 1
+@    s3 symbol char 0
+@    s3 symbol char font 2
+@    s3 symbol skip 0
+@    s3 line type 1
+@    s3 line linestyle 1
+@    s3 line linewidth 0.0
+@    s3 line color 1
+@    s3 line pattern 1
+@    s3 baseline type 0
+@    s3 baseline off
+@    s3 dropline off
+@    s3 fill type 0
+@    s3 fill rule 0
+@    s3 fill color 0
+@    s3 fill pattern 1
+@    s3 avalue off
+@    s3 avalue type 2
+@    s3 avalue char size 1.000000
+@    s3 avalue font 2
+@    s3 avalue color 1
+@    s3 avalue rot 0
+@    s3 avalue format general
+@    s3 avalue prec 3
+@    s3 avalue prepend ""
+@    s3 avalue append ""
+@    s3 avalue offset 0.000000 , 0.000000
+@    s3 errorbar on
+@    s3 errorbar place both
+@    s3 errorbar color 4
+@    s3 errorbar pattern 1
+@    s3 errorbar size 1.000000
+@    s3 errorbar linewidth 1.0
+@    s3 errorbar linestyle 1
+@    s3 errorbar riser linewidth 1.0
+@    s3 errorbar riser linestyle 1
+@    s3 errorbar riser clip off
+@    s3 errorbar riser clip length 0.100000
+@    s3 comment "reference p"
+@    s3 legend  "reference state"
+@g2 on
+@g2 hidden false
+@g2 type XY
+@g2 stacked false
+@g2 bar hgap 0.000000
+@g2 fixedpoint off
+@g2 fixedpoint type 0
+@g2 fixedpoint xy 0.000000, 0.000000
+@g2 fixedpoint format general general
+@g2 fixedpoint prec 6, 6
+@with g2
+@    world xmin -2
+@    world xmax 2
+@    world ymin -20
+@    world ymax 20
+@    stack world 0, 0, 0, 0
+@    znorm 1
+@    view xmin 0.150000
+@    view xmax 0.850000
+@    view ymin 0.600000
+@    view ymax 0.850000
+@    title "Logarithmic derivatives \6D(E)        "
+@    title font 4
+@    title size 1.000000
+@    title color 1
+@    subtitle ""
+@    subtitle font 4
+@    subtitle size 0.600000
+@    subtitle color 1
+@    xaxes scale Normal
+@    yaxes scale Normal
+@    xaxes invert off
+@    yaxes invert off
+@    xaxis  on
+@    xaxis  type zero false
+@    xaxis  offset 0.000000 , 0.000000
+@    xaxis  bar off
+@    xaxis  bar color 1
+@    xaxis  bar linestyle 1
+@    xaxis  bar linewidth 1.0
+@    xaxis  label ""
+@    xaxis  label layout para
+@    xaxis  label place auto
+@    xaxis  label char size 1.000000
+@    xaxis  label font 4
+@    xaxis  label color 1
+@    xaxis  label place normal
+@    xaxis  tick on
+@    xaxis  tick major 1
+@    xaxis  tick minor ticks 9
+@    xaxis  tick default 6
+@    xaxis  tick place rounded true
+@    xaxis  tick in
+@    xaxis  tick major size 0.700000
+@    xaxis  tick major color 1
+@    xaxis  tick major linewidth 1.0
+@    xaxis  tick major linestyle 1
+@    xaxis  tick major grid off
+@    xaxis  tick minor color 1
+@    xaxis  tick minor linewidth 1.0
+@    xaxis  tick minor linestyle 1
+@    xaxis  tick minor grid off
+@    xaxis  tick minor size 0.500000
+@    xaxis  ticklabel off
+@    xaxis  ticklabel format decimal
+@    xaxis  ticklabel prec 0
+@    xaxis  ticklabel formula ""
+@    xaxis  ticklabel append ""
+@    xaxis  ticklabel prepend ""
+@    xaxis  ticklabel angle 0
+@    xaxis  ticklabel skip 0
+@    xaxis  ticklabel stagger 0
+@    xaxis  ticklabel place normal
+@    xaxis  ticklabel offset auto
+@    xaxis  ticklabel offset 0.000000 , 0.010000
+@    xaxis  ticklabel start type auto
+@    xaxis  ticklabel start 0.000000
+@    xaxis  ticklabel stop type auto
+@    xaxis  ticklabel stop 0.000000
+@    xaxis  ticklabel char size 1.000000
+@    xaxis  ticklabel font 4
+@    xaxis  ticklabel color 1
+@    xaxis  tick place opposite
+@    xaxis  tick spec type none
+@    yaxis  on
+@    yaxis  type zero false
+@    yaxis  offset 0.000000 , 0.000000
+@    yaxis  bar off
+@    yaxis  bar color 1
+@    yaxis  bar linestyle 1
+@    yaxis  bar linewidth 1.0
+@    yaxis  label ""
+@    yaxis  label layout para
+@    yaxis  label place auto
+@    yaxis  label char size 1.000000
+@    yaxis  label font 4
+@    yaxis  label color 1
+@    yaxis  label place normal
+@    yaxis  tick on
+@    yaxis  tick major 10
+@    yaxis  tick minor ticks 0
+@    yaxis  tick default 6
+@    yaxis  tick place rounded true
+@    yaxis  tick in
+@    yaxis  tick major size 0.700000
+@    yaxis  tick major color 1
+@    yaxis  tick major linewidth 1.0
+@    yaxis  tick major linestyle 1
+@    yaxis  tick major grid off
+@    yaxis  tick minor color 1
+@    yaxis  tick minor linewidth 1.0
+@    yaxis  tick minor linestyle 1
+@    yaxis  tick minor grid off
+@    yaxis  tick minor size 0.500000
+@    yaxis  ticklabel on
+@    yaxis  ticklabel format decimal
+@    yaxis  ticklabel prec 0
+@    yaxis  ticklabel formula ""
+@    yaxis  ticklabel append ""
+@    yaxis  ticklabel prepend ""
+@    yaxis  ticklabel angle 0
+@    yaxis  ticklabel skip 0
+@    yaxis  ticklabel stagger 0
+@    yaxis  ticklabel place normal
+@    yaxis  ticklabel offset auto
+@    yaxis  ticklabel offset 0.000000 , 0.010000
+@    yaxis  ticklabel start type auto
+@    yaxis  ticklabel start 0.000000
+@    yaxis  ticklabel stop type auto
+@    yaxis  ticklabel stop 0.000000
+@    yaxis  ticklabel char size 1.000000
+@    yaxis  ticklabel font 4
+@    yaxis  ticklabel color 1
+@    yaxis  tick place both
+@    yaxis  tick spec type both
+@    yaxis  tick spec 3
+@    yaxis  tick major 0,               10
+@    yaxis  ticklabel 0, " 10.0"
+@    yaxis  tick major 1,                0
+@    yaxis  ticklabel 1, "    0.0"
+@    yaxis  tick major 2,              -10
+@    yaxis  ticklabel 2, "-10.0"
+@    altxaxis  off
+@    altyaxis  off
+@    legend on
+@    legend loctype view
+@    legend 0.78, 0.98
+@    legend box color 1
+@    legend box pattern 0
+@    legend box linewidth 1.0
+@    legend box linestyle 1
+@    legend box fill color 0
+@    legend box fill pattern 1
+@    legend font 4
+@    legend char size 0.700000
+@    legend color 1
+@    legend length 4
+@    legend vgap 1
+@    legend hgap 1
+@    legend invert false
+@    frame type 0
+@    frame linestyle 1
+@    frame linewidth 1.0
+@    frame color 1
+@    frame pattern 1
+@    frame background color 0
+@    frame background pattern 0
+@    s0 hidden false
+@    s0 type xy
+@    s0 symbol 0
+@    s0 symbol size 1.000000
+@    s0 symbol color 1
+@    s0 symbol pattern 1
+@    s0 symbol fill color 1
+@    s0 symbol fill pattern 0
+@    s0 symbol linewidth 1.0
+@    s0 symbol linestyle 1
+@    s0 symbol char 0
+@    s0 symbol char font 2
+@    s0 symbol skip 0
+@    s0 line type 1
+@    s0 line linestyle 1
+@    s0 line linewidth 1.0
+@    s0 line color 4
+@    s0 line pattern 1
+@    s0 baseline type 0
+@    s0 baseline off
+@    s0 dropline off
+@    s0 fill type 0
+@    s0 fill rule 0
+@    s0 fill color 0
+@    s0 fill pattern 1
+@    s0 avalue off
+@    s0 avalue type 2
+@    s0 avalue char size 1.000000
+@    s0 avalue font 2
+@    s0 avalue color 1
+@    s0 avalue rot 0
+@    s0 avalue format general
+@    s0 avalue prec 3
+@    s0 avalue prepend ""
+@    s0 avalue append ""
+@    s0 avalue offset 0.000000 , 0.000000
+@    s0 errorbar on
+@    s0 errorbar place both
+@    s0 errorbar color 1
+@    s0 errorbar pattern 1
+@    s0 errorbar size 1.000000
+@    s0 errorbar linewidth 1.0
+@    s0 errorbar linestyle 1
+@    s0 errorbar riser linewidth 1.0
+@    s0 errorbar riser linestyle 1
+@    s0 errorbar riser clip off
+@    s0 errorbar riser clip length 0.100000
+@    s0 comment "ae d"
+@    s0 legend  "all-electron"
+@    s1 hidden false
+@    s1 type xy
+@    s1 symbol 0
+@    s1 symbol size 1.000000
+@    s1 symbol color 2
+@    s1 symbol pattern 1
+@    s1 symbol fill color 2
+@    s1 symbol fill pattern 0
+@    s1 symbol linewidth 1.0
+@    s1 symbol linestyle 1
+@    s1 symbol char 0
+@    s1 symbol char font 2
+@    s1 symbol skip 0
+@    s1 line type 1
+@    s1 line linestyle 3
+@    s1 line linewidth 1.0
+@    s1 line color 2
+@    s1 line pattern 1
+@    s1 baseline type 0
+@    s1 baseline off
+@    s1 dropline off
+@    s1 fill type 0
+@    s1 fill rule 0
+@    s1 fill color 0
+@    s1 fill pattern 1
+@    s1 avalue off
+@    s1 avalue type 2
+@    s1 avalue char size 1.000000
+@    s1 avalue font 2
+@    s1 avalue color 1
+@    s1 avalue rot 0
+@    s1 avalue format general
+@    s1 avalue prec 3
+@    s1 avalue prepend ""
+@    s1 avalue append ""
+@    s1 avalue offset 0.000000 , 0.000000
+@    s1 errorbar on
+@    s1 errorbar place both
+@    s1 errorbar color 2
+@    s1 errorbar pattern 1
+@    s1 errorbar size 1.000000
+@    s1 errorbar linewidth 1.0
+@    s1 errorbar linestyle 1
+@    s1 errorbar riser linewidth 1.0
+@    s1 errorbar riser linestyle 1
+@    s1 errorbar riser clip off
+@    s1 errorbar riser clip length 0.100000
+@    s1 comment "semilocal d"
+@    s1 legend  "semilocal"
+@    s2 hidden false
+@    s2 type xy
+@    s2 symbol 0
+@    s2 symbol size 1.000000
+@    s2 symbol color 3
+@    s2 symbol pattern 1
+@    s2 symbol fill color 3
+@    s2 symbol fill pattern 0
+@    s2 symbol linewidth 1.0
+@    s2 symbol linestyle 1
+@    s2 symbol char 0
+@    s2 symbol char font 2
+@    s2 symbol skip 0
+@    s2 line type 1
+@    s2 line linestyle 5
+@    s2 line linewidth 1.0
+@    s2 line color 1
+@    s2 line pattern 1
+@    s2 baseline type 0
+@    s2 baseline off
+@    s2 dropline off
+@    s2 fill type 0
+@    s2 fill rule 0
+@    s2 fill color 0
+@    s2 fill pattern 1
+@    s2 avalue off
+@    s2 avalue type 2
+@    s2 avalue char size 1.000000
+@    s2 avalue font 2
+@    s2 avalue color 1
+@    s2 avalue rot 0
+@    s2 avalue format general
+@    s2 avalue prec 3
+@    s2 avalue prepend ""
+@    s2 avalue append ""
+@    s2 avalue offset 0.000000 , 0.000000
+@    s2 errorbar on
+@    s2 errorbar place both
+@    s2 errorbar color 3
+@    s2 errorbar pattern 1
+@    s2 errorbar size 1.000000
+@    s2 errorbar linewidth 1.0
+@    s2 errorbar linestyle 1
+@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linestyle 1
+@    s2 errorbar riser clip off
+@    s2 errorbar riser clip length 0.100000
+@    s2 comment "separable d"
+@    s2 legend  "separable"
+@    s3 hidden false
+@    s3 type xy
+@    s3 symbol 7
+@    s3 symbol size 1.000000
+@    s3 symbol color 4
+@    s3 symbol pattern 1
+@    s3 symbol fill color 4
+@    s3 symbol fill pattern 1
+@    s3 symbol linewidth 1.0
+@    s3 symbol linestyle 1
+@    s3 symbol char 0
+@    s3 symbol char font 2
+@    s3 symbol skip 0
+@    s3 line type 1
+@    s3 line linestyle 1
+@    s3 line linewidth 0.0
+@    s3 line color 1
+@    s3 line pattern 1
+@    s3 baseline type 0
+@    s3 baseline off
+@    s3 dropline off
+@    s3 fill type 0
+@    s3 fill rule 0
+@    s3 fill color 0
+@    s3 fill pattern 1
+@    s3 avalue off
+@    s3 avalue type 2
+@    s3 avalue char size 1.000000
+@    s3 avalue font 2
+@    s3 avalue color 1
+@    s3 avalue rot 0
+@    s3 avalue format general
+@    s3 avalue prec 3
+@    s3 avalue prepend ""
+@    s3 avalue append ""
+@    s3 avalue offset 0.000000 , 0.000000
+@    s3 errorbar on
+@    s3 errorbar place both
+@    s3 errorbar color 4
+@    s3 errorbar pattern 1
+@    s3 errorbar size 1.000000
+@    s3 errorbar linewidth 1.0
+@    s3 errorbar linestyle 1
+@    s3 errorbar riser linewidth 1.0
+@    s3 errorbar riser linestyle 1
+@    s3 errorbar riser clip off
+@    s3 errorbar riser clip length 0.100000
+@    s3 comment "reference d"
+@    s3 legend  "reference state"
+@ with g2
+@ g2 on
+@ subtitle "ncpp 21:45:40 Dec 10 2021 chuang3 r=3.0714 loc f"
+@ with g0
+@ g0 on
+ -0.2000000E+01  0.4306737E+01
+ -0.1728424E+01  0.3783563E+01
+ -0.1483688E+01  0.3256917E+01
+ -0.1265646E+01  0.2726775E+01
+ -0.1073639E+01  0.2193197E+01
+ -0.9064900E+00  0.1656429E+01
+ -0.7625158E+00  0.1116950E+01
+ -0.6395946E+00  0.5754368E+00
+ -0.5353134E+00  0.3268662E-01
+ -0.4471545E+00 -0.5104995E+00
+ -0.3726746E+00 -0.1053411E+01
+ -0.3096368E+00 -0.1595486E+01
+ -0.2560830E+00 -0.2136324E+01
+ -0.2103538E+00 -0.2675672E+01
+ -0.1710735E+00 -0.3213395E+01
+ -0.1371176E+00 -0.3749443E+01
+ -0.1075735E+00 -0.4283829E+01
+ -0.8170299E-01 -0.4816601E+01
+ -0.5890872E-01 -0.5347832E+01
+ -0.3870608E-01 -0.5877605E+01
+ -0.2070033E-01 -0.6406010E+01
+ -0.4568372E-02 -0.6933134E+01
+  0.9955699E-02 -0.7459064E+01
+  0.2309201E-01 -0.7983881E+01
+  0.3502387E-01 -0.8507663E+01
+  0.4590478E-01 -0.9030480E+01
+  0.5586407E-01 -0.9552398E+01
+  0.6501128E-01 -0.1007348E+02
+  0.7343972E-01 -0.1059378E+02
+  0.8122925E-01 -0.1111334E+02
+  0.8844858E-01 -0.1163222E+02
+  0.9515710E-01 -0.1215046E+02
+  0.1014064E+00 -0.1266810E+02
+  0.1072414E+00 -0.1318517E+02
+  0.1127015E+00 -0.1370171E+02
+  0.1178213E+00 -0.1421775E+02
+  0.1226313E+00 -0.1473332E+02
+  0.1271586E+00 -0.1524843E+02
+  0.1314272E+00 -0.1576312E+02
+  0.1354584E+00 -0.1627742E+02
+  0.1392713E+00 -0.1679133E+02
+  0.1428832E+00 -0.1730488E+02
+  0.1463094E+00 -0.1781808E+02
+  0.1495637E+00 -0.1833096E+02
+  0.1526588E+00 -0.1884353E+02
+  0.1556060E+00 -0.1935580E+02
+  0.1584155E+00 -0.1986779E+02
+  0.1610969E+00 -0.2037951E+02
+  0.1637782E+00 -0.2091542E+02
+  0.1664595E+00 -0.2147732E+02
+  0.1691409E+00 -0.2206715E+02
+  0.1718222E+00 -0.2268708E+02
+  0.1745035E+00 -0.2333949E+02
+  0.1771849E+00 -0.2402703E+02
+  0.1798662E+00 -0.2475265E+02
+  0.1825476E+00 -0.2551962E+02
+  0.1852289E+00 -0.2633162E+02
+  0.1879102E+00 -0.2719276E+02
+  0.1905916E+00 -0.2810767E+02
+  0.1932729E+00 -0.2908160E+02
+  0.1959542E+00 -0.3012048E+02
+  0.1986356E+00 -0.3123107E+02
+  0.2013169E+00 -0.3242112E+02
+  0.2039983E+00 -0.3369951E+02
+  0.2066796E+00 -0.3507651E+02
+  0.2093609E+00 -0.3656405E+02
+  0.2120423E+00 -0.3817606E+02
+  0.2147236E+00 -0.3992891E+02
+  0.2174050E+00 -0.4184198E+02
+  0.2200863E+00 -0.4393837E+02
+  0.2227676E+00 -0.4624584E+02
+  0.2254490E+00 -0.4879807E+02
+  0.2281303E+00 -0.5163629E+02
+  0.2308116E+00 -0.5481156E+02
+  0.2334930E+00 -0.5838785E+02
+  0.2361743E+00 -0.6244641E+02
+  0.2388557E+00 -0.6709204E+02
+  0.2415370E+00 -0.7246228E+02
+  0.2442183E+00 -0.7874125E+02
+  0.2468997E+00 -0.8618124E+02
+  0.2495810E+00 -0.9513747E+02
+  0.2522623E+00 -0.1061265E+03
+  0.2549437E+00 -0.1199296E+03
+  0.2576250E+00 -0.1377872E+03
+  0.2603064E+00 -0.1617945E+03
+  0.2629877E+00 -0.1957904E+03
+  0.2656690E+00 -0.2476490E+03
+  0.2683504E+00 -0.3364699E+03
+  0.2710317E+00 -0.5236633E+03
+  0.2737130E+00 -0.1175525E+04
+  0.2763944E+00  0.4881752E+04
+  0.2790757E+00  0.7955329E+03
+  0.2817571E+00  0.4336707E+03
+  0.2844384E+00  0.2983707E+03
+  0.2871197E+00  0.2275836E+03
+  0.2898011E+00  0.1840496E+03
+  0.2924824E+00  0.1545697E+03
+  0.2951637E+00  0.1332834E+03
+  0.2978451E+00  0.1171909E+03
+  0.3005264E+00  0.1045976E+03
+  0.3032078E+00  0.9447368E+02
+  0.3058891E+00  0.8615740E+02
+  0.3085704E+00  0.7920404E+02
+  0.3112518E+00  0.7330370E+02
+  0.3139331E+00  0.6823384E+02
+  0.3166145E+00  0.6383047E+02
+  0.3192958E+00  0.5997013E+02
+  0.3219771E+00  0.5655807E+02
+  0.3246585E+00  0.5352038E+02
+  0.3273398E+00  0.5079853E+02
+  0.3300211E+00  0.4834562E+02
+  0.3327025E+00  0.4612357E+02
+  0.3353838E+00  0.4410117E+02
+  0.3380652E+00  0.4225261E+02
+  0.3407465E+00  0.4055631E+02
+  0.3434278E+00  0.3899417E+02
+  0.3461092E+00  0.3755080E+02
+  0.3487905E+00  0.3621310E+02
+  0.3514718E+00  0.3496984E+02
+  0.3541532E+00  0.3381130E+02
+  0.3568345E+00  0.3272906E+02
+  0.3595159E+00  0.3171580E+02
+  0.3621972E+00  0.3076507E+02
+  0.3648785E+00  0.2987123E+02
+  0.3675599E+00  0.2902929E+02
+  0.3702412E+00  0.2823482E+02
+  0.3729225E+00  0.2748388E+02
+  0.3756039E+00  0.2677297E+02
+  0.3782852E+00  0.2609894E+02
+  0.3809666E+00  0.2545897E+02
+  0.3836479E+00  0.2485050E+02
+  0.3863292E+00  0.2427126E+02
+  0.3890106E+00  0.2371916E+02
+  0.3916919E+00  0.2319231E+02
+  0.3943732E+00  0.2268901E+02
+  0.3970546E+00  0.2220768E+02
+  0.3997359E+00  0.2174690E+02
+  0.4024173E+00  0.2130536E+02
+  0.4050986E+00  0.2088187E+02
+  0.4077799E+00  0.2047532E+02
+  0.4104613E+00  0.2008470E+02
+  0.4131426E+00  0.1970908E+02
+  0.4167813E+00  0.1922179E+02
+  0.4206116E+00  0.1873482E+02
+  0.4246487E+00  0.1824816E+02
+  0.4289091E+00  0.1776183E+02
+  0.4334114E+00  0.1727585E+02
+  0.4381758E+00  0.1679023E+02
+  0.4432252E+00  0.1630499E+02
+  0.4485848E+00  0.1582015E+02
+  0.4542830E+00  0.1533573E+02
+  0.4603512E+00  0.1485174E+02
+  0.4668251E+00  0.1436821E+02
+  0.4737446E+00  0.1388516E+02
+  0.4811548E+00  0.1340261E+02
+  0.4891067E+00  0.1292059E+02
+  0.4976580E+00  0.1243911E+02
+  0.5068747E+00  0.1195820E+02
+  0.5168315E+00  0.1147790E+02
+  0.5276141E+00  0.1099821E+02
+  0.5393207E+00  0.1051917E+02
+  0.5520637E+00  0.1004079E+02
+  0.5659725E+00  0.9563101E+01
+  0.5811959E+00  0.9086102E+01
+  0.5979052E+00  0.8609803E+01
+  0.6162973E+00  0.8134198E+01
+  0.6365985E+00  0.7659265E+01
+  0.6590671E+00  0.7184964E+01
+  0.6839971E+00  0.6711225E+01
+  0.7117189E+00  0.6237947E+01
+  0.7425987E+00  0.5764980E+01
+  0.7770337E+00  0.5292119E+01
+  0.8154407E+00  0.4819096E+01
+  0.8582362E+00  0.4345563E+01
+  0.9058049E+00  0.3871098E+01
+  0.9584555E+00  0.3395203E+01
+  0.1016365E+01  0.2917330E+01
+  0.1079517E+01  0.2436917E+01
+  0.1147651E+01  0.1953439E+01
+  0.1220226E+01  0.1466466E+01
+  0.1296435E+01  0.9757204E+00
+  0.1375254E+01  0.4811054E+00
+  0.1455533E+01 -0.1729299E-01
+  0.1536102E+01 -0.5192326E+00
+  0.1615870E+01 -0.1024361E+01
+  0.1693894E+01 -0.1532264E+01
+  0.1769424E+01 -0.2042511E+01
+  0.1841907E+01 -0.2554689E+01
+  0.1910977E+01 -0.3068414E+01
+  0.1976425E+01 -0.3583352E+01
+  0.2038174E+01 -0.4099213E+01
+&
+ -0.2000000E+01  0.4304651E+01
+ -0.1727835E+01  0.3781148E+01
+ -0.1482830E+01  0.3254297E+01
+ -0.1264696E+01  0.2724000E+01
+ -0.1072705E+01  0.2190295E+01
+ -0.9056452E+00  0.1653425E+01
+ -0.7618010E+00  0.1113871E+01
+ -0.6390264E+00  0.5723174E+00
+ -0.5348890E+00  0.2956299E-01
+ -0.4468582E+00 -0.5135915E+00
+ -0.3724838E+00 -0.1056440E+01
+ -0.3095272E+00 -0.1598427E+01
+ -0.2560315E+00 -0.2139158E+01
+ -0.2103402E+00 -0.2678386E+01
+ -0.1710814E+00 -0.3215981E+01
+ -0.1371338E+00 -0.3751897E+01
+ -0.1075880E+00 -0.4286149E+01
+ -0.8170818E-01 -0.4818788E+01
+ -0.5889911E-01 -0.5349887E+01
+ -0.3867771E-01 -0.5879530E+01
+ -0.2065048E-01 -0.6407807E+01
+ -0.4495255E-02 -0.6934806E+01
+  0.1005319E-01 -0.7460613E+01
+  0.2321445E-01 -0.7985310E+01
+  0.3517143E-01 -0.8508974E+01
+  0.4607738E-01 -0.9031675E+01
+  0.5606139E-01 -0.9553480E+01
+  0.6523288E-01 -0.1007445E+02
+  0.7368504E-01 -0.1059464E+02
+  0.8149766E-01 -0.1111409E+02
+  0.8873942E-01 -0.1163287E+02
+  0.9546968E-01 -0.1215101E+02
+  0.1017400E+00 -0.1266854E+02
+  0.1075953E+00 -0.1318551E+02
+  0.1130751E+00 -0.1370195E+02
+  0.1182138E+00 -0.1421789E+02
+  0.1230422E+00 -0.1473335E+02
+  0.1275871E+00 -0.1524837E+02
+  0.1318727E+00 -0.1576296E+02
+  0.1359203E+00 -0.1627716E+02
+  0.1397491E+00 -0.1679097E+02
+  0.1433762E+00 -0.1730443E+02
+  0.1468171E+00 -0.1781754E+02
+  0.1500857E+00 -0.1833033E+02
+  0.1531946E+00 -0.1884280E+02
+  0.1561550E+00 -0.1935498E+02
+  0.1589774E+00 -0.1986687E+02
+  0.1616712E+00 -0.2037850E+02
+  0.1643649E+00 -0.2091428E+02
+  0.1670587E+00 -0.2147601E+02
+  0.1697524E+00 -0.2206563E+02
+  0.1724462E+00 -0.2268529E+02
+  0.1751399E+00 -0.2333737E+02
+  0.1778337E+00 -0.2402452E+02
+  0.1805274E+00 -0.2474965E+02
+  0.1832212E+00 -0.2551605E+02
+  0.1859149E+00 -0.2632737E+02
+  0.1886087E+00 -0.2718771E+02
+  0.1913024E+00 -0.2810167E+02
+  0.1939962E+00 -0.2907449E+02
+  0.1966899E+00 -0.3011206E+02
+  0.1993837E+00 -0.3122112E+02
+  0.2020774E+00 -0.3240936E+02
+  0.2047712E+00 -0.3368563E+02
+  0.2074649E+00 -0.3506013E+02
+  0.2101587E+00 -0.3654473E+02
+  0.2128525E+00 -0.3815325E+02
+  0.2155462E+00 -0.3990197E+02
+  0.2182400E+00 -0.4181012E+02
+  0.2209337E+00 -0.4390062E+02
+  0.2236275E+00 -0.4620102E+02
+  0.2263212E+00 -0.4874470E+02
+  0.2290150E+00 -0.5157252E+02
+  0.2317087E+00 -0.5473503E+02
+  0.2344025E+00 -0.5829553E+02
+  0.2370962E+00 -0.6233435E+02
+  0.2397900E+00 -0.6695502E+02
+  0.2424837E+00 -0.7229325E+02
+  0.2451775E+00 -0.7853050E+02
+  0.2478712E+00 -0.8591509E+02
+  0.2505650E+00 -0.9479603E+02
+  0.2532587E+00 -0.1056799E+03
+  0.2559525E+00 -0.1193309E+03
+  0.2586462E+00 -0.1369588E+03
+  0.2613400E+00 -0.1605990E+03
+  0.2640337E+00 -0.1939611E+03
+  0.2667275E+00 -0.2445973E+03
+  0.2694212E+00 -0.3306145E+03
+  0.2721150E+00 -0.5090181E+03
+  0.2748087E+00 -0.1101344E+04
+  0.2775025E+00  0.6889726E+04
+  0.2801962E+00  0.8369136E+03
+  0.2828900E+00  0.4461807E+03
+  0.2855837E+00  0.3044757E+03
+  0.2882775E+00  0.2312570E+03
+  0.2909712E+00  0.1865367E+03
+  0.2936650E+00  0.1563859E+03
+  0.2963587E+00  0.1346813E+03
+  0.2990525E+00  0.1183093E+03
+  0.3017462E+00  0.1055192E+03
+  0.3044400E+00  0.9525108E+02
+  0.3071337E+00  0.8682561E+02
+  0.3098275E+00  0.7978737E+02
+  0.3125212E+00  0.7381960E+02
+  0.3152150E+00  0.6869516E+02
+  0.3179087E+00  0.6424690E+02
+  0.3206025E+00  0.6034914E+02
+  0.3232962E+00  0.5690550E+02
+  0.3259900E+00  0.5384088E+02
+  0.3286837E+00  0.5109585E+02
+  0.3313775E+00  0.4862281E+02
+  0.3340712E+00  0.4638316E+02
+  0.3367650E+00  0.4434526E+02
+  0.3394587E+00  0.4248296E+02
+  0.3421525E+00  0.4077444E+02
+  0.3448462E+00  0.3920133E+02
+  0.3475400E+00  0.3774810E+02
+  0.3502337E+00  0.3640149E+02
+  0.3529275E+00  0.3515014E+02
+  0.3556212E+00  0.3398423E+02
+  0.3583150E+00  0.3289527E+02
+  0.3610087E+00  0.3187583E+02
+  0.3637025E+00  0.3091943E+02
+  0.3663962E+00  0.3002036E+02
+  0.3690900E+00  0.2917358E+02
+  0.3717837E+00  0.2837462E+02
+  0.3744775E+00  0.2761952E+02
+  0.3771712E+00  0.2690473E+02
+  0.3798650E+00  0.2622708E+02
+  0.3825587E+00  0.2558372E+02
+  0.3852525E+00  0.2497210E+02
+  0.3879462E+00  0.2438988E+02
+  0.3906400E+00  0.2383499E+02
+  0.3933337E+00  0.2330552E+02
+  0.3960275E+00  0.2279973E+02
+  0.3987212E+00  0.2231607E+02
+  0.4014150E+00  0.2185308E+02
+  0.4041087E+00  0.2140945E+02
+  0.4068025E+00  0.2098398E+02
+  0.4094962E+00  0.2057556E+02
+  0.4121900E+00  0.2018315E+02
+  0.4148837E+00  0.1980584E+02
+  0.4185222E+00  0.1931861E+02
+  0.4223517E+00  0.1883169E+02
+  0.4263871E+00  0.1834508E+02
+  0.4306450E+00  0.1785880E+02
+  0.4351437E+00  0.1737287E+02
+  0.4399035E+00  0.1688730E+02
+  0.4449469E+00  0.1640211E+02
+  0.4502989E+00  0.1591732E+02
+  0.4559877E+00  0.1543294E+02
+  0.4620446E+00  0.1494899E+02
+  0.4685047E+00  0.1446550E+02
+  0.4754078E+00  0.1398249E+02
+  0.4827983E+00  0.1349997E+02
+  0.4907268E+00  0.1301798E+02
+  0.4992506E+00  0.1253653E+02
+  0.5084347E+00  0.1205565E+02
+  0.5183533E+00  0.1157537E+02
+  0.5290910E+00  0.1109571E+02
+  0.5407450E+00  0.1061669E+02
+  0.5534264E+00  0.1013834E+02
+  0.5672633E+00  0.9660671E+01
+  0.5824029E+00  0.9183699E+01
+  0.5990145E+00  0.8707431E+01
+  0.6172934E+00  0.8231864E+01
+  0.6374636E+00  0.7756979E+01
+  0.6597817E+00  0.7282740E+01
+  0.6845398E+00  0.6809085E+01
+  0.7120672E+00  0.6335916E+01
+  0.7427306E+00  0.5863095E+01
+  0.7769293E+00  0.5390429E+01
+  0.8150859E+00  0.4917658E+01
+  0.8576273E+00  0.4444451E+01
+  0.9049557E+00  0.3970396E+01
+  0.9574051E+00  0.3495009E+01
+  0.1015187E+01  0.3017746E+01
+  0.1078328E+01  0.2538044E+01
+  0.1146612E+01  0.2055365E+01
+  0.1219547E+01  0.1569258E+01
+  0.1296360E+01  0.1079416E+01
+  0.1376046E+01  0.5857074E+00
+  0.1457453E+01  0.8818763E-01
+  0.1539386E+01 -0.4129269E+00
+  0.1620716E+01 -0.9173005E+00
+  0.1700451E+01 -0.1424529E+01
+  0.1777790E+01 -0.1934184E+01
+  0.1852131E+01 -0.2445847E+01
+  0.1923065E+01 -0.2959132E+01
+  0.1990351E+01 -0.3473696E+01
+  0.2053883E+01 -0.3989241E+01
+&
+ -0.2000000E+01            NaN
+ -0.1970000E+01            NaN
+ -0.1940000E+01            NaN
+ -0.1910000E+01            NaN
+ -0.1880000E+01            NaN
+ -0.1850000E+01            NaN
+ -0.1820000E+01            NaN
+ -0.1790000E+01            NaN
+ -0.1760000E+01            NaN
+ -0.1730000E+01            NaN
+ -0.1700000E+01            NaN
+ -0.1670000E+01            NaN
+ -0.1640000E+01            NaN
+ -0.1610000E+01            NaN
+ -0.1580000E+01            NaN
+ -0.1550000E+01            NaN
+ -0.1520000E+01            NaN
+ -0.1490000E+01            NaN
+ -0.1460000E+01            NaN
+ -0.1430000E+01            NaN
+ -0.1400000E+01            NaN
+ -0.1370000E+01            NaN
+ -0.1340000E+01            NaN
+ -0.1310000E+01            NaN
+ -0.1280000E+01            NaN
+ -0.1250000E+01            NaN
+ -0.1220000E+01            NaN
+ -0.1190000E+01            NaN
+ -0.1160000E+01            NaN
+ -0.1130000E+01            NaN
+ -0.1100000E+01            NaN
+ -0.1070000E+01            NaN
+ -0.1040000E+01            NaN
+ -0.1010000E+01            NaN
+ -0.9800000E+00            NaN
+ -0.9770000E+00            NaN
+ -0.9740000E+00            NaN
+ -0.9710000E+00            NaN
+ -0.9680000E+00            NaN
+ -0.9650000E+00            NaN
+ -0.9620000E+00            NaN
+ -0.9590000E+00            NaN
+ -0.9560000E+00            NaN
+ -0.9530000E+00            NaN
+ -0.9500000E+00            NaN
+ -0.9470000E+00            NaN
+ -0.9440000E+00            NaN
+ -0.9410000E+00            NaN
+ -0.9380000E+00            NaN
+ -0.9350000E+00            NaN
+ -0.9320000E+00            NaN
+ -0.9290000E+00            NaN
+ -0.9260000E+00            NaN
+ -0.9230000E+00            NaN
+ -0.9200000E+00            NaN
+ -0.9170000E+00            NaN
+ -0.9140000E+00            NaN
+ -0.9110000E+00            NaN
+ -0.9080000E+00            NaN
+ -0.9050000E+00            NaN
+ -0.9020000E+00            NaN
+ -0.8990000E+00            NaN
+ -0.8960000E+00            NaN
+ -0.8930000E+00            NaN
+ -0.8900000E+00            NaN
+ -0.8870000E+00            NaN
+ -0.8840000E+00            NaN
+ -0.8810000E+00            NaN
+ -0.8780000E+00            NaN
+ -0.8750000E+00            NaN
+ -0.8720000E+00            NaN
+ -0.8690000E+00            NaN
+ -0.8660000E+00            NaN
+ -0.8630000E+00            NaN
+ -0.8600000E+00            NaN
+ -0.8570000E+00            NaN
+ -0.8540000E+00            NaN
+ -0.8510000E+00            NaN
+ -0.8480000E+00            NaN
+ -0.8450000E+00            NaN
+ -0.8420000E+00            NaN
+ -0.8390000E+00            NaN
+ -0.8360000E+00            NaN
+ -0.8330000E+00            NaN
+ -0.8300000E+00            NaN
+ -0.8270000E+00            NaN
+ -0.8240000E+00            NaN
+ -0.8210000E+00            NaN
+ -0.8180000E+00            NaN
+ -0.8150000E+00            NaN
+ -0.8120000E+00            NaN
+ -0.8090000E+00            NaN
+ -0.8060000E+00            NaN
+ -0.8030000E+00            NaN
+ -0.8000000E+00            NaN
+ -0.7970000E+00            NaN
+ -0.7940000E+00            NaN
+ -0.7910000E+00            NaN
+ -0.7880000E+00            NaN
+ -0.7850000E+00            NaN
+ -0.7820000E+00            NaN
+ -0.7790000E+00            NaN
+ -0.7760000E+00            NaN
+ -0.7730000E+00            NaN
+ -0.7700000E+00            NaN
+ -0.7670000E+00            NaN
+ -0.7640000E+00            NaN
+ -0.7610000E+00            NaN
+ -0.7580000E+00            NaN
+ -0.7550000E+00            NaN
+ -0.7520000E+00            NaN
+ -0.7490000E+00            NaN
+ -0.7460000E+00            NaN
+ -0.7430000E+00            NaN
+ -0.7400000E+00            NaN
+ -0.7370000E+00            NaN
+ -0.7340000E+00            NaN
+ -0.7310000E+00            NaN
+ -0.7280000E+00            NaN
+ -0.7250000E+00            NaN
+ -0.7220000E+00            NaN
+ -0.7190000E+00            NaN
+ -0.7160000E+00            NaN
+ -0.7130000E+00            NaN
+ -0.7100000E+00            NaN
+ -0.7070000E+00            NaN
+ -0.7040000E+00            NaN
+ -0.7010000E+00            NaN
+ -0.6980000E+00            NaN
+ -0.6950000E+00            NaN
+ -0.6920000E+00            NaN
+ -0.6890000E+00            NaN
+ -0.6860000E+00            NaN
+ -0.6830000E+00            NaN
+ -0.6800000E+00            NaN
+ -0.6770000E+00            NaN
+ -0.6740000E+00            NaN
+ -0.6710000E+00            NaN
+ -0.6680000E+00            NaN
+ -0.6650000E+00            NaN
+ -0.6620000E+00            NaN
+ -0.6590000E+00            NaN
+ -0.6560000E+00            NaN
+ -0.6530000E+00            NaN
+ -0.6500000E+00            NaN
+ -0.6470000E+00            NaN
+ -0.6440000E+00            NaN
+ -0.6410000E+00            NaN
+ -0.6380000E+00            NaN
+ -0.6350000E+00            NaN
+ -0.6320000E+00            NaN
+ -0.6290000E+00            NaN
+ -0.6260000E+00            NaN
+ -0.6230000E+00            NaN
+ -0.6200000E+00            NaN
+ -0.6170000E+00            NaN
+ -0.6140000E+00            NaN
+ -0.6110000E+00            NaN
+ -0.6080000E+00            NaN
+ -0.6050000E+00            NaN
+ -0.6020000E+00            NaN
+ -0.5990000E+00            NaN
+ -0.5960000E+00            NaN
+ -0.5930000E+00            NaN
+ -0.5900000E+00            NaN
+ -0.5870000E+00            NaN
+ -0.5840000E+00            NaN
+ -0.5810000E+00            NaN
+ -0.5780000E+00            NaN
+ -0.5750000E+00            NaN
+ -0.5720000E+00            NaN
+ -0.5690000E+00            NaN
+ -0.5660000E+00            NaN
+ -0.5630000E+00            NaN
+ -0.5600000E+00            NaN
+ -0.5570000E+00            NaN
+ -0.5540000E+00            NaN
+ -0.5510000E+00            NaN
+ -0.5480000E+00            NaN
+ -0.5450000E+00            NaN
+ -0.5420000E+00            NaN
+ -0.5390000E+00            NaN
+ -0.5360000E+00            NaN
+ -0.5330000E+00            NaN
+ -0.5300000E+00            NaN
+ -0.5270000E+00            NaN
+ -0.5240000E+00            NaN
+ -0.5210000E+00            NaN
+ -0.5180000E+00            NaN
+ -0.5150000E+00            NaN
+ -0.5120000E+00            NaN
+ -0.5090000E+00            NaN
+ -0.5060000E+00            NaN
+ -0.5030000E+00            NaN
+ -0.5000000E+00            NaN
+ -0.4970000E+00            NaN
+ -0.4940000E+00            NaN
+ -0.4910000E+00            NaN
+ -0.4880000E+00            NaN
+ -0.4850000E+00            NaN
+ -0.4820000E+00            NaN
+ -0.4790000E+00            NaN
+ -0.4760000E+00            NaN
+ -0.4730000E+00            NaN
+ -0.4700000E+00            NaN
+ -0.4670000E+00            NaN
+ -0.4640000E+00            NaN
+ -0.4610000E+00            NaN
+ -0.4580000E+00            NaN
+ -0.4550000E+00            NaN
+ -0.4520000E+00            NaN
+ -0.4490000E+00            NaN
+ -0.4460000E+00            NaN
+ -0.4430000E+00            NaN
+ -0.4400000E+00            NaN
+ -0.4370000E+00            NaN
+ -0.4340000E+00            NaN
+ -0.4310000E+00            NaN
+ -0.4280000E+00            NaN
+ -0.4250000E+00            NaN
+ -0.4220000E+00            NaN
+ -0.4190000E+00            NaN
+ -0.4160000E+00            NaN
+ -0.4130000E+00            NaN
+ -0.4100000E+00            NaN
+ -0.4070000E+00            NaN
+ -0.4040000E+00            NaN
+ -0.4010000E+00            NaN
+ -0.3980000E+00            NaN
+ -0.3950000E+00            NaN
+ -0.3920000E+00            NaN
+ -0.3890000E+00            NaN
+ -0.3860000E+00            NaN
+ -0.3830000E+00            NaN
+ -0.3800000E+00            NaN
+ -0.3770000E+00            NaN
+ -0.3740000E+00            NaN
+ -0.3710000E+00            NaN
+ -0.3680000E+00            NaN
+ -0.3650000E+00            NaN
+ -0.3620000E+00            NaN
+ -0.3590000E+00            NaN
+ -0.3560000E+00            NaN
+ -0.3530000E+00            NaN
+ -0.3500000E+00            NaN
+ -0.3470000E+00            NaN
+ -0.3440000E+00            NaN
+ -0.3410000E+00            NaN
+ -0.3380000E+00            NaN
+ -0.3350000E+00            NaN
+ -0.3320000E+00            NaN
+ -0.3290000E+00            NaN
+ -0.3260000E+00            NaN
+ -0.3230000E+00            NaN
+ -0.3200000E+00            NaN
+ -0.3170000E+00            NaN
+ -0.3140000E+00            NaN
+ -0.3110000E+00            NaN
+ -0.3080000E+00            NaN
+ -0.3050000E+00            NaN
+ -0.3020000E+00            NaN
+ -0.2990000E+00            NaN
+ -0.2960000E+00            NaN
+ -0.2930000E+00            NaN
+ -0.2900000E+00            NaN
+ -0.2870000E+00            NaN
+ -0.2840000E+00            NaN
+ -0.2810000E+00            NaN
+ -0.2780000E+00            NaN
+ -0.2750000E+00            NaN
+ -0.2720000E+00            NaN
+ -0.2690000E+00            NaN
+ -0.2660000E+00            NaN
+ -0.2630000E+00            NaN
+ -0.2600000E+00            NaN
+ -0.2570000E+00            NaN
+ -0.2540000E+00            NaN
+ -0.2510000E+00            NaN
+ -0.2480000E+00            NaN
+ -0.2450000E+00            NaN
+ -0.2420000E+00            NaN
+ -0.2390000E+00            NaN
+ -0.2360000E+00            NaN
+ -0.2330000E+00            NaN
+ -0.2300000E+00            NaN
+ -0.2270000E+00            NaN
+ -0.2240000E+00            NaN
+ -0.2210000E+00            NaN
+ -0.2180000E+00            NaN
+ -0.2150000E+00            NaN
+ -0.2120000E+00            NaN
+ -0.2090000E+00            NaN
+ -0.2060000E+00            NaN
+ -0.2030000E+00            NaN
+ -0.2000000E+00            NaN
+ -0.1970000E+00            NaN
+ -0.1940000E+00            NaN
+ -0.1910000E+00            NaN
+ -0.1880000E+00            NaN
+ -0.1850000E+00            NaN
+ -0.1820000E+00            NaN
+ -0.1790000E+00            NaN
+ -0.1760000E+00            NaN
+ -0.1730000E+00            NaN
+ -0.1700000E+00            NaN
+ -0.1670000E+00            NaN
+ -0.1640000E+00            NaN
+ -0.1610000E+00            NaN
+ -0.1580000E+00            NaN
+ -0.1550000E+00            NaN
+ -0.1520000E+00            NaN
+ -0.1490000E+00            NaN
+ -0.1460000E+00            NaN
+ -0.1430000E+00            NaN
+ -0.1400000E+00            NaN
+ -0.1370000E+00            NaN
+ -0.1340000E+00            NaN
+ -0.1310000E+00            NaN
+ -0.1280000E+00            NaN
+ -0.1250000E+00            NaN
+ -0.1220000E+00            NaN
+ -0.1190000E+00            NaN
+ -0.1160000E+00            NaN
+ -0.1130000E+00            NaN
+ -0.1100000E+00            NaN
+ -0.1070000E+00            NaN
+ -0.1040000E+00            NaN
+ -0.1010000E+00            NaN
+ -0.9800002E-01            NaN
+ -0.9500002E-01            NaN
+ -0.9200002E-01            NaN
+ -0.8900002E-01            NaN
+ -0.8600002E-01            NaN
+ -0.8300002E-01            NaN
+ -0.8000001E-01            NaN
+ -0.7700001E-01            NaN
+ -0.7400001E-01            NaN
+ -0.7100001E-01            NaN
+ -0.6800001E-01            NaN
+ -0.6500001E-01            NaN
+ -0.6200001E-01            NaN
+ -0.5900001E-01            NaN
+ -0.5600001E-01            NaN
+ -0.5300001E-01            NaN
+ -0.5000001E-01            NaN
+ -0.4700001E-01            NaN
+ -0.4400001E-01            NaN
+ -0.4100001E-01            NaN
+ -0.3800001E-01            NaN
+ -0.3500001E-01            NaN
+ -0.3200001E-01            NaN
+ -0.2900001E-01            NaN
+ -0.2600001E-01            NaN
+ -0.2300001E-01            NaN
+ -0.2000001E-01            NaN
+ -0.1700001E-01            NaN
+ -0.1400001E-01            NaN
+ -0.1100001E-01            NaN
+ -0.8000014E-02            NaN
+ -0.5000014E-02            NaN
+ -0.2000014E-02            NaN
+  0.9999857E-03            NaN
+  0.3999986E-02            NaN
+  0.6999986E-02            NaN
+  0.9999986E-02            NaN
+  0.1299999E-01            NaN
+  0.1599999E-01            NaN
+  0.1899999E-01            NaN
+  0.2199999E-01            NaN
+  0.2499999E-01            NaN
+  0.2799999E-01            NaN
+  0.3099999E-01            NaN
+  0.3399999E-01            NaN
+  0.3699999E-01            NaN
+  0.3999999E-01            NaN
+  0.4299999E-01            NaN
+  0.4599999E-01            NaN
+  0.4899999E-01            NaN
+  0.5199999E-01            NaN
+  0.5499999E-01            NaN
+  0.5799999E-01            NaN
+  0.6099999E-01            NaN
+  0.6399999E-01            NaN
+  0.6699999E-01            NaN
+  0.6999999E-01            NaN
+  0.7299999E-01            NaN
+  0.7599999E-01            NaN
+  0.7899999E-01            NaN
+  0.8199999E-01            NaN
+  0.8499999E-01            NaN
+  0.8799999E-01            NaN
+  0.9099999E-01            NaN
+  0.9399999E-01            NaN
+  0.9699999E-01            NaN
+  0.9999999E-01            NaN
+  0.1030000E+00            NaN
+  0.1060000E+00            NaN
+  0.1090000E+00            NaN
+  0.1120000E+00            NaN
+  0.1150000E+00            NaN
+  0.1180000E+00            NaN
+  0.1210000E+00            NaN
+  0.1240000E+00            NaN
+  0.1270000E+00            NaN
+  0.1300000E+00            NaN
+  0.1330000E+00            NaN
+  0.1360000E+00            NaN
+  0.1390000E+00            NaN
+  0.1420000E+00            NaN
+  0.1450000E+00            NaN
+  0.1480000E+00            NaN
+  0.1510000E+00            NaN
+  0.1540000E+00            NaN
+  0.1570000E+00            NaN
+  0.1600000E+00            NaN
+  0.1630000E+00            NaN
+  0.1660000E+00            NaN
+  0.1690000E+00            NaN
+  0.1720000E+00            NaN
+  0.1750000E+00            NaN
+  0.1780000E+00            NaN
+  0.1810000E+00            NaN
+  0.1840000E+00            NaN
+  0.1870000E+00            NaN
+  0.1900000E+00            NaN
+  0.1930000E+00            NaN
+  0.1960000E+00            NaN
+  0.1990000E+00            NaN
+  0.2020000E+00            NaN
+  0.2050000E+00            NaN
+  0.2080000E+00            NaN
+  0.2110000E+00            NaN
+  0.2140000E+00            NaN
+  0.2170000E+00            NaN
+  0.2200000E+00            NaN
+  0.2230000E+00            NaN
+  0.2260000E+00            NaN
+  0.2290000E+00            NaN
+  0.2320000E+00            NaN
+  0.2350000E+00            NaN
+  0.2380000E+00            NaN
+  0.2410000E+00            NaN
+  0.2440000E+00            NaN
+  0.2470000E+00            NaN
+  0.2500000E+00            NaN
+  0.2530000E+00            NaN
+  0.2560000E+00            NaN
+  0.2590000E+00            NaN
+  0.2620000E+00            NaN
+  0.2650000E+00            NaN
+  0.2680000E+00            NaN
+  0.2710000E+00            NaN
+  0.2740000E+00            NaN
+  0.2770000E+00            NaN
+  0.2800000E+00            NaN
+  0.2830000E+00            NaN
+  0.2860000E+00            NaN
+  0.2890000E+00            NaN
+  0.2920000E+00            NaN
+  0.2950000E+00            NaN
+  0.2980000E+00            NaN
+  0.3010000E+00            NaN
+  0.3040000E+00            NaN
+  0.3070000E+00            NaN
+  0.3100000E+00            NaN
+  0.3130000E+00            NaN
+  0.3160000E+00            NaN
+  0.3190000E+00            NaN
+  0.3220000E+00            NaN
+  0.3250000E+00            NaN
+  0.3280000E+00            NaN
+  0.3310000E+00            NaN
+  0.3340000E+00            NaN
+  0.3370000E+00            NaN
+  0.3400000E+00            NaN
+  0.3430000E+00            NaN
+  0.3460000E+00            NaN
+  0.3490000E+00            NaN
+  0.3520000E+00            NaN
+  0.3550000E+00            NaN
+  0.3580000E+00            NaN
+  0.3610000E+00            NaN
+  0.3640000E+00            NaN
+  0.3670000E+00            NaN
+  0.3700000E+00            NaN
+  0.3730000E+00            NaN
+  0.3760000E+00            NaN
+  0.3790000E+00            NaN
+  0.3820000E+00            NaN
+  0.3850000E+00            NaN
+  0.3880000E+00            NaN
+  0.3910000E+00            NaN
+  0.3940000E+00            NaN
+  0.3970000E+00            NaN
+  0.4000000E+00            NaN
+  0.4030000E+00            NaN
+  0.4060000E+00            NaN
+  0.4090000E+00            NaN
+  0.4120000E+00            NaN
+  0.4150000E+00            NaN
+  0.4180000E+00            NaN
+  0.4210000E+00            NaN
+  0.4240000E+00            NaN
+  0.4270000E+00            NaN
+  0.4300000E+00            NaN
+  0.4330000E+00            NaN
+  0.4360000E+00            NaN
+  0.4390000E+00            NaN
+  0.4420000E+00            NaN
+  0.4450000E+00            NaN
+  0.4480000E+00            NaN
+  0.4510000E+00            NaN
+  0.4540000E+00            NaN
+  0.4570000E+00            NaN
+  0.4600000E+00            NaN
+  0.4630000E+00            NaN
+  0.4660000E+00            NaN
+  0.4690000E+00            NaN
+  0.4720000E+00            NaN
+  0.4750000E+00            NaN
+  0.4780000E+00            NaN
+  0.4810000E+00            NaN
+  0.4840000E+00            NaN
+  0.4870000E+00            NaN
+  0.4900000E+00            NaN
+  0.4930000E+00            NaN
+  0.4960000E+00            NaN
+  0.4990000E+00            NaN
+  0.5020000E+00            NaN
+  0.5050000E+00            NaN
+  0.5080000E+00            NaN
+  0.5110000E+00            NaN
+  0.5140000E+00            NaN
+  0.5170000E+00            NaN
+  0.5200000E+00            NaN
+  0.5230000E+00            NaN
+  0.5260000E+00            NaN
+  0.5290000E+00            NaN
+  0.5320000E+00            NaN
+  0.5350000E+00            NaN
+  0.5380000E+00            NaN
+  0.5410000E+00            NaN
+  0.5440000E+00            NaN
+  0.5470000E+00            NaN
+  0.5500000E+00            NaN
+  0.5530000E+00            NaN
+  0.5560000E+00            NaN
+  0.5590000E+00            NaN
+  0.5620000E+00            NaN
+  0.5650000E+00            NaN
+  0.5680000E+00            NaN
+  0.5710000E+00            NaN
+  0.5740000E+00            NaN
+  0.5770000E+00            NaN
+  0.5800000E+00            NaN
+  0.5830000E+00            NaN
+  0.5860000E+00            NaN
+  0.5890000E+00            NaN
+  0.5920000E+00            NaN
+  0.5950000E+00            NaN
+  0.5980000E+00            NaN
+  0.6010000E+00            NaN
+  0.6040000E+00            NaN
+  0.6070000E+00            NaN
+  0.6100000E+00            NaN
+  0.6130000E+00            NaN
+  0.6160000E+00            NaN
+  0.6190000E+00            NaN
+  0.6220000E+00            NaN
+  0.6250000E+00            NaN
+  0.6280000E+00            NaN
+  0.6310000E+00            NaN
+  0.6340000E+00            NaN
+  0.6370000E+00            NaN
+  0.6400000E+00            NaN
+  0.6430000E+00            NaN
+  0.6460000E+00            NaN
+  0.6490000E+00            NaN
+  0.6520000E+00            NaN
+  0.6550000E+00            NaN
+  0.6580000E+00            NaN
+  0.6610000E+00            NaN
+  0.6640000E+00            NaN
+  0.6670000E+00            NaN
+  0.6700000E+00            NaN
+  0.6730000E+00            NaN
+  0.6760000E+00            NaN
+  0.6790000E+00            NaN
+  0.6820000E+00            NaN
+  0.6850000E+00            NaN
+  0.6880000E+00            NaN
+  0.6910000E+00            NaN
+  0.6940000E+00            NaN
+  0.6970000E+00            NaN
+  0.7000000E+00            NaN
+  0.7030000E+00            NaN
+  0.7060000E+00            NaN
+  0.7090000E+00            NaN
+  0.7120000E+00            NaN
+  0.7150000E+00            NaN
+  0.7180000E+00            NaN
+  0.7210000E+00            NaN
+  0.7240000E+00            NaN
+  0.7270000E+00            NaN
+  0.7300000E+00            NaN
+  0.7330000E+00            NaN
+  0.7360000E+00            NaN
+  0.7390000E+00            NaN
+  0.7420000E+00            NaN
+  0.7450000E+00            NaN
+  0.7480000E+00            NaN
+  0.7510000E+00            NaN
+  0.7540000E+00            NaN
+  0.7570000E+00            NaN
+  0.7600000E+00            NaN
+  0.7630000E+00            NaN
+  0.7660000E+00            NaN
+  0.7690000E+00            NaN
+  0.7720000E+00            NaN
+  0.7750000E+00            NaN
+  0.7780000E+00            NaN
+  0.7810000E+00            NaN
+  0.7840000E+00            NaN
+  0.7870000E+00            NaN
+  0.7900000E+00            NaN
+  0.7930000E+00            NaN
+  0.7960000E+00            NaN
+  0.7990000E+00            NaN
+  0.8020000E+00            NaN
+  0.8050000E+00            NaN
+  0.8080000E+00            NaN
+  0.8110000E+00            NaN
+  0.8140000E+00            NaN
+  0.8170000E+00            NaN
+  0.8200000E+00            NaN
+  0.8230000E+00            NaN
+  0.8260000E+00            NaN
+  0.8290000E+00            NaN
+  0.8320000E+00            NaN
+  0.8350000E+00            NaN
+  0.8380000E+00            NaN
+  0.8410000E+00            NaN
+  0.8440000E+00            NaN
+  0.8470000E+00            NaN
+  0.8500000E+00            NaN
+  0.8530000E+00            NaN
+  0.8560000E+00            NaN
+  0.8590000E+00            NaN
+  0.8620000E+00            NaN
+  0.8650000E+00            NaN
+  0.8680000E+00            NaN
+  0.8710000E+00            NaN
+  0.8740000E+00            NaN
+  0.8770000E+00            NaN
+  0.8800000E+00            NaN
+  0.8830000E+00            NaN
+  0.8860000E+00            NaN
+  0.8890000E+00            NaN
+  0.8920000E+00            NaN
+  0.8950000E+00            NaN
+  0.8980000E+00            NaN
+  0.9010000E+00            NaN
+  0.9040000E+00            NaN
+  0.9070000E+00            NaN
+  0.9100000E+00            NaN
+  0.9130000E+00            NaN
+  0.9160000E+00            NaN
+  0.9190000E+00            NaN
+  0.9220000E+00            NaN
+  0.9250000E+00            NaN
+  0.9280000E+00            NaN
+  0.9310000E+00            NaN
+  0.9340000E+00            NaN
+  0.9370000E+00            NaN
+  0.9400000E+00            NaN
+  0.9430000E+00            NaN
+  0.9460000E+00            NaN
+  0.9490000E+00            NaN
+  0.9520000E+00            NaN
+  0.9550000E+00            NaN
+  0.9580000E+00            NaN
+  0.9610000E+00            NaN
+  0.9640000E+00            NaN
+  0.9670000E+00            NaN
+  0.9700000E+00            NaN
+  0.9730000E+00            NaN
+  0.9760000E+00            NaN
+  0.9790000E+00            NaN
+  0.9820000E+00            NaN
+  0.9850000E+00            NaN
+  0.9880000E+00            NaN
+  0.9910000E+00            NaN
+  0.9940000E+00            NaN
+  0.9970000E+00            NaN
+  0.1000000E+01            NaN
+  0.1003000E+01            NaN
+  0.1033000E+01            NaN
+  0.1063000E+01            NaN
+  0.1093000E+01            NaN
+  0.1123000E+01            NaN
+  0.1153000E+01            NaN
+  0.1183000E+01            NaN
+  0.1213000E+01            NaN
+  0.1243000E+01            NaN
+  0.1273000E+01            NaN
+  0.1303000E+01            NaN
+  0.1333000E+01            NaN
+  0.1363000E+01            NaN
+  0.1393000E+01            NaN
+  0.1423000E+01            NaN
+  0.1453000E+01            NaN
+  0.1483000E+01            NaN
+  0.1513000E+01            NaN
+  0.1543000E+01            NaN
+  0.1573000E+01            NaN
+  0.1603000E+01            NaN
+  0.1633000E+01            NaN
+  0.1663000E+01            NaN
+  0.1693000E+01            NaN
+  0.1723000E+01            NaN
+  0.1753000E+01            NaN
+  0.1783000E+01            NaN
+  0.1813000E+01            NaN
+  0.1843000E+01            NaN
+  0.1873000E+01            NaN
+  0.1903000E+01            NaN
+  0.1933000E+01            NaN
+  0.1963000E+01            NaN
+  0.1993000E+01            NaN
+&
+-3.50202 -19
+&
+-0.294466 -19
+&
+@ with g1
+@ g1 on
+ -0.2000000E+01  0.5335029E+01
+ -0.1970086E+01  0.5001399E+01
+ -0.1904893E+01  0.4674173E+01
+ -0.1765124E+01  0.4294616E+01
+ -0.1548931E+01  0.3825590E+01
+ -0.1315304E+01  0.3316411E+01
+ -0.1094272E+01  0.2795123E+01
+ -0.8932870E+00  0.2268368E+01
+ -0.7138112E+00  0.1738045E+01
+ -0.5554233E+00  0.1205025E+01
+ -0.4168711E+00  0.6699525E+00
+ -0.2964603E+00  0.1334335E+00
+ -0.1922739E+00 -0.4039419E+00
+ -0.1023337E+00 -0.9416248E+00
+ -0.2472151E-01 -0.1479138E+01
+  0.4233775E-01 -0.2016095E+01
+  0.1004298E+00 -0.2552205E+01
+  0.1509344E+00 -0.3087269E+01
+  0.1950297E+00 -0.3621158E+01
+  0.2337091E+00 -0.4153808E+01
+  0.2678031E+00 -0.4685195E+01
+  0.2980033E+00 -0.5215328E+01
+  0.3248843E+00 -0.5744239E+01
+  0.3489240E+00 -0.6271972E+01
+  0.3705204E+00 -0.6798579E+01
+  0.3900060E+00 -0.7324117E+01
+  0.4076593E+00 -0.7848643E+01
+  0.4237149E+00 -0.8372216E+01
+  0.4383710E+00 -0.8894891E+01
+  0.4517957E+00 -0.9416720E+01
+  0.4641324E+00 -0.9937755E+01
+  0.4755041E+00 -0.1045804E+02
+  0.4860163E+00 -0.1097763E+02
+  0.4957603E+00 -0.1149655E+02
+  0.5048152E+00 -0.1201485E+02
+  0.5132500E+00 -0.1253257E+02
+  0.5211250E+00 -0.1304973E+02
+  0.5284930E+00 -0.1356636E+02
+  0.5354005E+00 -0.1408251E+02
+  0.5418887E+00 -0.1459818E+02
+  0.5479941E+00 -0.1511342E+02
+  0.5537491E+00 -0.1562823E+02
+  0.5591826E+00 -0.1614264E+02
+  0.5643205E+00 -0.1665668E+02
+  0.5691860E+00 -0.1717035E+02
+  0.5738000E+00 -0.1768368E+02
+  0.5781813E+00 -0.1819669E+02
+  0.5823468E+00 -0.1870938E+02
+  0.5863121E+00 -0.1922178E+02
+  0.5900911E+00 -0.1973389E+02
+  0.5936965E+00 -0.2024573E+02
+  0.5973019E+00 -0.2078195E+02
+  0.6009073E+00 -0.2134435E+02
+  0.6045127E+00 -0.2193494E+02
+  0.6081181E+00 -0.2255591E+02
+  0.6117235E+00 -0.2320971E+02
+  0.6153289E+00 -0.2389904E+02
+  0.6189343E+00 -0.2462693E+02
+  0.6225397E+00 -0.2539673E+02
+  0.6261451E+00 -0.2621221E+02
+  0.6297505E+00 -0.2707760E+02
+  0.6333559E+00 -0.2799769E+02
+  0.6369613E+00 -0.2897788E+02
+  0.6405667E+00 -0.3002430E+02
+  0.6441721E+00 -0.3114397E+02
+  0.6477775E+00 -0.3234491E+02
+  0.6513829E+00 -0.3363638E+02
+  0.6549883E+00 -0.3502908E+02
+  0.6585937E+00 -0.3653548E+02
+  0.6621992E+00 -0.3817018E+02
+  0.6658046E+00 -0.3995041E+02
+  0.6694100E+00 -0.4189660E+02
+  0.6730154E+00 -0.4403321E+02
+  0.6766208E+00 -0.4638975E+02
+  0.6802262E+00 -0.4900217E+02
+  0.6838316E+00 -0.5191468E+02
+  0.6874370E+00 -0.5518233E+02
+  0.6910424E+00 -0.5887450E+02
+  0.6946478E+00 -0.6307990E+02
+  0.6982532E+00 -0.6791380E+02
+  0.7018586E+00 -0.7352880E+02
+  0.7054640E+00 -0.8013124E+02
+  0.7090694E+00 -0.8800717E+02
+  0.7126748E+00 -0.9756491E+02
+  0.7162802E+00 -0.1094083E+03
+  0.7198856E+00 -0.1244694E+03
+  0.7234910E+00 -0.1442669E+03
+  0.7270964E+00 -0.1714538E+03
+  0.7307018E+00 -0.2111188E+03
+  0.7343072E+00 -0.2744162E+03
+  0.7379126E+00 -0.3914358E+03
+  0.7415180E+00 -0.6810188E+03
+  0.7451234E+00 -0.2596723E+04
+  0.7487288E+00  0.1438359E+04
+  0.7523342E+00  0.5641128E+03
+  0.7559396E+00  0.3512044E+03
+  0.7595450E+00  0.2551505E+03
+  0.7631504E+00  0.2004612E+03
+  0.7667558E+00  0.1651491E+03
+  0.7703612E+00  0.1404644E+03
+  0.7739666E+00  0.1222362E+03
+  0.7775720E+00  0.1082236E+03
+  0.7811774E+00  0.9711526E+02
+  0.7847828E+00  0.8809258E+02
+  0.7883882E+00  0.8061820E+02
+  0.7919936E+00  0.7432475E+02
+  0.7955990E+00  0.6895257E+02
+  0.7992044E+00  0.6431292E+02
+  0.8028098E+00  0.6026531E+02
+  0.8064152E+00  0.5670304E+02
+  0.8100206E+00  0.5354358E+02
+  0.8136260E+00  0.5072212E+02
+  0.8172314E+00  0.4818702E+02
+  0.8208368E+00  0.4589668E+02
+  0.8244423E+00  0.4381716E+02
+  0.8280477E+00  0.4192054E+02
+  0.8316531E+00  0.4018360E+02
+  0.8352585E+00  0.3858691E+02
+  0.8388639E+00  0.3711406E+02
+  0.8424693E+00  0.3575110E+02
+  0.8460747E+00  0.3448611E+02
+  0.8496801E+00  0.3330881E+02
+  0.8532855E+00  0.3221035E+02
+  0.8568909E+00  0.3118299E+02
+  0.8604963E+00  0.3022000E+02
+  0.8641017E+00  0.2931546E+02
+  0.8677071E+00  0.2846415E+02
+  0.8713125E+00  0.2766147E+02
+  0.8749179E+00  0.2690332E+02
+  0.8785233E+00  0.2618606E+02
+  0.8821287E+00  0.2550642E+02
+  0.8857341E+00  0.2486148E+02
+  0.8893395E+00  0.2424862E+02
+  0.8929449E+00  0.2366547E+02
+  0.8965503E+00  0.2310989E+02
+  0.9001557E+00  0.2257993E+02
+  0.9037611E+00  0.2207383E+02
+  0.9073665E+00  0.2159000E+02
+  0.9109719E+00  0.2112696E+02
+  0.9145773E+00  0.2068337E+02
+  0.9181827E+00  0.2025802E+02
+  0.9217881E+00  0.1984978E+02
+  0.9262938E+00  0.1936206E+02
+  0.9310283E+00  0.1887463E+02
+  0.9360086E+00  0.1838749E+02
+  0.9412538E+00  0.1790065E+02
+  0.9467846E+00  0.1741413E+02
+  0.9526241E+00  0.1692793E+02
+  0.9587976E+00  0.1644208E+02
+  0.9653332E+00  0.1595658E+02
+  0.9722621E+00  0.1547145E+02
+  0.9796191E+00  0.1498671E+02
+  0.9874427E+00  0.1450237E+02
+  0.9957759E+00  0.1401845E+02
+  0.1004667E+01  0.1353495E+02
+  0.1014170E+01  0.1305191E+02
+  0.1024346E+01  0.1256934E+02
+  0.1035262E+01  0.1208724E+02
+  0.1046995E+01  0.1160565E+02
+  0.1059632E+01  0.1112456E+02
+  0.1073271E+01  0.1064399E+02
+  0.1088021E+01  0.1016396E+02
+  0.1104007E+01  0.9684451E+01
+  0.1121371E+01  0.9205476E+01
+  0.1140271E+01  0.8727019E+01
+  0.1160884E+01  0.8249060E+01
+  0.1183412E+01  0.7771563E+01
+  0.1208077E+01  0.7294475E+01
+  0.1235123E+01  0.6817721E+01
+  0.1264818E+01  0.6341198E+01
+  0.1297448E+01  0.5864768E+01
+  0.1333311E+01  0.5388255E+01
+  0.1372705E+01  0.4911439E+01
+  0.1415915E+01  0.4434049E+01
+  0.1463188E+01  0.3955770E+01
+  0.1514704E+01  0.3476242E+01
+  0.1570541E+01  0.2995078E+01
+  0.1630643E+01  0.2511884E+01
+  0.1694791E+01  0.2026288E+01
+  0.1762580E+01  0.1537972E+01
+  0.1833430E+01  0.1046704E+01
+  0.1906604E+01  0.5523600E+00
+  0.1981265E+01  0.5493341E-01
+  0.2056530E+01 -0.4454716E+00
+&
+ -0.2000000E+01  0.4692875E+01
+ -0.1776288E+01  0.4239522E+01
+ -0.1522447E+01  0.3733208E+01
+ -0.1280298E+01  0.3213642E+01
+ -0.1058941E+01  0.2688688E+01
+ -0.8601359E+00  0.2160198E+01
+ -0.6836509E+00  0.1628909E+01
+ -0.5284077E+00  0.1095347E+01
+ -0.3928455E+00  0.5600350E+00
+ -0.2751157E+00  0.2352007E-01
+ -0.1732338E+00 -0.5136502E+00
+ -0.8520860E-01 -0.1050968E+01
+ -0.9143324E-02 -0.1587996E+01
+  0.5669696E-01 -0.2124386E+01
+  0.1138501E+00 -0.2659881E+01
+  0.1636478E+00 -0.3194306E+01
+  0.2072242E+00 -0.3727553E+01
+  0.2455344E+00 -0.4259571E+01
+  0.2793770E+00 -0.4790345E+01
+  0.3094177E+00 -0.5319890E+01
+  0.3362103E+00 -0.5848240E+01
+  0.3602162E+00 -0.6375440E+01
+  0.3818206E+00 -0.6901542E+01
+  0.4013458E+00 -0.7426603E+01
+  0.4190625E+00 -0.7950679E+01
+  0.4351991E+00 -0.8473825E+01
+  0.4499490E+00 -0.8996095E+01
+  0.4634767E+00 -0.9517542E+01
+  0.4759227E+00 -0.1003821E+02
+  0.4874078E+00 -0.1055816E+02
+  0.4980357E+00 -0.1107741E+02
+  0.5078965E+00 -0.1159602E+02
+  0.5170682E+00 -0.1211402E+02
+  0.5256190E+00 -0.1263145E+02
+  0.5336086E+00 -0.1314834E+02
+  0.5410895E+00 -0.1366471E+02
+  0.5481078E+00 -0.1418060E+02
+  0.5547044E+00 -0.1469603E+02
+  0.5609157E+00 -0.1521102E+02
+  0.5667741E+00 -0.1572561E+02
+  0.5723082E+00 -0.1623980E+02
+  0.5775441E+00 -0.1675362E+02
+  0.5825049E+00 -0.1726709E+02
+  0.5872115E+00 -0.1778021E+02
+  0.5916828E+00 -0.1829302E+02
+  0.5959358E+00 -0.1880552E+02
+  0.5999859E+00 -0.1931773E+02
+  0.6038473E+00 -0.1982966E+02
+  0.6075328E+00 -0.2034131E+02
+  0.6112182E+00 -0.2087714E+02
+  0.6149036E+00 -0.2143892E+02
+  0.6185890E+00 -0.2202861E+02
+  0.6222745E+00 -0.2264838E+02
+  0.6259599E+00 -0.2330060E+02
+  0.6296453E+00 -0.2398795E+02
+  0.6333308E+00 -0.2471337E+02
+  0.6370162E+00 -0.2548015E+02
+  0.6407016E+00 -0.2629198E+02
+  0.6443870E+00 -0.2715297E+02
+  0.6480725E+00 -0.2806780E+02
+  0.6517579E+00 -0.2904171E+02
+  0.6554433E+00 -0.3008067E+02
+  0.6591287E+00 -0.3119149E+02
+  0.6628142E+00 -0.3238195E+02
+  0.6664996E+00 -0.3366098E+02
+  0.6701850E+00 -0.3503895E+02
+  0.6738705E+00 -0.3652785E+02
+  0.6775559E+00 -0.3814173E+02
+  0.6812413E+00 -0.3989711E+02
+  0.6849267E+00 -0.4181355E+02
+  0.6886122E+00 -0.4391440E+02
+  0.6922976E+00 -0.4622773E+02
+  0.6959830E+00 -0.4878765E+02
+  0.6996685E+00 -0.5163594E+02
+  0.7033539E+00 -0.5482442E+02
+  0.7070393E+00 -0.5841809E+02
+  0.7107247E+00 -0.6249967E+02
+  0.7144102E+00 -0.6717599E+02
+  0.7180956E+00 -0.7258759E+02
+  0.7217810E+00 -0.7892302E+02
+  0.7254665E+00 -0.8644135E+02
+  0.7291519E+00 -0.9550851E+02
+  0.7328373E+00 -0.1066587E+03
+  0.7365227E+00 -0.1207037E+03
+  0.7402082E+00 -0.1389402E+03
+  0.7438936E+00 -0.1635750E+03
+  0.7475790E+00 -0.1986939E+03
+  0.7512645E+00 -0.2528029E+03
+  0.7549499E+00 -0.3470187E+03
+  0.7586353E+00 -0.5522093E+03
+  0.7623207E+00 -0.1345468E+04
+  0.7660062E+00  0.3111428E+04
+  0.7696916E+00  0.7230357E+03
+  0.7733770E+00  0.4095309E+03
+  0.7770624E+00  0.2858984E+03
+  0.7807479E+00  0.2197362E+03
+  0.7844333E+00  0.1785275E+03
+  0.7881187E+00  0.1503937E+03
+  0.7918042E+00  0.1299631E+03
+  0.7954896E+00  0.1144523E+03
+  0.7991750E+00  0.1022745E+03
+  0.8028604E+00  0.9245912E+02
+  0.8065459E+00  0.8437916E+02
+  0.8102313E+00  0.7761138E+02
+  0.8139167E+00  0.7185986E+02
+  0.8176022E+00  0.6691142E+02
+  0.8212876E+00  0.6260862E+02
+  0.8249730E+00  0.5883264E+02
+  0.8286584E+00  0.5549213E+02
+  0.8323439E+00  0.5251571E+02
+  0.8360293E+00  0.4984680E+02
+  0.8397147E+00  0.4743995E+02
+  0.8434002E+00  0.4525825E+02
+  0.8470856E+00  0.4327141E+02
+  0.8507710E+00  0.4145436E+02
+  0.8544564E+00  0.3978612E+02
+  0.8581419E+00  0.3824904E+02
+  0.8618273E+00  0.3682818E+02
+  0.8655127E+00  0.3551076E+02
+  0.8691982E+00  0.3428580E+02
+  0.8728836E+00  0.3314385E+02
+  0.8765690E+00  0.3207669E+02
+  0.8802544E+00  0.3107714E+02
+  0.8839399E+00  0.3013893E+02
+  0.8876253E+00  0.2925652E+02
+  0.8913107E+00  0.2842504E+02
+  0.8949961E+00  0.2764016E+02
+  0.8986816E+00  0.2689803E+02
+  0.9023670E+00  0.2619520E+02
+  0.9060524E+00  0.2552861E+02
+  0.9097379E+00  0.2489547E+02
+  0.9134233E+00  0.2429330E+02
+  0.9171087E+00  0.2371985E+02
+  0.9207941E+00  0.2317309E+02
+  0.9244796E+00  0.2265115E+02
+  0.9281650E+00  0.2215237E+02
+  0.9318504E+00  0.2167520E+02
+  0.9355359E+00  0.2121825E+02
+  0.9392213E+00  0.2078023E+02
+  0.9429067E+00  0.2035996E+02
+  0.9465921E+00  0.1995637E+02
+  0.9512485E+00  0.1946874E+02
+  0.9561407E+00  0.1898140E+02
+  0.9612862E+00  0.1849434E+02
+  0.9667046E+00  0.1800759E+02
+  0.9724172E+00  0.1752115E+02
+  0.9784477E+00  0.1703504E+02
+  0.9848221E+00  0.1654927E+02
+  0.9915693E+00  0.1606385E+02
+  0.9987212E+00  0.1557880E+02
+  0.1006313E+01  0.1509413E+02
+  0.1014386E+01  0.1460986E+02
+  0.1022982E+01  0.1412601E+02
+  0.1032152E+01  0.1364259E+02
+  0.1041950E+01  0.1315962E+02
+  0.1052439E+01  0.1267711E+02
+  0.1063689E+01  0.1219508E+02
+  0.1075777E+01  0.1171354E+02
+  0.1088794E+01  0.1123251E+02
+  0.1102837E+01  0.1075200E+02
+  0.1118020E+01  0.1027202E+02
+  0.1134470E+01  0.9792569E+01
+  0.1152332E+01  0.9313646E+01
+  0.1171766E+01  0.8835241E+01
+  0.1192956E+01  0.8357335E+01
+  0.1216104E+01  0.7879894E+01
+  0.1241439E+01  0.7402867E+01
+  0.1269212E+01  0.6926182E+01
+  0.1299695E+01  0.6449740E+01
+  0.1333182E+01  0.5973410E+01
+  0.1369979E+01  0.5497020E+01
+  0.1410396E+01  0.5020359E+01
+  0.1454729E+01  0.4543167E+01
+  0.1503240E+01  0.4065138E+01
+  0.1556125E+01  0.3585925E+01
+  0.1613486E+01  0.3105151E+01
+  0.1675289E+01  0.2622430E+01
+  0.1741336E+01  0.2137396E+01
+  0.1811248E+01  0.1649731E+01
+  0.1884461E+01  0.1159198E+01
+  0.1960252E+01  0.6656620E+00
+  0.2037781E+01  0.1691007E+00
+&
+ -0.2000000E+01            NaN
+ -0.1970000E+01            NaN
+ -0.1940000E+01            NaN
+ -0.1910000E+01            NaN
+ -0.1880000E+01            NaN
+ -0.1850000E+01            NaN
+ -0.1820000E+01            NaN
+ -0.1790000E+01            NaN
+ -0.1760000E+01            NaN
+ -0.1730000E+01            NaN
+ -0.1700000E+01            NaN
+ -0.1670000E+01            NaN
+ -0.1640000E+01            NaN
+ -0.1610000E+01            NaN
+ -0.1580000E+01            NaN
+ -0.1550000E+01            NaN
+ -0.1520000E+01            NaN
+ -0.1490000E+01            NaN
+ -0.1460000E+01            NaN
+ -0.1430000E+01            NaN
+ -0.1400000E+01            NaN
+ -0.1370000E+01            NaN
+ -0.1340000E+01            NaN
+ -0.1310000E+01            NaN
+ -0.1280000E+01            NaN
+ -0.1250000E+01            NaN
+ -0.1220000E+01            NaN
+ -0.1190000E+01            NaN
+ -0.1160000E+01            NaN
+ -0.1130000E+01            NaN
+ -0.1100000E+01            NaN
+ -0.1070000E+01            NaN
+ -0.1040000E+01            NaN
+ -0.1010000E+01            NaN
+ -0.9800000E+00            NaN
+ -0.9770000E+00            NaN
+ -0.9740000E+00            NaN
+ -0.9710000E+00            NaN
+ -0.9680000E+00            NaN
+ -0.9650000E+00            NaN
+ -0.9620000E+00            NaN
+ -0.9590000E+00            NaN
+ -0.9560000E+00            NaN
+ -0.9530000E+00            NaN
+ -0.9500000E+00            NaN
+ -0.9470000E+00            NaN
+ -0.9440000E+00            NaN
+ -0.9410000E+00            NaN
+ -0.9380000E+00            NaN
+ -0.9350000E+00            NaN
+ -0.9320000E+00            NaN
+ -0.9290000E+00            NaN
+ -0.9260000E+00            NaN
+ -0.9230000E+00            NaN
+ -0.9200000E+00            NaN
+ -0.9170000E+00            NaN
+ -0.9140000E+00            NaN
+ -0.9110000E+00            NaN
+ -0.9080000E+00            NaN
+ -0.9050000E+00            NaN
+ -0.9020000E+00            NaN
+ -0.8990000E+00            NaN
+ -0.8960000E+00            NaN
+ -0.8930000E+00            NaN
+ -0.8900000E+00            NaN
+ -0.8870000E+00            NaN
+ -0.8840000E+00            NaN
+ -0.8810000E+00            NaN
+ -0.8780000E+00            NaN
+ -0.8750000E+00            NaN
+ -0.8720000E+00            NaN
+ -0.8690000E+00            NaN
+ -0.8660000E+00            NaN
+ -0.8630000E+00            NaN
+ -0.8600000E+00            NaN
+ -0.8570000E+00            NaN
+ -0.8540000E+00            NaN
+ -0.8510000E+00            NaN
+ -0.8480000E+00            NaN
+ -0.8450000E+00            NaN
+ -0.8420000E+00            NaN
+ -0.8390000E+00            NaN
+ -0.8360000E+00            NaN
+ -0.8330000E+00            NaN
+ -0.8300000E+00            NaN
+ -0.8270000E+00            NaN
+ -0.8240000E+00            NaN
+ -0.8210000E+00            NaN
+ -0.8180000E+00            NaN
+ -0.8150000E+00            NaN
+ -0.8120000E+00            NaN
+ -0.8090000E+00            NaN
+ -0.8060000E+00            NaN
+ -0.8030000E+00            NaN
+ -0.8000000E+00            NaN
+ -0.7970000E+00            NaN
+ -0.7940000E+00            NaN
+ -0.7910000E+00            NaN
+ -0.7880000E+00            NaN
+ -0.7850000E+00            NaN
+ -0.7820000E+00            NaN
+ -0.7790000E+00            NaN
+ -0.7760000E+00            NaN
+ -0.7730000E+00            NaN
+ -0.7700000E+00            NaN
+ -0.7670000E+00            NaN
+ -0.7640000E+00            NaN
+ -0.7610000E+00            NaN
+ -0.7580000E+00            NaN
+ -0.7550000E+00            NaN
+ -0.7520000E+00            NaN
+ -0.7490000E+00            NaN
+ -0.7460000E+00            NaN
+ -0.7430000E+00            NaN
+ -0.7400000E+00            NaN
+ -0.7370000E+00            NaN
+ -0.7340000E+00            NaN
+ -0.7310000E+00            NaN
+ -0.7280000E+00            NaN
+ -0.7250000E+00            NaN
+ -0.7220000E+00            NaN
+ -0.7190000E+00            NaN
+ -0.7160000E+00            NaN
+ -0.7130000E+00            NaN
+ -0.7100000E+00            NaN
+ -0.7070000E+00            NaN
+ -0.7040000E+00            NaN
+ -0.7010000E+00            NaN
+ -0.6980000E+00            NaN
+ -0.6950000E+00            NaN
+ -0.6920000E+00            NaN
+ -0.6890000E+00            NaN
+ -0.6860000E+00            NaN
+ -0.6830000E+00            NaN
+ -0.6800000E+00            NaN
+ -0.6770000E+00            NaN
+ -0.6740000E+00            NaN
+ -0.6710000E+00            NaN
+ -0.6680000E+00            NaN
+ -0.6650000E+00            NaN
+ -0.6620000E+00            NaN
+ -0.6590000E+00            NaN
+ -0.6560000E+00            NaN
+ -0.6530000E+00            NaN
+ -0.6500000E+00            NaN
+ -0.6470000E+00            NaN
+ -0.6440000E+00            NaN
+ -0.6410000E+00            NaN
+ -0.6380000E+00            NaN
+ -0.6350000E+00            NaN
+ -0.6320000E+00            NaN
+ -0.6290000E+00            NaN
+ -0.6260000E+00            NaN
+ -0.6230000E+00            NaN
+ -0.6200000E+00            NaN
+ -0.6170000E+00            NaN
+ -0.6140000E+00            NaN
+ -0.6110000E+00            NaN
+ -0.6080000E+00            NaN
+ -0.6050000E+00            NaN
+ -0.6020000E+00            NaN
+ -0.5990000E+00            NaN
+ -0.5960000E+00            NaN
+ -0.5930000E+00            NaN
+ -0.5900000E+00            NaN
+ -0.5870000E+00            NaN
+ -0.5840000E+00            NaN
+ -0.5810000E+00            NaN
+ -0.5780000E+00            NaN
+ -0.5750000E+00            NaN
+ -0.5720000E+00            NaN
+ -0.5690000E+00            NaN
+ -0.5660000E+00            NaN
+ -0.5630000E+00            NaN
+ -0.5600000E+00            NaN
+ -0.5570000E+00            NaN
+ -0.5540000E+00            NaN
+ -0.5510000E+00            NaN
+ -0.5480000E+00            NaN
+ -0.5450000E+00            NaN
+ -0.5420000E+00            NaN
+ -0.5390000E+00            NaN
+ -0.5360000E+00            NaN
+ -0.5330000E+00            NaN
+ -0.5300000E+00            NaN
+ -0.5270000E+00            NaN
+ -0.5240000E+00            NaN
+ -0.5210000E+00            NaN
+ -0.5180000E+00            NaN
+ -0.5150000E+00            NaN
+ -0.5120000E+00            NaN
+ -0.5090000E+00            NaN
+ -0.5060000E+00            NaN
+ -0.5030000E+00            NaN
+ -0.5000000E+00            NaN
+ -0.4970000E+00            NaN
+ -0.4940000E+00            NaN
+ -0.4910000E+00            NaN
+ -0.4880000E+00            NaN
+ -0.4850000E+00            NaN
+ -0.4820000E+00            NaN
+ -0.4790000E+00            NaN
+ -0.4760000E+00            NaN
+ -0.4730000E+00            NaN
+ -0.4700000E+00            NaN
+ -0.4670000E+00            NaN
+ -0.4640000E+00            NaN
+ -0.4610000E+00            NaN
+ -0.4580000E+00            NaN
+ -0.4550000E+00            NaN
+ -0.4520000E+00            NaN
+ -0.4490000E+00            NaN
+ -0.4460000E+00            NaN
+ -0.4430000E+00            NaN
+ -0.4400000E+00            NaN
+ -0.4370000E+00            NaN
+ -0.4340000E+00            NaN
+ -0.4310000E+00            NaN
+ -0.4280000E+00            NaN
+ -0.4250000E+00            NaN
+ -0.4220000E+00            NaN
+ -0.4190000E+00            NaN
+ -0.4160000E+00            NaN
+ -0.4130000E+00            NaN
+ -0.4100000E+00            NaN
+ -0.4070000E+00            NaN
+ -0.4040000E+00            NaN
+ -0.4010000E+00            NaN
+ -0.3980000E+00            NaN
+ -0.3950000E+00            NaN
+ -0.3920000E+00            NaN
+ -0.3890000E+00            NaN
+ -0.3860000E+00            NaN
+ -0.3830000E+00            NaN
+ -0.3800000E+00            NaN
+ -0.3770000E+00            NaN
+ -0.3740000E+00            NaN
+ -0.3710000E+00            NaN
+ -0.3680000E+00            NaN
+ -0.3650000E+00            NaN
+ -0.3620000E+00            NaN
+ -0.3590000E+00            NaN
+ -0.3560000E+00            NaN
+ -0.3530000E+00            NaN
+ -0.3500000E+00            NaN
+ -0.3470000E+00            NaN
+ -0.3440000E+00            NaN
+ -0.3410000E+00            NaN
+ -0.3380000E+00            NaN
+ -0.3350000E+00            NaN
+ -0.3320000E+00            NaN
+ -0.3290000E+00            NaN
+ -0.3260000E+00            NaN
+ -0.3230000E+00            NaN
+ -0.3200000E+00            NaN
+ -0.3170000E+00            NaN
+ -0.3140000E+00            NaN
+ -0.3110000E+00            NaN
+ -0.3080000E+00            NaN
+ -0.3050000E+00            NaN
+ -0.3020000E+00            NaN
+ -0.2990000E+00            NaN
+ -0.2960000E+00            NaN
+ -0.2930000E+00            NaN
+ -0.2900000E+00            NaN
+ -0.2870000E+00            NaN
+ -0.2840000E+00            NaN
+ -0.2810000E+00            NaN
+ -0.2780000E+00            NaN
+ -0.2750000E+00            NaN
+ -0.2720000E+00            NaN
+ -0.2690000E+00            NaN
+ -0.2660000E+00            NaN
+ -0.2630000E+00            NaN
+ -0.2600000E+00            NaN
+ -0.2570000E+00            NaN
+ -0.2540000E+00            NaN
+ -0.2510000E+00            NaN
+ -0.2480000E+00            NaN
+ -0.2450000E+00            NaN
+ -0.2420000E+00            NaN
+ -0.2390000E+00            NaN
+ -0.2360000E+00            NaN
+ -0.2330000E+00            NaN
+ -0.2300000E+00            NaN
+ -0.2270000E+00            NaN
+ -0.2240000E+00            NaN
+ -0.2210000E+00            NaN
+ -0.2180000E+00            NaN
+ -0.2150000E+00            NaN
+ -0.2120000E+00            NaN
+ -0.2090000E+00            NaN
+ -0.2060000E+00            NaN
+ -0.2030000E+00            NaN
+ -0.2000000E+00            NaN
+ -0.1970000E+00            NaN
+ -0.1940000E+00            NaN
+ -0.1910000E+00            NaN
+ -0.1880000E+00            NaN
+ -0.1850000E+00            NaN
+ -0.1820000E+00            NaN
+ -0.1790000E+00            NaN
+ -0.1760000E+00            NaN
+ -0.1730000E+00            NaN
+ -0.1700000E+00            NaN
+ -0.1670000E+00            NaN
+ -0.1640000E+00            NaN
+ -0.1610000E+00            NaN
+ -0.1580000E+00            NaN
+ -0.1550000E+00            NaN
+ -0.1520000E+00            NaN
+ -0.1490000E+00            NaN
+ -0.1460000E+00            NaN
+ -0.1430000E+00            NaN
+ -0.1400000E+00            NaN
+ -0.1370000E+00            NaN
+ -0.1340000E+00            NaN
+ -0.1310000E+00            NaN
+ -0.1280000E+00            NaN
+ -0.1250000E+00            NaN
+ -0.1220000E+00            NaN
+ -0.1190000E+00            NaN
+ -0.1160000E+00            NaN
+ -0.1130000E+00            NaN
+ -0.1100000E+00            NaN
+ -0.1070000E+00            NaN
+ -0.1040000E+00            NaN
+ -0.1010000E+00            NaN
+ -0.9800002E-01            NaN
+ -0.9500002E-01            NaN
+ -0.9200002E-01            NaN
+ -0.8900002E-01            NaN
+ -0.8600002E-01            NaN
+ -0.8300002E-01            NaN
+ -0.8000001E-01            NaN
+ -0.7700001E-01            NaN
+ -0.7400001E-01            NaN
+ -0.7100001E-01            NaN
+ -0.6800001E-01            NaN
+ -0.6500001E-01            NaN
+ -0.6200001E-01            NaN
+ -0.5900001E-01            NaN
+ -0.5600001E-01            NaN
+ -0.5300001E-01            NaN
+ -0.5000001E-01            NaN
+ -0.4700001E-01            NaN
+ -0.4400001E-01            NaN
+ -0.4100001E-01            NaN
+ -0.3800001E-01            NaN
+ -0.3500001E-01            NaN
+ -0.3200001E-01            NaN
+ -0.2900001E-01            NaN
+ -0.2600001E-01            NaN
+ -0.2300001E-01            NaN
+ -0.2000001E-01            NaN
+ -0.1700001E-01            NaN
+ -0.1400001E-01            NaN
+ -0.1100001E-01            NaN
+ -0.8000014E-02            NaN
+ -0.5000014E-02            NaN
+ -0.2000014E-02            NaN
+  0.9999857E-03            NaN
+  0.3999986E-02            NaN
+  0.6999986E-02            NaN
+  0.9999986E-02            NaN
+  0.1299999E-01            NaN
+  0.1599999E-01            NaN
+  0.1899999E-01            NaN
+  0.2199999E-01            NaN
+  0.2499999E-01            NaN
+  0.2799999E-01            NaN
+  0.3099999E-01            NaN
+  0.3399999E-01            NaN
+  0.3699999E-01            NaN
+  0.3999999E-01            NaN
+  0.4299999E-01            NaN
+  0.4599999E-01            NaN
+  0.4899999E-01            NaN
+  0.5199999E-01            NaN
+  0.5499999E-01            NaN
+  0.5799999E-01            NaN
+  0.6099999E-01            NaN
+  0.6399999E-01            NaN
+  0.6699999E-01            NaN
+  0.6999999E-01            NaN
+  0.7299999E-01            NaN
+  0.7599999E-01            NaN
+  0.7899999E-01            NaN
+  0.8199999E-01            NaN
+  0.8499999E-01            NaN
+  0.8799999E-01            NaN
+  0.9099999E-01            NaN
+  0.9399999E-01            NaN
+  0.9699999E-01            NaN
+  0.9999999E-01            NaN
+  0.1030000E+00            NaN
+  0.1060000E+00            NaN
+  0.1090000E+00            NaN
+  0.1120000E+00            NaN
+  0.1150000E+00            NaN
+  0.1180000E+00            NaN
+  0.1210000E+00            NaN
+  0.1240000E+00            NaN
+  0.1270000E+00            NaN
+  0.1300000E+00            NaN
+  0.1330000E+00            NaN
+  0.1360000E+00            NaN
+  0.1390000E+00            NaN
+  0.1420000E+00            NaN
+  0.1450000E+00            NaN
+  0.1480000E+00            NaN
+  0.1510000E+00            NaN
+  0.1540000E+00            NaN
+  0.1570000E+00            NaN
+  0.1600000E+00            NaN
+  0.1630000E+00            NaN
+  0.1660000E+00            NaN
+  0.1690000E+00            NaN
+  0.1720000E+00            NaN
+  0.1750000E+00            NaN
+  0.1780000E+00            NaN
+  0.1810000E+00            NaN
+  0.1840000E+00            NaN
+  0.1870000E+00            NaN
+  0.1900000E+00            NaN
+  0.1930000E+00            NaN
+  0.1960000E+00            NaN
+  0.1990000E+00            NaN
+  0.2020000E+00            NaN
+  0.2050000E+00            NaN
+  0.2080000E+00            NaN
+  0.2110000E+00            NaN
+  0.2140000E+00            NaN
+  0.2170000E+00            NaN
+  0.2200000E+00            NaN
+  0.2230000E+00            NaN
+  0.2260000E+00            NaN
+  0.2290000E+00            NaN
+  0.2320000E+00            NaN
+  0.2350000E+00            NaN
+  0.2380000E+00            NaN
+  0.2410000E+00            NaN
+  0.2440000E+00            NaN
+  0.2470000E+00            NaN
+  0.2500000E+00            NaN
+  0.2530000E+00            NaN
+  0.2560000E+00            NaN
+  0.2590000E+00            NaN
+  0.2620000E+00            NaN
+  0.2650000E+00            NaN
+  0.2680000E+00            NaN
+  0.2710000E+00            NaN
+  0.2740000E+00            NaN
+  0.2770000E+00            NaN
+  0.2800000E+00            NaN
+  0.2830000E+00            NaN
+  0.2860000E+00            NaN
+  0.2890000E+00            NaN
+  0.2920000E+00            NaN
+  0.2950000E+00            NaN
+  0.2980000E+00            NaN
+  0.3010000E+00            NaN
+  0.3040000E+00            NaN
+  0.3070000E+00            NaN
+  0.3100000E+00            NaN
+  0.3130000E+00            NaN
+  0.3160000E+00            NaN
+  0.3190000E+00            NaN
+  0.3220000E+00            NaN
+  0.3250000E+00            NaN
+  0.3280000E+00            NaN
+  0.3310000E+00            NaN
+  0.3340000E+00            NaN
+  0.3370000E+00            NaN
+  0.3400000E+00            NaN
+  0.3430000E+00            NaN
+  0.3460000E+00            NaN
+  0.3490000E+00            NaN
+  0.3520000E+00            NaN
+  0.3550000E+00            NaN
+  0.3580000E+00            NaN
+  0.3610000E+00            NaN
+  0.3640000E+00            NaN
+  0.3670000E+00            NaN
+  0.3700000E+00            NaN
+  0.3730000E+00            NaN
+  0.3760000E+00            NaN
+  0.3790000E+00            NaN
+  0.3820000E+00            NaN
+  0.3850000E+00            NaN
+  0.3880000E+00            NaN
+  0.3910000E+00            NaN
+  0.3940000E+00            NaN
+  0.3970000E+00            NaN
+  0.4000000E+00            NaN
+  0.4030000E+00            NaN
+  0.4060000E+00            NaN
+  0.4090000E+00            NaN
+  0.4120000E+00            NaN
+  0.4150000E+00            NaN
+  0.4180000E+00            NaN
+  0.4210000E+00            NaN
+  0.4240000E+00            NaN
+  0.4270000E+00            NaN
+  0.4300000E+00            NaN
+  0.4330000E+00            NaN
+  0.4360000E+00            NaN
+  0.4390000E+00            NaN
+  0.4420000E+00            NaN
+  0.4450000E+00            NaN
+  0.4480000E+00            NaN
+  0.4510000E+00            NaN
+  0.4540000E+00            NaN
+  0.4570000E+00            NaN
+  0.4600000E+00            NaN
+  0.4630000E+00            NaN
+  0.4660000E+00            NaN
+  0.4690000E+00            NaN
+  0.4720000E+00            NaN
+  0.4750000E+00            NaN
+  0.4780000E+00            NaN
+  0.4810000E+00            NaN
+  0.4840000E+00            NaN
+  0.4870000E+00            NaN
+  0.4900000E+00            NaN
+  0.4930000E+00            NaN
+  0.4960000E+00            NaN
+  0.4990000E+00            NaN
+  0.5020000E+00            NaN
+  0.5050000E+00            NaN
+  0.5080000E+00            NaN
+  0.5110000E+00            NaN
+  0.5140000E+00            NaN
+  0.5170000E+00            NaN
+  0.5200000E+00            NaN
+  0.5230000E+00            NaN
+  0.5260000E+00            NaN
+  0.5290000E+00            NaN
+  0.5320000E+00            NaN
+  0.5350000E+00            NaN
+  0.5380000E+00            NaN
+  0.5410000E+00            NaN
+  0.5440000E+00            NaN
+  0.5470000E+00            NaN
+  0.5500000E+00            NaN
+  0.5530000E+00            NaN
+  0.5560000E+00            NaN
+  0.5590000E+00            NaN
+  0.5620000E+00            NaN
+  0.5650000E+00            NaN
+  0.5680000E+00            NaN
+  0.5710000E+00            NaN
+  0.5740000E+00            NaN
+  0.5770000E+00            NaN
+  0.5800000E+00            NaN
+  0.5830000E+00            NaN
+  0.5860000E+00            NaN
+  0.5890000E+00            NaN
+  0.5920000E+00            NaN
+  0.5950000E+00            NaN
+  0.5980000E+00            NaN
+  0.6010000E+00            NaN
+  0.6040000E+00            NaN
+  0.6070000E+00            NaN
+  0.6100000E+00            NaN
+  0.6130000E+00            NaN
+  0.6160000E+00            NaN
+  0.6190000E+00            NaN
+  0.6220000E+00            NaN
+  0.6250000E+00            NaN
+  0.6280000E+00            NaN
+  0.6310000E+00            NaN
+  0.6340000E+00            NaN
+  0.6370000E+00            NaN
+  0.6400000E+00            NaN
+  0.6430000E+00            NaN
+  0.6460000E+00            NaN
+  0.6490000E+00            NaN
+  0.6520000E+00            NaN
+  0.6550000E+00            NaN
+  0.6580000E+00            NaN
+  0.6610000E+00            NaN
+  0.6640000E+00            NaN
+  0.6670000E+00            NaN
+  0.6700000E+00            NaN
+  0.6730000E+00            NaN
+  0.6760000E+00            NaN
+  0.6790000E+00            NaN
+  0.6820000E+00            NaN
+  0.6850000E+00            NaN
+  0.6880000E+00            NaN
+  0.6910000E+00            NaN
+  0.6940000E+00            NaN
+  0.6970000E+00            NaN
+  0.7000000E+00            NaN
+  0.7030000E+00            NaN
+  0.7060000E+00            NaN
+  0.7090000E+00            NaN
+  0.7120000E+00            NaN
+  0.7150000E+00            NaN
+  0.7180000E+00            NaN
+  0.7210000E+00            NaN
+  0.7240000E+00            NaN
+  0.7270000E+00            NaN
+  0.7300000E+00            NaN
+  0.7330000E+00            NaN
+  0.7360000E+00            NaN
+  0.7390000E+00            NaN
+  0.7420000E+00            NaN
+  0.7450000E+00            NaN
+  0.7480000E+00            NaN
+  0.7510000E+00            NaN
+  0.7540000E+00            NaN
+  0.7570000E+00            NaN
+  0.7600000E+00            NaN
+  0.7630000E+00            NaN
+  0.7660000E+00            NaN
+  0.7690000E+00            NaN
+  0.7720000E+00            NaN
+  0.7750000E+00            NaN
+  0.7780000E+00            NaN
+  0.7810000E+00            NaN
+  0.7840000E+00            NaN
+  0.7870000E+00            NaN
+  0.7900000E+00            NaN
+  0.7930000E+00            NaN
+  0.7960000E+00            NaN
+  0.7990000E+00            NaN
+  0.8020000E+00            NaN
+  0.8050000E+00            NaN
+  0.8080000E+00            NaN
+  0.8110000E+00            NaN
+  0.8140000E+00            NaN
+  0.8170000E+00            NaN
+  0.8200000E+00            NaN
+  0.8230000E+00            NaN
+  0.8260000E+00            NaN
+  0.8290000E+00            NaN
+  0.8320000E+00            NaN
+  0.8350000E+00            NaN
+  0.8380000E+00            NaN
+  0.8410000E+00            NaN
+  0.8440000E+00            NaN
+  0.8470000E+00            NaN
+  0.8500000E+00            NaN
+  0.8530000E+00            NaN
+  0.8560000E+00            NaN
+  0.8590000E+00            NaN
+  0.8620000E+00            NaN
+  0.8650000E+00            NaN
+  0.8680000E+00            NaN
+  0.8710000E+00            NaN
+  0.8740000E+00            NaN
+  0.8770000E+00            NaN
+  0.8800000E+00            NaN
+  0.8830000E+00            NaN
+  0.8860000E+00            NaN
+  0.8890000E+00            NaN
+  0.8920000E+00            NaN
+  0.8950000E+00            NaN
+  0.8980000E+00            NaN
+  0.9010000E+00            NaN
+  0.9040000E+00            NaN
+  0.9070000E+00            NaN
+  0.9100000E+00            NaN
+  0.9130000E+00            NaN
+  0.9160000E+00            NaN
+  0.9190000E+00            NaN
+  0.9220000E+00            NaN
+  0.9250000E+00            NaN
+  0.9280000E+00            NaN
+  0.9310000E+00            NaN
+  0.9340000E+00            NaN
+  0.9370000E+00            NaN
+  0.9400000E+00            NaN
+  0.9430000E+00            NaN
+  0.9460000E+00            NaN
+  0.9490000E+00            NaN
+  0.9520000E+00            NaN
+  0.9550000E+00            NaN
+  0.9580000E+00            NaN
+  0.9610000E+00            NaN
+  0.9640000E+00            NaN
+  0.9670000E+00            NaN
+  0.9700000E+00            NaN
+  0.9730000E+00            NaN
+  0.9760000E+00            NaN
+  0.9790000E+00            NaN
+  0.9820000E+00            NaN
+  0.9850000E+00            NaN
+  0.9880000E+00            NaN
+  0.9910000E+00            NaN
+  0.9940000E+00            NaN
+  0.9970000E+00            NaN
+  0.1000000E+01            NaN
+  0.1003000E+01            NaN
+  0.1033000E+01            NaN
+  0.1063000E+01            NaN
+  0.1093000E+01            NaN
+  0.1123000E+01            NaN
+  0.1153000E+01            NaN
+  0.1183000E+01            NaN
+  0.1213000E+01            NaN
+  0.1243000E+01            NaN
+  0.1273000E+01            NaN
+  0.1303000E+01            NaN
+  0.1333000E+01            NaN
+  0.1363000E+01            NaN
+  0.1393000E+01            NaN
+  0.1423000E+01            NaN
+  0.1453000E+01            NaN
+  0.1483000E+01            NaN
+  0.1513000E+01            NaN
+  0.1543000E+01            NaN
+  0.1573000E+01            NaN
+  0.1603000E+01            NaN
+  0.1633000E+01            NaN
+  0.1663000E+01            NaN
+  0.1693000E+01            NaN
+  0.1723000E+01            NaN
+  0.1753000E+01            NaN
+  0.1783000E+01            NaN
+  0.1813000E+01            NaN
+  0.1843000E+01            NaN
+  0.1873000E+01            NaN
+  0.1903000E+01            NaN
+  0.1933000E+01            NaN
+  0.1963000E+01            NaN
+  0.1993000E+01            NaN
+&
+-2.23687 -19
+&
+-0.136776 -19
+&
+@ with g2
+@ g2 on
+ -0.2000000E+01  0.4938265E+01
+ -0.1692388E+01  0.4416786E+01
+ -0.1414347E+01  0.3889967E+01
+ -0.1167914E+01  0.3354958E+01
+ -0.9563048E+00  0.2806458E+01
+ -0.7839973E+00  0.2236016E+01
+ -0.6549924E+00  0.1636323E+01
+ -0.5678406E+00  0.1014215E+01
+ -0.5127991E+00  0.3907752E+00
+ -0.4778460E+00 -0.2197377E+00
+ -0.4545471E+00 -0.8147880E+00
+ -0.4381453E+00 -0.1396418E+01
+ -0.4260410E+00 -0.1967276E+01
+ -0.4167607E+00 -0.2529590E+01
+ -0.4094246E+00 -0.3085069E+01
+ -0.4034805E+00 -0.3635003E+01
+ -0.3985658E+00 -0.4180366E+01
+ -0.3944336E+00 -0.4721910E+01
+ -0.3909100E+00 -0.5260219E+01
+ -0.3878688E+00 -0.5795756E+01
+ -0.3852168E+00 -0.6328893E+01
+ -0.3828833E+00 -0.6859934E+01
+ -0.3808137E+00 -0.7389128E+01
+ -0.3789653E+00 -0.7916682E+01
+ -0.3773043E+00 -0.8442773E+01
+ -0.3758032E+00 -0.8967548E+01
+ -0.3744400E+00 -0.9491135E+01
+ -0.3731962E+00 -0.1001364E+02
+ -0.3720567E+00 -0.1053517E+02
+ -0.3710089E+00 -0.1105579E+02
+ -0.3700420E+00 -0.1157559E+02
+ -0.3691469E+00 -0.1209462E+02
+ -0.3683159E+00 -0.1261295E+02
+ -0.3675423E+00 -0.1313062E+02
+ -0.3668202E+00 -0.1364768E+02
+ -0.3661447E+00 -0.1416418E+02
+ -0.3655114E+00 -0.1468014E+02
+ -0.3649164E+00 -0.1519561E+02
+ -0.3643563E+00 -0.1571061E+02
+ -0.3638281E+00 -0.1622517E+02
+ -0.3633292E+00 -0.1673932E+02
+ -0.3628571E+00 -0.1725307E+02
+ -0.3624098E+00 -0.1776646E+02
+ -0.3619853E+00 -0.1827950E+02
+ -0.3615819E+00 -0.1879220E+02
+ -0.3611981E+00 -0.1930459E+02
+ -0.3608324E+00 -0.1981668E+02
+ -0.3604837E+00 -0.2032849E+02
+ -0.3601349E+00 -0.2086480E+02
+ -0.3597862E+00 -0.2142742E+02
+ -0.3594374E+00 -0.2201833E+02
+ -0.3590887E+00 -0.2263974E+02
+ -0.3587399E+00 -0.2329407E+02
+ -0.3583912E+00 -0.2398401E+02
+ -0.3580424E+00 -0.2471255E+02
+ -0.3576937E+00 -0.2548303E+02
+ -0.3573450E+00 -0.2629918E+02
+ -0.3569962E+00 -0.2716519E+02
+ -0.3566475E+00 -0.2808579E+02
+ -0.3562987E+00 -0.2906630E+02
+ -0.3559500E+00 -0.3011278E+02
+ -0.3556012E+00 -0.3123213E+02
+ -0.3552525E+00 -0.3243223E+02
+ -0.3549037E+00 -0.3372216E+02
+ -0.3545550E+00 -0.3511241E+02
+ -0.3542062E+00 -0.3661515E+02
+ -0.3538575E+00 -0.3824464E+02
+ -0.3535087E+00 -0.4001762E+02
+ -0.3531600E+00 -0.4195392E+02
+ -0.3528112E+00 -0.4407723E+02
+ -0.3524625E+00 -0.4641602E+02
+ -0.3521138E+00 -0.4900486E+02
+ -0.3517650E+00 -0.5188613E+02
+ -0.3514163E+00 -0.5511237E+02
+ -0.3510675E+00 -0.5874950E+02
+ -0.3507188E+00 -0.6288137E+02
+ -0.3503700E+00 -0.6761634E+02
+ -0.3500213E+00 -0.7309687E+02
+ -0.3496725E+00 -0.7951414E+02
+ -0.3493238E+00 -0.8713082E+02
+ -0.3489750E+00 -0.9631787E+02
+ -0.3486263E+00 -0.1076168E+03
+ -0.3482775E+00 -0.1218507E+03
+ -0.3479288E+00 -0.1403335E+03
+ -0.3475801E+00 -0.1653022E+03
+ -0.3472313E+00 -0.2008969E+03
+ -0.3468826E+00 -0.2557354E+03
+ -0.3465338E+00 -0.3512050E+03
+ -0.3461851E+00 -0.5590380E+03
+ -0.3458363E+00 -0.1361285E+04
+ -0.3454876E+00  0.3172039E+04
+ -0.3451388E+00  0.7348568E+03
+ -0.3447901E+00  0.4163031E+03
+ -0.3444413E+00  0.2907697E+03
+ -0.3440926E+00  0.2236138E+03
+ -0.3437438E+00  0.1817960E+03
+ -0.3433951E+00  0.1532519E+03
+ -0.3430463E+00  0.1325271E+03
+ -0.3426976E+00  0.1167955E+03
+ -0.3423489E+00  0.1044467E+03
+ -0.3420001E+00  0.9449528E+02
+ -0.3416514E+00  0.8630493E+02
+ -0.3413026E+00  0.7944612E+02
+ -0.3409539E+00  0.7361851E+02
+ -0.3406051E+00  0.6860579E+02
+ -0.3402564E+00  0.6424817E+02
+ -0.3399076E+00  0.6042509E+02
+ -0.3395589E+00  0.5704386E+02
+ -0.3392101E+00  0.5403205E+02
+ -0.3388614E+00  0.5133224E+02
+ -0.3385126E+00  0.4889832E+02
+ -0.3381639E+00  0.4669284E+02
+ -0.3378151E+00  0.4468507E+02
+ -0.3374664E+00  0.4284956E+02
+ -0.3371177E+00  0.4116504E+02
+ -0.3367689E+00  0.3961361E+02
+ -0.3364202E+00  0.3818008E+02
+ -0.3360714E+00  0.3685150E+02
+ -0.3357227E+00  0.3561675E+02
+ -0.3353739E+00  0.3446622E+02
+ -0.3350252E+00  0.3339156E+02
+ -0.3346764E+00  0.3238551E+02
+ -0.3343277E+00  0.3144170E+02
+ -0.3339789E+00  0.3055452E+02
+ -0.3336302E+00  0.2971901E+02
+ -0.3332814E+00  0.2893079E+02
+ -0.3329327E+00  0.2818594E+02
+ -0.3325839E+00  0.2748098E+02
+ -0.3322352E+00  0.2681279E+02
+ -0.3318865E+00  0.2617855E+02
+ -0.3315377E+00  0.2557574E+02
+ -0.3311890E+00  0.2500208E+02
+ -0.3308402E+00  0.2445549E+02
+ -0.3304915E+00  0.2393411E+02
+ -0.3301427E+00  0.2343623E+02
+ -0.3297940E+00  0.2296028E+02
+ -0.3294452E+00  0.2250486E+02
+ -0.3290965E+00  0.2206865E+02
+ -0.3287477E+00  0.2165047E+02
+ -0.3283990E+00  0.2124921E+02
+ -0.3280502E+00  0.2086387E+02
+ -0.3277015E+00  0.2049351E+02
+ -0.3273528E+00  0.2013729E+02
+ -0.3270040E+00  0.1979439E+02
+ -0.3264857E+00  0.1930783E+02
+ -0.3259381E+00  0.1882164E+02
+ -0.3253589E+00  0.1833582E+02
+ -0.3247451E+00  0.1785041E+02
+ -0.3240936E+00  0.1736543E+02
+ -0.3234009E+00  0.1688090E+02
+ -0.3226630E+00  0.1639684E+02
+ -0.3218755E+00  0.1591329E+02
+ -0.3210332E+00  0.1543028E+02
+ -0.3201303E+00  0.1494785E+02
+ -0.3191601E+00  0.1446603E+02
+ -0.3181151E+00  0.1398486E+02
+ -0.3169863E+00  0.1350440E+02
+ -0.3157634E+00  0.1302469E+02
+ -0.3144345E+00  0.1254579E+02
+ -0.3129856E+00  0.1206776E+02
+ -0.3113999E+00  0.1159069E+02
+ -0.3096578E+00  0.1111463E+02
+ -0.3077355E+00  0.1063969E+02
+ -0.3056045E+00  0.1016597E+02
+ -0.3032301E+00  0.9693576E+01
+ -0.3005695E+00  0.9222641E+01
+ -0.2975698E+00  0.8753311E+01
+ -0.2941649E+00  0.8285752E+01
+ -0.2902708E+00  0.7820155E+01
+ -0.2857797E+00  0.7356734E+01
+ -0.2805519E+00  0.6895733E+01
+ -0.2744029E+00  0.6437425E+01
+ -0.2670860E+00  0.5982110E+01
+ -0.2582663E+00  0.5530104E+01
+ -0.2474813E+00  0.5081718E+01
+ -0.2340842E+00  0.4637208E+01
+ -0.2171604E+00  0.4196667E+01
+ -0.1954132E+00  0.3759841E+01
+ -0.1670286E+00  0.3325786E+01
+ -0.1295835E+00  0.2892366E+01
+ -0.8018818E-01  0.2455711E+01
+ -0.1622588E-01  0.2010235E+01
+  0.6309538E-01  0.1550150E+01
+  0.1552319E+00  0.1072353E+01
+  0.2546755E+00  0.5779960E+00
+  0.3553045E+00  0.7094091E-01
+  0.4524298E+00 -0.4447284E+00
+  0.5432961E+00 -0.9658853E+00
+  0.6266684E+00 -0.1490413E+01
+  0.7022732E+00 -0.2016921E+01
+  0.7703756E+00 -0.2544491E+01
+  0.8315106E+00 -0.3072505E+01
+  0.8863239E+00 -0.3600541E+01
+  0.9354824E+00 -0.4128313E+01
+  0.9796258E+00 -0.4655624E+01
+  0.1019343E+01 -0.5182346E+01
+  0.1055165E+01 -0.5708396E+01
+  0.1087559E+01 -0.6233727E+01
+  0.1116937E+01 -0.6758315E+01
+  0.1143658E+01 -0.7282153E+01
+  0.1168032E+01 -0.7805249E+01
+  0.1190330E+01 -0.8327616E+01
+  0.1210786E+01 -0.8849275E+01
+  0.1229605E+01 -0.9370249E+01
+  0.1246961E+01 -0.9890564E+01
+  0.1263011E+01 -0.1041025E+02
+  0.1277889E+01 -0.1092933E+02
+  0.1291712E+01 -0.1144783E+02
+  0.1304584E+01 -0.1196578E+02
+  0.1316595E+01 -0.1248320E+02
+  0.1327827E+01 -0.1300012E+02
+  0.1338349E+01 -0.1351657E+02
+  0.1348225E+01 -0.1403256E+02
+  0.1357511E+01 -0.1454812E+02
+  0.1366256E+01 -0.1506326E+02
+  0.1374506E+01 -0.1557801E+02
+  0.1382299E+01 -0.1609238E+02
+  0.1389673E+01 -0.1660640E+02
+  0.1396660E+01 -0.1712007E+02
+  0.1403287E+01 -0.1763341E+02
+  0.1409583E+01 -0.1814644E+02
+  0.1415571E+01 -0.1865916E+02
+  0.1421272E+01 -0.1917160E+02
+  0.1426706E+01 -0.1968377E+02
+  0.1431891E+01 -0.2019567E+02
+  0.1437077E+01 -0.2073188E+02
+  0.1442262E+01 -0.2129421E+02
+  0.1447448E+01 -0.2188467E+02
+  0.1452633E+01 -0.2250547E+02
+  0.1457819E+01 -0.2315906E+02
+  0.1463004E+01 -0.2384815E+02
+  0.1468190E+01 -0.2457577E+02
+  0.1473375E+01 -0.2534531E+02
+  0.1478561E+01 -0.2616055E+02
+  0.1483746E+01 -0.2702576E+02
+  0.1488932E+01 -0.2794576E+02
+  0.1494118E+01 -0.2892598E+02
+  0.1499303E+01 -0.2997263E+02
+  0.1504489E+01 -0.3109278E+02
+  0.1509674E+01 -0.3229455E+02
+  0.1514860E+01 -0.3358730E+02
+  0.1520045E+01 -0.3498187E+02
+  0.1525231E+01 -0.3649092E+02
+  0.1530416E+01 -0.3812927E+02
+  0.1535602E+01 -0.3991442E+02
+  0.1540787E+01 -0.4186720E+02
+  0.1545973E+01 -0.4401256E+02
+  0.1551158E+01 -0.4638064E+02
+  0.1556344E+01 -0.4900826E+02
+  0.1561529E+01 -0.5194079E+02
+  0.1566715E+01 -0.5523486E+02
+  0.1571900E+01 -0.5896204E+02
+  0.1577086E+01 -0.6321410E+02
+  0.1582271E+01 -0.6811077E+02
+  0.1587457E+01 -0.7381111E+02
+  0.1592642E+01 -0.8053129E+02
+  0.1597828E+01 -0.8857257E+02
+  0.1603013E+01 -0.9836789E+02
+  0.1608199E+01 -0.1105625E+03
+  0.1613384E+01 -0.1261625E+03
+  0.1618570E+01 -0.1468276E+03
+  0.1623755E+01 -0.1755059E+03
+  0.1628941E+01 -0.2179833E+03
+  0.1634126E+01 -0.2873822E+03
+  0.1639312E+01 -0.4211853E+03
+  0.1644498E+01 -0.7867188E+03
+  0.1649683E+01 -0.5877545E+04
+  0.1654869E+01  0.1076732E+04
+  0.1660054E+01  0.4936755E+03
+  0.1665240E+01  0.3204495E+03
+  0.1670425E+01  0.2373145E+03
+  0.1675611E+01  0.1884900E+03
+  0.1680796E+01  0.1563667E+03
+  0.1685982E+01  0.1336251E+03
+  0.1691167E+01  0.1166777E+03
+  0.1696353E+01  0.1035593E+03
+  0.1701538E+01  0.9310316E+02
+  0.1706724E+01  0.8457286E+02
+  0.1711909E+01  0.7748062E+02
+  0.1717095E+01  0.7149060E+02
+  0.1722280E+01  0.6636395E+02
+  0.1727466E+01  0.6192619E+02
+  0.1732651E+01  0.5804690E+02
+  0.1737837E+01  0.5462661E+02
+  0.1743022E+01  0.5158815E+02
+  0.1748208E+01  0.4887074E+02
+  0.1753393E+01  0.4642584E+02
+  0.1758579E+01  0.4421423E+02
+  0.1763764E+01  0.4220386E+02
+  0.1768950E+01  0.4036831E+02
+  0.1774135E+01  0.3868558E+02
+  0.1779321E+01  0.3713721E+02
+  0.1784506E+01  0.3570761E+02
+  0.1789692E+01  0.3438350E+02
+  0.1794877E+01  0.3315351E+02
+  0.1800063E+01  0.3200785E+02
+  0.1805249E+01  0.3093804E+02
+  0.1810434E+01  0.2993670E+02
+  0.1815620E+01  0.2899738E+02
+  0.1820805E+01  0.2811442E+02
+  0.1825991E+01  0.2728280E+02
+  0.1831176E+01  0.2649812E+02
+  0.1836362E+01  0.2575644E+02
+  0.1841547E+01  0.2505426E+02
+  0.1846733E+01  0.2438844E+02
+  0.1851918E+01  0.2375617E+02
+  0.1857104E+01  0.2315493E+02
+  0.1862289E+01  0.2258243E+02
+  0.1867475E+01  0.2203662E+02
+  0.1872660E+01  0.2151562E+02
+  0.1877846E+01  0.2101773E+02
+  0.1883031E+01  0.2054140E+02
+  0.1888217E+01  0.2008523E+02
+  0.1893402E+01  0.1964791E+02
+  0.1899455E+01  0.1915972E+02
+  0.1905803E+01  0.1867178E+02
+  0.1912466E+01  0.1818409E+02
+  0.1919467E+01  0.1769667E+02
+  0.1926831E+01  0.1720953E+02
+  0.1934586E+01  0.1672267E+02
+  0.1942762E+01  0.1623610E+02
+  0.1951391E+01  0.1574983E+02
+  0.1960510E+01  0.1526387E+02
+  0.1970159E+01  0.1477824E+02
+  0.1980380E+01  0.1429293E+02
+  0.1991224E+01  0.1380796E+02
+  0.2002743E+01  0.1332333E+02
+&
+ -0.2000000E+01  0.4943085E+01
+ -0.1691756E+01  0.4421625E+01
+ -0.1413099E+01  0.3894783E+01
+ -0.1166140E+01  0.3359626E+01
+ -0.9542161E+00  0.2810705E+01
+ -0.7819601E+00  0.2239410E+01
+ -0.6534248E+00  0.1638629E+01
+ -0.5669179E+00  0.1015994E+01
+ -0.5123677E+00  0.3928627E+00
+ -0.4776885E+00 -0.2169958E+00
+ -0.4545243E+00 -0.8113846E+00
+ -0.4381844E+00 -0.1392439E+01
+ -0.4261050E+00 -0.1962811E+01
+ -0.4168309E+00 -0.2524714E+01
+ -0.4094914E+00 -0.3079839E+01
+ -0.4035388E+00 -0.3629463E+01
+ -0.3986134E+00 -0.4174550E+01
+ -0.3944695E+00 -0.4715844E+01
+ -0.3909338E+00 -0.5253925E+01
+ -0.3878808E+00 -0.5789250E+01
+ -0.3852174E+00 -0.6322190E+01
+ -0.3828729E+00 -0.6853044E+01
+ -0.3807930E+00 -0.7382061E+01
+ -0.3789348E+00 -0.7909447E+01
+ -0.3772646E+00 -0.8435376E+01
+ -0.3757548E+00 -0.8959995E+01
+ -0.3743833E+00 -0.9483430E+01
+ -0.3731318E+00 -0.1000579E+02
+ -0.3719851E+00 -0.1052717E+02
+ -0.3709304E+00 -0.1104766E+02
+ -0.3699571E+00 -0.1156731E+02
+ -0.3690559E+00 -0.1208621E+02
+ -0.3682191E+00 -0.1260441E+02
+ -0.3674400E+00 -0.1312195E+02
+ -0.3667128E+00 -0.1363889E+02
+ -0.3660324E+00 -0.1415525E+02
+ -0.3653944E+00 -0.1467109E+02
+ -0.3647950E+00 -0.1518644E+02
+ -0.3642306E+00 -0.1570131E+02
+ -0.3636984E+00 -0.1621575E+02
+ -0.3631956E+00 -0.1672978E+02
+ -0.3627199E+00 -0.1724342E+02
+ -0.3622690E+00 -0.1775668E+02
+ -0.3618412E+00 -0.1826960E+02
+ -0.3614346E+00 -0.1878219E+02
+ -0.3610477E+00 -0.1929447E+02
+ -0.3606791E+00 -0.1980644E+02
+ -0.3603275E+00 -0.2031813E+02
+ -0.3599759E+00 -0.2085429E+02
+ -0.3596243E+00 -0.2141672E+02
+ -0.3592727E+00 -0.2200741E+02
+ -0.3589211E+00 -0.2262855E+02
+ -0.3585696E+00 -0.2328254E+02
+ -0.3582180E+00 -0.2397209E+02
+ -0.3578664E+00 -0.2470016E+02
+ -0.3575148E+00 -0.2547009E+02
+ -0.3571632E+00 -0.2628559E+02
+ -0.3568116E+00 -0.2715085E+02
+ -0.3564600E+00 -0.2807056E+02
+ -0.3561085E+00 -0.2905004E+02
+ -0.3557569E+00 -0.3009532E+02
+ -0.3554053E+00 -0.3121325E+02
+ -0.3550537E+00 -0.3241171E+02
+ -0.3547021E+00 -0.3369971E+02
+ -0.3543505E+00 -0.3508770E+02
+ -0.3539990E+00 -0.3658779E+02
+ -0.3536474E+00 -0.3821415E+02
+ -0.3532958E+00 -0.3998342E+02
+ -0.3529442E+00 -0.4191534E+02
+ -0.3525926E+00 -0.4403341E+02
+ -0.3522410E+00 -0.4636592E+02
+ -0.3518895E+00 -0.4894718E+02
+ -0.3515379E+00 -0.5181925E+02
+ -0.3511863E+00 -0.5503423E+02
+ -0.3508347E+00 -0.5865743E+02
+ -0.3504831E+00 -0.6277192E+02
+ -0.3501315E+00 -0.6748491E+02
+ -0.3497799E+00 -0.7293728E+02
+ -0.3494284E+00 -0.7931784E+02
+ -0.3490768E+00 -0.8688574E+02
+ -0.3487252E+00 -0.9600644E+02
+ -0.3483736E+00 -0.1072126E+03
+ -0.3480220E+00 -0.1213118E+03
+ -0.3476704E+00 -0.1395906E+03
+ -0.3473189E+00 -0.1642311E+03
+ -0.3469673E+00 -0.1992544E+03
+ -0.3466157E+00 -0.2529751E+03
+ -0.3462641E+00 -0.3458184E+03
+ -0.3459125E+00 -0.5449963E+03
+ -0.3455609E+00 -0.1277996E+04
+ -0.3452094E+00  0.3765887E+04
+ -0.3448578E+00  0.7638203E+03
+ -0.3445062E+00  0.4257931E+03
+ -0.3441546E+00  0.2955411E+03
+ -0.3438030E+00  0.2265294E+03
+ -0.3434514E+00  0.1837887E+03
+ -0.3430998E+00  0.1547164E+03
+ -0.3427483E+00  0.1336597E+03
+ -0.3423967E+00  0.1177051E+03
+ -0.3420451E+00  0.1051985E+03
+ -0.3416935E+00  0.9513116E+02
+ -0.3413419E+00  0.8685280E+02
+ -0.3409903E+00  0.7992545E+02
+ -0.3406388E+00  0.7404330E+02
+ -0.3402872E+00  0.6898637E+02
+ -0.3399356E+00  0.6459236E+02
+ -0.3395840E+00  0.6073891E+02
+ -0.3392324E+00  0.5733204E+02
+ -0.3388808E+00  0.5429834E+02
+ -0.3385293E+00  0.5157968E+02
+ -0.3381777E+00  0.4912939E+02
+ -0.3378261E+00  0.4690958E+02
+ -0.3374745E+00  0.4488919E+02
+ -0.3371229E+00  0.4304250E+02
+ -0.3367713E+00  0.4134800E+02
+ -0.3364197E+00  0.3978764E+02
+ -0.3360682E+00  0.3834607E+02
+ -0.3357166E+00  0.3701022E+02
+ -0.3353650E+00  0.3576887E+02
+ -0.3350134E+00  0.3461232E+02
+ -0.3346618E+00  0.3353217E+02
+ -0.3343102E+00  0.3252108E+02
+ -0.3339587E+00  0.3157263E+02
+ -0.3336071E+00  0.3068116E+02
+ -0.3332555E+00  0.2984170E+02
+ -0.3329039E+00  0.2904981E+02
+ -0.3325523E+00  0.2830155E+02
+ -0.3322007E+00  0.2759341E+02
+ -0.3318492E+00  0.2692225E+02
+ -0.3314976E+00  0.2628524E+02
+ -0.3311460E+00  0.2567983E+02
+ -0.3307944E+00  0.2510373E+02
+ -0.3304428E+00  0.2455485E+02
+ -0.3300912E+00  0.2403131E+02
+ -0.3297397E+00  0.2353139E+02
+ -0.3293881E+00  0.2305352E+02
+ -0.3290365E+00  0.2259627E+02
+ -0.3286849E+00  0.2215834E+02
+ -0.3283333E+00  0.2173852E+02
+ -0.3279817E+00  0.2133571E+02
+ -0.3276301E+00  0.2094890E+02
+ -0.3272786E+00  0.2057714E+02
+ -0.3269270E+00  0.2021958E+02
+ -0.3265754E+00  0.1987541E+02
+ -0.3260549E+00  0.1938892E+02
+ -0.3255051E+00  0.1890278E+02
+ -0.3249236E+00  0.1841703E+02
+ -0.3243075E+00  0.1793168E+02
+ -0.3236538E+00  0.1744675E+02
+ -0.3229588E+00  0.1696227E+02
+ -0.3222187E+00  0.1647827E+02
+ -0.3214289E+00  0.1599477E+02
+ -0.3205844E+00  0.1551180E+02
+ -0.3196794E+00  0.1502941E+02
+ -0.3187072E+00  0.1454762E+02
+ -0.3176602E+00  0.1406648E+02
+ -0.3165297E+00  0.1358605E+02
+ -0.3153055E+00  0.1310635E+02
+ -0.3139756E+00  0.1262747E+02
+ -0.3125260E+00  0.1214945E+02
+ -0.3109404E+00  0.1167237E+02
+ -0.3091991E+00  0.1119630E+02
+ -0.3072787E+00  0.1072134E+02
+ -0.3051509E+00  0.1024758E+02
+ -0.3027814E+00  0.9775144E+01
+ -0.3001280E+00  0.9304148E+01
+ -0.2971387E+00  0.8834740E+01
+ -0.2937481E+00  0.8367086E+01
+ -0.2898737E+00  0.7901372E+01
+ -0.2854096E+00  0.7437810E+01
+ -0.2802187E+00  0.6976643E+01
+ -0.2741202E+00  0.6518140E+01
+ -0.2668730E+00  0.6062600E+01
+ -0.2581496E+00  0.5610341E+01
+ -0.2474992E+00  0.5161679E+01
+ -0.2342912E+00  0.4716884E+01
+ -0.2176344E+00  0.4276082E+01
+ -0.1962636E+00  0.3839082E+01
+ -0.1684008E+00  0.3405055E+01
+ -0.1316471E+00  0.2972050E+01
+ -0.8307611E-01  0.2536433E+01
+ -0.1988546E-01  0.2092787E+01
+  0.5910936E-01  0.1635209E+01
+  0.1518233E+00  0.1160138E+01
+  0.2529578E+00  0.6682533E+00
+  0.3562400E+00  0.1632343E+00
+  0.4566575E+00 -0.3507822E+00
+  0.5511522E+00 -0.8705609E+00
+  0.6382700E+00 -0.1393901E+01
+  0.7175946E+00 -0.1919363E+01
+  0.7893030E+00 -0.2445998E+01
+  0.8538783E+00 -0.2973172E+01
+  0.9119387E+00 -0.3500451E+01
+  0.9641393E+00 -0.4027539E+01
+  0.1011119E+01 -0.4554233E+01
+  0.1053472E+01 -0.5080397E+01
+  0.1091737E+01 -0.5605941E+01
+  0.1126395E+01 -0.6130813E+01
+  0.1157870E+01 -0.6654982E+01
+  0.1186533E+01 -0.7178438E+01
+  0.1212707E+01 -0.7701181E+01
+  0.1236676E+01 -0.8223224E+01
+  0.1258684E+01 -0.8744582E+01
+  0.1278945E+01 -0.9265275E+01
+  0.1297646E+01 -0.9785328E+01
+  0.1314949E+01 -0.1030477E+02
+  0.1330998E+01 -0.1082361E+02
+  0.1345917E+01 -0.1134189E+02
+  0.1359815E+01 -0.1185963E+02
+  0.1372790E+01 -0.1237686E+02
+  0.1384927E+01 -0.1289359E+02
+  0.1396301E+01 -0.1340985E+02
+  0.1406981E+01 -0.1392566E+02
+  0.1417024E+01 -0.1444105E+02
+  0.1426486E+01 -0.1495602E+02
+  0.1435414E+01 -0.1547061E+02
+  0.1443850E+01 -0.1598482E+02
+  0.1451833E+01 -0.1649868E+02
+  0.1459398E+01 -0.1701220E+02
+  0.1466576E+01 -0.1752539E+02
+  0.1473396E+01 -0.1803827E+02
+  0.1479882E+01 -0.1855085E+02
+  0.1486059E+01 -0.1906315E+02
+  0.1491948E+01 -0.1957518E+02
+  0.1497568E+01 -0.2008694E+02
+  0.1503188E+01 -0.2062294E+02
+  0.1508808E+01 -0.2118499E+02
+  0.1514428E+01 -0.2177509E+02
+  0.1520048E+01 -0.2239543E+02
+  0.1525668E+01 -0.2304844E+02
+  0.1531288E+01 -0.2373684E+02
+  0.1536908E+01 -0.2446364E+02
+  0.1542528E+01 -0.2523219E+02
+  0.1548148E+01 -0.2604628E+02
+  0.1553768E+01 -0.2691013E+02
+  0.1559388E+01 -0.2782853E+02
+  0.1565007E+01 -0.2880689E+02
+  0.1570627E+01 -0.2985137E+02
+  0.1576247E+01 -0.3096899E+02
+  0.1581867E+01 -0.3216781E+02
+  0.1587487E+01 -0.3345712E+02
+  0.1593107E+01 -0.3484768E+02
+  0.1598727E+01 -0.3635203E+02
+  0.1604347E+01 -0.3798487E+02
+  0.1609967E+01 -0.3976354E+02
+  0.1615587E+01 -0.4170865E+02
+  0.1621207E+01 -0.4384490E+02
+  0.1626827E+01 -0.4620212E+02
+  0.1632447E+01 -0.4881668E+02
+  0.1638067E+01 -0.5173342E+02
+  0.1643687E+01 -0.5500820E+02
+  0.1649307E+01 -0.5871160E+02
+  0.1654927E+01 -0.6293403E+02
+  0.1660546E+01 -0.6779326E+02
+  0.1666166E+01 -0.7344561E+02
+  0.1671786E+01 -0.8010310E+02
+  0.1677406E+01 -0.8806075E+02
+  0.1683026E+01 -0.9774155E+02
+  0.1688646E+01 -0.1097743E+03
+  0.1694266E+01 -0.1251360E+03
+  0.1699886E+01 -0.1454321E+03
+  0.1705506E+01 -0.1734976E+03
+  0.1711126E+01 -0.2148544E+03
+  0.1716746E+01 -0.2818809E+03
+  0.1722366E+01 -0.4092469E+03
+  0.1727986E+01 -0.7451822E+03
+  0.1733606E+01 -0.4118316E+04
+  0.1739226E+01  0.1170962E+04
+  0.1744846E+01  0.5131895E+03
+  0.1750466E+01  0.3288303E+03
+  0.1756086E+01  0.2420397E+03
+  0.1761705E+01  0.1915667E+03
+  0.1767325E+01  0.1585575E+03
+  0.1772945E+01  0.1352832E+03
+  0.1778565E+01  0.1179895E+03
+  0.1784185E+01  0.1046326E+03
+  0.1789805E+01  0.9400480E+02
+  0.1795425E+01  0.8534644E+02
+  0.1801045E+01  0.7815593E+02
+  0.1806665E+01  0.7208867E+02
+  0.1812285E+01  0.6690009E+02
+  0.1817905E+01  0.6241183E+02
+  0.1823525E+01  0.5849072E+02
+  0.1829145E+01  0.5503536E+02
+  0.1834765E+01  0.5196715E+02
+  0.1840385E+01  0.4922425E+02
+  0.1846005E+01  0.4675730E+02
+  0.1851625E+01  0.4452646E+02
+  0.1857244E+01  0.4249920E+02
+  0.1862864E+01  0.4064871E+02
+  0.1868484E+01  0.3895268E+02
+  0.1874104E+01  0.3739242E+02
+  0.1879724E+01  0.3595211E+02
+  0.1885344E+01  0.3461831E+02
+  0.1890964E+01  0.3337952E+02
+  0.1896584E+01  0.3222584E+02
+  0.1902204E+01  0.3114868E+02
+  0.1907824E+01  0.3014059E+02
+  0.1913444E+01  0.2919504E+02
+  0.1919064E+01  0.2830631E+02
+  0.1924684E+01  0.2746934E+02
+  0.1930304E+01  0.2667968E+02
+  0.1935924E+01  0.2593334E+02
+  0.1941544E+01  0.2522681E+02
+  0.1947164E+01  0.2455690E+02
+  0.1952784E+01  0.2392079E+02
+  0.1958403E+01  0.2331593E+02
+  0.1964023E+01  0.2274001E+02
+  0.1969643E+01  0.2219095E+02
+  0.1975263E+01  0.2166688E+02
+  0.1980883E+01  0.2116606E+02
+  0.1986503E+01  0.2068696E+02
+  0.1992123E+01  0.2022813E+02
+  0.1997743E+01  0.1978828E+02
+  0.2004263E+01  0.1930019E+02
+&
+ -0.2000000E+01            NaN
+ -0.1970000E+01            NaN
+ -0.1940000E+01            NaN
+ -0.1910000E+01            NaN
+ -0.1880000E+01            NaN
+ -0.1850000E+01            NaN
+ -0.1820000E+01            NaN
+ -0.1790000E+01            NaN
+ -0.1760000E+01            NaN
+ -0.1730000E+01            NaN
+ -0.1700000E+01            NaN
+ -0.1670000E+01            NaN
+ -0.1640000E+01            NaN
+ -0.1610000E+01            NaN
+ -0.1580000E+01            NaN
+ -0.1550000E+01            NaN
+ -0.1520000E+01            NaN
+ -0.1490000E+01            NaN
+ -0.1460000E+01            NaN
+ -0.1430000E+01            NaN
+ -0.1400000E+01            NaN
+ -0.1370000E+01            NaN
+ -0.1340000E+01            NaN
+ -0.1310000E+01            NaN
+ -0.1280000E+01            NaN
+ -0.1250000E+01            NaN
+ -0.1220000E+01            NaN
+ -0.1190000E+01            NaN
+ -0.1160000E+01            NaN
+ -0.1130000E+01            NaN
+ -0.1100000E+01            NaN
+ -0.1070000E+01            NaN
+ -0.1040000E+01            NaN
+ -0.1010000E+01            NaN
+ -0.9800000E+00            NaN
+ -0.9770000E+00            NaN
+ -0.9740000E+00            NaN
+ -0.9710000E+00            NaN
+ -0.9680000E+00            NaN
+ -0.9650000E+00            NaN
+ -0.9620000E+00            NaN
+ -0.9590000E+00            NaN
+ -0.9560000E+00            NaN
+ -0.9530000E+00            NaN
+ -0.9500000E+00            NaN
+ -0.9470000E+00            NaN
+ -0.9440000E+00            NaN
+ -0.9410000E+00            NaN
+ -0.9380000E+00            NaN
+ -0.9350000E+00            NaN
+ -0.9320000E+00            NaN
+ -0.9290000E+00            NaN
+ -0.9260000E+00            NaN
+ -0.9230000E+00            NaN
+ -0.9200000E+00            NaN
+ -0.9170000E+00            NaN
+ -0.9140000E+00            NaN
+ -0.9110000E+00            NaN
+ -0.9080000E+00            NaN
+ -0.9050000E+00            NaN
+ -0.9020000E+00            NaN
+ -0.8990000E+00            NaN
+ -0.8960000E+00            NaN
+ -0.8930000E+00            NaN
+ -0.8900000E+00            NaN
+ -0.8870000E+00            NaN
+ -0.8840000E+00            NaN
+ -0.8810000E+00            NaN
+ -0.8780000E+00            NaN
+ -0.8750000E+00            NaN
+ -0.8720000E+00            NaN
+ -0.8690000E+00            NaN
+ -0.8660000E+00            NaN
+ -0.8630000E+00            NaN
+ -0.8600000E+00            NaN
+ -0.8570000E+00            NaN
+ -0.8540000E+00            NaN
+ -0.8510000E+00            NaN
+ -0.8480000E+00            NaN
+ -0.8450000E+00            NaN
+ -0.8420000E+00            NaN
+ -0.8390000E+00            NaN
+ -0.8360000E+00            NaN
+ -0.8330000E+00            NaN
+ -0.8300000E+00            NaN
+ -0.8270000E+00            NaN
+ -0.8240000E+00            NaN
+ -0.8210000E+00            NaN
+ -0.8180000E+00            NaN
+ -0.8150000E+00            NaN
+ -0.8120000E+00            NaN
+ -0.8090000E+00            NaN
+ -0.8060000E+00            NaN
+ -0.8030000E+00            NaN
+ -0.8000000E+00            NaN
+ -0.7970000E+00            NaN
+ -0.7940000E+00            NaN
+ -0.7910000E+00            NaN
+ -0.7880000E+00            NaN
+ -0.7850000E+00            NaN
+ -0.7820000E+00            NaN
+ -0.7790000E+00            NaN
+ -0.7760000E+00            NaN
+ -0.7730000E+00            NaN
+ -0.7700000E+00            NaN
+ -0.7670000E+00            NaN
+ -0.7640000E+00            NaN
+ -0.7610000E+00            NaN
+ -0.7580000E+00            NaN
+ -0.7550000E+00            NaN
+ -0.7520000E+00            NaN
+ -0.7490000E+00            NaN
+ -0.7460000E+00            NaN
+ -0.7430000E+00            NaN
+ -0.7400000E+00            NaN
+ -0.7370000E+00            NaN
+ -0.7340000E+00            NaN
+ -0.7310000E+00            NaN
+ -0.7280000E+00            NaN
+ -0.7250000E+00            NaN
+ -0.7220000E+00            NaN
+ -0.7190000E+00            NaN
+ -0.7160000E+00            NaN
+ -0.7130000E+00            NaN
+ -0.7100000E+00            NaN
+ -0.7070000E+00            NaN
+ -0.7040000E+00            NaN
+ -0.7010000E+00            NaN
+ -0.6980000E+00            NaN
+ -0.6950000E+00            NaN
+ -0.6920000E+00            NaN
+ -0.6890000E+00            NaN
+ -0.6860000E+00            NaN
+ -0.6830000E+00            NaN
+ -0.6800000E+00            NaN
+ -0.6770000E+00            NaN
+ -0.6740000E+00            NaN
+ -0.6710000E+00            NaN
+ -0.6680000E+00            NaN
+ -0.6650000E+00            NaN
+ -0.6620000E+00            NaN
+ -0.6590000E+00            NaN
+ -0.6560000E+00            NaN
+ -0.6530000E+00            NaN
+ -0.6500000E+00            NaN
+ -0.6470000E+00            NaN
+ -0.6440000E+00            NaN
+ -0.6410000E+00            NaN
+ -0.6380000E+00            NaN
+ -0.6350000E+00            NaN
+ -0.6320000E+00            NaN
+ -0.6290000E+00            NaN
+ -0.6260000E+00            NaN
+ -0.6230000E+00            NaN
+ -0.6200000E+00            NaN
+ -0.6170000E+00            NaN
+ -0.6140000E+00            NaN
+ -0.6110000E+00            NaN
+ -0.6080000E+00            NaN
+ -0.6050000E+00            NaN
+ -0.6020000E+00            NaN
+ -0.5990000E+00            NaN
+ -0.5960000E+00            NaN
+ -0.5930000E+00            NaN
+ -0.5900000E+00            NaN
+ -0.5870000E+00            NaN
+ -0.5840000E+00            NaN
+ -0.5810000E+00            NaN
+ -0.5780000E+00            NaN
+ -0.5750000E+00            NaN
+ -0.5720000E+00            NaN
+ -0.5690000E+00            NaN
+ -0.5660000E+00            NaN
+ -0.5630000E+00            NaN
+ -0.5600000E+00            NaN
+ -0.5570000E+00            NaN
+ -0.5540000E+00            NaN
+ -0.5510000E+00            NaN
+ -0.5480000E+00            NaN
+ -0.5450000E+00            NaN
+ -0.5420000E+00            NaN
+ -0.5390000E+00            NaN
+ -0.5360000E+00            NaN
+ -0.5330000E+00            NaN
+ -0.5300000E+00            NaN
+ -0.5270000E+00            NaN
+ -0.5240000E+00            NaN
+ -0.5210000E+00            NaN
+ -0.5180000E+00            NaN
+ -0.5150000E+00            NaN
+ -0.5120000E+00            NaN
+ -0.5090000E+00            NaN
+ -0.5060000E+00            NaN
+ -0.5030000E+00            NaN
+ -0.5000000E+00            NaN
+ -0.4970000E+00            NaN
+ -0.4940000E+00            NaN
+ -0.4910000E+00            NaN
+ -0.4880000E+00            NaN
+ -0.4850000E+00            NaN
+ -0.4820000E+00            NaN
+ -0.4790000E+00            NaN
+ -0.4760000E+00            NaN
+ -0.4730000E+00            NaN
+ -0.4700000E+00            NaN
+ -0.4670000E+00            NaN
+ -0.4640000E+00            NaN
+ -0.4610000E+00            NaN
+ -0.4580000E+00            NaN
+ -0.4550000E+00            NaN
+ -0.4520000E+00            NaN
+ -0.4490000E+00            NaN
+ -0.4460000E+00            NaN
+ -0.4430000E+00            NaN
+ -0.4400000E+00            NaN
+ -0.4370000E+00            NaN
+ -0.4340000E+00            NaN
+ -0.4310000E+00            NaN
+ -0.4280000E+00            NaN
+ -0.4250000E+00            NaN
+ -0.4220000E+00            NaN
+ -0.4190000E+00            NaN
+ -0.4160000E+00            NaN
+ -0.4130000E+00            NaN
+ -0.4100000E+00            NaN
+ -0.4070000E+00            NaN
+ -0.4040000E+00            NaN
+ -0.4010000E+00            NaN
+ -0.3980000E+00            NaN
+ -0.3950000E+00            NaN
+ -0.3920000E+00            NaN
+ -0.3890000E+00            NaN
+ -0.3860000E+00            NaN
+ -0.3830000E+00            NaN
+ -0.3800000E+00            NaN
+ -0.3770000E+00            NaN
+ -0.3740000E+00            NaN
+ -0.3710000E+00            NaN
+ -0.3680000E+00            NaN
+ -0.3650000E+00            NaN
+ -0.3620000E+00            NaN
+ -0.3590000E+00            NaN
+ -0.3560000E+00            NaN
+ -0.3530000E+00            NaN
+ -0.3500000E+00            NaN
+ -0.3470000E+00            NaN
+ -0.3440000E+00            NaN
+ -0.3410000E+00            NaN
+ -0.3380000E+00            NaN
+ -0.3350000E+00            NaN
+ -0.3320000E+00            NaN
+ -0.3290000E+00            NaN
+ -0.3260000E+00            NaN
+ -0.3230000E+00            NaN
+ -0.3200000E+00            NaN
+ -0.3170000E+00            NaN
+ -0.3140000E+00            NaN
+ -0.3110000E+00            NaN
+ -0.3080000E+00            NaN
+ -0.3050000E+00            NaN
+ -0.3020000E+00            NaN
+ -0.2990000E+00            NaN
+ -0.2960000E+00            NaN
+ -0.2930000E+00            NaN
+ -0.2900000E+00            NaN
+ -0.2870000E+00            NaN
+ -0.2840000E+00            NaN
+ -0.2810000E+00            NaN
+ -0.2780000E+00            NaN
+ -0.2750000E+00            NaN
+ -0.2720000E+00            NaN
+ -0.2690000E+00            NaN
+ -0.2660000E+00            NaN
+ -0.2630000E+00            NaN
+ -0.2600000E+00            NaN
+ -0.2570000E+00            NaN
+ -0.2540000E+00            NaN
+ -0.2510000E+00            NaN
+ -0.2480000E+00            NaN
+ -0.2450000E+00            NaN
+ -0.2420000E+00            NaN
+ -0.2390000E+00            NaN
+ -0.2360000E+00            NaN
+ -0.2330000E+00            NaN
+ -0.2300000E+00            NaN
+ -0.2270000E+00            NaN
+ -0.2240000E+00            NaN
+ -0.2210000E+00            NaN
+ -0.2180000E+00            NaN
+ -0.2150000E+00            NaN
+ -0.2120000E+00            NaN
+ -0.2090000E+00            NaN
+ -0.2060000E+00            NaN
+ -0.2030000E+00            NaN
+ -0.2000000E+00            NaN
+ -0.1970000E+00            NaN
+ -0.1940000E+00            NaN
+ -0.1910000E+00            NaN
+ -0.1880000E+00            NaN
+ -0.1850000E+00            NaN
+ -0.1820000E+00            NaN
+ -0.1790000E+00            NaN
+ -0.1760000E+00            NaN
+ -0.1730000E+00            NaN
+ -0.1700000E+00            NaN
+ -0.1670000E+00            NaN
+ -0.1640000E+00            NaN
+ -0.1610000E+00            NaN
+ -0.1580000E+00            NaN
+ -0.1550000E+00            NaN
+ -0.1520000E+00            NaN
+ -0.1490000E+00            NaN
+ -0.1460000E+00            NaN
+ -0.1430000E+00            NaN
+ -0.1400000E+00            NaN
+ -0.1370000E+00            NaN
+ -0.1340000E+00            NaN
+ -0.1310000E+00            NaN
+ -0.1280000E+00            NaN
+ -0.1250000E+00            NaN
+ -0.1220000E+00            NaN
+ -0.1190000E+00            NaN
+ -0.1160000E+00            NaN
+ -0.1130000E+00            NaN
+ -0.1100000E+00            NaN
+ -0.1070000E+00            NaN
+ -0.1040000E+00            NaN
+ -0.1010000E+00            NaN
+ -0.9800002E-01            NaN
+ -0.9500002E-01            NaN
+ -0.9200002E-01            NaN
+ -0.8900002E-01            NaN
+ -0.8600002E-01            NaN
+ -0.8300002E-01            NaN
+ -0.8000001E-01            NaN
+ -0.7700001E-01            NaN
+ -0.7400001E-01            NaN
+ -0.7100001E-01            NaN
+ -0.6800001E-01            NaN
+ -0.6500001E-01            NaN
+ -0.6200001E-01            NaN
+ -0.5900001E-01            NaN
+ -0.5600001E-01            NaN
+ -0.5300001E-01            NaN
+ -0.5000001E-01            NaN
+ -0.4700001E-01            NaN
+ -0.4400001E-01            NaN
+ -0.4100001E-01            NaN
+ -0.3800001E-01            NaN
+ -0.3500001E-01            NaN
+ -0.3200001E-01            NaN
+ -0.2900001E-01            NaN
+ -0.2600001E-01            NaN
+ -0.2300001E-01            NaN
+ -0.2000001E-01            NaN
+ -0.1700001E-01            NaN
+ -0.1400001E-01            NaN
+ -0.1100001E-01            NaN
+ -0.8000014E-02            NaN
+ -0.5000014E-02            NaN
+ -0.2000014E-02            NaN
+  0.9999857E-03            NaN
+  0.3999986E-02            NaN
+  0.6999986E-02            NaN
+  0.9999986E-02            NaN
+  0.1299999E-01            NaN
+  0.1599999E-01            NaN
+  0.1899999E-01            NaN
+  0.2199999E-01            NaN
+  0.2499999E-01            NaN
+  0.2799999E-01            NaN
+  0.3099999E-01            NaN
+  0.3399999E-01            NaN
+  0.3699999E-01            NaN
+  0.3999999E-01            NaN
+  0.4299999E-01            NaN
+  0.4599999E-01            NaN
+  0.4899999E-01            NaN
+  0.5199999E-01            NaN
+  0.5499999E-01            NaN
+  0.5799999E-01            NaN
+  0.6099999E-01            NaN
+  0.6399999E-01            NaN
+  0.6699999E-01            NaN
+  0.6999999E-01            NaN
+  0.7299999E-01            NaN
+  0.7599999E-01            NaN
+  0.7899999E-01            NaN
+  0.8199999E-01            NaN
+  0.8499999E-01            NaN
+  0.8799999E-01            NaN
+  0.9099999E-01            NaN
+  0.9399999E-01            NaN
+  0.9699999E-01            NaN
+  0.9999999E-01            NaN
+  0.1030000E+00            NaN
+  0.1060000E+00            NaN
+  0.1090000E+00            NaN
+  0.1120000E+00            NaN
+  0.1150000E+00            NaN
+  0.1180000E+00            NaN
+  0.1210000E+00            NaN
+  0.1240000E+00            NaN
+  0.1270000E+00            NaN
+  0.1300000E+00            NaN
+  0.1330000E+00            NaN
+  0.1360000E+00            NaN
+  0.1390000E+00            NaN
+  0.1420000E+00            NaN
+  0.1450000E+00            NaN
+  0.1480000E+00            NaN
+  0.1510000E+00            NaN
+  0.1540000E+00            NaN
+  0.1570000E+00            NaN
+  0.1600000E+00            NaN
+  0.1630000E+00            NaN
+  0.1660000E+00            NaN
+  0.1690000E+00            NaN
+  0.1720000E+00            NaN
+  0.1750000E+00            NaN
+  0.1780000E+00            NaN
+  0.1810000E+00            NaN
+  0.1840000E+00            NaN
+  0.1870000E+00            NaN
+  0.1900000E+00            NaN
+  0.1930000E+00            NaN
+  0.1960000E+00            NaN
+  0.1990000E+00            NaN
+  0.2020000E+00            NaN
+  0.2050000E+00            NaN
+  0.2080000E+00            NaN
+  0.2110000E+00            NaN
+  0.2140000E+00            NaN
+  0.2170000E+00            NaN
+  0.2200000E+00            NaN
+  0.2230000E+00            NaN
+  0.2260000E+00            NaN
+  0.2290000E+00            NaN
+  0.2320000E+00            NaN
+  0.2350000E+00            NaN
+  0.2380000E+00            NaN
+  0.2410000E+00            NaN
+  0.2440000E+00            NaN
+  0.2470000E+00            NaN
+  0.2500000E+00            NaN
+  0.2530000E+00            NaN
+  0.2560000E+00            NaN
+  0.2590000E+00            NaN
+  0.2620000E+00            NaN
+  0.2650000E+00            NaN
+  0.2680000E+00            NaN
+  0.2710000E+00            NaN
+  0.2740000E+00            NaN
+  0.2770000E+00            NaN
+  0.2800000E+00            NaN
+  0.2830000E+00            NaN
+  0.2860000E+00            NaN
+  0.2890000E+00            NaN
+  0.2920000E+00            NaN
+  0.2950000E+00            NaN
+  0.2980000E+00            NaN
+  0.3010000E+00            NaN
+  0.3040000E+00            NaN
+  0.3070000E+00            NaN
+  0.3100000E+00            NaN
+  0.3130000E+00            NaN
+  0.3160000E+00            NaN
+  0.3190000E+00            NaN
+  0.3220000E+00            NaN
+  0.3250000E+00            NaN
+  0.3280000E+00            NaN
+  0.3310000E+00            NaN
+  0.3340000E+00            NaN
+  0.3370000E+00            NaN
+  0.3400000E+00            NaN
+  0.3430000E+00            NaN
+  0.3460000E+00            NaN
+  0.3490000E+00            NaN
+  0.3520000E+00            NaN
+  0.3550000E+00            NaN
+  0.3580000E+00            NaN
+  0.3610000E+00            NaN
+  0.3640000E+00            NaN
+  0.3670000E+00            NaN
+  0.3700000E+00            NaN
+  0.3730000E+00            NaN
+  0.3760000E+00            NaN
+  0.3790000E+00            NaN
+  0.3820000E+00            NaN
+  0.3850000E+00            NaN
+  0.3880000E+00            NaN
+  0.3910000E+00            NaN
+  0.3940000E+00            NaN
+  0.3970000E+00            NaN
+  0.4000000E+00            NaN
+  0.4030000E+00            NaN
+  0.4060000E+00            NaN
+  0.4090000E+00            NaN
+  0.4120000E+00            NaN
+  0.4150000E+00            NaN
+  0.4180000E+00            NaN
+  0.4210000E+00            NaN
+  0.4240000E+00            NaN
+  0.4270000E+00            NaN
+  0.4300000E+00            NaN
+  0.4330000E+00            NaN
+  0.4360000E+00            NaN
+  0.4390000E+00            NaN
+  0.4420000E+00            NaN
+  0.4450000E+00            NaN
+  0.4480000E+00            NaN
+  0.4510000E+00            NaN
+  0.4540000E+00            NaN
+  0.4570000E+00            NaN
+  0.4600000E+00            NaN
+  0.4630000E+00            NaN
+  0.4660000E+00            NaN
+  0.4690000E+00            NaN
+  0.4720000E+00            NaN
+  0.4750000E+00            NaN
+  0.4780000E+00            NaN
+  0.4810000E+00            NaN
+  0.4840000E+00            NaN
+  0.4870000E+00            NaN
+  0.4900000E+00            NaN
+  0.4930000E+00            NaN
+  0.4960000E+00            NaN
+  0.4990000E+00            NaN
+  0.5020000E+00            NaN
+  0.5050000E+00            NaN
+  0.5080000E+00            NaN
+  0.5110000E+00            NaN
+  0.5140000E+00            NaN
+  0.5170000E+00            NaN
+  0.5200000E+00            NaN
+  0.5230000E+00            NaN
+  0.5260000E+00            NaN
+  0.5290000E+00            NaN
+  0.5320000E+00            NaN
+  0.5350000E+00            NaN
+  0.5380000E+00            NaN
+  0.5410000E+00            NaN
+  0.5440000E+00            NaN
+  0.5470000E+00            NaN
+  0.5500000E+00            NaN
+  0.5530000E+00            NaN
+  0.5560000E+00            NaN
+  0.5590000E+00            NaN
+  0.5620000E+00            NaN
+  0.5650000E+00            NaN
+  0.5680000E+00            NaN
+  0.5710000E+00            NaN
+  0.5740000E+00            NaN
+  0.5770000E+00            NaN
+  0.5800000E+00            NaN
+  0.5830000E+00            NaN
+  0.5860000E+00            NaN
+  0.5890000E+00            NaN
+  0.5920000E+00            NaN
+  0.5950000E+00            NaN
+  0.5980000E+00            NaN
+  0.6010000E+00            NaN
+  0.6040000E+00            NaN
+  0.6070000E+00            NaN
+  0.6100000E+00            NaN
+  0.6130000E+00            NaN
+  0.6160000E+00            NaN
+  0.6190000E+00            NaN
+  0.6220000E+00            NaN
+  0.6250000E+00            NaN
+  0.6280000E+00            NaN
+  0.6310000E+00            NaN
+  0.6340000E+00            NaN
+  0.6370000E+00            NaN
+  0.6400000E+00            NaN
+  0.6430000E+00            NaN
+  0.6460000E+00            NaN
+  0.6490000E+00            NaN
+  0.6520000E+00            NaN
+  0.6550000E+00            NaN
+  0.6580000E+00            NaN
+  0.6610000E+00            NaN
+  0.6640000E+00            NaN
+  0.6670000E+00            NaN
+  0.6700000E+00            NaN
+  0.6730000E+00            NaN
+  0.6760000E+00            NaN
+  0.6790000E+00            NaN
+  0.6820000E+00            NaN
+  0.6850000E+00            NaN
+  0.6880000E+00            NaN
+  0.6910000E+00            NaN
+  0.6940000E+00            NaN
+  0.6970000E+00            NaN
+  0.7000000E+00            NaN
+  0.7030000E+00            NaN
+  0.7060000E+00            NaN
+  0.7090000E+00            NaN
+  0.7120000E+00            NaN
+  0.7150000E+00            NaN
+  0.7180000E+00            NaN
+  0.7210000E+00            NaN
+  0.7240000E+00            NaN
+  0.7270000E+00            NaN
+  0.7300000E+00            NaN
+  0.7330000E+00            NaN
+  0.7360000E+00            NaN
+  0.7390000E+00            NaN
+  0.7420000E+00            NaN
+  0.7450000E+00            NaN
+  0.7480000E+00            NaN
+  0.7510000E+00            NaN
+  0.7540000E+00            NaN
+  0.7570000E+00            NaN
+  0.7600000E+00            NaN
+  0.7630000E+00            NaN
+  0.7660000E+00            NaN
+  0.7690000E+00            NaN
+  0.7720000E+00            NaN
+  0.7750000E+00            NaN
+  0.7780000E+00            NaN
+  0.7810000E+00            NaN
+  0.7840000E+00            NaN
+  0.7870000E+00            NaN
+  0.7900000E+00            NaN
+  0.7930000E+00            NaN
+  0.7960000E+00            NaN
+  0.7990000E+00            NaN
+  0.8020000E+00            NaN
+  0.8050000E+00            NaN
+  0.8080000E+00            NaN
+  0.8110000E+00            NaN
+  0.8140000E+00            NaN
+  0.8170000E+00            NaN
+  0.8200000E+00            NaN
+  0.8230000E+00            NaN
+  0.8260000E+00            NaN
+  0.8290000E+00            NaN
+  0.8320000E+00            NaN
+  0.8350000E+00            NaN
+  0.8380000E+00            NaN
+  0.8410000E+00            NaN
+  0.8440000E+00            NaN
+  0.8470000E+00            NaN
+  0.8500000E+00            NaN
+  0.8530000E+00            NaN
+  0.8560000E+00            NaN
+  0.8590000E+00            NaN
+  0.8620000E+00            NaN
+  0.8650000E+00            NaN
+  0.8680000E+00            NaN
+  0.8710000E+00            NaN
+  0.8740000E+00            NaN
+  0.8770000E+00            NaN
+  0.8800000E+00            NaN
+  0.8830000E+00            NaN
+  0.8860000E+00            NaN
+  0.8890000E+00            NaN
+  0.8920000E+00            NaN
+  0.8950000E+00            NaN
+  0.8980000E+00            NaN
+  0.9010000E+00            NaN
+  0.9040000E+00            NaN
+  0.9070000E+00            NaN
+  0.9100000E+00            NaN
+  0.9130000E+00            NaN
+  0.9160000E+00            NaN
+  0.9190000E+00            NaN
+  0.9220000E+00            NaN
+  0.9250000E+00            NaN
+  0.9280000E+00            NaN
+  0.9310000E+00            NaN
+  0.9340000E+00            NaN
+  0.9370000E+00            NaN
+  0.9400000E+00            NaN
+  0.9430000E+00            NaN
+  0.9460000E+00            NaN
+  0.9490000E+00            NaN
+  0.9520000E+00            NaN
+  0.9550000E+00            NaN
+  0.9580000E+00            NaN
+  0.9610000E+00            NaN
+  0.9640000E+00            NaN
+  0.9670000E+00            NaN
+  0.9700000E+00            NaN
+  0.9730000E+00            NaN
+  0.9760000E+00            NaN
+  0.9790000E+00            NaN
+  0.9820000E+00            NaN
+  0.9850000E+00            NaN
+  0.9880000E+00            NaN
+  0.9910000E+00            NaN
+  0.9940000E+00            NaN
+  0.9970000E+00            NaN
+  0.1000000E+01            NaN
+  0.1003000E+01            NaN
+  0.1033000E+01            NaN
+  0.1063000E+01            NaN
+  0.1093000E+01            NaN
+  0.1123000E+01            NaN
+  0.1153000E+01            NaN
+  0.1183000E+01            NaN
+  0.1213000E+01            NaN
+  0.1243000E+01            NaN
+  0.1273000E+01            NaN
+  0.1303000E+01            NaN
+  0.1333000E+01            NaN
+  0.1363000E+01            NaN
+  0.1393000E+01            NaN
+  0.1423000E+01            NaN
+  0.1453000E+01            NaN
+  0.1483000E+01            NaN
+  0.1513000E+01            NaN
+  0.1543000E+01            NaN
+  0.1573000E+01            NaN
+  0.1603000E+01            NaN
+  0.1633000E+01            NaN
+  0.1663000E+01            NaN
+  0.1693000E+01            NaN
+  0.1723000E+01            NaN
+  0.1753000E+01            NaN
+  0.1783000E+01            NaN
+  0.1813000E+01            NaN
+  0.1843000E+01            NaN
+  0.1873000E+01            NaN
+  0.1903000E+01            NaN
+  0.1933000E+01            NaN
+  0.1963000E+01            NaN
+  0.1993000E+01            NaN
+&
+-0.405437 -19
+&

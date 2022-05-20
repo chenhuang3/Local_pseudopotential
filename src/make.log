@@ -1,0 +1,4 @@
+g77  -c psatom.f
+g77   -o pslp.x pslp.o psatom.o rcovalent.o ppcheck.o derlkb.o vexcos.o outwfct.o labelmap.o ggarad.o gga91_sr.o bpgcxc.o ldaxc.o corlyp.o pbe.o logmesh.o atomini.o sratom_n.o vestat.o vexcor.o dftseq.o atoaux.o darraux.o anderson.o moment.o spinorbit.o relxc.o pbe-modify.o stat_orb.o fxc_mgga_pk.o vklix.o invermat.o arhf.o acgc.o gaunt.o ecp.o cepvwn.o overlap.o klbyiiLAPACK.o laguerre.o gaussq.o kinkon.o dfbt_srt.o bessel.o ../lib/libFREE.a
+/usr/lib/gcc-lib/i486-suse-linux/2.95.3/libg2c.a(open.o): In function `f_open':
+open.o(.text+0x4da): the use of `tempnam' is dangerous, better use `mkstemp'

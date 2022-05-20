@@ -1,0 +1,473 @@
+#! /bin/csh -f
+onintr INTERRUPT
+#
+#------ Analyze pseudopotentials with fhipp code -----
+#       27-06-2003 Martin Fuchs
+#
+#   "pswatch -h" returns a list of options
+#
+set WORKDIR  = $PWD                             # working directory
+set SOURCES  = ${FHIPP_PATH}/fhi98PP            # assumed path to resources
+set PROGRAM  = ${SOURCES}/src/pslp.x            # executable
+set GRAPHIC  = ${SOURCES}/bin/Xmgrace   	# path for xvgr graphics header files
+set EDITOR   = vi
+set scratch  = ".scratch"                       # scratchfile
+set marker   = $$.marker                        # used for listing
+#
+#---------------------------------------------
+
+#aliases
+
+alias testinput 'set INFO = \!:1; if (! -e \!:1 || -z \!:1) goto \!:2'
+alias filename  'echo \!:1"."\!:2'
+alias get_graphics_template 'set GRAPHICS_TEMPLATE = ${GRAPHIC}/xmgrace.${GRAPHICS_TOPIC}'
+alias get_graphics_output   'set GRAPHICS_OUTPUT   = xv.${OUT}.${GRAPHICS_TOPIC}.agr'
+alias xvgr_cat  'if( -e \!:1) cat \!:1; if(! -e \!:1) echo 0.0 0.0; echo "&"'
+
+# default
+
+unset ONLYATOM		      # self-consistent pseudoatom and log derivatives
+unset DEBUG                   # remove all scratch files
+unset QMC_OUTPUT              # alternative output formatting
+unset NO_XMGRACE              # graphic output in xmgr format
+unset NONRELATIVISTIC         # relativistic aell-electron effective expected
+unset SPINPOLARIZED           # non spin polarized calculation expected
+set   LIMIT_GRAPHICS          # don't do all graphics 
+set   CHECKGHOST              # perform analysis of Kleinman-Bylander potentials
+set   LOGDERIVATIVE           # calculate logarithmic derivatives
+set   PREFIX = "ncpp"         # prefix for inputfiles
+set   INI    = "ncpp.ini"
+set   RDIAG  = "0.0"
+set   RCUT_GLOBAL = "1000"
+
+# input
+
+if ($#argv == 0) goto SHORTHELP
+while ($#argv)
+      switch ($1)
+      case [-][hH]* :
+            goto LONGHELP
+            shift; breaksw
+      case [a-zA-Z0-9]* :
+            set INI = $1
+            shift; breaksw
+      case -g :
+		set DEBUG
+		shift; breaksw
+      case -xv :
+		set NO_XMGRACE
+		shift; breaksw
+      case -ao :
+            set ONLYATOM
+            shift; breaksw
+      case -q :
+            set QUIET 
+            shift; breaksw
+      case -i :
+            set PREFIX = $2
+            shift; shift; breaksw
+      case -ae :
+            set AE_FILE = $2
+            shift; shift; breaksw
+      case -cpi :
+            set CPI_FILE = $2
+            shift; shift; breaksw
+      case -cpo:
+	    set ALT_OUTFILE = $2
+	    set CALCWFCT
+            shift; shift; breaksw
+      case -fqmc:
+            set QMC_OUTPUT
+            set CALCWFCT
+	    shift; breaksw 
+      case -e :
+            unset VIEW
+            set   EDIT
+            shift; breaksw
+      case -v :
+            unset EDIT
+            set VIEW
+            shift; breaksw
+	case -c :
+            set RCUT_GLOBAL = $2
+            set CUT_GLOBAL
+		shift; shift; breaksw
+	case -rl :
+            set RDIAG = $2
+		shift; shift; breaksw
+	case -L :
+            switch ($2)
+			case [0-5] :
+			set LBEG = $2; shift; breaksw
+			default :
+			set LBEG =  0; breaksw
+		endsw
+		switch ($2)
+			case [0-5] :
+			set LEND = $2; shift; breaksw
+			default :
+			set LEND =  2; breaksw
+		endsw
+		set LRANGE
+		shift; breaksw
+	case -l :
+		set LLOCAL = $2
+		shift; shift; breaksw
+	case -kb :
+		unset CHECKGHOST
+		shift; breaksw
+	case -d :
+		unset LOGDERIVATIVE
+		shift; breaksw
+	case -r :
+		set NONRELATIVISTIC
+		shift; breaksw
+	case -S :
+		set SPINPOLARIZED
+                set ONLYATOM
+		shift; breaksw
+	default : 
+		echo $0 - option $1 undefined
+            shift; breaksw
+	endsw
+end
+
+# inout handling
+	
+if (! $?AE_FILE ) then
+	set AE_FILE = `filename $PREFIX "aep"`
+endif
+if (! $?CPI_FILE ) then
+	set CPI_FILE = `filename $PREFIX "cpi"` 
+endif
+if (! $?CORE_KINETIC_FILE ) then
+	set CORE_KINETIC_FILE = `filename $PREFIX "fck"` 
+endif
+set OUT = `echo $PREFIX | awk -F"/" '{print $NF}'`
+set DAT = ${OUT}.test
+
+testinput $INI      NOINPUT
+testinput $CPI_FILE NOINPUT
+
+set LMAX = `awk 'NR == 1 {print $2-1}' $CPI_FILE ` 
+if ( $?LLOCAL ) then
+	if ( $LLOCAL > $LMAX ) then
+		echo pswatch - local potential L = $LLOCAL out of range in file $CPI_FILE
+		goto TERMINATE
+	endif
+else
+	set LLOCAL = $LMAX
+endif
+
+if(! $?LRANGE ) then
+  set LBEG = 0
+  set LEND = $LMAX
+endif
+
+#cleanup
+rm -f ${DAT} xv.${OUT}.lder* >& $scratch ; date >! $marker
+
+# prepare input
+set STAMP = "$OUT `date +'"'%T %h %d %Y'"'` $USER"
+
+set LINE_1 = ($LLOCAL $LBEG $LEND $LMAX 0.0 ": LLOC LBEG LEND LMAX RLD")
+set LINE_2 = (.t. .t. .t. .f.        ": TLGD TKB TIWF TNRL")
+set LINE_3 = (.f. 1000               ": TCUT_GLOBAL RCUT_GLOBAL")
+set LINE_4 = (.f.                    ": TSPIN")
+if ( $?RDIAG )                          set LINE_1[5] = $RDIAG
+if ( $?ONLYATOM || ! $?LOGDERIVATIVE )  set LINE_2[1] = ".f."
+if ( $?ONLYATOM || ! $?CHECKGHOST )     set LINE_2[2] = ".f." 
+if ( $?CALCWFCT )                       set LINE_2[3] = ".f."
+if ( $?NONRELATIVISTIC )                set LINE_2[4] = ".t." 
+if ( $?CUT_GLOBAL) then
+	set LINE_3[1] = ".t."
+	set LINE_3[2] = $RCUT_GLOBAL
+endif
+if ( $?SPINPOLARIZED )                  set LINE_4[1] = ".t." 
+
+set INPUT_UNIT = fort.21
+
+(echo $LINE_1; echo $LINE_2; echo $LINE_3; echo $LINE_4; cat $INI) >! $INPUT_UNIT
+
+if ( $?EDIT ) $EDITOR $INPUT_UNIT
+if ( $?VIEW ) less    $INPUT_UNIT
+
+tail +5 $INPUT_UNIT >! fort.22  
+
+tail +12 $CPI_FILE >! fort.31
+if(-e $AE_FILE ) cp $AE_FILE fort.37
+if(-e $CORE_KINETIC_FILE ) cp $CORE_KINETIC_FILE fort.17
+
+# actions
+
+if (! -e $PROGRAM ) then
+      echo $0 "- executable not found:" $PROGRAM
+      goto INTERRUPT
+endif
+
+if( $?QUIET ) then
+	(echo "#info $0 $STAMP"; ${PROGRAM}) >! ${DAT}
+else
+	(echo "#info $0 $STAMP"; ${PROGRAM})  | tee ${DAT}
+endif
+
+# output handling
+
+if( $?CUT_GLOBAL)  set ALT_OUTFILE = ${OUT}.cpo
+if( $?ALT_OUTFILE ) then
+ 
+#                     ======= fhi94md output ======
+
+#    VALENCE total valence charge          NOOFPOT number of pseudopotentials present
+echo `head -1 fort.40 | awk '{print $NF}'` " " `ls fort.4[0-4] | wc -l` >! $ALT_OUTFILE
+cat << unused_fit_parameters >>! $ALT_OUTFILE
+  0.0000    0.0000    0.0000   0.0000
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+unused_fit_parameters
+
+foreach PSEUDOPOTENTIAL ( fort.4[0-4] )
+
+      (head -1 $PSEUDOPOTENTIAL | awk '{print $2," "$3}' ;\
+       tail +2 $PSEUDOPOTENTIAL ) >>! $ALT_OUTFILE
+
+end
+if (-e fort.27) cat fort.27 >>! $ALT_OUTFILE
+
+endif 	# alternative pseudopotential output
+
+#                     ======= done with fhi94md ======
+
+#                     ======= qmc output ======
+if( $?QMC_OUTPUT ) then
+
+set QMC_POTENTIAL_FILE = ${PREFIX}.qpot
+set QMC_ORBITAL_FILE   = ${PREFIX}.qorb
+
+set NOF_GRIDPOINTS = `head -1 fort.40 | awk '{print $2}'`
+set NOF_COMPONENTS = `ls fort.4[0-4] | wc -l`
+set IONIC_CHARGE   = `head -1 fort.40 | awk '{print $6}'`
+
+tail +2 fort.40 | awk '{print $2}' >! 0.r 
+
+rm  -f *.qn *.qp *.qpn
+foreach LINDEX ( 0 1 2 )
+
+        set PSEUDOPOTENTIAL = fort.4${LINDEX}
+	echo $PSEUDOPOTENTIAL
+        if(-e ${PSEUDOPOTENTIAL}) then
+		tail +2 $PSEUDOPOTENTIAL  | awk '{printf "%20.14e\n", $4}'    >! ${LINDEX}.qp
+		tail +2 $PSEUDOPOTENTIAL  | awk '{printf "%20.14e\n", $3/$2}' >! ${LINDEX}.qo
+	echo $PSEUDOPOTENTIAL exists
+	endif
+end
+
+foreach LINDEX ( 0 1 2 )
+
+	if( -e ${LINDEX}.qp && $LINDEX != $LLOCAL ) then
+		paste ${LINDEX}.qp ${LLOCAL}.qp | awk '{printf "%20.14e\n",$1-$2}' > ${LINDEX}.qpn
+		rm -f ${LINDEX}.qp 
+		echo ${LINDEX}.qpn made
+	endif
+end
+
+echo  $IONIC_CHARGE  $NOF_COMPONENTS  $NOF_GRIDPOINTS  "0"  >! $QMC_POTENTIAL_FILE
+paste 0.r ${LLOCAL}.qp [0-${LMAX}].qpn >> $QMC_POTENTIAL_FILE 
+
+echo  $IONIC_CHARGE  $NOF_COMPONENTS  $NOF_GRIDPOINTS  "1"  >! $QMC_ORBITAL_FILE
+paste 0.r [0-${LMAX}].qo  >> $QMC_ORBITAL_FILE
+
+endif
+#                     ======= end output ======
+
+#                     ======= begin graphics ========
+if(! $?NO_XMGRACE ) then
+
+#wavefunctions
+#( cat ${GRAPHIC}/xvgr.ae_wfct ;\
+#  echo "@ title" '"'"Radial Wavefunctions  \s\S"${STAMP}"\N\N"'"' ;\
+#  awk < fort.38 'BEGIN {g = 0} \
+#                  {if ($1 == "#" && NR == 1) {print "@ legend string",g,"\""$2"\"";g++} \
+#                  else if ($1 == "#") {print "@ legend string",g,"\""$2"\"";print "&";g++}\
+#                  else {printf "%12.6e %12.6e \n", $1,$2} }' \
+#) >! xv.${OUT}.ps_wfct
+
+if ( $?ONLYATOM ) goto TERMINATE
+
+#logarithmic derivatives 
+
+if ( $?LOGDERIVATIVE ) then
+set LOCAL = `grep "componen" ${DAT} | awk '{print "loc "$2}'`
+set RDIAG = `grep "radius =" ${DAT} | awk '{print "r=" $(NF-1)}'`
+
+#  s to d
+set GRAPHICS_TOPIC = lder_sd
+get_graphics_template
+get_graphics_output
+(cat ${GRAPHICS_TEMPLATE}; \
+ echo "@ with g2"; echo "@ g2 on" ; echo "@ subtitle" '"'$STAMP $RDIAG $LOCAL'"') >>! ${GRAPHICS_OUTPUT}
+@ LL = 0
+while ( ${LL} < 3 ) 
+      (echo "@ with g"${LL}; echo "@ g"${LL}" on"; \
+       xvgr_cat fort.5${LL}; xvgr_cat fort.6${LL}; xvgr_cat fort.7${LL}; \
+       grep "^<" ${DAT} | awk '$4 =='"${LL}"' {e_refernc = $6/27.2116;print e_refernc,"-19"; print "&"}' \
+      ) >>! ${GRAPHICS_OUTPUT}
+@ LL++
+end
+
+# f to h
+if (-e fort.53 || -e fort.63) then
+set GRAPHICS_TOPIC = lder_fh
+get_graphics_template
+get_graphics_output
+(cat ${GRAPHICS_TEMPLATE}; \
+ echo "@ with g2"; echo "@ g2 on" ; echo "@ subtitle" '"'$STAMP $RDIAG $LOCAL'"') >>! ${GRAPHICS_OUTPUT}
+@ LL = 0
+while ( ${LL} < 3 )
+      @ INDEX = ${LL} + 3
+      (echo "@ with g"${LL}; echo "@ g"${LL}" on") >>! ${GRAPHICS_OUTPUT}
+      (xvgr_cat fort.5${INDEX}; xvgr_cat fort.6${INDEX}; xvgr_cat fort.7${INDEX}) >>! ${GRAPHICS_OUTPUT}
+      grep "^<" ${DAT} | awk '$4 =='"${INDEX}"' {e_refernc = $6/27.2116;print e_refernc,"-19"; print "&"}' \
+      >>! ${GRAPHICS_OUTPUT}
+@ LL++
+end
+endif
+
+endif 	# logarithmic derivatives done
+
+# pseudopotentials 
+
+set GRAPHICS_TOPIC = pspot_i
+get_graphics_template
+get_graphics_output
+
+if(! -e ${GRAPHICS_OUTPUT}) then
+( cat ${GRAPHICS_TEMPLATE};\
+  echo "@ title" '"'"Ionic Pseudopotentials  \s\S"${STAMP}"\N\N"'"'  ; \
+  grep "y range plot" ${DAT} | \
+  awk '{printf "@ world ymin %4.2f\n",$(NF-2);   printf "@ world ymax %4.2f\n",$(NF-1) \
+        printf "@ yaxis tick major %4.2f\n",$NF; printf "@ yaxis tick minor %4.2f\n", $NF/4}' \
+) >! ${GRAPHICS_OUTPUT}
+foreach PSEUDOPOTENTIAL ( fort.4[0-4] )
+
+awk < $PSEUDOPOTENTIAL '{if(NR == 1){print "@ legend string",$4,"\""$4,"\\6(r\\sc\\N\\4> "substr($5,1,5),")\""}\
+                         else {printf "%12.6e %12.6e \n",$2,$4}} END {print "&"}' >>! ${GRAPHICS_OUTPUT}
+
+end
+endif
+
+set GRAPHICS_TOPIC = pspot_s
+get_graphics_template
+get_graphics_output
+if(! -e ${GRAPHICS_OUTPUT}) then
+
+( cat ${GRAPHICS_TEMPLATE};\
+  echo "@ title" '"'"Screened pseudopotentials  \s\S"${STAMP}"\N\N"'"' ; \
+  grep "y range plot" ${DAT} | \
+  awk '{printf "@ world ymin %4.2f\n",$(NF-2);   printf "@ world ymax %4.2f\n",$(NF-1) \
+        printf "@ yaxis tick major %4.2f\n",$NF; printf "@ yaxis tick minor %4.2f\n", $NF/4}' \
+) >! ${GRAPHICS_OUTPUT}
+#cat tmp.vps_i >>  xv.${OUT}.pspot_s
+
+foreach PSEUDOPOTENTIAL ( fort.4[5-9] )
+
+awk < $PSEUDOPOTENTIAL '{if(NR == 1){print "@ legend string",$4,"\""$4,"\\6(r\\sc\\N\\4> "substr($5,1,5),")\""}\
+                         else {printf "%12.6e %12.6e \n",$2,$4}} END {print "&"}' >>! ${GRAPHICS_OUTPUT}
+
+end
+endif
+
+endif
+
+#                     ======= done with graphics ========
+
+TERMINATE:
+rm -f $scratch
+if (! $?DEBUG) rm -f fort.*
+echo $0 - done: output
+ls -t -1  | awk '{if ($0  ~ /'$marker'/) {exit 0} else {print $0}'}
+rm -f *$marker
+exit 0
+
+NOINPUT:
+echo $0 - missing or empty inputfile $INFO 
+exit 1 
+
+INTERRUPT:
+rm -f fort.* $scratch 
+echo $0 - quit: output
+ls -t -1  | awk '{if ($0  ~ /'$marker'/) {exit 0} else {print $0}'}
+rm -f *$marker
+exit 1
+
+SHORTHELP:
+cat << SYNTAX
+$0 -h -g -xv -e -v -ao -kb -q -s -r [-c Number] [-l Number] [-L Number Number] [-rl Number] 
+[-ae File] [-cpi File] [-cpo File] -i String] File
+SYNTAX
+exit 0
+
+LONGHELP:
+less << INFO
+program    $0
+
+tool       check pseudopotentials by analysis of pseudoatom, logarithmic derivatives,
+           and fully separable (Kleinman-Bylander) potentials
+
+options    -h            help
+           -g            do not cleanup (debugging)
+           -xv           skip graphics output
+           -e            edit input
+           -v            display input
+           -q            no screen output
+           -ao           perform pseudoatom calculation only 
+           -kb           skip analysis of Kleinman-Bylander potentials
+           -d            skip evaluation of lograithmic derivatives 
+           -r	   	 assume pseudopotentials were generated nonrelativistically
+           -S            assume spin-polarized calculation
+           -c   number   global cutoff radius, produces output file [prefix].cpo 
+           -l   number   angular momentum for local pseudopotential
+           -L   numbers  angular momentum range for log derivatives (eg "-L 0 3" covers l = 0...3)
+           -rl  number   diagnostic radius for log derivivatives
+           -ae  file     alternate file for all-electron potential
+           -cpi file     alternate file for pseudopotential input
+           -cpo file     alternate file for pseudopotential output, eg, when wavefunctions are calculated
+           -fqmc         write pseudo wavefcts and potentials in QMC package format
+
+           -i   string   identifying [prefix] for input/output files
+
+input      [prefix].ini  initialization file, generic format:
+                         14.0 3 2 8 0.0 : z nc nv iexc rnlc
+                          1   0  2.0    : n l f
+                          2   0  2.0
+                          2   1  6.0
+                          3   0  2.0
+                          3   1  2.0
+
+                         spin-polarized case:
+                         14.0 3 2 8 0.0   : z nc nv iexc rnlc
+                          1   0  1.0  1.0 : n l fup fdown
+                          2   0  1.0  1.0
+                          2   1  3.0  3.0
+                          3   0  1.0  1.0
+                          3   1  2.0  0.0
+
+           [prefix].cpi   pseudopotential file
+
+           [prefix].aep   all-electron effective potential 
+
+author     Martin Fuchs
+           Abteilung Theorie
+           Fritz-Haber-Institut der MPG
+           E-Mail: fuchs@fhi-berlin.mpg.de
+
+INFO
+
+exit 0

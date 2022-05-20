@@ -1,0 +1,170 @@
+#! /bin/csh -f
+# script to facilitate hardness tests for semilocal 
+# using pseudopotentials the psgen and pswatch 
+# shell scripts
+#
+onintr TERMINATE
+if ( $#argv != 1 ) goto USAGE
+
+# -------------- begin user settings --------------
+
+set OUTPUT_PREFIX    = al-test      		# outputfiles are $OUTPUT_PREFIX.relax	relaxed core all-electron
+						#                 ...           .frozen   frozen core all-electron
+						#                 ...           .pseudo   pseudo atom
+
+set INPUT_FILE       = $1                       # occupation scheme
+
+set REFERENCE_PREFIX = "al"                	# take pseudopotentials from file $REFERENCE_PREFIX.cpi
+                                                #      frozen-core                $REFERENCE_PREFIX.fc
+                                                #      all-electron potential     $REFERENCE_PREFIX.aep
+
+set RELATIVITYSWITCH = " " 			# -" " relativistic all-ectron reference atom
+						# "-r" non-relativistic all-electron atom
+						#      e.g. when nonrelativistic pseudopotentials are used
+
+						# indices of levels of all-electron atoms to investigate
+						# (read off from  $OUTPUT_PREFIX.[relax, frozen].dat files)
+set ALEVEL1 = 4  
+set ALEVEL2 = 5
+set ALEVEL3 = 6
+						# indices of levels of pseudo atom to investigate
+						# (read off from $REFERENCE_PREFIX.test file)
+set PLEVEL1 = 1
+set PLEVEL2 = 2
+set PLEVEL3 = 3
+
+set EDITOR = vi                                 # editor for input file
+
+# -------------- end user settings ----------------
+
+# verify settings
+
+echo "OUTPUT_PREFIX    " $OUTPUT_PREFIX    
+echo "INPUT_FILE       " $INPUT_FILE       
+echo "REFERENCE_PREFIX " $REFERENCE_PREFIX
+
+if(! -e $INPUT_FILE || -z $INPUT_FILE ) then
+	echo "missing or empty input file" $INPUT_FILE 
+    goto USAGE 
+endif
+
+# ensure output works always, no matter whether reference levels are found
+
+set RE = 0
+set AE = 0
+set PE = 0
+set RE1 = 0
+set RE2 = 0
+set RE3 = 0
+set AE1 = 0
+set AE2 = 0
+set AE3 = 0
+set PE1 = 0
+set PE2 = 0
+set PE3 = 0
+set ROCC = 0
+set AOCC = 0
+set POCC = 0
+
+# actions
+
+set SCRATCH = $$.scratch
+alias clean  'if (-e \!:1 ) rm -i \!:1'
+
+# in case a real*8 format is present prepare file for awk
+alias format 'sed ''s/D/E/g'' \!:1 >! $SCRATCH ;  mv $SCRATCH \!:1'
+
+clean ${OUTPUT_PREFIX}.relax
+clean ${OUTPUT_PREFIX}.frozen
+clean ${OUTPUT_PREFIX}.pseudo
+
+# initialize counter 
+if( -e ${OUTPUT_PREFIX}.relax) then
+	@ COUNT = `tail -1 ${OUTPUT_PREFIX}.relax | awk '{print $1+1}'`
+else
+	@ COUNT = 1
+endif
+
+while ($COUNT < 20 ) 
+
+#foreach file (Dwork/*)
+#cp $file $INPUT_FILE 
+
+#if( $COUNT == 0 ) then
+#	echo "$0 - edit the occupation scheme ... (press <return>)"
+#	set stop = $<
+#     endif
+
+      $EDITOR $INPUT_FILE
+
+# relaxed core (all-electron calculation)
+
+	echo "$0 - RELAXED CORE calculation ..."
+ 	psgen -xv -ao -o ${OUTPUT_PREFIX}.relax $INPUT_FILE $RELATIVITYSWITCH >& $SCRATCH
+      set TMP_DATA = ${OUTPUT_PREFIX}.relax.dat
+	if( $?ALEVEL1) set ROCC = `awk '$1 == "<" && $2 =='"$ALEVEL1"'{print $5}' $TMP_DATA`
+	if( $?ALEVEL1) set RE1  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL1"'{g = $6} END {print g}' $TMP_DATA`
+	if( $?ALEVEL2) set RE2  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL2"'{g = $6} END {print g}' $TMP_DATA`
+	if( $?ALEVEL3) set RE3  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL3"'{g = $6} END {print g}' $TMP_DATA`
+      set RE   = `grep "total energy" $TMP_DATA | awk '{print $3}'`
+
+# frozen core 
+
+	echo "$0 - FROZEN CORE calculation ..."
+	psgen -xv -ao -fc ${REFERENCE_PREFIX}.fc -o ${OUTPUT_PREFIX}.frozen $INPUT_FILE $RELATIVITYSWITCH >& $SCRATCH
+      set TMP_DATA = ${OUTPUT_PREFIX}.frozen.dat
+	if( $?ALEVEL1) set AOCC = `awk '$1 == "<" && $2 =='"$ALEVEL1"'{print $5}' $TMP_DATA`
+      if( $?ALEVEL1) set AE1  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL1"'{g = $6} END {print g}' $TMP_DATA`
+      if( $?ALEVEL2) set AE2  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL2"'{g = $6} END {print g}' $TMP_DATA`
+      if( $?ALEVEL3) set AE3  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$ALEVEL3"'{g = $6} END {print g}' $TMP_DATA`
+      set AE   = `grep "total energy" $TMP_DATA | awk '{print $3}'`
+
+# pseudo atom
+
+	echo "$0 - PSEUDO ATOM calculation ..."
+      pswatch -ao -q -cpi ${REFERENCE_PREFIX}.cpi -i ${REFERENCE_PREFIX} $INPUT_FILE >& $SCRATCH
+      set TMP_DATA = ${REFERENCE_PREFIX}.test
+	if( $?PLEVEL1) set POCC = `awk '$1 == "<" && $2 =='"$PLEVEL1"'{print $5}' $TMP_DATA`
+      if( $?PLEVEL1) set PE1  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$PLEVEL1"'{g = $6} END {print g}' $TMP_DATA`
+      if( $?PLEVEL2) set PE2  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$PLEVEL2"'{g = $6} END {print g}' $TMP_DATA`
+      if( $?PLEVEL3) set PE3  = `awk 'BEGIN {g = 0} $1 == "<" && $2 =='"$PLEVEL3"'{g = $6} END {print g}' $TMP_DATA`
+      set PE   = `grep "total energy" $TMP_DATA | awk '{print $3}'`
+
+NEXT:
+
+      cp $INPUT_FILE ${INPUT_FILE}.${COUNT}
+	echo "$0 - what we have after run" $COUNT "(file" ${INPUT_FILE}.${COUNT} ")"
+      echo "[1]:occ  [2]:etot  [3]:e_s  [4]:e_p  [5]:e_d"   
+      echo "relaxed core"  
+      if(-e ${OUTPUT_PREFIX}.relax ) cat ${OUTPUT_PREFIX}.relax
+	echo $COUNT $RE $RE1 $RE2 $RE3
+      echo "frozen core"  
+      if(-e ${OUTPUT_PREFIX}.frozen )cat ${OUTPUT_PREFIX}.frozen
+	echo $COUNT $AE $AE1 $AE2 $AE3
+      echo "pseudo atom"
+      if(-e ${OUTPUT_PREFIX}.pseudo ) cat ${OUTPUT_PREFIX}.pseudo
+	echo $COUNT $PE $PE1 $PE2 $PE3
+
+echo $0 "- configuration $COUNT done - <ret> save & continue - q <ret> save & quit - x <ret> escape -"
+set stop = $<
+
+if( $stop == x) goto TERMINATE
+
+echo $COUNT $RE $RE1 $RE2 $RE3 >>! ${OUTPUT_PREFIX}.relax; format ${OUTPUT_PREFIX}.relax
+echo $COUNT $AE $AE1 $AE2 $AE3 >>! ${OUTPUT_PREFIX}.frozen; format ${OUTPUT_PREFIX}.frozen
+echo $COUNT $PE $PE1 $PE2 $PE3 >>! ${OUTPUT_PREFIX}.pseudo; format ${OUTPUT_PREFIX}.pseudo
+
+if( $stop == q) goto TERMINATE
+	
+@ COUNT++
+end
+
+TERMINATE:
+rm -f $SCRATCH
+echo $0 "- output in" ${OUTPUT_PREFIX}.relax ${OUTPUT_PREFIX}.frozen ${OUTPUT_PREFIX}.pseudo
+exit
+
+USAGE:
+echo "(1) inspect user settings of this script" $0
+echo "(2) usage: $0 [editable file w/ occupation scheme, cf pswatch -h]"
+exit

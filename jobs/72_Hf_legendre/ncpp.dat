@@ -1,0 +1,109 @@
+#info ./psgen ncpp 21:22:27 Sep 25 2021 chuang3
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Hf      
+                nuclear charge  72.00
+                  total charge   0.50
+         number of core states  10
+      number of valence states   5
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+      scalar-relativistic mode
+        parameters radial mesh   563     1.024700   0.868056E-04
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -65293.2174         -2399.4626
+<  2     2     0        2.0000       -11169.8210          -410.4801
+<  3     2     1        6.0000        -9807.5119          -360.4166
+<  4     3     0        2.0000        -2548.3992           -93.6512
+<  5     3     1        6.0000        -2141.4809           -78.6974
+<  6     3     2       10.0000        -1660.1724           -61.0097
+<  7     4     0        2.0000         -516.8569           -18.9940
+<  8     4     1        6.0000         -383.3894           -14.0892
+<  9     4     2       10.0000         -210.9846            -7.7535
+< 10     4     3       14.0000          -21.1468            -0.7771
+< 11     5     0        2.0000          -71.3332            -2.6214
+< 12     5     1        6.0000          -39.8247            -1.4635
+< 13     5     2        1.5000           -6.4062            -0.2354
+< 14     6     0        2.0000           -8.2909            -0.3047
+< 15     6     1        0.0000           -3.9576            -0.1454
+
+                                  (Hartree a.u.)
+                  total energy      -15078.12957
+                kinetic energy       16522.49447
+                orbital energy       -9277.89302
+                coulomb energy      -37188.16585
+                hartree energy        5894.99149
+   exchange-correlation energy        -307.44968
+           xc potential energy        -402.20462
+          number of iterations                29   convergence  0.0E+00
+           core kinetic energy       16422.82350
+           core orbital energy       -9262.90654
+         core potential energy      -25685.73004
+            integrated density          71.50000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+ 
+ fhipp - all-electron atom done
+
+    === TROULLIER-MARTINS mode ===  t     
+
+  l  n     radius:     node      peak       default core
+x 0  5                0.553      0.993      2.800
+x 1  5                0.595      1.150      2.840
+x 2  5                0.656      1.658      2.460
+x 3  5                0.000      0.000      2.460
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  t     2.7679638   2.8363325 -71.3332317 -71.3332304   1.0000149   0.9999895
+  0  troullier-martins                               -8.2909392 -14.0689858   (excited state!)
+  1  t     2.8363325   2.9063899 -34.4793987 -34.4794071   1.0000007   1.0000006
+  1  troullier-martins                               -3.9575979  -3.7047989   (excited state!)
+  2  t     2.4500600   2.5105765  -6.4061948  -6.4062021   1.0000005   0.9999982
+  3  t     2.4500600   2.5105765   0.0100000   0.0096953   0.9999959   0.9999959
+ 
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.01787
+
+                                  (Hartree a.u.)
+                  total energy         -47.67613
+                kinetic energy          12.58051
+              potential energy         -89.90274
+                hartree energy          35.06818
+                     xc energy          -5.42208
+                      c energy          -0.42826
+    integrated valence density          11.50000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           2.450     (tolerance  1.0E-03)
+                  y range plot      -100  21  30
+ 
+ fhipp - done for input @
+ 
+@ 72.00 10  5  6  0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   6.00
+@     4  2  10.00
+@     4  3  14.00
+@     5  0   2.00
+@     5  1   6.00
+@     5  2   1.50
+@     6  0   2.00
+@     6  1   0.00
+@ 3  t                   : ltmx spptype
+@ 0   0.00   0.00E+00  t  : lt rct et spptype
+@ 1   0.00   0.12E+02  t
+@ 2   0.00   0.00E+00  t
+@ 3   0.00   0.10E-01  t

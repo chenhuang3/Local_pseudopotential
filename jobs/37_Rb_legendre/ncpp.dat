@@ -1,0 +1,101 @@
+#info ./psgen ncpp 10:08:25 Dec 11 2021 chuang3
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Rb      
+                nuclear charge  37.00
+                  total charge   0.00
+         number of core states   6
+      number of valence states   5
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+      scalar-relativistic mode
+        parameters radial mesh  1069     1.012300   0.168919E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -15034.0771          -552.4878
+<  2     2     0        2.0000        -2008.4016           -73.8068
+<  3     2     1        6.0000        -1780.4095           -65.4283
+<  4     3     0        2.0000         -298.1544           -10.9569
+<  5     3     1        6.0000         -225.0289            -8.2696
+<  6     3     2       10.0000         -104.1156            -3.8261
+<  7     4     0        2.0000          -32.0441            -1.1776
+<  8     4     1        6.0000          -16.1120            -0.5921
+<  9     4     2        0.0000           -0.0754            -0.0028
+< 10     5     0        0.9000           -2.3074            -0.0848
+< 11     5     1        0.1000           -0.8200            -0.0301
+
+                                  (Hartree a.u.)
+                  total energy       -2981.18976
+                kinetic energy        3053.21598
+                orbital energy       -1760.93914
+                coulomb energy       -7184.41037
+                hartree energy        1250.66283
+   exchange-correlation energy        -100.65820
+           xc potential energy        -131.07042
+          number of iterations                32   convergence  0.0E+00
+           core kinetic energy        3015.55184
+           core orbital energy       -1754.95203
+         core potential energy       -4770.50386
+            integrated density          37.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+ 
+ fhipp - all-electron atom done
+
+    === TROULLIER-MARTINS mode ===  t     
+
+  l  n     radius:     node      peak       default core
+x 0  4                0.617      1.253      4.000
+x 1  4                0.640      1.416      4.250
+x 2  4                0.697      7.026      3.500
+x 3  4                0.000      0.000      3.500
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  t     4.5246170   4.5802698 -32.0441036 -32.0441036   1.0000076   0.9999943
+  0  troullier-martins                               -2.3074188  -2.7633867   (excited state!)
+  1  t     2.9495688   2.9858485 -15.4715702 -15.4715705   1.0000000   1.0000000
+  1  troullier-martins                               -0.8199936  -0.8075333   (excited state!)
+  2  t     3.4576308   3.5001596  -0.0754313  -0.0754280   1.0000084   1.0000122
+  3  t     3.4576308   3.5001596   0.0100000   0.0100042   1.0000000   1.0000000
+ 
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.00588
+
+                                  (Hartree a.u.)
+                  total energy         -23.99149
+                kinetic energy           6.69931
+              potential energy         -46.29821
+                hartree energy          19.19637
+                     xc energy          -3.58896
+                      c energy          -0.30831
+    integrated valence density           9.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           1.365     (tolerance  1.0E-03)
+                  y range plot      -100  50  37
+ 
+ fhipp - done for input @
+ 
+@ 37.00  6  5  6  0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   6.00
+@     4  2   0.00
+@     5  0   0.90
+@     5  1   0.10
+@ 3  t                   : ltmx spptype
+@ 0   4.58   0.00E+00  t  : lt rct et spptype
+@ 1   2.98   0.70E+01  t
+@ 2   0.00   0.00E+00  t
+@ 3   0.00   0.10E-01  t

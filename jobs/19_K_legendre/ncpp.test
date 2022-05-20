@@ -1,0 +1,184 @@
+#info ./pswatch ncpp 16:15:48 Dec 10 2021 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         4.00000000000000     
+ icut:               770
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           1
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+ orbital   1 vanish at    24.3051
+ orbital   2 vanish at    38.6765
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   0.90 eref: -0.0880 (   -2.393 eV) u_ref(icut): -4.789E-01 norm(r<rc): 0.3309
+n,l: 2 1 => occ:   0.10 eref: -0.0321 (   -0.874 eV) u_ref(icut):  3.241E-01 norm(r<rc): 0.1042
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            2     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  1.54417D-05    |proj g|=  1.27873D-03
+ & dftseq - no bound state found (iter): e=>0 n l           2           1
+iter:   0 NEW_X, fcost: 2.812E-07  eig_match: 2.81E-07 |g|: 7.47E-05
+iter:   1 NEW_X, fcost: 2.561E-07  eig_match: 2.56E-07 |g|: 2.76E-05
+iter:   2 NEW_X, fcost: 2.521E-07  eig_match: 2.52E-07 |g|: 8.66E-06
+iter:   3 NEW_X, fcost: 2.512E-07  eig_match: 2.51E-07 |g|: 8.79E-06
+iter:   4 NEW_X, fcost: 2.406E-07  eig_match: 2.41E-07 |g|: 2.82E-05
+iter:   5 NEW_X, fcost: 2.224E-07  eig_match: 2.22E-07 |g|: 5.31E-05
+iter:   6 NEW_X, fcost: 1.769E-07  eig_match: 1.77E-07 |g|: 8.96E-05
+iter:   7 NEW_X, fcost: 1.083E-07  eig_match: 1.08E-07 |g|: 1.10E-04
+iter:   8 NEW_X, fcost: 3.648E-08  eig_match: 3.65E-08 |g|: 8.22E-05
+iter:   9 NEW_X, fcost: 2.803E-09  eig_match: 2.80E-09 |g|: 2.33E-05
+iter:  10 NEW_X, fcost: 2.377E-11  eig_match: 2.38E-11 |g|: 1.25E-06
+iter:  11 NEW_X, fcost: 2.077E-13  eig_match: 2.08E-13 |g|: 1.59E-08
+iter:  12 NEW_X, fcost: 3.690E-16  eig_match: 3.69E-16 |g|: 6.41E-09
+
+** L-BFGS reaches minimum, finished **
+
+ ------ final param ------
+c( 1): -2.072569E-01
+c( 2): -8.806321E-02
+c( 3):  1.964514E-02
+c( 4):  3.919718E-02
+c( 5):  1.178159E-03
+c( 6): -6.400522E-03
+c( 7): -9.335697E-04
+ 
+ >>> optimization is done <<< 
+
+*** final psatom_chen calc. with vlpsp *** 
+
+  >>> vks.dat is written <<<
+n,l:  1 0 => occ:    0.900 eig:  -0.08795 eref:  -0.08795 dE:  4.94E-07 eV
+n,l:  2 1 => occ:    0.100 eig:  -0.03210 eref:  -0.03210 dE:  1.70E-07 eV
+ 
+orb: 1  u(icut):  4.692E-01 u(ref): -4.789E-01  norm(r<rc):  0.3925 (ref: 0.3309)
+orb: 2  u(icut):  3.420E-01 u(ref):  3.241E-01  norm(r<rc):  0.1258 (ref: 0.1042)
+ 
+*** rcut:    3.98  ***
+*** Coulomb tail starts at    5.40   rmax:  79.56 ***
+  >>> vlps.dat is written <<<
+  >>> set vorb=vloc, vbare=vloc, uu=ups <<<
+ 
+ enter outlps()
+ outlps() ==> use_poly:  F 
+ outlps() ==> interpolate use pchip 
+ leave outlps()
+ 
+   >>> continue pswatch <<<
+ 
+               chemical symbol  K       
+                nuclear charge  19.00
+   number of valence electrons   1.00
+      number of valence states   2
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+        parameters radial mesh  1015    1.012300   0.328947E-03
+  input pseudopotentials up to   d
+
+          === pseudo atom (Hartree a.u.) ===
+
+<        n     l   occupation  eigenvalue(eV)  potential energy
+<  1     1     0      0.9000       -2.3933        -0.20542
+<  2     2     1      0.1000       -0.8735        -0.16133
+ 
+                  total energy      -0.14902
+                kinetic energy       0.04612
+  ionic pseudopotential energy      -0.20101
+                hartree energy       0.09169
+                     xc energy      -0.08582
+        local potential energy      -0.20101
+           xc potential energy      -0.11086
+    integrated valence density       1.00000
+          number of iterations            19   convergence  0.0E+00
+                  y range plot        -1   1   1
+ 
+ pslp - pseudoatom done - now testing
+
+ --- assuming scalar-relativistic all-electron atom ---
+
+ --- d component taken as local potential ---
+ --- input wavefunctions used for kb potentials ---
+
+ --- kb potentials: spectrum of bound states (eV) ---
+
+            l          e0            e1            e2
+semilocal   0       -2.3913        0.0000        0.0000
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    0       -2.3913        0.0000        0.0000
+semilocal   1       -0.8373        0.0000        0.0000
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    1       -0.8373        0.0000        0.0000
+
+ --- analysis of kb potentials: s waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate       -2.3933 eV    eloc0
+        dto. 1st excited state       -0.1777 eV    eloc1
+              reference energy       -2.3933 eV     eref
+
+ --- analysis of kb potentials: p waves  ---
+
+ & dftseq - no bound state found (iter): e=>0 n l           3           1
+ note: for the local potential no bound excited p state
+       is found, the ghost state analysis will assume
+       a zero 1st excited state energy (variable eloc1)
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate       -0.8735 eV    eloc0
+        dto. 1st excited state        0.0000 eV    eloc1
+              reference energy       -0.8735 eV     eref
+
+ --- logarithmic derivatives: at radius = 5.0212 ---
+
+ --- nonlocal potentials ---
+ --- all-electron potential ---
+ --- semilocal potentials ---
+
+ --- kinetic energy convergence in momentum space ---
+
+     l  n  bracket   cutoff    norm   kinet. energy   cutoff
+            (eV)      (Ry)               (Hartree)    (eV)
+ck   0     1.0E+00      0   0.317313   0.112620E-01      1
+ck   0     1.0E-01      0   0.988683   0.415749E-01      5
+ck   0     1.0E-02      2   0.999736   0.442305E-01     25
+ck   0     1.0E-03      3   0.999984   0.444785E-01     37
+cx   0  1                   1.000000   0.445037E-01
+
+ck   1     1.0E+00      0   0.491426   0.253813E-01      1
+ck   1     1.0E-01      0   0.987875   0.576772E-01      7
+ck   1     1.0E-02      1   0.999612   0.604428E-01     12
+ck   1     1.0E-03      3   0.999979   0.606679E-01     37
+cx   1  2                   1.000000   0.606998E-01
+
+ --- coulomb tail of pseudopotentials ---
+     Tolerance 1.0E-03 is met for
+     l= 1 at radii >   5.403
+     l= 2 at radii >   5.403
+     l= 3 at radii >   5.403
+
+ --- done & exiting ---

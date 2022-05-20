@@ -1,0 +1,107 @@
+#info ./psgen ncpp 22:52:53 Dec 10 2021 chuang3
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Cs      
+                nuclear charge  55.00
+                  total charge   0.20
+         number of core states   9
+      number of valence states   5
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+      scalar-relativistic mode
+        parameters radial mesh  1101     1.012300   0.113636E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -35801.3577         -1315.6653
+<  2     2     0        2.0000        -5616.5664          -206.4034
+<  3     2     1        6.0000        -5038.2552          -185.1510
+<  4     3     0        2.0000        -1168.3897           -42.9372
+<  5     3     1        6.0000         -982.3099           -36.0989
+<  6     3     2       10.0000         -709.2661           -26.0648
+<  7     4     0        2.0000         -221.2236            -8.1298
+<  8     4     1        6.0000         -161.7419            -5.9439
+<  9     4     2       10.0000          -75.1782            -2.7627
+< 10     5     0        2.0000          -27.6572            -1.0164
+< 11     5     1        6.0000          -14.4377            -0.5306
+< 12     5     2        0.0000           -1.0706            -0.0393
+< 13     6     0        0.8000           -2.7590            -0.1014
+< 14     6     1        0.0000           -1.2728            -0.0468
+
+                                  (Hartree a.u.)
+                  total energy       -7786.91052
+                kinetic energy        8204.52913
+                orbital energy       -4803.00712
+                coulomb energy      -18842.06054
+                hartree energy        3042.59281
+   exchange-correlation energy        -191.97192
+           xc potential energy        -250.66132
+          number of iterations                31   convergence  0.0E+00
+           core kinetic energy        8167.95189
+           core orbital energy       -4797.70982
+         core potential energy      -12965.66170
+            integrated density          54.80000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+ 
+ fhipp - all-electron atom done
+
+    === HAMANN mode ===   h     
+
+  l  n     radius:     node      peak       default core
+x 0  5                0.823      1.535      0.921
+x 1  5                0.885      1.778      1.067
+x 2  5                1.051      3.196      1.918
+x 3  4                0.000      0.000      3.803
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  h     0.9185772   2.1881217 -27.6572300 -27.6572299   1.0000000   1.0000099
+  0  hamann                                          -2.7590486  -2.7711953   (excited state!)
+  1  h     1.0637180   2.5650247 -14.4377346 -14.4377346   1.0000000   1.0000094
+  1  hamann                                          -1.2728141  -1.2745751   (excited state!)
+  2  h     1.9128013   6.9895460  -1.0705523  -1.0705523   1.0000000   1.0000008
+  3  h     3.7930374   9.3728280  -1.0705523  -1.0705523   1.0000000   1.0000000
+ 
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.35835
+
+                                  (Hartree a.u.)
+                  total energy         -20.13254
+                kinetic energy           5.16592
+              potential energy         -37.94477
+                hartree energy          15.74300
+                     xc energy          -3.09669
+                      c energy          -0.26730
+    integrated valence density           8.80000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           1.822     (tolerance  1.0E-03)
+                  y range plot      -100  36  34
+ 
+ fhipp - done for input @
+ 
+@ 55.00  9  5  6  0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   6.00
+@     4  2  10.00
+@     5  0   2.00
+@     5  1   6.00
+@     5  2   0.00
+@     6  0   0.80
+@     6  1   0.00
+@ 3  h                   : ltmx spptype
+@ 0   0.00   0.00E+00  h  : lt rct et spptype
+@ 1   0.00   0.00E+00  h
+@ 2   0.00   0.00E+00  h
+@ 3   0.00   0.00E+00  h

@@ -1,0 +1,98 @@
+#info pswatch n-rp1.00 16:32:33 Jul 01 2003 fuchs
+
+fhi pseudopotential tool pslp - version rev270603B
+
+               chemical symbol  N       
+                nuclear charge   7.00
+   number of valence electrons   5.00
+      number of valence states   2
+    exchange-correlation model   8  LDA CA Perdew/Wang 1991                 
+        parameters radial mesh   467    1.024700  0.892857E-03
+  input pseudopotentials up to   d
+
+          === pseudo atom (Hartree a.u.) ===
+
+<        n     l   occupation  eigenvalue(eV)  potential energy
+<  1     1     0      2.0000      -18.4214        -4.00071
+<  2     2     1      3.0000       -7.2394        -4.70454
+
+                  total energy      -9.64523
+                kinetic energy       6.47069
+  ionic pseudopotential energy     -22.11504
+                hartree energy       8.16064
+                     xc energy      -2.16152
+        local potential energy     -22.23139
+           xc potential energy      -2.82899
+    integrated valence density       5.00000
+          number of iterations            19   convergence  0.0E+00
+                  y range plot       -18   1   4
+
+ pslp - pseudoatom done - now testing
+
+ --- assuming scalar-relativistic all-electron atom ---
+
+ --- d component taken as local potential ---
+ --- input wavefunctions used for kb potentials ---
+
+ --- kb potentials: spectrum of bound states (eV) ---
+
+            l          e0            e1            e2
+semilocal   0      -18.4213       -0.0600        0.0000
+nonlocal    0      -18.4213       -0.0578        0.0000
+semilocal   1       -7.2393        0.0000        0.0000
+nonlocal    1       -7.2393        0.0000        0.0000
+
+ --- analysis of kb potentials: s waves  ---
+
+ * no ghost (ekb > 0, eloc0 < eref < eloc1)
+
+                     kb cosine        0.4034
+                     kb energy       89.8396 eV      ekb
+   local potential groundstate      -50.2586 eV    eloc0
+        dto. 1st excited state       -1.2540 eV    eloc1
+              reference energy      -18.4214 eV     eref
+
+ --- analysis of kb potentials: p waves  ---
+
+ & dftseq - no bound state found (iter): e=>0 n l 3 1
+ note: for the local potential no bound excited p state
+       is found, the ghost state analysis will assume
+       a zero 1st excited state energy (variable eloc1)
+
+ * no ghost (ekb < 0, eref < eloc0)
+
+                     kb cosine       -0.2395
+                     kb energy     -151.4587 eV      ekb
+   local potential groundstate       -3.2495 eV    eloc0
+        dto. 1st excited state        0.0000 eV    eloc1
+              reference energy       -7.2394 eV     eref
+
+ --- logarithmic derivatives: at radius = 1.8974 ---
+
+ --- nonlocal potentials ---
+ --- all-electron potential ---
+ --- semilocal potentials ---
+
+ --- kinetic energy convergence in momentum space ---
+
+     l  n  bracket   cutoff    norm   kinet. energy
+            (eV)      (Ry)               (Hartree)
+ck   0     1.0E+00      5   0.989508   0.526408E+00
+ck   0     1.0E-01     26   0.999768   0.559218E+00
+ck   0     1.0E-02     56   0.999989   0.562365E+00
+ck   0     1.0E-03     81   0.999999   0.562693E+00
+cx   0  1                   1.000000   0.562727E+00
+
+ck   1     1.0E+00     48   0.998689   0.174507E+01
+ck   1     1.0E-01     80   0.999919   0.177820E+01
+ck   1     1.0E-02    106   0.999994   0.178139E+01
+ck   1     1.0E-03    168   1.000000   0.178171E+01
+cx   1  2                   1.000000   0.178174E+01
+
+ --- coulomb tail of pseudopotentials ---
+     Tolerance 1.0E-03 is met for
+     l= 1 at radii >   1.382
+     l= 2 at radii >   1.109
+     l= 3 at radii >   1.348
+
+ --- done & exiting ---

@@ -1,0 +1,90 @@
+#info psgen se-bad 16:15:50 Jul 01 2003 fuchs
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Se      
+                nuclear charge  34.00
+                  total charge   0.00
+         number of core states   6
+      number of valence states   2
+    exchange-correlation model   8  LDA CA Perdew/Wang 1991                 
+      scalar-relativistic mode
+        parameters radial mesh   533    1.024700  0.183824E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -12483.7620          -458.7662
+<  2     2     0        2.0000        -1604.7173           -58.9718
+<  3     2     1        6.0000        -1412.9283           -51.9237
+<  4     3     0        2.0000         -212.6666            -7.8153
+<  5     3     1        6.0000         -152.7037            -5.6117
+<  6     3     2       10.0000          -53.3878            -1.9620
+<  7     4     0        2.0000          -17.4833            -0.6425
+<  8     4     1        4.0000           -6.6554            -0.2446
+
+                                  (Hartree a.u.)
+                  total energy       -2426.78938
+                kinetic energy        2475.47455
+                orbital energy       -1418.20218
+                coulomb energy       -5853.74139
+                hartree energy        1036.05647
+   exchange-correlation energy         -84.57902
+           xc potential energy        -112.04829
+          number of iterations                25   convergence  0.0E+00
+           core kinetic energy        2458.88658
+           core orbital energy       -1415.93886
+         core potential energy       -3874.82544
+            integrated density          34.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === HAMANN mode ===   h     
+
+  l  n     radius:     node      peak       default core
+x 0  4                0.702      1.495      0.897
+x 1  4                0.737      1.773      1.064
+x 2  4                0.000      0.000      1.765
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  h     0.8954994   2.2632956 -17.4833283 -17.4833289   1.0000000   1.0000065
+  1  h     1.0622884   2.8191092  -6.6554441  -6.6554443   1.0000000   1.0000061
+  2  h     1.7305222   4.2683146  -6.6554441  -6.6554441   1.0000000   1.0000000
+
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.26014
+
+                                  (Hartree a.u.)
+                  total energy          -9.35460
+                kinetic energy           3.09252
+              potential energy         -18.22848
+                hartree energy           7.66739
+                     xc energy          -1.88602
+                      c energy          -0.28022
+    integrated valence density           6.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           2.155     (tolerance  1.0E-03)
+                  y range plot        -5   5   2
+
+ fhipp - done for input @
+
+@ 34.00  6  2  8 0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   4.00
+@ 2  h                   : ltmx spptype
+@ 1   0.90  -.17E+02  h
+@ 2   1.06  -.67E+01  h
+@ 3   1.73  -.67E+01  h

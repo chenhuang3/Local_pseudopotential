@@ -1,0 +1,44 @@
+#info ./pswatch ncpp 14:30:59 Jan 07 2022 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         2.40000000000000     
+ icut:               744
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           3
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+ orbital   1 vanish at     4.5185
+ orbital   2 vanish at     5.3620
+ orbital   3 vanish at    10.8958
+ orbital   4 vanish at    13.9138
+ orbital   5 vanish at    19.1199
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref: -2.8106 (  -76.481 eV) u_ref(icut):  9.000E-02 norm(r<rc): 0.9981
+n,l: 2 1 => occ:   6.00 eref: -1.8442 (  -50.183 eV) u_ref(icut): -1.475E-01 norm(r<rc): 0.9936
+n,l: 3 2 => occ:   2.50 eref: -0.3975 (  -10.818 eV) u_ref(icut):  3.646E-01 norm(r<rc): 0.9103
+n,l: 2 0 => occ:   2.00 eref: -0.3072 (   -8.360 eV) u_ref(icut): -6.253E-01 norm(r<rc): 0.2823
+n,l: 3 1 => occ:   0.00 eref: -0.1628 (   -4.429 eV) u_ref(icut):  4.649E-01 norm(r<rc): 0.1278
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  1.00E-02
+    orb  4:  1.00E-02
+    orb  5:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds

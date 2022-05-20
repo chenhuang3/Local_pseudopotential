@@ -1,0 +1,137 @@
+#! /bin/csh -f
+#-----------------------------------------------------------------------------------------------------
+# transferability test for pseudoatoms: - errors in excitation energies from total energies
+#                                       -           eigenvalues (hardness-like)
+# usage:
+#
+# pstrans [-p] [prefix of data files [prefix].{relax,frozen,pseudo}] [field to extract > 1]"
+#
+# current setup:
+#
+# flag    field no.    function 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# -p      = 2          excitation energies (units of eV) with respect to the total energies of
+#                      the reference configuration as given on line 1 of data files 
+# -p      > 2          eigenvalues (units of eV) of level corresponding to field number 
+# none    = 2          error of excitation energies (units of meV) of the frozen core/pseudo atom
+#                      with respect to the fully relaxed all-electron atom
+# none    > 2          error of the eigenvalues (units of meV) of the frozen core/pseudo atom
+#                      with respect to the fully relaxed all-electron atom for the level
+#                      corresponding to field number
+#
+# data file format
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#   [1]: label [2]: total energy (Hartree) [3 etc.]: eigenvalues (eV)
+# > 1          -1940.75291                 -10.7663          -3.8309           0
+# > 2          -1940.87894                 -10.2765          -3.4946           0
+# > 3          -1941.00205                 -9.74820          -3.1317           0
+# > ...
+#
+# output
+#
+# flag    set no. (separated by &)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# -p      1    all-electron atom, fully relaxed core
+#         2      dto., frozen core approximation
+#         3      pseudo atom
+# none    1    errors for all-electron atom, frozen core approximation
+#         2    errors for pseudo atom
+#
+#-----------------------------------------------------------------------------------------------------
+# comments:
+#
+# (1)  Excitation energies: Substract the total energy of the all-electron/frozen-core/pseudo
+#      atom (files $1.{relax,frozen,pseudo}, format [1]:label [2]:total energy [3 etc]: eigenvalues in eV)
+#      for a reference configuration (line 1) from those for other configurations
+#      (line > 1). These values are kept in the intermediate files $SCRATCH.{relax,frozen,pseudo}.
+# (2)  Errors: Substract from the excitation energies/eigenvalues for the frozen-core/pseudo atom those
+#      for the all-electron atom, yielding their error with respect to an all-electron calculation.
+#-----------------------------------------------------------------------------------------------------
+onintr TERMINATE
+unset  PLAIN                        # error mode
+set SCRATCH = scratch-pstrans         
+set nn = 2                          # default is total energy (filed 2)
+
+if( $#argv < 1 ) goto USAGE
+while ($#argv)
+      switch ($1)
+      case -p :				# plain mode
+            set PLAIN
+            shift; breaksw
+      case [".""/"a-zA-Z]* :
+            set PREFIX = $1
+            shift; breaksw
+      case [2-6] :
+            set nn = $1
+            shift; breaksw
+      default :
+            echo $0 - bad input: $1
+            goto USAGE
+            shift; breaksw
+      endsw
+end
+
+set MODE = "error relative to all-electron calc"
+if( $?PLAIN ) then
+   set MODE = "absolute difference to configuration 1"
+endif
+
+switch ($nn)
+case 2 :
+	echo "#----- [index]   [total energy, " $MODE "] ----"
+	breaksw
+case 3 :
+	echo "#----- [index]   [s eigenvalue, " $MODE "] ----"
+	breaksw
+case 4 :
+	echo "#----- [index]   [p eigenvalue, " $MODE "] ----"
+	breaksw
+case 5 :
+	echo "#----- [index]   [d eigenvalue, " $MODE "] ----"
+	breaksw
+case 6 :
+	echo "#----- [index]   [f eigenvalue, " $MODE "] ----"
+	breaksw
+endsw
+ 
+set unit = 1000				# eV to meV - eigenvalue mode
+if( $nn == 2 ) set unit = 27211.6	# Hartree to meV - total energy mode
+set rr = '$'$nn				# with respect to reference value
+if( $?PLAIN && $nn > 2 ) then
+	set rr   = 0			# absolute values for excitation energies (meV) and eigenvalues (eV)
+	set unit = 1
+endif
+
+foreach i ( ${PREFIX}.relax ${PREFIX}.frozen ${PREFIX}.pseudo  )
+	if(! -e $i || -z $i ) then
+		echo $0 "- exit: missing or empty file:" $i
+            exit
+	endif
+end
+
+awk 'NR == 1 {eref = '"$rr"'};{del = ($'"$nn"' - eref)* '"$unit"'; print $1,del}' ${PREFIX}.relax  >! ${SCRATCH}.relax
+awk 'NR == 1 {eref = '"$rr"'};{del = ($'"$nn"' - eref)* '"$unit"'; print $1,del}' ${PREFIX}.frozen >! ${SCRATCH}.frozen
+awk 'NR == 1 {eref = '"$rr"'};{del = ($'"$nn"' - eref)* '"$unit"'; print $1,del}' ${PREFIX}.pseudo >! ${SCRATCH}.pseudo
+
+if( $?PLAIN) then
+
+# plain difference with respect to reference value
+cat ${SCRATCH}.relax;  echo "& relaxed plain"
+cat ${SCRATCH}.frozen; echo "& frozen plain"
+cat ${SCRATCH}.pseudo; echo "& pseudo plain"
+
+else
+
+# error with respect to all-electron values
+paste ${SCRATCH}.frozen ${SCRATCH}.relax | awk '{print $1,($2-$NF)} END {print "& frozen"}'
+paste ${SCRATCH}.pseudo ${SCRATCH}.relax | awk '{print $1,($2-$NF)} END {print "& pseudo"}'
+
+endif
+
+TERMINATE:
+rm -f  ${SCRATCH}.*
+exit
+
+USAGE:
+echo $0 "- usage: pstrans [-p] [prefix of data files [prefix].{relax,frozen,pseudo}] [field to extract > 2]"
+exit 

@@ -1,0 +1,98 @@
+#! /bin/csh -f
+
+# generate tm pseudopotential for selenium using
+# - the neutral configuration for the d potential
+# - an ionized configuration is used for the d wavefunction
+
+# --- settings ---
+
+set INI     = se-mult			# name of the game
+set RC      = 0.0d0			# core radius for nlcv XC
+set XC      = 8				# xc scheme
+set COMMENT = "u_d: 5s1 5p3 5d0.25"	# comment for .dat file
+
+cd  $cwd
+rm -f fort.* 
+
+# --- run 1 ---
+
+cat << otto >! $INI.ini 
+34.00 6 2 $XC $RC
+     1     0  2.00000000             state N L occupied by F
+     2     0  2.00000000
+     2     1  6.00000000
+     3     0  2.00000000
+     3     1  6.00000000
+     3     2  10.00
+     4     0   2.00
+     4     1   1.00
+2 t
+0 2.0 0.0 t
+otto
+
+psgen  -o $INI $INI.ini -g 
+
+mv fort.40 1.s				# store s potential
+mv fort.41 1.p				# store p potential
+mv fort.42 1.d				# store d potential
+
+# --- run 2 ---
+
+cat << lisa >! ${INI}.2.ini
+34.00 6 3 $XC $RC
+     1     0  2.00000000             state N L occupied by F
+     2     0  2.00000000
+     2     1  6.00000000
+     3     0  2.00000000
+     3     1  6.00000000
+     3     2 10.00
+     4     0  1.00
+     4     1  3.00
+     4     2  0.25
+2 t
+0 2.00   0.0 t
+lisa
+
+psgen -o ${INI}.2 ${INI}.2.ini -g -fc ${INI}.fc -rc $RC
+
+mv fort.40 2.s				# store s potential
+mv fort.41 2.p				# store p potential
+mv fort.42 2.d				# store d potential
+if(-e fort.27) cp fort.27 2.c		# in case we need the model core density
+
+# --- pasting --- take wavefunction from 2.d but potential from 1.d
+
+paste 2.d 1.d | awk '{if (NR == 1) {print $0} else {print $1,$2,$3,$NF}}' >! scratch; mv scratch 1.d
+
+# --- pseudopotential file ---- in fhi94md format
+
+echo `grep 'integrated valence' $INI.dat | awk '{print $NF"E+00"}'` `ls 1.* | wc -l` >! ${INI}.cpi
+cat << lotte >>! ${INI}.cpi
+  0.0000    0.0000    0.0000   0.0000
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+lotte
+
+awk < 1.s '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi
+awk < 1.p '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi
+awk < 1.d '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi
+# awk < 2.d '{if (NR == 1) {print $2,$3} else {print $0}}' >>! ${INI}.cpi 	# if we wanted everything from run 2
+if(-e 2.c ) cat 2.c >>! ${INI}.cpi
+
+# --- info file ---- 
+
+if( $?COMMENT ) echo "comment: " $COMMENT  >> ${INI}.dat
+cat ${INI}.2.dat >> $INI.dat
+
+# --- cleaning ---
+
+rm -f fort.* 1.* 2.* ${INI}.2.* xv.${INI}.2.{pspot_s,ae_wfct,density,unscreen}
+
+exit

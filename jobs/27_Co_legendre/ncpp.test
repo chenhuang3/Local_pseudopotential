@@ -1,0 +1,55 @@
+#info ./pswatch ncpp 12:44:13 Jan 25 2022 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         2.50000000000000     
+ icut:               760
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           3
+ mag_fit:              -1
+ mag_weight:   0.200000000000000     
+ mag_energy:  -0.182780000000000     
+ occ_sp (up):   1.00000000000000        3.00000000000000     
+   5.00000000000000        1.00000000000000       0.000000000000000E+000
+ occ_sp (dn):   1.00000000000000        3.00000000000000     
+  0.500000000000000        1.00000000000000       0.000000000000000E+000
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+ orbital   1 vanish at     3.7561
+ orbital   2 vanish at     4.4031
+ orbital   3 vanish at     8.9474
+ orbital   4 vanish at    12.7545
+ orbital   5 vanish at    18.4053
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref: -4.0320 ( -109.718 eV) u_ref(icut):  2.583E-02 norm(r<rc): 0.9999
+n,l: 2 1 => occ:   6.00 eref: -2.6777 (  -72.865 eV) u_ref(icut): -5.194E-02 norm(r<rc): 0.9994
+n,l: 3 2 => occ:   6.50 eref: -0.5522 (  -15.026 eV) u_ref(icut):  2.228E-01 norm(r<rc): 0.9743
+n,l: 2 0 => occ:   2.00 eref: -0.3578 (   -9.738 eV) u_ref(icut): -6.591E-01 norm(r<rc): 0.4827
+n,l: 3 1 => occ:   0.00 eref: -0.1705 (   -4.639 eV) u_ref(icut):  5.514E-01 norm(r<rc): 0.2392
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  1.00E-02
+    orb  4:  1.00E-02
+    orb  5:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  1.22430D-11    |proj g|=  2.62906D-06
+iter:   0 NEW_X, fcost: 1.013E-11  eig_match: 1.01E-11 |g|: 2.61E-07
+iter:   1 NEW_X, fcost: 1.010E-11  eig_match: 1.01E-11 |g|: 1.91E-07

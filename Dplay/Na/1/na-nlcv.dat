@@ -1,0 +1,85 @@
+#info psgen na-nlcv 15:13:58 Jul 01 2003 fuchs
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Na      
+                nuclear charge  11.00
+                  total charge   0.00
+         number of core states   3
+      number of valence states   1
+    exchange-correlation model   8  LDA CA Perdew/Wang 1991                 
+      scalar-relativistic mode
+        parameters radial mesh   485    1.024700  0.568182E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000        -1028.1059           -37.7819
+<  2     2     0        2.0000          -56.3331            -2.0702
+<  3     2     1        6.0000          -28.8272            -1.0594
+<  4     3     0        1.0000           -2.8194            -0.1036
+
+                                  (Hartree a.u.)
+                  total energy        -161.65563
+                kinetic energy         161.51591
+                orbital energy         -86.16402
+                coulomb energy        -389.45676
+                hartree energy          79.82402
+   exchange-correlation energy         -13.53880
+           xc potential energy         -17.87121
+          number of iterations                25   convergence  0.0E+00
+           core kinetic energy         161.15396
+           core orbital energy         -86.06041
+         core potential energy        -247.21437
+            integrated density          11.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === HAMANN mode ===   h     
+
+  l  n     radius:     node      peak       default core
+x 0  3                1.018      3.204      1.923
+x 1  3                0.001      0.001      2.107
+x 2  3                0.001      0.001      1.923
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  h     1.9195547   5.3488868  -2.8194025  -2.8194027   1.0000000   1.0000011
+  1  h     2.0653359   5.0941290  -2.8194025  -2.8194025   1.0000000   1.0000000
+  2  h     1.9195547   4.6204364  -2.8194025  -2.8194025   1.0000000   1.0000000
+
+   --- nonlinear core-valence XC ---
+    core density cutoff radius           1.39779
+        c-v equidensity radius           2.27708
+ integrated model core density           4.07139
+              true core charge          10.00000
+
+                                  (Hartree a.u.)
+                  total energy          -2.36621
+                kinetic energy           0.06441
+              potential energy          -0.23312
+                hartree energy           0.11111
+                     xc energy          -2.30861
+                      c energy          -0.26908
+    integrated valence density           1.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           2.906     (tolerance  1.0E-03)
+                  y range plot        -1   2   1
+
+ fhipp - done for input @
+
+@ 11.00  3  1  8 0.14E+01 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   1.00
+@ 2  h                   : ltmx spptype
+@ 1   1.92  -.28E+01  h
+@ 2   2.07  -.28E+01  h
+@ 3   1.92  -.28E+01  h

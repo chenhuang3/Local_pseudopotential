@@ -1,0 +1,94 @@
+#info ./pswatch ncpp 00:10:53 Aug 28 2021 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ >>> read KS potential from vks.dat <<< 
+ call psatom() to get the reference eigenvalues
+ [note they are different from AE relativistic results]
+
+ ---- reference eigenvalues ----
+n,l:  1 0 ->  occ:   0.50   eref:  -0.46601 [    -12.6809 eV]
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            3     M =            5
+ This problem is unconstrained.
+ 
+ task=NEW_X, fcost:  1.025738299081770E-002  |g|:  5.088865901697224E-002
+ lam:   10.0020521645562       shift:  0.467444348410740       rcut:
+  0.315979929270400     
+ 
+ task=NEW_X, fcost:  6.712522684445470E-004  |g|:  2.912138811340522E-004
+ lam:   10.0344469260727       shift:  0.573180002191074       rcut:
+  -2.67502967060997     
+ 
+ task=NEW_X, fcost:  6.021458887949809E-004  |g|:  2.586773880050054E-004
+ lam:   10.2744879228087       shift:  0.698231319638588       rcut:
+  -2.67547042114554     
+ 
+ task=NEW_X, fcost:  2.759347759371348E-004  |g|:  1.134682656363185E-004
+ lam:   11.9821929301734       shift:   1.74898576155017       rcut:
+  -2.67246205742791     
+ 
+ task=NEW_X, fcost:  1.612556821599269E-004  |g|:  6.694287470094751E-005
+ lam:   13.0747487432223       shift:   2.62672890112711       rcut:
+  -2.66267756529285     
+ 
+ task=NEW_X, fcost:  7.841423099656038E-005  |g|:  3.566305521148800E-005
+ lam:   14.2880296815951       shift:   3.94503676753665       rcut:
+  -2.63864210688626     
+ 
+ task=NEW_X, fcost:  2.875572560034681E-005  |g|:  1.930626121393613E-005
+ lam:   14.8558774492585       shift:   5.73466136835304       rcut:
+  -2.56339913147183     
+ 
+ task=NEW_X, fcost:  1.243672224800797E-008  |g|:  5.115485398170213E-007
+ lam:   14.4019584846891       shift:   8.35361457801031       rcut:
+  -2.48003893261069     
+ 
+ task=NEW_X, fcost:  4.949409269130175E-009  |g|:  3.275245818605911E-007
+ lam:   14.3647184993373       shift:   8.42297633647632       rcut:
+  -2.47841321776017     
+ 
+ task=NEW_X, fcost:  9.542772878957953E-013  |g|:  4.521114485072090E-009
+ lam:   14.3794275280443       shift:   8.39598526958069       rcut:
+  -2.47904119999137     
+ 
+ task=NEW_X, fcost:  7.361880029804920E-017  |g|:  3.945851206198325E-011
+ lam:   14.3792287363605       shift:   8.39635350597677       rcut:
+  -2.47903259365107     
+ 
+ task=NEW_X, fcost:  3.157933400204494E-021  |g|:  3.359087734672142E-013
+ lam:   14.3792270085412       shift:   8.39635675885150       rcut:
+  -2.47903251721597     
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    3     12     15      1     0     0   2.978D-13   3.158D-21
+
+CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+
+ Total User time 4.526E-02 seconds.
+
+ exit BFGS. task: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  >>> optimization is done <<< 
+  valence electron number, zval:    1.00000000000000     
+
+final psatom_chen calc. with vlpsp: 
+n,l:  1 0 -> occ:  0.50 eig:    -0.46601 eref:    -0.46601
+Coulomb tail starts at     0.73 rmax:   76.95
+  >>> vlpsp.dat is written <<<

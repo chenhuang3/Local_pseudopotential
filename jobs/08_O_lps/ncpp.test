@@ -1,0 +1,91 @@
+#info ./pswatch ncpp 09:13:15 Dec 06 2021 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         1.00000000000000     
+ icut:               586
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           1
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref:-19.2356 ( -523.430 eV) u_ref(icut):  3.002E-02 norm(r<rc): 0.9999
+n,l: 2 0 => occ:   2.00 eref: -1.1536 (  -31.392 eV) u_ref(icut): -9.518E-01 norm(r<rc): 0.4697
+n,l: 2 1 => occ:   3.50 eref: -0.5982 (  -16.278 eV) u_ref(icut):  8.466E-01 norm(r<rc): 0.4642
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            6     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  3.15718D+02    |proj g|=  2.70654D+00
+iter:   0 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 9.02E-01
+iter:   1 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 1.04E-01
+iter:   2 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 7.85E-02
+iter:   3 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 1.26E-01
+iter:   4 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 2.81E-01
+iter:   5 NEW_X, fcost: 1.521E+02  eig_match: 1.52E+02 |g|: 5.43E-01
+iter:   6 NEW_X, fcost: 1.520E+02  eig_match: 1.52E+02 |g|: 9.94E-01
+iter:   7 NEW_X, fcost: 1.519E+02  eig_match: 1.52E+02 |g|: 1.64E+00
+iter:   8 NEW_X, fcost: 1.518E+02  eig_match: 1.52E+02 |g|: 2.08E+00
+iter:   9 NEW_X, fcost: 1.515E+02  eig_match: 1.52E+02 |g|: 2.60E+00
+iter:  10 NEW_X, fcost: 1.510E+02  eig_match: 1.51E+02 |g|: 1.76E+00
+iter:  11 NEW_X, fcost: 1.502E+02  eig_match: 1.50E+02 |g|: 1.78E+00
+iter:  12 NEW_X, fcost: 1.490E+02  eig_match: 1.49E+02 |g|: 1.28E+00
+iter:  13 NEW_X, fcost: 1.480E+02  eig_match: 1.48E+02 |g|: 1.69E+00
+iter:  14 NEW_X, fcost: 1.478E+02  eig_match: 1.48E+02 |g|: 7.92E-01
+iter:  15 NEW_X, fcost: 1.473E+02  eig_match: 1.47E+02 |g|: 8.07E-01
+iter:  16 NEW_X, fcost: 1.469E+02  eig_match: 1.47E+02 |g|: 1.41E+00
+iter:  17 NEW_X, fcost: 1.465E+02  eig_match: 1.46E+02 |g|: 2.34E+00
+iter:  18 NEW_X, fcost: 1.455E+02  eig_match: 1.46E+02 |g|: 4.85E-01
+iter:  19 NEW_X, fcost: 1.448E+02  eig_match: 1.45E+02 |g|: 1.76E+00
+iter:  20 NEW_X, fcost: 1.443E+02  eig_match: 1.44E+02 |g|: 8.80E-01
+iter:  21 NEW_X, fcost: 1.439E+02  eig_match: 1.44E+02 |g|: 1.63E+00
+iter:  22 NEW_X, fcost: 1.432E+02  eig_match: 1.43E+02 |g|: 1.41E+00
+iter:  23 NEW_X, fcost: 1.426E+02  eig_match: 1.43E+02 |g|: 9.02E-01
+iter:  24 NEW_X, fcost: 1.422E+02  eig_match: 1.42E+02 |g|: 5.18E-01
+iter:  25 NEW_X, fcost: 1.420E+02  eig_match: 1.42E+02 |g|: 1.51E+00
+iter:  26 NEW_X, fcost: 1.418E+02  eig_match: 1.42E+02 |g|: 2.05E+00
+iter:  27 NEW_X, fcost: 1.414E+02  eig_match: 1.41E+02 |g|: 1.81E+00
+iter:  28 NEW_X, fcost: 1.410E+02  eig_match: 1.41E+02 |g|: 2.66E-01
+iter:  29 NEW_X, fcost: 1.408E+02  eig_match: 1.41E+02 |g|: 1.52E+00
+iter:  30 NEW_X, fcost: 1.405E+02  eig_match: 1.41E+02 |g|: 2.99E+00
+iter:  31 NEW_X, fcost: 1.402E+02  eig_match: 1.40E+02 |g|: 7.74E-01
+iter:  32 NEW_X, fcost: 1.399E+02  eig_match: 1.40E+02 |g|: 2.32E+00
+iter:  33 NEW_X, fcost: 1.397E+02  eig_match: 1.40E+02 |g|: 1.25E+00
+iter:  34 NEW_X, fcost: 1.395E+02  eig_match: 1.40E+02 |g|: 3.22E+00
+iter:  35 NEW_X, fcost: 1.392E+02  eig_match: 1.39E+02 |g|: 3.46E-01
+iter:  36 NEW_X, fcost: 1.390E+02  eig_match: 1.39E+02 |g|: 6.22E-01
+iter:  37 NEW_X, fcost: 1.390E+02  eig_match: 1.39E+02 |g|: 1.62E+00
+iter:  38 NEW_X, fcost: 1.389E+02  eig_match: 1.39E+02 |g|: 2.14E+00
+iter:  39 NEW_X, fcost: 1.387E+02  eig_match: 1.39E+02 |g|: 1.53E+00
+iter:  40 NEW_X, fcost: 1.385E+02  eig_match: 1.39E+02 |g|: 6.87E-01
+iter:  41 NEW_X, fcost: 1.385E+02  eig_match: 1.38E+02 |g|: 1.72E+00
+iter:  42 NEW_X, fcost: 1.383E+02  eig_match: 1.38E+02 |g|: 2.22E+00
+iter:  43 NEW_X, fcost: 1.381E+02  eig_match: 1.38E+02 |g|: 6.37E-01
+iter:  44 NEW_X, fcost: 1.380E+02  eig_match: 1.38E+02 |g|: 1.35E-01
+iter:  45 NEW_X, fcost: 1.380E+02  eig_match: 1.38E+02 |g|: 1.20E+00
+iter:  46 NEW_X, fcost: 1.380E+02  eig_match: 1.38E+02 |g|: 2.08E+00
+iter:  47 NEW_X, fcost: 1.379E+02  eig_match: 1.38E+02 |g|: 1.56E+00
+iter:  48 NEW_X, fcost: 1.378E+02  eig_match: 1.38E+02 |g|: 9.78E-01
+iter:  49 NEW_X, fcost: 1.377E+02  eig_match: 1.38E+02 |g|: 1.30E+00
+iter:  50 NEW_X, fcost: 1.375E+02  eig_match: 1.38E+02 |g|: 8.38E-01
+iter:  51 NEW_X, fcost: 1.374E+02  eig_match: 1.37E+02 |g|: 9.92E-01
+iter:  52 NEW_X, fcost: 1.374E+02  eig_match: 1.37E+02 |g|: 1.70E+00
+iter:  53 NEW_X, fcost: 1.373E+02  eig_match: 1.37E+02 |g|: 1.41E+00

@@ -1,0 +1,93 @@
+#info psgen mn-pbe:medium:p1.4 17:40:30 Jul 01 2003 fuchs
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Mn      
+                nuclear charge  25.00
+                  total charge   0.00
+         number of core states   5
+      number of valence states   3
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+      scalar-relativistic mode
+        parameters radial mesh   519    1.024700  0.250000E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000        -6429.5928          -236.2813
+<  2     2     0        2.0000         -743.9533           -27.3396
+<  3     2     1        6.0000         -630.1939           -23.1590
+<  4     3     0        2.0000          -85.8800            -3.1560
+<  5     3     1        6.0000          -54.5937            -2.0063
+<  6     3     2        5.0000           -6.7711            -0.2488
+<  7     4     0        2.0000           -5.1073            -0.1877
+<  8     4     1        0.0000           -1.3704            -0.0504
+
+                                  (Hartree a.u.)
+                  total energy       -1158.29515
+                kinetic energy        1171.07576
+                orbital energy        -686.16502
+                coulomb energy       -2764.99791
+                hartree energy         487.54875
+   exchange-correlation energy         -51.92176
+           xc potential energy         -67.34037
+          number of iterations                32   convergence  0.0E+00
+           core kinetic energy        1138.08813
+           core orbital energy        -684.54548
+         core potential energy       -1822.63361
+            integrated density          25.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === TROULLIER-MARTINS mode ===  t     
+
+  l  n     radius:     node      peak       default core
+x 0  4                1.052      2.471      2.420
+x 1  4                1.132      3.394      2.500
+x 2  3                0.000      0.748      2.300
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  t     2.4116419   2.4712095  -5.1072697  -5.1072864   0.9999998   0.9998952
+  1  t     2.4712095   2.5322483  -1.3703596  -1.3703484   1.0000044   1.0000144
+  2  t     2.2967797   2.3535102  -6.7711442  -6.7711768   1.0000004   1.0000040
+
+   --- nonlinear core-valence XC ---
+    core density cutoff radius           1.37590
+        c-v equidensity radius           1.24796
+ integrated model core density           5.97722
+              true core charge          18.00000
+
+                                  (Hartree a.u.)
+                  total energy         -18.07985
+                kinetic energy          19.12878
+              potential energy         -41.90491
+                hartree energy          12.90016
+                     xc energy          -8.20388
+                      c energy          -0.53242
+    integrated valence density           7.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           2.033     (tolerance  1.0E-03)
+                  y range plot       -15   1   4
+
+ fhipp - done for input @
+
+@ 25.00  5  3  6 0.14E+01 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2   5.00
+@     4  0   2.00
+@     4  1   0.00
+@ 2  t                   : ltmx spptype
+@ 1   2.41  -.51E+01  t
+@ 2   2.47  -.14E+01  t
+@ 3   2.30  -.68E+01  t

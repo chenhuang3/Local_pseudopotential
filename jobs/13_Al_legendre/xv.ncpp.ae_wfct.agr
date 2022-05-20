@@ -1,0 +1,1577 @@
+# Grace project file
+#
+@version 50104
+@page size 792, 612
+@page scroll 5%
+@page inout 5%
+@link page off
+@map font 0 to "Times-Roman", "Times-Roman"
+@map font 1 to "Times-Italic", "Times-Italic"
+@map font 2 to "Times-Bold", "Times-Bold"
+@map font 3 to "Times-BoldItalic", "Times-BoldItalic"
+@map font 4 to "Helvetica", "Helvetica"
+@map font 5 to "Helvetica-Oblique", "Helvetica-Oblique"
+@map font 6 to "Helvetica-Bold", "Helvetica-Bold"
+@map font 7 to "Helvetica-BoldOblique", "Helvetica-BoldOblique"
+@map font 8 to "Courier", "Courier"
+@map font 9 to "Courier-Oblique", "Courier-Oblique"
+@map font 10 to "Courier-Bold", "Courier-Bold"
+@map font 11 to "Courier-BoldOblique", "Courier-BoldOblique"
+@map font 12 to "Symbol", "Symbol"
+@map font 13 to "ZapfDingbats", "ZapfDingbats"
+@map color 0 to (255, 255, 255), "white"
+@map color 1 to (0, 0, 0), "black"
+@map color 2 to (255, 0, 0), "red"
+@map color 3 to (0, 255, 0), "green"
+@map color 4 to (0, 0, 255), "blue"
+@map color 5 to (255, 255, 0), "yellow"
+@map color 6 to (188, 143, 143), "brown"
+@map color 7 to (220, 220, 220), "grey"
+@map color 8 to (148, 0, 211), "violet"
+@map color 9 to (0, 255, 255), "cyan"
+@map color 10 to (255, 0, 255), "magenta"
+@map color 11 to (255, 165, 0), "orange"
+@map color 12 to (114, 33, 188), "indigo"
+@map color 13 to (103, 7, 72), "maroon"
+@map color 14 to (64, 224, 208), "turquoise"
+@map color 15 to (0, 139, 0), "green4"
+@reference date 0
+@date wrap off
+@date wrap year 1950
+@default linewidth 1.0
+@default linestyle 1
+@default color 1
+@default pattern 1
+@default font 2
+@default char size 1.000000
+@default symbol size 1.000000
+@default sformat "%16.8g"
+@background color 0
+@page background fill on
+@timestamp off
+@timestamp 0.03, 0.03
+@timestamp color 1
+@timestamp rot 0
+@timestamp font 0
+@timestamp char size 1.000000
+@timestamp def ""
+@r0 off
+@link r0 to g0
+@r0 type above
+@r0 linestyle 1
+@r0 linewidth 1.0
+@r0 color 1
+@r0 line 0, 0, 0, 0
+@r1 off
+@link r1 to g0
+@r1 type above
+@r1 linestyle 1
+@r1 linewidth 1.0
+@r1 color 1
+@r1 line 0, 0, 0, 0
+@r2 off
+@link r2 to g0
+@r2 type above
+@r2 linestyle 1
+@r2 linewidth 1.0
+@r2 color 1
+@r2 line 0, 0, 0, 0
+@r3 off
+@link r3 to g0
+@r3 type above
+@r3 linestyle 1
+@r3 linewidth 1.0
+@r3 color 1
+@r3 line 0, 0, 0, 0
+@r4 off
+@link r4 to g0
+@r4 type above
+@r4 linestyle 1
+@r4 linewidth 1.0
+@r4 color 1
+@r4 line 0, 0, 0, 0
+@g0 on
+@g0 hidden false
+@g0 type XY
+@g0 stacked false
+@g0 bar hgap 0.000000
+@g0 fixedpoint off
+@g0 fixedpoint type 0
+@g0 fixedpoint xy 0.000000, 0.000000
+@g0 fixedpoint format general general
+@g0 fixedpoint prec 6, 6
+@with g0
+@    world xmin 0
+@    world xmax 4.9
+@    world ymin -4
+@    world ymax 6
+@    stack world 0, 0, 0, 0
+@    znorm 1
+@    view xmin 0.15
+@    view xmax 0.75
+@    view ymin 0.20
+@    view ymax 0.80
+@    title "Radial Wavefunctions (All-Electron)"
+@    title font 4
+@    title size 1.000000
+@    title color 1
+@    subtitle ""
+@    subtitle font 4
+@    subtitle size 0.800000
+@    subtitle color 1
+@    xaxes scale Normal
+@    yaxes scale Normal
+@    xaxes invert off
+@    yaxes invert off
+@    xaxis  on
+@    xaxis  type zero false
+@    xaxis  offset 0.000000 , 0.000000
+@    xaxis  bar off
+@    xaxis  bar color 1
+@    xaxis  bar linestyle 1
+@    xaxis  bar linewidth 1.0
+@    xaxis  label "r  \4(bohr)\N"
+@    xaxis  label layout para
+@    xaxis  label place auto
+@    xaxis  label char size 1.000000
+@    xaxis  label font 6
+@    xaxis  label color 1
+@    xaxis  label place normal
+@    xaxis  tick on
+@    xaxis  tick major 1
+@    xaxis  tick minor ticks 9
+@    xaxis  tick default 6
+@    xaxis  tick place rounded true
+@    xaxis  tick in
+@    xaxis  tick major size 1.000000
+@    xaxis  tick major color 1
+@    xaxis  tick major linewidth 1.0
+@    xaxis  tick major linestyle 1
+@    xaxis  tick major grid off
+@    xaxis  tick minor color 1
+@    xaxis  tick minor linewidth 1.0
+@    xaxis  tick minor linestyle 1
+@    xaxis  tick minor grid off
+@    xaxis  tick minor size 0.500000
+@    xaxis  ticklabel on
+@    xaxis  ticklabel format decimal
+@    xaxis  ticklabel prec 0
+@    xaxis  ticklabel formula ""
+@    xaxis  ticklabel append ""
+@    xaxis  ticklabel prepend ""
+@    xaxis  ticklabel angle 0
+@    xaxis  ticklabel skip 0
+@    xaxis  ticklabel stagger 0
+@    xaxis  ticklabel place normal
+@    xaxis  ticklabel offset auto
+@    xaxis  ticklabel offset 0.000000 , 0.010000
+@    xaxis  ticklabel start type auto
+@    xaxis  ticklabel start 0.000000
+@    xaxis  ticklabel stop type auto
+@    xaxis  ticklabel stop 0.000000
+@    xaxis  ticklabel char size 1.000000
+@    xaxis  ticklabel font 4
+@    xaxis  ticklabel color 1
+@    xaxis  tick place both
+@    xaxis  tick spec type none
+@    yaxis  on
+@    yaxis  type zero false
+@    yaxis  offset 0.000000 , 0.000000
+@    yaxis  bar off
+@    yaxis  bar color 1
+@    yaxis  bar linestyle 1
+@    yaxis  bar linewidth 1.0
+@    yaxis  label "u(r) \4(arbitrary scale)"
+@    yaxis  label layout para
+@    yaxis  label place auto
+@    yaxis  label char size 1.000000
+@    yaxis  label font 6
+@    yaxis  label color 1
+@    yaxis  label place normal
+@    yaxis  tick on
+@    yaxis  tick major 2
+@    yaxis  tick minor ticks 1
+@    yaxis  tick default 6
+@    yaxis  tick place rounded true
+@    yaxis  tick out
+@    yaxis  tick major size 1.000000
+@    yaxis  tick major color 1
+@    yaxis  tick major linewidth 1.0
+@    yaxis  tick major linestyle 1
+@    yaxis  tick major grid off
+@    yaxis  tick minor color 1
+@    yaxis  tick minor linewidth 1.0
+@    yaxis  tick minor linestyle 1
+@    yaxis  tick minor grid off
+@    yaxis  tick minor size 0.500000
+@    yaxis  ticklabel on
+@    yaxis  ticklabel format decimal
+@    yaxis  ticklabel prec 0
+@    yaxis  ticklabel formula ""
+@    yaxis  ticklabel append ""
+@    yaxis  ticklabel prepend ""
+@    yaxis  ticklabel angle 0
+@    yaxis  ticklabel skip 0
+@    yaxis  ticklabel stagger 0
+@    yaxis  ticklabel place normal
+@    yaxis  ticklabel offset auto
+@    yaxis  ticklabel offset 0.000000 , 0.010000
+@    yaxis  ticklabel start type auto
+@    yaxis  ticklabel start 0.000000
+@    yaxis  ticklabel stop type auto
+@    yaxis  ticklabel stop 0.000000
+@    yaxis  ticklabel char size 1.000000
+@    yaxis  ticklabel font 4
+@    yaxis  ticklabel color 1
+@    yaxis  tick place both
+@    yaxis  tick spec type none
+@    altxaxis  off
+@    altyaxis  off
+@    legend on
+@    legend loctype view
+@    legend 0.755, 0.82
+@    legend box color 1
+@    legend box pattern 0
+@    legend box linewidth 1.0
+@    legend box linestyle 1
+@    legend box fill color 0
+@    legend box fill pattern 1
+@    legend font 4
+@    legend char size 1.000000
+@    legend color 1
+@    legend length 4
+@    legend vgap 2
+@    legend hgap 1
+@    legend invert false
+@    frame type 0
+@    frame linestyle 1
+@    frame linewidth 1.0
+@    frame color 1
+@    frame pattern 1
+@    frame background color 0
+@    frame background pattern 0
+@    s0 hidden false
+@    s0 type xy
+@    s0 symbol 0
+@    s0 symbol size 1.000000
+@    s0 symbol color 1
+@    s0 symbol pattern 1
+@    s0 symbol fill color 1
+@    s0 symbol fill pattern 0
+@    s0 symbol linewidth 1.0
+@    s0 symbol linestyle 1
+@    s0 symbol char 0
+@    s0 symbol char font 2
+@    s0 symbol skip 0
+@    s0 line type 1
+@    s0 line linestyle 1
+@    s0 line linewidth 2.0
+@    s0 line color 1
+@    s0 line pattern 1
+@    s0 baseline type 0
+@    s0 baseline off
+@    s0 dropline off
+@    s0 fill type 0
+@    s0 fill rule 0
+@    s0 fill color 0
+@    s0 fill pattern 1
+@    s0 avalue off
+@    s0 avalue type 2
+@    s0 avalue char size 1.000000
+@    s0 avalue font 2
+@    s0 avalue color 1
+@    s0 avalue rot 0
+@    s0 avalue format general
+@    s0 avalue prec 3
+@    s0 avalue prepend ""
+@    s0 avalue append ""
+@    s0 avalue offset 0.000000 , 0.000000
+@    s0 errorbar on
+@    s0 errorbar place both
+@    s0 errorbar color 1
+@    s0 errorbar pattern 1
+@    s0 errorbar size 1.000000
+@    s0 errorbar linewidth 1.0
+@    s0 errorbar linestyle 1
+@    s0 errorbar riser linewidth 1.0
+@    s0 errorbar riser linestyle 1
+@    s0 errorbar riser clip off
+@    s0 errorbar riser clip length 0.100000
+@    s0 comment "6p"
+@    s0 legend  "6p"
+@    s2 hidden false
+@    s2 type xy
+@    s2 symbol 0
+@    s2 symbol size 1.000000
+@    s2 symbol color 2
+@    s2 symbol pattern 1
+@    s2 symbol fill color 2
+@    s2 symbol fill pattern 0
+@    s2 symbol linewidth 1.0
+@    s2 symbol linestyle 1
+@    s2 symbol char 0
+@    s2 symbol char font 2
+@    s2 symbol skip 0
+@    s2 line type 1
+@    s2 line linestyle 3
+@    s2 line linewidth 2.0
+@    s2 line color 2
+@    s2 line pattern 1
+@    s2 baseline type 0
+@    s2 baseline off
+@    s2 dropline off
+@    s2 fill type 0
+@    s2 fill rule 0
+@    s2 fill color 0
+@    s2 fill pattern 1
+@    s2 avalue off
+@    s2 avalue type 2
+@    s2 avalue char size 1.000000
+@    s2 avalue font 2
+@    s2 avalue color 1
+@    s2 avalue rot 0
+@    s2 avalue format general
+@    s2 avalue prec 3
+@    s2 avalue prepend ""
+@    s2 avalue append ""
+@    s2 avalue offset 0.000000 , 0.000000
+@    s2 errorbar on
+@    s2 errorbar place both
+@    s2 errorbar color 2
+@    s2 errorbar pattern 1
+@    s2 errorbar size 1.000000
+@    s2 errorbar linewidth 1.0
+@    s2 errorbar linestyle 1
+@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linestyle 1
+@    s2 errorbar riser clip off
+@    s2 errorbar riser clip length 0.100000
+@    s2 comment "5d"
+@    s2 legend  "5d"
+@    s3 hidden false
+@    s3 type xy
+@    s3 symbol 0
+@    s3 symbol size 1.000000
+@    s3 symbol color 3
+@    s3 symbol pattern 1
+@    s3 symbol fill color 3
+@    s3 symbol fill pattern 0
+@    s3 symbol linewidth 1.0
+@    s3 symbol linestyle 1
+@    s3 symbol char 0
+@    s3 symbol char font 2
+@    s3 symbol skip 0
+@    s3 line type 1
+@    s3 line linestyle 4
+@    s3 line linewidth 2.0
+@    s3 line color 3
+@    s3 line pattern 1
+@    s3 baseline type 0
+@    s3 baseline off
+@    s3 dropline off
+@    s3 fill type 0
+@    s3 fill rule 0
+@    s3 fill color 0
+@    s3 fill pattern 1
+@    s3 avalue off
+@    s3 avalue type 2
+@    s3 avalue char size 1.000000
+@    s3 avalue font 2
+@    s3 avalue color 1
+@    s3 avalue rot 0
+@    s3 avalue format general
+@    s3 avalue prec 3
+@    s3 avalue prepend ""
+@    s3 avalue append ""
+@    s3 avalue offset 0.000000 , 0.000000
+@    s3 errorbar on
+@    s3 errorbar place both
+@    s3 errorbar color 3
+@    s3 errorbar pattern 1
+@    s3 errorbar size 1.000000
+@    s3 errorbar linewidth 1.0
+@    s3 errorbar linestyle 1
+@    s3 errorbar riser linewidth 1.0
+@    s3 errorbar riser linestyle 1
+@    s3 errorbar riser clip off
+@    s3 errorbar riser clip length 0.100000
+@    s3 comment "5p"
+@    s3 legend  "5p"
+@    s4 hidden false
+@    s4 type xy
+@    s4 symbol 0
+@    s4 symbol size 1.000000
+@    s4 symbol color 4
+@    s4 symbol pattern 1
+@    s4 symbol fill color 4
+@    s4 symbol fill pattern 0
+@    s4 symbol linewidth 1.0
+@    s4 symbol linestyle 1
+@    s4 symbol char 0
+@    s4 symbol char font 2
+@    s4 symbol skip 0
+@    s4 line type 1
+@    s4 line linestyle 5
+@    s4 line linewidth 2.0
+@    s4 line color 4
+@    s4 line pattern 1
+@    s4 baseline type 0
+@    s4 baseline off
+@    s4 dropline off
+@    s4 fill type 0
+@    s4 fill rule 0
+@    s4 fill color 0
+@    s4 fill pattern 1
+@    s4 avalue off
+@    s4 avalue type 2
+@    s4 avalue char size 1.000000
+@    s4 avalue font 2
+@    s4 avalue color 1
+@    s4 avalue rot 0
+@    s4 avalue format general
+@    s4 avalue prec 3
+@    s4 avalue prepend ""
+@    s4 avalue append ""
+@    s4 avalue offset 0.000000 , 0.000000
+@    s4 errorbar on
+@    s4 errorbar place both
+@    s4 errorbar color 4
+@    s4 errorbar pattern 1
+@    s4 errorbar size 1.000000
+@    s4 errorbar linewidth 1.0
+@    s4 errorbar linestyle 1
+@    s4 errorbar riser linewidth 1.0
+@    s4 errorbar riser linestyle 1
+@    s4 errorbar riser clip off
+@    s4 errorbar riser clip length 0.100000
+@    s4 comment "5s"
+@    s4 legend  "5s"
+@    s5 hidden false
+@    s5 type xy
+@    s5 symbol 0
+@    s5 symbol size 1.000000
+@    s5 symbol color 10
+@    s5 symbol pattern 1
+@    s5 symbol fill color 10
+@    s5 symbol fill pattern 0
+@    s5 symbol linewidth 1.0
+@    s5 symbol linestyle 1
+@    s5 symbol char 0
+@    s5 symbol char font 2
+@    s5 symbol skip 0
+@    s5 line type 1
+@    s5 line linestyle 2
+@    s5 line linewidth 1.0
+@    s5 line color 10
+@    s5 line pattern 1
+@    s5 baseline type 0
+@    s5 baseline off
+@    s5 dropline off
+@    s5 fill type 0
+@    s5 fill rule 0
+@    s5 fill color 0
+@    s5 fill pattern 1
+@    s5 avalue off
+@    s5 avalue type 2
+@    s5 avalue char size 1.000000
+@    s5 avalue font 2
+@    s5 avalue color 1
+@    s5 avalue rot 0
+@    s5 avalue format general
+@    s5 avalue prec 3
+@    s5 avalue prepend ""
+@    s5 avalue append ""
+@    s5 avalue offset 0.000000 , 0.000000
+@    s5 errorbar on
+@    s5 errorbar place both
+@    s5 errorbar color 10
+@    s5 errorbar pattern 1
+@    s5 errorbar size 1.000000
+@    s5 errorbar linewidth 1.0
+@    s5 errorbar linestyle 1
+@    s5 errorbar riser linewidth 1.0
+@    s5 errorbar riser linestyle 1
+@    s5 errorbar riser clip off
+@    s5 errorbar riser clip length 0.100000
+@    s5 comment "4f"
+@    s5 legend  "4f"
+@    s6 hidden false
+@    s6 type xy
+@    s6 symbol 0
+@    s6 symbol size 1.000000
+@    s6 symbol color 11
+@    s6 symbol pattern 1
+@    s6 symbol fill color 11
+@    s6 symbol fill pattern 0
+@    s6 symbol linewidth 1.0
+@    s6 symbol linestyle 1
+@    s6 symbol char 0
+@    s6 symbol char font 2
+@    s6 symbol skip 0
+@    s6 line type 1
+@    s6 line linestyle 3
+@    s6 line linewidth 1.0
+@    s6 line color 11
+@    s6 line pattern 1
+@    s6 baseline type 0
+@    s6 baseline off
+@    s6 dropline off
+@    s6 fill type 0
+@    s6 fill rule 0
+@    s6 fill color 0
+@    s6 fill pattern 1
+@    s6 avalue off
+@    s6 avalue type 2
+@    s6 avalue char size 1.000000
+@    s6 avalue font 2
+@    s6 avalue color 1
+@    s6 avalue rot 0
+@    s6 avalue format general
+@    s6 avalue prec 3
+@    s6 avalue prepend ""
+@    s6 avalue append ""
+@    s6 avalue offset 0.000000 , 0.000000
+@    s6 errorbar on
+@    s6 errorbar place both
+@    s6 errorbar color 11
+@    s6 errorbar pattern 1
+@    s6 errorbar size 1.000000
+@    s6 errorbar linewidth 1.0
+@    s6 errorbar linestyle 1
+@    s6 errorbar riser linewidth 1.0
+@    s6 errorbar riser linestyle 1
+@    s6 errorbar riser clip off
+@    s6 errorbar riser clip length 0.100000
+@    s6 comment "4d"
+@    s6 legend  "4d"
+@    s7 hidden false
+@    s7 type xy
+@    s7 symbol 0
+@    s7 symbol size 1.000000
+@    s7 symbol color 8
+@    s7 symbol pattern 1
+@    s7 symbol fill color 8
+@    s7 symbol fill pattern 0
+@    s7 symbol linewidth 1.0
+@    s7 symbol linestyle 1
+@    s7 symbol char 0
+@    s7 symbol char font 2
+@    s7 symbol skip 0
+@    s7 line type 1
+@    s7 line linestyle 3
+@    s7 line linewidth 1.0
+@    s7 line color 8
+@    s7 line pattern 1
+@    s7 baseline type 0
+@    s7 baseline off
+@    s7 dropline off
+@    s7 fill type 0
+@    s7 fill rule 0
+@    s7 fill color 0
+@    s7 fill pattern 1
+@    s7 avalue off
+@    s7 avalue type 2
+@    s7 avalue char size 1.000000
+@    s7 avalue font 2
+@    s7 avalue color 1
+@    s7 avalue rot 0
+@    s7 avalue format general
+@    s7 avalue prec 3
+@    s7 avalue prepend ""
+@    s7 avalue append ""
+@    s7 avalue offset 0.000000 , 0.000000
+@    s7 errorbar on
+@    s7 errorbar place both
+@    s7 errorbar color 8
+@    s7 errorbar pattern 1
+@    s7 errorbar size 1.000000
+@    s7 errorbar linewidth 1.0
+@    s7 errorbar linestyle 1
+@    s7 errorbar riser linewidth 1.0
+@    s7 errorbar riser linestyle 1
+@    s7 errorbar riser clip off
+@    s7 errorbar riser clip length 0.100000
+@    s7 comment "4p"
+@    s7 legend  "4p"
+@    s8 hidden false
+@    s8 type xy
+@    s8 symbol 0
+@    s8 symbol size 1.000000
+@    s8 symbol color 5
+@    s8 symbol pattern 1
+@    s8 symbol fill color 5
+@    s8 symbol fill pattern 0
+@    s8 symbol linewidth 1.0
+@    s8 symbol linestyle 1
+@    s8 symbol char 0
+@    s8 symbol char font 2
+@    s8 symbol skip 0
+@    s8 line type 1
+@    s8 line linestyle 1
+@    s8 line linewidth 1.0
+@    s8 line color 5
+@    s8 line pattern 1
+@    s8 baseline type 0
+@    s8 baseline off
+@    s8 dropline off
+@    s8 fill type 0
+@    s8 fill rule 0
+@    s8 fill color 0
+@    s8 fill pattern 1
+@    s8 avalue off
+@    s8 avalue type 2
+@    s8 avalue char size 1.000000
+@    s8 avalue font 2
+@    s8 avalue color 1
+@    s8 avalue rot 0
+@    s8 avalue format general
+@    s8 avalue prec 3
+@    s8 avalue prepend ""
+@    s8 avalue append ""
+@    s8 avalue offset 0.000000 , 0.000000
+@    s8 errorbar on
+@    s8 errorbar place both
+@    s8 errorbar color 5
+@    s8 errorbar pattern 1
+@    s8 errorbar size 1.000000
+@    s8 errorbar linewidth 1.0
+@    s8 errorbar linestyle 1
+@    s8 errorbar riser linewidth 1.0
+@    s8 errorbar riser linestyle 1
+@    s8 errorbar riser clip off
+@    s8 errorbar riser clip length 0.100000
+@    s8 comment "4s"
+@    s8 legend  "4s"
+@    s9 hidden false
+@    s9 type xy
+@    s9 symbol 0
+@    s9 symbol size 1.000000
+@    s9 symbol color 15
+@    s9 symbol pattern 1
+@    s9 symbol fill color 15
+@    s9 symbol fill pattern 0
+@    s9 symbol linewidth 1.0
+@    s9 symbol linestyle 1
+@    s9 symbol char 0
+@    s9 symbol char font 2
+@    s9 symbol skip 0
+@    s9 line type 1
+@    s9 line linestyle 4
+@    s9 line linewidth 1.0
+@    s9 line color 15
+@    s9 line pattern 1
+@    s9 baseline type 0
+@    s9 baseline off
+@    s9 dropline off
+@    s9 fill type 0
+@    s9 fill rule 0
+@    s9 fill color 0
+@    s9 fill pattern 1
+@    s9 avalue off
+@    s9 avalue type 2
+@    s9 avalue char size 1.000000
+@    s9 avalue font 2
+@    s9 avalue color 1
+@    s9 avalue rot 0
+@    s9 avalue format general
+@    s9 avalue prec 3
+@    s9 avalue prepend ""
+@    s9 avalue append ""
+@    s9 avalue offset 0.000000 , 0.000000
+@    s9 errorbar on
+@    s9 errorbar place both
+@    s9 errorbar color 15
+@    s9 errorbar pattern 1
+@    s9 errorbar size 1.000000
+@    s9 errorbar linewidth 1.0
+@    s9 errorbar linestyle 1
+@    s9 errorbar riser linewidth 1.0
+@    s9 errorbar riser linestyle 1
+@    s9 errorbar riser clip off
+@    s9 errorbar riser clip length 0.100000
+@    s9 comment "3d"
+@    s9 legend  "3d"
+@    s10 hidden false
+@    s10 type xy
+@    s10 symbol 0
+@    s10 symbol size 1.000000
+@    s10 symbol color 6
+@    s10 symbol pattern 1
+@    s10 symbol fill color 6
+@    s10 symbol fill pattern 0
+@    s10 symbol linewidth 1.0
+@    s10 symbol linestyle 1
+@    s10 symbol char 0
+@    s10 symbol char font 2
+@    s10 symbol skip 0
+@    s10 line type 1
+@    s10 line linestyle 5
+@    s10 line linewidth 1.0
+@    s10 line color 6
+@    s10 line pattern 1
+@    s10 baseline type 0
+@    s10 baseline off
+@    s10 dropline off
+@    s10 fill type 0
+@    s10 fill rule 0
+@    s10 fill color 0
+@    s10 fill pattern 1
+@    s10 avalue off
+@    s10 avalue type 2
+@    s10 avalue char size 1.000000
+@    s10 avalue font 2
+@    s10 avalue color 1
+@    s10 avalue rot 0
+@    s10 avalue format general
+@    s10 avalue prec 3
+@    s10 avalue prepend ""
+@    s10 avalue append ""
+@    s10 avalue offset 0.000000 , 0.000000
+@    s10 errorbar on
+@    s10 errorbar place both
+@    s10 errorbar color 6
+@    s10 errorbar pattern 1
+@    s10 errorbar size 1.000000
+@    s10 errorbar linewidth 1.0
+@    s10 errorbar linestyle 1
+@    s10 errorbar riser linewidth 1.0
+@    s10 errorbar riser linestyle 1
+@    s10 errorbar riser clip off
+@    s10 errorbar riser clip length 0.100000
+@    s10 comment "3p"
+@    s10 legend  "3p"
+@    s11 hidden false
+@    s11 type xy
+@    s11 symbol 0
+@    s11 symbol size 1.000000
+@    s11 symbol color 14
+@    s11 symbol pattern 1
+@    s11 symbol fill color 14
+@    s11 symbol fill pattern 0
+@    s11 symbol linewidth 1.0
+@    s11 symbol linestyle 1
+@    s11 symbol char 65
+@    s11 symbol char font 2
+@    s11 symbol skip 0
+@    s11 line type 1
+@    s11 line linestyle 1
+@    s11 line linewidth 1.0
+@    s11 line color 14
+@    s11 line pattern 1
+@    s11 baseline type 0
+@    s11 baseline off
+@    s11 dropline off
+@    s11 fill type 0
+@    s11 fill rule 0
+@    s11 fill color 1
+@    s11 fill pattern 1
+@    s11 avalue off
+@    s11 avalue type 2
+@    s11 avalue char size 1.000000
+@    s11 avalue font 2
+@    s11 avalue color 1
+@    s11 avalue rot 0
+@    s11 avalue format general
+@    s11 avalue prec 3
+@    s11 avalue prepend ""
+@    s11 avalue append ""
+@    s11 avalue offset 0.000000 , 0.000000
+@    s11 errorbar on
+@    s11 errorbar place both
+@    s11 errorbar color 14
+@    s11 errorbar pattern 1
+@    s11 errorbar size 1.000000
+@    s11 errorbar linewidth 1.0
+@    s11 errorbar linestyle 1
+@    s11 errorbar riser linewidth 1.0
+@    s11 errorbar riser linestyle 1
+@    s11 errorbar riser clip off
+@    s11 errorbar riser clip length 0.100000
+@    s11 legend  "3s"
+@    s12 hidden false
+@    s12 type xy
+@    s12 symbol 0
+@    s12 symbol size 1.000000
+@    s12 symbol color 1
+@    s12 symbol pattern 1
+@    s12 symbol fill color 1
+@    s12 symbol fill pattern 0
+@    s12 symbol linewidth 1.0
+@    s12 symbol linestyle 1
+@    s12 symbol char 65
+@    s12 symbol char font 2
+@    s12 symbol skip 0
+@    s12 line type 1
+@    s12 line linestyle 2
+@    s12 line linewidth 1.0
+@    s12 line color 1
+@    s12 line pattern 1
+@    s12 baseline type 0
+@    s12 baseline off
+@    s12 dropline off
+@    s12 fill type 0
+@    s12 fill rule 0
+@    s12 fill color 1
+@    s12 fill pattern 1
+@    s12 avalue off
+@    s12 avalue type 2
+@    s12 avalue char size 1.000000
+@    s12 avalue font 2
+@    s12 avalue color 1
+@    s12 avalue rot 0
+@    s12 avalue format general
+@    s12 avalue prec 3
+@    s12 avalue prepend ""
+@    s12 avalue append ""
+@    s12 avalue offset 0.000000 , 0.000000
+@    s12 errorbar on
+@    s12 errorbar place both
+@    s12 errorbar color 1
+@    s12 errorbar pattern 1
+@    s12 errorbar size 1.000000
+@    s12 errorbar linewidth 1.0
+@    s12 errorbar linestyle 1
+@    s12 errorbar riser linewidth 1.0
+@    s12 errorbar riser linestyle 1
+@    s12 errorbar riser clip off
+@    s12 errorbar riser clip length 0.100000
+@    s12 legend  "2p"
+@    s13 hidden false
+@    s13 type xy
+@    s13 symbol 0
+@    s13 symbol size 1.000000
+@    s13 symbol color 1
+@    s13 symbol pattern 1
+@    s13 symbol fill color 1
+@    s13 symbol fill pattern 0
+@    s13 symbol linewidth 1.0
+@    s13 symbol linestyle 1
+@    s13 symbol char 65
+@    s13 symbol char font 2
+@    s13 symbol skip 0
+@    s13 line type 1
+@    s13 line linestyle 3
+@    s13 line linewidth 1.0
+@    s13 line color 1
+@    s13 line pattern 1
+@    s13 baseline type 0
+@    s13 baseline off
+@    s13 dropline off
+@    s13 fill type 0
+@    s13 fill rule 0
+@    s13 fill color 1
+@    s13 fill pattern 1
+@    s13 avalue off
+@    s13 avalue type 2
+@    s13 avalue char size 1.000000
+@    s13 avalue font 2
+@    s13 avalue color 1
+@    s13 avalue rot 0
+@    s13 avalue format general
+@    s13 avalue prec 3
+@    s13 avalue prepend ""
+@    s13 avalue append ""
+@    s13 avalue offset 0.000000 , 0.000000
+@    s13 errorbar on
+@    s13 errorbar place both
+@    s13 errorbar color 1
+@    s13 errorbar pattern 1
+@    s13 errorbar size 1.000000
+@    s13 errorbar linewidth 1.0
+@    s13 errorbar linestyle 1
+@    s13 errorbar riser linewidth 1.0
+@    s13 errorbar riser linestyle 1
+@    s13 errorbar riser clip off
+@    s13 errorbar riser clip length 0.100000
+@    s13 legend  "2s"
+@    s14 hidden false
+@    s14 type xy
+@    s14 symbol 0
+@    s14 symbol size 1.000000
+@    s14 symbol color 1
+@    s14 symbol pattern 1
+@    s14 symbol fill color 1
+@    s14 symbol fill pattern 0
+@    s14 symbol linewidth 1.0
+@    s14 symbol linestyle 1
+@    s14 symbol char 65
+@    s14 symbol char font 2
+@    s14 symbol skip 0
+@    s14 line type 1
+@    s14 line linestyle 7
+@    s14 line linewidth 1.0
+@    s14 line color 1
+@    s14 line pattern 1
+@    s14 baseline type 0
+@    s14 baseline off
+@    s14 dropline off
+@    s14 fill type 0
+@    s14 fill rule 0
+@    s14 fill color 1
+@    s14 fill pattern 1
+@    s14 avalue off
+@    s14 avalue type 2
+@    s14 avalue char size 1.000000
+@    s14 avalue font 2
+@    s14 avalue color 1
+@    s14 avalue rot 0
+@    s14 avalue format general
+@    s14 avalue prec 3
+@    s14 avalue prepend ""
+@    s14 avalue append ""
+@    s14 avalue offset 0.000000 , 0.000000
+@    s14 errorbar on
+@    s14 errorbar place both
+@    s14 errorbar color 1
+@    s14 errorbar pattern 1
+@    s14 errorbar size 1.000000
+@    s14 errorbar linewidth 1.0
+@    s14 errorbar linestyle 1
+@    s14 errorbar riser linewidth 1.0
+@    s14 errorbar riser linestyle 1
+@    s14 errorbar riser clip off
+@    s14 errorbar riser clip length 0.100000
+@    s14 legend  "1s"
+@    s15 hidden false
+@    s15 type xy
+@    s15 symbol 0
+@    s15 symbol size 1.000000
+@    s15 symbol color 1
+@    s15 symbol pattern 1
+@    s15 symbol fill color 1
+@    s15 symbol fill pattern 0
+@    s15 symbol linewidth 1.0
+@    s15 symbol linestyle 1
+@    s15 symbol char 65
+@    s15 symbol char font 2
+@    s15 symbol skip 0
+@    s15 line type 1
+@    s15 line linestyle 1
+@    s15 line linewidth 1.0
+@    s15 line color 1
+@    s15 line pattern 1
+@    s15 baseline type 0
+@    s15 baseline off
+@    s15 dropline off
+@    s15 fill type 0
+@    s15 fill rule 0
+@    s15 fill color 1
+@    s15 fill pattern 1
+@    s15 avalue off
+@    s15 avalue type 2
+@    s15 avalue char size 1.000000
+@    s15 avalue font 2
+@    s15 avalue color 1
+@    s15 avalue rot 0
+@    s15 avalue format general
+@    s15 avalue prec 3
+@    s15 avalue prepend ""
+@    s15 avalue append ""
+@    s15 avalue offset 0.000000 , 0.000000
+@    s15 errorbar on
+@    s15 errorbar place both
+@    s15 errorbar color 1
+@    s15 errorbar pattern 1
+@    s15 errorbar size 1.000000
+@    s15 errorbar linewidth 1.0
+@    s15 errorbar linestyle 1
+@    s15 errorbar riser linewidth 1.0
+@    s15 errorbar riser linestyle 1
+@    s15 errorbar riser clip off
+@    s15 errorbar riser clip length 0.100000
+@    s15 legend  ""
+@ title "Radial Wavefunctions  \s\Sncpp 13:05:44 Dec 05 2021 chuang3\N\N"
+@ legend string 0 "3d"
+4.807690e-04 5.794790e-11 
+5.366850e-04 7.729260e-11 
+5.991050e-04 1.041260e-10 
+6.687840e-04 1.412300e-10 
+7.465680e-04 1.923910e-10 
+8.333980e-04 2.628530e-10 
+9.303270e-04 3.598650e-10 
+1.038530e-03 4.934490e-10 
+1.159320e-03 6.774600e-10 
+1.294150e-03 9.310550e-10 
+1.444670e-03 1.280730e-09 
+1.612690e-03 1.763130e-09 
+1.800260e-03 2.428970e-09 
+2.009640e-03 3.348410e-09 
+2.243370e-03 4.618530e-09 
+2.504280e-03 6.373720e-09 
+2.795550e-03 8.799930e-09 
+3.120680e-03 1.215450e-08 
+3.483640e-03 1.679350e-08 
+3.888800e-03 2.320950e-08 
+4.341100e-03 3.208380e-08 
+4.845990e-03 4.435860e-08 
+5.409610e-03 6.133590e-08 
+6.038770e-03 8.481460e-08 
+6.741120e-03 1.172790e-07 
+7.525150e-03 1.621570e-07 
+8.400360e-03 2.241770e-07 
+9.377370e-03 3.098530e-07 
+1.046800e-02 4.281540e-07 
+1.168550e-02 5.914160e-07 
+1.304460e-02 8.165860e-07 
+1.456180e-02 1.126910e-06 
+1.625540e-02 1.554250e-06 
+1.814600e-02 2.142160e-06 
+2.025640e-02 2.950150e-06 
+2.261240e-02 4.059260e-06 
+2.524230e-02 5.579710e-06 
+2.817820e-02 7.660990e-06 
+3.145540e-02 1.050530e-05 
+3.511390e-02 1.438520e-05 
+3.919780e-02 1.966720e-05 
+4.375680e-02 2.684200e-05 
+4.884590e-02 3.656400e-05 
+5.452700e-02 4.970230e-05 
+6.086880e-02 6.740500e-05 
+6.794810e-02 9.118130e-05 
+7.585090e-02 1.230030e-04 
+8.467280e-02 1.654300e-04 
+9.452070e-02 2.217640e-04 
+1.055140e-01 2.962280e-04 
+1.177860e-01 3.941860e-04 
+1.314850e-01 5.223870e-04 
+1.467780e-01 6.892500e-04 
+1.638490e-01 9.051730e-04 
+1.829050e-01 1.182890e-03 
+2.041780e-01 1.537850e-03 
+2.279250e-01 1.988650e-03 
+2.544340e-01 2.557370e-03 
+2.840260e-01 3.269660e-03 
+3.170600e-01 4.155000e-03 
+3.539360e-01 5.247250e-03 
+3.951010e-01 6.585290e-03 
+4.410530e-01 8.213860e-03 
+4.923500e-01 1.018450e-02 
+5.496130e-01 1.255660e-02 
+6.135360e-01 1.539860e-02 
+6.848940e-01 1.878850e-02 
+7.645510e-01 2.281540e-02 
+8.534730e-01 2.758040e-02 
+9.527360e-01 3.319860e-02 
+1.063550e+00 3.979920e-02 
+1.187240e+00 4.752280e-02 
+1.325320e+00 5.651900e-02 
+1.479470e+00 6.698210e-02 
+1.651540e+00 7.914280e-02 
+1.843620e+00 9.303320e-02 
+2.058040e+00 1.084970e-01 
+2.297410e+00 1.253020e-01 
+2.564610e+00 1.431350e-01 
+2.862890e+00 1.616250e-01 
+3.195860e+00 1.803950e-01 
+3.567550e+00 1.991210e-01 
+3.982480e+00 2.175580e-01 
+4.445660e+00 2.354240e-01 
+4.962720e+00 2.521680e-01 
+5.539910e+00 2.667950e-01 
+6.184240e+00 2.779600e-01 
+6.903500e+00 2.843300e-01 
+7.706410e+00 2.850250e-01 
+8.602710e+00 2.798730e-01 
+9.603260e+00 2.693670e-01 
+1.072020e+01 2.544310e-01 
+1.196700e+01 2.361510e-01 
+1.335880e+01 2.155580e-01 
+1.491250e+01 1.935220e-01 
+1.664690e+01 1.707270e-01 
+1.858310e+01 1.477220e-01 
+2.074440e+01 1.249900e-01 
+2.315710e+01 1.030130e-01 
+2.585040e+01 8.231000e-02 
+2.885690e+01 6.342250e-02 
+3.221310e+01 4.684730e-02 
+3.595970e+01 3.295150e-02 
+4.014200e+01 2.191090e-02 
+4.481080e+01 1.366460e-02 
+5.002250e+01 7.923610e-03 
+5.584040e+01 4.231600e-03 
+6.233500e+01 2.059870e-03 
+6.958490e+01 9.042250e-04 
+@ legend string 1 "3p"
+&
+4.807690e-04 4.545120e-06 
+5.366850e-04 5.462730e-06 
+5.991050e-04 6.604140e-06 
+6.687840e-04 8.022300e-06 
+7.465680e-04 9.780730e-06 
+8.333980e-04 1.195840e-05 
+9.303270e-04 1.465350e-05 
+1.038530e-03 1.798780e-05 
+1.159320e-03 2.211250e-05 
+1.294150e-03 2.721520e-05 
+1.444670e-03 3.352840e-05 
+1.612690e-03 4.134060e-05 
+1.800260e-03 5.100930e-05 
+2.009640e-03 6.297730e-05 
+2.243370e-03 7.779350e-05 
+2.504280e-03 9.613720e-05 
+2.795550e-03 1.188490e-04 
+3.120680e-03 1.469700e-04 
+3.483640e-03 1.817840e-04 
+3.888800e-03 2.248810e-04 
+4.341100e-03 2.782190e-04 
+4.845990e-03 3.442160e-04 
+5.409610e-03 4.258470e-04 
+6.038770e-03 5.267740e-04 
+6.741120e-03 6.514940e-04 
+7.525150e-03 8.055230e-04 
+8.400360e-03 9.956140e-04 
+9.377370e-03 1.230020e-03 
+1.046800e-02 1.518790e-03 
+1.168550e-02 1.874170e-03 
+1.304460e-02 2.310970e-03 
+1.456180e-02 2.847120e-03 
+1.625540e-02 3.504170e-03 
+1.814600e-02 4.307990e-03 
+2.025640e-02 5.289410e-03 
+2.261240e-02 6.485020e-03 
+2.524230e-02 7.937940e-03 
+2.817820e-02 9.698650e-03 
+3.145540e-02 1.182570e-02 
+3.511390e-02 1.438640e-02 
+3.919780e-02 1.745700e-02 
+4.375680e-02 2.112310e-02 
+4.884590e-02 2.547880e-02 
+5.452700e-02 3.062550e-02 
+6.086880e-02 3.666950e-02 
+6.794810e-02 4.371820e-02 
+7.585090e-02 5.187480e-02 
+8.467280e-02 6.123070e-02 
+9.452070e-02 7.185520e-02 
+1.055140e-01 8.378380e-02 
+1.177860e-01 9.700200e-02 
+1.314850e-01 1.114290e-01 
+1.467780e-01 1.268970e-01 
+1.638490e-01 1.431340e-01 
+1.829050e-01 1.597450e-01 
+2.041780e-01 1.762020e-01 
+2.279250e-01 1.918380e-01 
+2.544340e-01 2.058370e-01 
+2.840260e-01 2.172280e-01 
+3.170600e-01 2.249060e-01 
+3.539360e-01 2.277060e-01 
+3.951010e-01 2.244710e-01 
+4.410530e-01 2.141390e-01 
+4.923500e-01 1.958210e-01 
+5.496130e-01 1.688800e-01 
+6.135360e-01 1.330010e-01 
+6.848940e-01 8.824170e-02 
+7.645510e-01 3.508250e-02 
+8.534730e-01 -2.554840e-02 
+9.527360e-01 -9.227230e-02 
+1.063550e+00 -1.632880e-01 
+1.187240e+00 -2.364110e-01 
+1.325320e+00 -3.091470e-01 
+1.479470e+00 -3.790090e-01 
+1.651540e+00 -4.436400e-01 
+1.843620e+00 -4.996920e-01 
+2.058040e+00 -5.432540e-01 
+2.297410e+00 -5.709560e-01 
+2.564610e+00 -5.804080e-01 
+2.862890e+00 -5.706220e-01 
+3.195860e+00 -5.423360e-01 
+3.567550e+00 -4.980920e-01 
+3.982480e+00 -4.419120e-01 
+4.445660e+00 -3.785310e-01 
+4.962720e+00 -3.125670e-01 
+5.539910e+00 -2.480420e-01 
+6.184240e+00 -1.883040e-01 
+6.903500e+00 -1.360070e-01 
+7.706410e+00 -9.292700e-02 
+8.602710e+00 -5.972730e-02 
+9.603260e+00 -3.591330e-02 
+1.072020e+01 -2.008560e-02 
+1.196700e+01 -1.038240e-02 
+1.335880e+01 -4.924180e-03 
+1.491250e+01 -2.124850e-03 
+1.664690e+01 -8.261030e-04 
+1.858310e+01 -2.861150e-04 
+2.074440e+01 -8.714230e-05 
+2.315710e+01 -2.299900e-05 
+2.585040e+01 -5.173240e-06 
+2.885690e+01 -9.733810e-07 
+3.221310e+01 -1.500480e-07 
+3.595970e+01 -1.851230e-08 
+4.014200e+01 -1.780930e-09 
+4.481080e+01 -1.297620e-10 
+5.002250e+01 -6.931760e-12 
+5.584040e+01 -2.617910e-13 
+@ legend string 2 "3s"
+&
+4.807690e-04 3.026360e-03 
+5.366850e-04 3.374220e-03 
+5.991050e-04 3.761730e-03 
+6.687840e-04 4.193340e-03 
+7.465680e-04 4.673970e-03 
+8.333980e-04 5.209070e-03 
+9.303270e-04 5.804660e-03 
+1.038530e-03 6.467390e-03 
+1.159320e-03 7.204580e-03 
+1.294150e-03 8.024320e-03 
+1.444670e-03 8.935490e-03 
+1.612690e-03 9.947830e-03 
+1.800260e-03 1.107200e-02 
+2.009640e-03 1.231970e-02 
+2.243370e-03 1.370350e-02 
+2.504280e-03 1.523730e-02 
+2.795550e-03 1.693600e-02 
+3.120680e-03 1.881560e-02 
+3.483640e-03 2.089330e-02 
+3.888800e-03 2.318740e-02 
+4.341100e-03 2.571730e-02 
+4.845990e-03 2.850300e-02 
+5.409610e-03 3.156570e-02 
+6.038770e-03 3.492660e-02 
+6.741120e-03 3.860730e-02 
+7.525150e-03 4.262850e-02 
+8.400360e-03 4.701020e-02 
+9.377370e-03 5.177010e-02 
+1.046800e-02 5.692280e-02 
+1.168550e-02 6.247840e-02 
+1.304460e-02 6.844080e-02 
+1.456180e-02 7.480550e-02 
+1.625540e-02 8.155730e-02 
+1.814600e-02 8.866700e-02 
+2.025640e-02 9.608840e-02 
+2.261240e-02 1.037540e-01 
+2.524230e-02 1.115710e-01 
+2.817820e-02 1.194160e-01 
+3.145540e-02 1.271290e-01 
+3.511390e-02 1.345120e-01 
+3.919780e-02 1.413200e-01 
+4.375680e-02 1.472570e-01 
+4.884590e-02 1.519780e-01 
+5.452700e-02 1.550830e-01 
+6.086880e-02 1.561220e-01 
+6.794810e-02 1.546020e-01 
+7.585090e-02 1.500000e-01 
+8.467280e-02 1.417840e-01 
+9.452070e-02 1.294380e-01 
+1.055140e-01 1.125050e-01 
+1.177860e-01 9.063040e-02 
+1.314850e-01 6.362320e-02 
+1.467780e-01 3.151920e-02 
+1.638490e-01 -5.350010e-03 
+1.829050e-01 -4.629080e-02 
+2.041780e-01 -9.019360e-02 
+2.279250e-01 -1.355020e-01 
+2.544340e-01 -1.802040e-01 
+2.840260e-01 -2.218470e-01 
+3.170600e-01 -2.576170e-01 
+3.539360e-01 -2.844980e-01 
+3.951010e-01 -2.994910e-01 
+4.410530e-01 -2.998690e-01 
+4.923500e-01 -2.834530e-01 
+5.496130e-01 -2.488620e-01 
+6.135360e-01 -1.957360e-01 
+6.848940e-01 -1.248910e-01 
+7.645510e-01 -3.839630e-02 
+8.534730e-01 6.044090e-02 
+9.527360e-01 1.672040e-01 
+1.063550e+00 2.766150e-01 
+1.187240e+00 3.828630e-01 
+1.325320e+00 4.800190e-01 
+1.479470e+00 5.628420e-01 
+1.651540e+00 6.272390e-01 
+1.843620e+00 6.688710e-01 
+2.058040e+00 6.840930e-01 
+2.297410e+00 6.715840e-01 
+2.564610e+00 6.326730e-01 
+2.862890e+00 5.713540e-01 
+3.195860e+00 4.938810e-01 
+3.567550e+00 4.079360e-01 
+3.982480e+00 3.214090e-01 
+4.445660e+00 2.410660e-01 
+4.962720e+00 1.716110e-01 
+5.539910e+00 1.154380e-01 
+6.184240e+00 7.293510e-02 
+6.903500e+00 4.297120e-02 
+7.706410e+00 2.342410e-02 
+8.602710e+00 1.171730e-02 
+9.603260e+00 5.332540e-03 
+1.072020e+01 2.187440e-03 
+1.196700e+01 8.004740e-04 
+1.335880e+01 2.582880e-04 
+1.491250e+01 7.251790e-05 
+1.664690e+01 1.745090e-05 
+1.858310e+01 3.538180e-06 
+2.074440e+01 5.928040e-07 
+2.315710e+01 8.030050e-08 
+2.585040e+01 8.580950e-09 
+2.885690e+01 7.037230e-10 
+3.221310e+01 4.295040e-11 
+3.595970e+01 1.884780e-12 
+4.014200e+01 5.722010e-14 
+4.481080e+01 1.151060e-15 
+@ legend string 3 "2p"
+&
+4.807690e-04 2.153620e-05 
+5.366850e-04 2.588410e-05 
+5.991050e-04 3.129240e-05 
+6.687840e-04 3.801210e-05 
+7.465680e-04 4.634410e-05 
+8.333980e-04 5.666270e-05 
+9.303270e-04 6.943280e-05 
+1.038530e-03 8.523170e-05 
+1.159320e-03 1.047760e-04 
+1.294150e-03 1.289540e-04 
+1.444670e-03 1.588680e-04 
+1.612690e-03 1.958840e-04 
+1.800260e-03 2.416970e-04 
+2.009640e-03 2.984060e-04 
+2.243370e-03 3.686090e-04 
+2.504280e-03 4.555270e-04 
+2.795550e-03 5.631450e-04 
+3.120680e-03 6.963890e-04 
+3.483640e-03 8.613520e-04 
+3.888800e-03 1.065560e-03 
+4.341100e-03 1.318300e-03 
+4.845990e-03 1.631020e-03 
+5.409610e-03 2.017820e-03 
+6.038770e-03 2.496060e-03 
+6.741120e-03 3.087050e-03 
+7.525150e-03 3.816920e-03 
+8.400360e-03 4.717690e-03 
+9.377370e-03 5.828470e-03 
+1.046800e-02 7.196920e-03 
+1.168550e-02 8.881020e-03 
+1.304460e-02 1.095110e-02 
+1.456180e-02 1.349200e-02 
+1.625540e-02 1.660620e-02 
+1.814600e-02 2.041610e-02 
+2.025640e-02 2.506830e-02 
+2.261240e-02 3.073640e-02 
+2.524230e-02 3.762520e-02 
+2.817820e-02 4.597480e-02 
+3.145540e-02 5.606370e-02 
+3.511390e-02 6.821240e-02 
+3.919780e-02 8.278550e-02 
+4.375680e-02 1.001920e-01 
+4.884590e-02 1.208840e-01 
+5.452700e-02 1.453510e-01 
+6.086880e-02 1.741080e-01 
+6.794810e-02 2.076850e-01 
+7.585090e-02 2.465970e-01 
+8.467280e-02 2.913180e-01 
+9.452070e-02 3.422330e-01 
+1.055140e-01 3.995920e-01 
+1.177860e-01 4.634400e-01 
+1.314850e-01 5.335550e-01 
+1.467780e-01 6.093670e-01 
+1.638490e-01 6.898870e-01 
+1.829050e-01 7.736550e-01 
+2.041780e-01 8.587110e-01 
+2.279250e-01 9.426080e-01 
+2.544340e-01 1.022400e+00 
+2.840260e-01 1.094630e+00 
+3.170600e-01 1.155480e+00 
+3.539360e-01 1.201110e+00 
+3.951010e-01 1.228030e+00 
+4.410530e-01 1.233420e+00 
+4.923500e-01 1.215540e+00 
+5.496130e-01 1.173870e+00 
+6.135360e-01 1.109380e+00 
+6.848940e-01 1.024450e+00 
+7.645510e-01 9.228140e-01 
+8.534730e-01 8.093190e-01 
+9.527360e-01 6.895800e-01 
+1.063550e+00 5.694740e-01 
+1.187240e+00 4.545530e-01 
+1.325320e+00 3.495470e-01 
+1.479470e+00 2.581830e-01 
+1.651540e+00 1.827500e-01 
+1.843620e+00 1.234350e-01 
+2.058040e+00 7.907400e-02 
+2.297410e+00 4.773320e-02 
+2.564610e+00 2.696000e-02 
+2.862890e+00 1.413660e-02 
+3.195860e+00 6.823180e-03 
+3.567550e+00 3.003300e-03 
+3.982480e+00 1.193500e-03 
+4.445660e+00 4.235720e-04 
+4.962720e+00 1.326190e-04 
+5.539910e+00 3.612240e-05 
+6.184240e+00 8.422310e-06 
+6.903500e+00 1.650520e-06 
+7.706410e+00 2.663700e-07 
+8.602710e+00 3.461210e-08 
+9.603260e+00 3.532120e-09 
+1.072020e+01 2.753630e-10 
+@ legend string 4 "2s"
+&
+4.807690e-04 1.154750e-02 
+5.366850e-04 1.287470e-02 
+5.991050e-04 1.435330e-02 
+6.687840e-04 1.600020e-02 
+7.465680e-04 1.783410e-02 
+8.333980e-04 1.987590e-02 
+9.303270e-04 2.214840e-02 
+1.038530e-03 2.467720e-02 
+1.159320e-03 2.749000e-02 
+1.294150e-03 3.061790e-02 
+1.444670e-03 3.409460e-02 
+1.612690e-03 3.795730e-02 
+1.800260e-03 4.224680e-02 
+2.009640e-03 4.700750e-02 
+2.243370e-03 5.228790e-02 
+2.504280e-03 5.814060e-02 
+2.795550e-03 6.462240e-02 
+3.120680e-03 7.179450e-02 
+3.483640e-03 7.972270e-02 
+3.888800e-03 8.847680e-02 
+4.341100e-03 9.813040e-02 
+4.845990e-03 1.087610e-01 
+5.409610e-03 1.204480e-01 
+6.038770e-03 1.332750e-01 
+6.741120e-03 1.473210e-01 
+7.525150e-03 1.626680e-01 
+8.400360e-03 1.793920e-01 
+9.377370e-03 1.975610e-01 
+1.046800e-02 2.172310e-01 
+1.168550e-02 2.384420e-01 
+1.304460e-02 2.612100e-01 
+1.456180e-02 2.855190e-01 
+1.625540e-02 3.113120e-01 
+1.814600e-02 3.384830e-01 
+2.025640e-02 3.668580e-01 
+2.261240e-02 3.961850e-01 
+2.524230e-02 4.261150e-01 
+2.817820e-02 4.561870e-01 
+3.145540e-02 4.858050e-01 
+3.511390e-02 5.142230e-01 
+3.919780e-02 5.405240e-01 
+4.375680e-02 5.636080e-01 
+4.884590e-02 5.821800e-01 
+5.452700e-02 5.947500e-01 
+6.086880e-02 5.996430e-01 
+6.794810e-02 5.950250e-01 
+7.585090e-02 5.789510e-01 
+8.467280e-02 5.494360e-01 
+9.452070e-02 5.045620e-01 
+1.055140e-01 4.426060e-01 
+1.177860e-01 3.622150e-01 
+1.314850e-01 2.625960e-01 
+1.467780e-01 1.437330e-01 
+1.638490e-01 6.606930e-03 
+1.829050e-01 -1.466090e-01 
+2.041780e-01 -3.124130e-01 
+2.279250e-01 -4.859290e-01 
+2.544340e-01 -6.609610e-01 
+2.840260e-01 -8.301330e-01 
+3.170600e-01 -9.852340e-01 
+3.539360e-01 -1.117840e+00 
+3.951010e-01 -1.220120e+00 
+4.410530e-01 -1.285620e+00 
+4.923500e-01 -1.310110e+00 
+5.496130e-01 -1.292180e+00 
+6.135360e-01 -1.233540e+00 
+6.848940e-01 -1.138980e+00 
+7.645510e-01 -1.016010e+00 
+8.534730e-01 -8.741500e-01 
+9.527360e-01 -7.238680e-01 
+1.063550e+00 -5.754550e-01 
+1.187240e+00 -4.378140e-01 
+1.325320e+00 -3.175780e-01 
+1.479470e+00 -2.188020e-01 
+1.651540e+00 -1.427290e-01 
+1.843620e+00 -8.770060e-02 
+2.058040e+00 -5.040360e-02 
+2.297410e+00 -2.688810e-02 
+2.564610e+00 -1.320160e-02 
+2.862890e+00 -5.910170e-03 
+3.195860e+00 -2.387660e-03 
+3.567550e+00 -8.605680e-04 
+3.982480e+00 -2.732910e-04 
+4.445660e+00 -7.543080e-05 
+4.962720e+00 -1.782000e-05 
+5.539910e+00 -3.541080e-06 
+6.184240e+00 -5.802320e-07 
+6.903500e+00 -7.665620e-08 
+7.706410e+00 -7.962980e-09 
+8.602710e+00 -6.325480e-10 
+9.603260e+00 -3.725480e-11 
+1.072020e+01 -1.571850e-12 
+@ legend string 5 "1s"
+&
+4.807690e-04 4.442750e-02 
+5.366850e-04 4.953410e-02 
+5.991050e-04 5.522290e-02 
+6.687840e-04 6.155910e-02 
+7.465680e-04 6.861510e-02 
+8.333980e-04 7.647080e-02 
+9.303270e-04 8.521460e-02 
+1.038530e-03 9.494430e-02 
+1.159320e-03 1.057680e-01 
+1.294150e-03 1.178030e-01 
+1.444670e-03 1.311810e-01 
+1.612690e-03 1.460450e-01 
+1.800260e-03 1.625520e-01 
+2.009640e-03 1.808730e-01 
+2.243370e-03 2.011960e-01 
+2.504280e-03 2.237220e-01 
+2.795550e-03 2.486730e-01 
+3.120680e-03 2.762840e-01 
+3.483640e-03 3.068100e-01 
+3.888800e-03 3.405220e-01 
+4.341100e-03 3.777060e-01 
+4.845990e-03 4.186640e-01 
+5.409610e-03 4.637090e-01 
+6.038770e-03 5.131640e-01 
+6.741120e-03 5.673530e-01 
+7.525150e-03 6.266000e-01 
+8.400360e-03 6.912140e-01 
+9.377370e-03 7.614850e-01 
+1.046800e-02 8.376640e-01 
+1.168550e-02 9.199510e-01 
+1.304460e-02 1.008470e+00 
+1.456180e-02 1.103250e+00 
+1.625540e-02 1.204190e+00 
+1.814600e-02 1.311020e+00 
+2.025640e-02 1.423290e+00 
+2.261240e-02 1.540300e+00 
+2.524230e-02 1.661060e+00 
+2.817820e-02 1.784290e+00 
+3.145540e-02 1.908290e+00 
+3.511390e-02 2.031000e+00 
+3.919780e-02 2.149920e+00 
+4.375680e-02 2.262120e+00 
+4.884590e-02 2.364260e+00 
+5.452700e-02 2.452640e+00 
+6.086880e-02 2.523280e+00 
+6.794810e-02 2.572120e+00 
+7.585090e-02 2.595150e+00 
+8.467280e-02 2.588710e+00 
+9.452070e-02 2.549800e+00 
+1.055140e-01 2.476410e+00 
+1.177860e-01 2.367860e+00 
+1.314850e-01 2.225160e+00 
+1.467780e-01 2.051190e+00 
+1.638490e-01 1.850880e+00 
+1.829050e-01 1.631030e+00 
+2.041780e-01 1.400070e+00 
+2.279250e-01 1.167440e+00 
+2.544340e-01 9.427380e-01 
+2.840260e-01 7.347060e-01 
+3.170600e-01 5.504250e-01 
+3.539360e-01 3.946840e-01 
+3.951010e-01 2.695760e-01 
+4.410530e-01 1.744590e-01 
+4.923500e-01 1.063520e-01 
+5.496130e-01 6.067740e-02 
+6.135360e-01 3.216760e-02 
+6.848940e-01 1.571980e-02 
+7.645510e-01 7.018140e-03 
+8.534730e-01 2.834020e-03 
+9.527360e-01 1.023620e-03 
+1.063550e+00 3.266010e-04 
+1.187240e+00 9.077860e-05 
+1.325320e+00 2.163720e-05 
+1.479470e+00 4.345200e-06 
+1.651540e+00 7.214160e-07 
+1.843620e+00 9.692200e-08 
+2.058040e+00 1.028020e-08 
+2.297410e+00 8.373570e-10 

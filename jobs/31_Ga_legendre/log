@@ -1,0 +1,432 @@
+#info ./pswatch ncpp 21:08:21 Dec 17 2021 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         2.30000000000000     
+ icut:               765
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           3
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+ orbital   1 vanish at     3.1925
+ orbital   2 vanish at     3.6969
+ orbital   3 vanish at     7.1538
+ orbital   4 vanish at    11.2454
+ orbital   5 vanish at    16.6292
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref: -5.5845 ( -151.964 eV) u_ref(icut):  1.503E-02 norm(r<rc): 1.0000
+n,l: 2 1 => occ:   6.00 eref: -3.7741 ( -102.699 eV) u_ref(icut): -3.213E-02 norm(r<rc): 0.9998
+n,l: 3 2 => occ:  10.00 eref: -0.8448 (  -22.989 eV) u_ref(icut):  1.653E-01 norm(r<rc): 0.9889
+n,l: 2 0 => occ:   2.00 eref: -0.4567 (  -12.428 eV) u_ref(icut): -6.766E-01 norm(r<rc): 0.5671
+n,l: 3 1 => occ:   0.50 eref: -0.2066 (   -5.622 eV) u_ref(icut):  5.973E-01 norm(r<rc): 0.2960
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  1.00E-02
+    orb  4:  1.00E-02
+    orb  5:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  2.09019D-01    |proj g|=  1.76876D-01
+iter:   0 NEW_X, fcost: 2.038E-02  eig_match: 2.04E-02 |g|: 8.74E-02
+iter:   1 NEW_X, fcost: 3.530E-03  eig_match: 3.53E-03 |g|: 3.11E-02
+iter:   2 NEW_X, fcost: 2.694E-03  eig_match: 2.69E-03 |g|: 1.35E-02
+iter:   3 NEW_X, fcost: 2.316E-03  eig_match: 2.32E-03 |g|: 6.23E-03
+iter:   4 NEW_X, fcost: 2.217E-03  eig_match: 2.22E-03 |g|: 4.76E-03
+iter:   5 NEW_X, fcost: 1.802E-03  eig_match: 1.80E-03 |g|: 1.12E-02
+iter:   6 NEW_X, fcost: 1.144E-03  eig_match: 1.14E-03 |g|: 1.51E-02
+iter:   7 NEW_X, fcost: 4.702E-04  eig_match: 4.70E-04 |g|: 1.24E-02
+iter:   8 NEW_X, fcost: 2.770E-04  eig_match: 2.77E-04 |g|: 2.17E-03
+iter:   9 NEW_X, fcost: 2.686E-04  eig_match: 2.69E-04 |g|: 1.22E-03
+iter:  10 NEW_X, fcost: 2.677E-04  eig_match: 2.68E-04 |g|: 5.68E-04
+iter:  11 NEW_X, fcost: 2.674E-04  eig_match: 2.67E-04 |g|: 3.49E-04
+iter:  12 NEW_X, fcost: 2.671E-04  eig_match: 2.67E-04 |g|: 6.63E-05
+iter:  13 NEW_X, fcost: 2.670E-04  eig_match: 2.67E-04 |g|: 5.19E-05
+iter:  14 NEW_X, fcost: 2.670E-04  eig_match: 2.67E-04 |g|: 4.91E-05
+iter:  15 NEW_X, fcost: 2.663E-04  eig_match: 2.66E-04 |g|: 1.58E-04
+iter:  16 NEW_X, fcost: 2.652E-04  eig_match: 2.65E-04 |g|: 3.13E-04
+iter:  17 NEW_X, fcost: 2.621E-04  eig_match: 2.62E-04 |g|: 6.41E-04
+iter:  18 NEW_X, fcost: 2.567E-04  eig_match: 2.57E-04 |g|: 1.13E-03
+iter:  19 NEW_X, fcost: 2.458E-04  eig_match: 2.46E-04 |g|: 1.70E-03
+iter:  20 NEW_X, fcost: 2.395E-04  eig_match: 2.39E-04 |g|: 4.35E-03
+iter:  21 NEW_X, fcost: 2.112E-04  eig_match: 2.11E-04 |g|: 2.97E-03
+iter:  22 NEW_X, fcost: 2.015E-04  eig_match: 2.01E-04 |g|: 1.48E-03
+iter:  23 NEW_X, fcost: 1.909E-04  eig_match: 1.91E-04 |g|: 1.15E-03
+iter:  24 NEW_X, fcost: 1.826E-04  eig_match: 1.83E-04 |g|: 3.80E-03
+iter:  25 NEW_X, fcost: 1.699E-04  eig_match: 1.70E-04 |g|: 1.19E-03
+iter:  26 NEW_X, fcost: 1.564E-04  eig_match: 1.56E-04 |g|: 2.04E-03
+iter:  27 NEW_X, fcost: 1.444E-04  eig_match: 1.44E-04 |g|: 1.53E-03
+iter:  28 NEW_X, fcost: 1.346E-04  eig_match: 1.35E-04 |g|: 1.38E-03
+iter:  29 NEW_X, fcost: 1.230E-04  eig_match: 1.23E-04 |g|: 1.10E-03
+iter:  30 NEW_X, fcost: 1.211E-04  eig_match: 1.21E-04 |g|: 2.06E-03
+iter:  31 NEW_X, fcost: 1.174E-04  eig_match: 1.17E-04 |g|: 2.16E-03
+iter:  32 NEW_X, fcost: 1.147E-04  eig_match: 1.15E-04 |g|: 3.24E-03
+iter:  33 NEW_X, fcost: 1.061E-04  eig_match: 1.06E-04 |g|: 1.86E-03
+iter:  34 NEW_X, fcost: 9.878E-05  eig_match: 9.88E-05 |g|: 5.98E-04
+iter:  35 NEW_X, fcost: 9.461E-05  eig_match: 9.46E-05 |g|: 1.21E-03
+iter:  36 NEW_X, fcost: 8.986E-05  eig_match: 8.99E-05 |g|: 2.20E-03
+iter:  37 NEW_X, fcost: 8.256E-05  eig_match: 8.26E-05 |g|: 7.92E-04
+iter:  38 NEW_X, fcost: 8.039E-05  eig_match: 8.04E-05 |g|: 1.57E-03
+iter:  39 NEW_X, fcost: 7.843E-05  eig_match: 7.84E-05 |g|: 2.02E-03
+iter:  40 NEW_X, fcost: 7.512E-05  eig_match: 7.51E-05 |g|: 2.04E-03
+iter:  41 NEW_X, fcost: 7.165E-05  eig_match: 7.17E-05 |g|: 4.64E-04
+iter:  42 NEW_X, fcost: 6.762E-05  eig_match: 6.76E-05 |g|: 1.24E-03
+iter:  43 NEW_X, fcost: 6.295E-05  eig_match: 6.30E-05 |g|: 1.41E-03
+iter:  44 NEW_X, fcost: 5.861E-05  eig_match: 5.86E-05 |g|: 2.16E-03
+iter:  45 NEW_X, fcost: 5.332E-05  eig_match: 5.33E-05 |g|: 1.87E-03
+iter:  46 NEW_X, fcost: 4.960E-05  eig_match: 4.96E-05 |g|: 7.28E-04
+iter:  47 NEW_X, fcost: 4.701E-05  eig_match: 4.70E-05 |g|: 1.73E-03
+iter:  48 NEW_X, fcost: 4.663E-05  eig_match: 4.66E-05 |g|: 3.33E-04
+iter:  49 NEW_X, fcost: 4.427E-05  eig_match: 4.43E-05 |g|: 1.20E-03
+iter:  50 NEW_X, fcost: 4.340E-05  eig_match: 4.34E-05 |g|: 1.40E-03
+iter:  51 NEW_X, fcost: 4.079E-05  eig_match: 4.08E-05 |g|: 1.50E-03
+iter:  52 NEW_X, fcost: 3.974E-05  eig_match: 3.97E-05 |g|: 5.80E-04
+iter:  53 NEW_X, fcost: 3.835E-05  eig_match: 3.83E-05 |g|: 2.16E-03
+iter:  54 NEW_X, fcost: 3.723E-05  eig_match: 3.72E-05 |g|: 1.47E-03
+iter:  55 NEW_X, fcost: 3.305E-05  eig_match: 3.30E-05 |g|: 1.67E-03
+iter:  56 NEW_X, fcost: 3.190E-05  eig_match: 3.19E-05 |g|: 1.76E-04
+iter:  57 NEW_X, fcost: 3.106E-05  eig_match: 3.11E-05 |g|: 9.45E-04
+iter:  58 NEW_X, fcost: 2.967E-05  eig_match: 2.97E-05 |g|: 1.44E-03
+iter:  59 NEW_X, fcost: 2.688E-05  eig_match: 2.69E-05 |g|: 1.25E-03
+iter:  60 NEW_X, fcost: 2.554E-05  eig_match: 2.55E-05 |g|: 2.22E-03
+iter:  61 NEW_X, fcost: 2.231E-05  eig_match: 2.23E-05 |g|: 1.95E-04
+iter:  62 NEW_X, fcost: 2.165E-05  eig_match: 2.16E-05 |g|: 6.64E-04
+iter:  63 NEW_X, fcost: 2.090E-05  eig_match: 2.09E-05 |g|: 1.99E-03
+iter:  64 NEW_X, fcost: 1.931E-05  eig_match: 1.93E-05 |g|: 9.24E-04
+iter:  65 NEW_X, fcost: 1.771E-05  eig_match: 1.77E-05 |g|: 1.33E-03
+iter:  66 NEW_X, fcost: 1.660E-05  eig_match: 1.66E-05 |g|: 8.23E-04
+iter:  67 NEW_X, fcost: 1.582E-05  eig_match: 1.58E-05 |g|: 2.07E-03
+iter:  68 NEW_X, fcost: 1.323E-05  eig_match: 1.32E-05 |g|: 2.72E-04
+iter:  69 NEW_X, fcost: 1.254E-05  eig_match: 1.25E-05 |g|: 5.25E-04
+iter:  70 NEW_X, fcost: 1.207E-05  eig_match: 1.21E-05 |g|: 1.17E-03
+iter:  71 NEW_X, fcost: 1.120E-05  eig_match: 1.12E-05 |g|: 1.04E-03
+iter:  72 NEW_X, fcost: 1.042E-05  eig_match: 1.04E-05 |g|: 2.94E-04
+iter:  73 NEW_X, fcost: 9.946E-06  eig_match: 9.95E-06 |g|: 5.80E-04
+iter:  74 NEW_X, fcost: 9.365E-06  eig_match: 9.36E-06 |g|: 1.36E-03
+iter:  75 NEW_X, fcost: 8.816E-06  eig_match: 8.82E-06 |g|: 1.11E-03
+iter:  76 NEW_X, fcost: 8.491E-06  eig_match: 8.49E-06 |g|: 5.72E-04
+iter:  77 NEW_X, fcost: 7.979E-06  eig_match: 7.98E-06 |g|: 1.72E-04
+iter:  78 NEW_X, fcost: 7.656E-06  eig_match: 7.66E-06 |g|: 5.18E-04
+iter:  79 NEW_X, fcost: 7.304E-06  eig_match: 7.30E-06 |g|: 1.12E-03
+iter:  80 NEW_X, fcost: 6.802E-06  eig_match: 6.80E-06 |g|: 9.05E-04
+iter:  81 NEW_X, fcost: 6.294E-06  eig_match: 6.29E-06 |g|: 9.81E-04
+iter:  82 NEW_X, fcost: 5.322E-06  eig_match: 5.32E-06 |g|: 5.95E-04
+iter:  83 NEW_X, fcost: 4.918E-06  eig_match: 4.92E-06 |g|: 1.39E-03
+iter:  84 NEW_X, fcost: 3.769E-06  eig_match: 3.77E-06 |g|: 2.48E-04
+iter:  85 NEW_X, fcost: 3.601E-06  eig_match: 3.60E-06 |g|: 3.41E-04
+iter:  86 NEW_X, fcost: 3.278E-06  eig_match: 3.28E-06 |g|: 1.06E-03
+iter:  87 NEW_X, fcost: 3.038E-06  eig_match: 3.04E-06 |g|: 4.91E-04
+iter:  88 NEW_X, fcost: 2.744E-06  eig_match: 2.74E-06 |g|: 5.96E-04
+
+At iterate   90    f=  2.45570D-06    |proj g|=  7.61170D-04
+iter:  89 NEW_X, fcost: 2.456E-06  eig_match: 2.46E-06 |g|: 8.36E-04
+iter:  90 NEW_X, fcost: 2.216E-06  eig_match: 2.22E-06 |g|: 1.47E-04
+iter:  91 NEW_X, fcost: 2.103E-06  eig_match: 2.10E-06 |g|: 5.50E-04
+iter:  92 NEW_X, fcost: 1.922E-06  eig_match: 1.92E-06 |g|: 2.51E-04
+iter:  93 NEW_X, fcost: 1.683E-06  eig_match: 1.68E-06 |g|: 3.57E-04
+iter:  94 NEW_X, fcost: 1.362E-06  eig_match: 1.36E-06 |g|: 9.85E-04
+iter:  95 NEW_X, fcost: 1.203E-06  eig_match: 1.20E-06 |g|: 2.75E-04
+iter:  96 NEW_X, fcost: 1.133E-06  eig_match: 1.13E-06 |g|: 2.79E-04
+iter:  97 NEW_X, fcost: 9.185E-07  eig_match: 9.19E-07 |g|: 4.71E-04
+iter:  98 NEW_X, fcost: 7.810E-07  eig_match: 7.81E-07 |g|: 4.43E-04
+iter:  99 NEW_X, fcost: 6.795E-07  eig_match: 6.79E-07 |g|: 2.76E-04
+iter: 100 NEW_X, fcost: 5.514E-07  eig_match: 5.51E-07 |g|: 6.64E-05
+iter: 101 NEW_X, fcost: 5.104E-07  eig_match: 5.10E-07 |g|: 2.73E-04
+iter: 102 NEW_X, fcost: 4.509E-07  eig_match: 4.51E-07 |g|: 3.35E-04
+iter: 103 NEW_X, fcost: 4.076E-07  eig_match: 4.08E-07 |g|: 2.38E-04
+iter: 104 NEW_X, fcost: 3.615E-07  eig_match: 3.61E-07 |g|: 4.89E-04
+iter: 105 NEW_X, fcost: 2.836E-07  eig_match: 2.84E-07 |g|: 1.59E-04
+iter: 106 NEW_X, fcost: 2.453E-07  eig_match: 2.45E-07 |g|: 4.64E-04
+iter: 107 NEW_X, fcost: 2.024E-07  eig_match: 2.02E-07 |g|: 4.51E-05
+iter: 108 NEW_X, fcost: 1.751E-07  eig_match: 1.75E-07 |g|: 7.26E-05
+iter: 109 NEW_X, fcost: 1.615E-07  eig_match: 1.61E-07 |g|: 1.71E-04
+iter: 110 NEW_X, fcost: 1.432E-07  eig_match: 1.43E-07 |g|: 1.24E-04
+iter: 111 NEW_X, fcost: 1.269E-07  eig_match: 1.27E-07 |g|: 1.36E-05
+iter: 112 NEW_X, fcost: 1.228E-07  eig_match: 1.23E-07 |g|: 8.36E-05
+iter: 113 NEW_X, fcost: 1.184E-07  eig_match: 1.18E-07 |g|: 7.34E-05
+iter: 114 NEW_X, fcost: 1.168E-07  eig_match: 1.17E-07 |g|: 6.80E-05
+iter: 115 NEW_X, fcost: 1.142E-07  eig_match: 1.14E-07 |g|: 1.50E-05
+iter: 116 NEW_X, fcost: 1.137E-07  eig_match: 1.14E-07 |g|: 1.21E-05
+iter: 117 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 7.43E-06
+iter: 118 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 5.16E-07
+iter: 119 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 3.95E-07
+iter: 120 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 1.38E-07
+iter: 121 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 1.20E-07
+iter: 122 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 4.23E-07
+iter: 123 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 8.56E-07
+iter: 124 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 1.62E-06
+iter: 125 NEW_X, fcost: 1.136E-07  eig_match: 1.14E-07 |g|: 2.82E-06
+iter: 126 NEW_X, fcost: 1.135E-07  eig_match: 1.14E-07 |g|: 4.76E-06
+iter: 127 NEW_X, fcost: 1.135E-07  eig_match: 1.14E-07 |g|: 7.80E-06
+iter: 128 NEW_X, fcost: 1.135E-07  eig_match: 1.13E-07 |g|: 1.26E-05
+iter: 129 NEW_X, fcost: 1.133E-07  eig_match: 1.13E-07 |g|: 1.98E-05
+iter: 130 NEW_X, fcost: 1.130E-07  eig_match: 1.13E-07 |g|: 2.98E-05
+iter: 131 NEW_X, fcost: 1.122E-07  eig_match: 1.12E-07 |g|: 4.27E-05
+iter: 132 NEW_X, fcost: 1.106E-07  eig_match: 1.11E-07 |g|: 5.12E-05
+iter: 133 NEW_X, fcost: 1.101E-07  eig_match: 1.10E-07 |g|: 9.18E-05
+iter: 134 NEW_X, fcost: 1.075E-07  eig_match: 1.08E-07 |g|: 6.63E-05
+iter: 135 NEW_X, fcost: 1.053E-07  eig_match: 1.05E-07 |g|: 5.02E-05
+iter: 136 NEW_X, fcost: 1.018E-07  eig_match: 1.02E-07 |g|: 6.33E-05
+iter: 137 NEW_X, fcost: 9.643E-08  eig_match: 9.64E-08 |g|: 1.58E-05
+iter: 138 NEW_X, fcost: 9.586E-08  eig_match: 9.59E-08 |g|: 1.87E-05
+iter: 139 NEW_X, fcost: 9.468E-08  eig_match: 9.47E-08 |g|: 3.72E-05
+iter: 140 NEW_X, fcost: 9.284E-08  eig_match: 9.28E-08 |g|: 5.46E-05
+iter: 141 NEW_X, fcost: 8.969E-08  eig_match: 8.97E-08 |g|: 6.77E-05
+iter: 142 NEW_X, fcost: 8.172E-08  eig_match: 8.17E-08 |g|: 1.02E-04
+iter: 143 NEW_X, fcost: 6.559E-08  eig_match: 6.56E-08 |g|: 1.38E-04
+iter: 144 NEW_X, fcost: 6.406E-08  eig_match: 6.41E-08 |g|: 2.22E-04
+iter: 145 NEW_X, fcost: 3.585E-08  eig_match: 3.59E-08 |g|: 1.45E-04
+iter: 146 NEW_X, fcost: 1.448E-08  eig_match: 1.45E-08 |g|: 1.25E-05
+iter: 147 NEW_X, fcost: 9.738E-09  eig_match: 9.74E-09 |g|: 8.65E-05
+iter: 148 NEW_X, fcost: 4.602E-09  eig_match: 4.60E-09 |g|: 6.37E-05
+iter: 149 NEW_X, fcost: 2.162E-09  eig_match: 2.16E-09 |g|: 7.97E-05
+iter: 150 NEW_X, fcost: 8.664E-10  eig_match: 8.66E-10 |g|: 1.07E-05
+iter: 151 NEW_X, fcost: 4.459E-10  eig_match: 4.46E-10 |g|: 6.94E-06
+iter: 152 NEW_X, fcost: 2.903E-10  eig_match: 2.90E-10 |g|: 2.09E-06
+iter: 153 NEW_X, fcost: 2.418E-10  eig_match: 2.42E-10 |g|: 3.49E-06
+iter: 154 NEW_X, fcost: 2.217E-10  eig_match: 2.22E-10 |g|: 1.76E-06
+iter: 155 NEW_X, fcost: 1.892E-10  eig_match: 1.89E-10 |g|: 5.60E-07
+iter: 156 NEW_X, fcost: 1.574E-10  eig_match: 1.57E-10 |g|: 9.61E-07
+iter: 157 NEW_X, fcost: 1.536E-10  eig_match: 1.54E-10 |g|: 4.06E-07
+iter: 158 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 3.03E-08
+iter: 159 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 6.38E-09
+iter: 160 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 5.50E-10
+iter: 161 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 1.19E-10
+iter: 162 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 9.81E-11
+iter: 163 NEW_X, fcost: 1.535E-10  eig_match: 1.54E-10 |g|: 9.81E-11
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    5    164    208      1     0     0   6.686D-11   1.535D-10
+  F =  1.535123293735523E-010
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+
+ Cauchy                time 1.895E-05 seconds.
+ Subspace minimization time 2.388E-03 seconds.
+ Line search           time 2.101E+02 seconds.
+
+ Total User time 2.112E+02 seconds.
+
+ exit BFGS. task: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  last call to cost():
+
+ *** fcost:      1.5351E-10 ***
+
+ *** penalty:    0.0000E+00 ***
+ *** wf_match:   1.5280E-10 ***
+
+ ------ final param ------
+c( 1): -1.999261E+01
+c( 2):  1.239919E+01
+c( 3):  4.418935E+00
+c( 4): -1.297532E+01
+c( 5):  1.059803E+01
+c( 6):  6.325922E-01
+c( 7): -9.867643E+00
+c( 8):  4.855544E+00
+c( 9):  2.507539E+00
+c(10): -1.726743E+00
+ 
+ >>> optimization is done <<< 
+
+*** final psatom_chen calc. with vlpsp *** 
+
+  >>> vks.dat is written <<<
+n,l:  1 0 => occ:    2.000 eig:  -8.75109 eref:  -5.58454 dE: -8.62E+01 eV
+n,l:  2 1 => occ:    6.000 eig:  -5.56045 eref:  -3.77409 dE: -4.86E+01 eV
+n,l:  3 2 => occ:   10.000 eig:  -0.84483 eref:  -0.84483 dE:  1.68E-07 eV
+n,l:  2 0 => occ:    2.000 eig:  -0.45671 eref:  -0.45671 dE:  2.25E-05 eV
+n,l:  3 1 => occ:    0.500 eig:  -0.20661 eref:  -0.20661 dE:  4.57E-06 eV
+ 
+orb: 1  u(icut):  3.199E-03 u(ref):  1.503E-02  norm(r<rc):  1.0000 (ref: 1.0000)
+orb: 2  u(icut):  1.138E-02 u(ref): -3.213E-02  norm(r<rc):  1.0000 (ref: 0.9998)
+orb: 3  u(icut):  1.653E-01 u(ref):  1.653E-01  norm(r<rc):  0.9889 (ref: 0.9889)
+orb: 4  u(icut): -6.768E-01 u(ref): -6.766E-01  norm(r<rc):  0.5671 (ref: 0.5671)
+orb: 5  u(icut): -5.953E-01 u(ref):  5.973E-01  norm(r<rc):  0.3018 (ref: 0.2960)
+ 
+*** rcut:    2.29  ***
+*** Coulomb tail starts at    2.27   rmax:  79.52 ***
+  >>> vlps.dat is written <<<
+  >>> set vorb=vloc, vbare=vloc, uu=ups <<<
+ 
+ enter outlps()
+ outlps() ==> use_poly:  F 
+ outlps() ==> interpolate use pchip 
+ leave outlps()
+ 
+   >>> continue pswatch <<<
+ 
+               chemical symbol  Ga      
+                nuclear charge  31.00
+   number of valence electrons  20.50
+      number of valence states   5
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+        parameters radial mesh  1055    1.012300   0.201613E-03
+  input pseudopotentials up to   f
+
+          === pseudo atom (Hartree a.u.) ===
+
+<        n     l   occupation  eigenvalue(eV)  potential energy
+<  1     1     0      2.0000     -238.1310       -34.84338
+<  2     2     1      6.0000     -151.3088       -33.73962
+<  3     3     2     10.0000      -22.9892       -28.52873
+<  4     2     0      2.0000      -12.4278       -10.34809
+<  5     3     1      0.5000       -5.6221        -8.04748
+ 
+                  total energy    -263.76716
+                kinetic energy     130.55088
+  ionic pseudopotential energy    -582.13166
+                hartree energy     210.15029
+                     xc energy     -22.33668
+        local potential energy    -582.13166
+           xc potential energy     -29.04972
+    integrated valence density      20.50000
+          number of iterations            22   convergence  0.0E+00
+                  y range plot       -41   1  10
+ 
+ pslp - pseudoatom done - now testing
+
+ --- assuming scalar-relativistic all-electron atom ---
+
+ --- f component taken as local potential ---
+ --- input wavefunctions used for kb potentials ---
+
+ --- kb potentials: spectrum of bound states (eV) ---
+
+            l          e0            e1            e2
+semilocal   0     -238.1307      -12.4207       -1.9687
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    0     -238.1307      -12.4207       -1.9687
+semilocal   1     -151.3082       -5.6182       -0.7891
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    1     -151.3082       -5.6182       -0.7891
+semilocal   2      -22.9870       -0.5662        0.0000
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    2      -22.9870       -0.5662        0.0000
+
+ --- analysis of kb potentials: s waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate     -238.1310 eV    eloc0
+        dto. 1st excited state      -12.4278 eV    eloc1
+              reference energy     -238.1310 eV     eref
+
+ --- analysis of kb potentials: p waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate     -151.3088 eV    eloc0
+        dto. 1st excited state       -5.6221 eV    eloc1
+              reference energy      -12.4278 eV     eref
+
+ --- analysis of kb potentials: d waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate      -22.9892 eV    eloc0
+        dto. 1st excited state       -0.6969 eV    eloc1
+              reference energy       -5.6221 eV     eref
+
+ --- logarithmic derivatives: at radius = 3.1537 ---
+
+ --- nonlocal potentials ---
+ --- all-electron potential ---
+ --- semilocal potentials ---
+
+ --- kinetic energy convergence in momentum space ---
+
+     l  n  bracket   cutoff    norm   kinet. energy   cutoff
+            (eV)      (Ry)               (Hartree)    (eV)
+ck   0     1.0E+00     88   0.999317   0.364698E+01   1202
+ck   0     1.0E-01    180   0.999961   0.367929E+01   2443
+ck   0     1.0E-02    224   0.999997   0.368261E+01   3041
+ck   0     1.0E-03    254   1.000000   0.368292E+01   3461
+cx   0  1                   1.000000   0.368296E+01
+
+ck   0     1.0E+00     64   0.999053   0.511394E+00    871
+ck   0     1.0E-01     91   0.999936   0.544295E+00   1241
+ck   0     1.0E-02    143   0.999996   0.547163E+00   1943
+ck   0     1.0E-03    234   1.000000   0.547491E+00   3185
+cx   0  2                   1.000000   0.547528E+00
+
+ck   1     1.0E+00    114   0.999384   0.648052E+01   1558
+ck   1     1.0E-01    145   0.999959   0.651248E+01   1976
+ck   1     1.0E-02    251   0.999997   0.651558E+01   3418
+ck   1     1.0E-03    303   1.000000   0.651589E+01   4119
+cx   1  2                   1.000000   0.651592E+01
+
+ck   1     1.0E+00     19   0.997677   0.432154E+00    263
+ck   1     1.0E-01     96   0.999936   0.464732E+00   1307
+ck   1     1.0E-02    120   0.999995   0.467772E+00   1631
+ck   1     1.0E-03    180   1.000000   0.468097E+00   2443
+cx   1  3                   1.000000   0.468133E+00
+
+ck   2     1.0E+00    130   0.999458   0.824070E+01   1768
+ck   2     1.0E-01    169   0.999957   0.827243E+01   2299
+ck   2     1.0E-02    199   0.999997   0.827567E+01   2705
+ck   2     1.0E-03    315   1.000000   0.827600E+01   4287
+cx   2  3                   1.000000   0.827603E+01
+
+ --- coulomb tail of pseudopotentials ---
+     Tolerance 1.0E-03 is met for
+     l= 1 at radii >   2.267
+     l= 2 at radii >   2.267
+     l= 3 at radii >   2.267
+     l= 4 at radii >   2.267
+
+ --- done & exiting ---
+./pswatch - done: output
+log
+xv.ncpp.lder_fh.agr
+xv.ncpp.lder_sd.agr
+ncpp.test
+vlps.cpi
+orb5.dat
+orb4.dat
+orb3.dat
+orb2.dat
+orb1.dat
+rho_val.dat
+vhxc.dat
+vlps.dat
+rho_lps.dat
+vks.dat
+iterate.dat

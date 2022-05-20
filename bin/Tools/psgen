@@ -1,0 +1,533 @@
+#! /bin/csh -f
+onintr INTERRUPT
+#
+#------ Generate pseudopotentials with fhipp code -----
+#       10-06-2003 Martin Fuchs
+#
+#   "psgen -h" returns a list of options
+#
+set WORKDIR  = $PWD                             # working directory
+set SOURCES  = ${FHIPP_PATH}/fhi98PP		# assumed path to resources
+set ELEMENTS = ${SOURCES}/bin/Elements          # inputfile database
+set PROGRAM  = ${SOURCES}/src/fhipp.x		# path to executable
+set GRAPHIC  = ${SOURCES}/bin/Xmgrace           # path for xmgrace graphics header files
+set RESULTS  = Tmp                              # directory where we save results 
+set EDITOR   = vi
+set scratch  = ".scratch"                       # scratchfile
+set marker   = $$.marker                        # used for listing
+#---------------------------------------------------------
+
+#aliases
+
+alias testinput             'set INFO = \!:1; if (! -e \!:1 || -z \!:1) goto \!:2'
+alias get_graphics_template 'set GRAPHICS_TEMPLATE = ${GRAPHIC}/xmgrace.${GRAPHICS_TOPIC}'
+alias get_graphics_output   'set GRAPHICS_OUTPUT   = xv.${OUT}.${GRAPHICS_TOPIC}.agr'
+
+# default settings
+
+unset ONLYATOM                    #do all-electron and generate pseudopotentials
+unset DEBUG                       #remove all scratch files
+unset NONRELATIVISTIC             #relativistic all-electron calculation
+unset SPINPOLARIZED               #non spin polarized calculation expected
+unset NO_XMGRACE	          #grapics output in xmgr
+set   GRAPHICS_TOPIC = 'UNKNOWN'  #default suffix for xmgrace
+set   OUT  = 'ncpp'               #prefix for outputfiles
+set   INI  = 'ncpp.ini' 
+unset SAVE                        #do not save results in $HARDCOPY
+set   OPTIONT = (x x x x x)
+set   OPTIONR = (x x x x)
+
+# input 
+
+if ($#argv == 0) goto SHORTHELP
+while ($#argv)
+	switch ($1)
+      case -[hH]* :
+                goto LONGHELP
+                shift; breaksw
+      case [a-zA-Z0-9]* :
+		set INI = $1
+		shift; breaksw
+      case -xv :
+                set NO_XMGRACE
+		shift; breaksw
+      case -ao :
+     	 	set ONLYATOM
+		shift; breaksw
+      case -o :
+		set OUT = $2
+      	        shift; shift; breaksw
+      case -xc :
+		set xctyp = $2 
+		shift; shift; breaksw
+      case -S :
+		set SPINPOLARIZED
+     	 	set ONLYATOM
+		shift; breaksw
+      case -rc :
+		set rcore = $2
+		shift; shift; breaksw
+      case -r :
+                set NONRELATIVISTIC
+                shift; breaksw
+	case -e :
+		unset VIEW
+		set   EDIT
+		shift; breaksw
+	case -v :
+		set VIEW
+		shift; breaksw
+      case -[r][spdf] :
+            switch ($2)
+                  case [0-9][.][0-9]* :
+                        set VALUE = $2; breaksw
+                  default :
+                        set VALUE = "0.0"; breaksw
+            endsw
+            switch ($1)
+                  case -rs:
+                        set OPTIONR[1] = ${VALUE}; breaksw
+                  case -rp:
+                        set OPTIONR[2] = ${VALUE}; breaksw
+                  case -rd:
+                        set OPTIONR[3] = ${VALUE}; breaksw
+                  case -rf:
+                        set OPTIONR[4] = ${VALUE}; breaksw
+            endsw
+            shift; shift; breaksw
+	case -[t][spdf] :
+            switch ($2)
+		case [tThH] :
+				set VALUE = $2; breaksw
+                default :
+				set VALUE = "h"; breaksw
+            endsw 
+            switch ($1)
+            	case -ts:
+              		set OPTIONT[1] = ${VALUE}; breaksw
+            	case -tp:
+				set OPTIONT[2] = ${VALUE}; breaksw
+            	case -td:
+				set OPTIONT[3] = ${VALUE}; breaksw
+            	case -tf:
+				set OPTIONT[4] = ${VALUE}; breaksw
+            endsw
+		shift; shift; breaksw
+      case -T :
+            set VALUE = `echo $2 | awk '{print substr($1,1,1)}'`
+            switch (${VALUE})
+                  case [tThH]:
+                        set OPTIONT[5] = ${VALUE} ; shift; breaksw
+                  default :
+                        set OPTIONT[5] = "t"; breaksw
+            endsw
+            shift; breaksw
+	case -S :
+		set SAVE
+		shift; breaksw
+	case -ip :
+		set INITIAL_POTENTIAL = $2
+		shift; shift; breaksw
+	case -g :
+		set DEBUG
+		shift; breaksw
+	case -fc :
+		set CORE_FILE = $2
+		shift; shift; breaksw
+      case -get
+            set GET = $2
+            shift; shift; breaksw
+      default :
+            echo $0 - option $1 undefined
+            shift; breaksw
+      endsw
+end
+
+if( ! -e $INI ) then
+	cp ${ELEMENTS}/*${INI}*.ini ${INI} >& $scratch
+endif
+if( ! $?GET ) then
+	testinput $INI NOINPUT
+endif
+
+#cleanup
+
+rm -f fort.* >& $scratch ; date >! $marker 
+
+# prepare input
+
+if( $?GET ) then					# get input from database
+      switch (${OPTIONT[5]})
+            case [tT] :
+                  set DBASE_SUB = TM
+                  breaksw
+            case [hH] :
+                  set DBASE_SUB = Ham
+                  breaksw
+            default :
+                  set DBASE_SUB = "{Ham}"
+                  breaksw
+      endsw
+
+      echo "Looking up element:" $GET "in:" ${ELEMENTS}/${DBASE_SUB}
+
+      cp ${ELEMENTS}/${DBASE_SUB}/*${GET}*ini . >& $scratch
+      if( $status == 0 ) then
+            set default_input = ${OUT}.ini
+            echo "Input files found and copied from database:"
+            ls *${GET}*ini
+            set VALUE = `ls *${GET}*ini | tail -1` 	# handle multiple files
+            cp ${VALUE} ${default_input}
+            echo "Copying" ${VALUE} "to" ${default_input} "as present input file"
+      else
+            set INFO = "${GET} (no match in database)"
+            goto NOINPUT
+      endif
+
+else
+      set default_input = ${INI}
+endif
+testinput ${default_input} NOINPUT
+set INI = ${default_input}
+
+# modifying input file from command line
+
+set IWC   = `awk 'NR == 1 {print $2+$3+2}' $INI`
+if( ${OPTIONT[5]} !~ "x" )  then
+	awk '{if (NR == '"${IWC}"') {print $1,"'${OPTIONT[5]}'"} else {print $0}}' $INI >! $scratch
+	mv $scratch $INI
+endif
+set PP_TYPE = `awk < $INI 'NR == '"${IWC}"' {print $2}' `
+
+if ( $?xctyp ) then
+	awk 'NR == 1 {print $1,$2,$3,"'${xctyp}'",$5,$6,$7,$8,$9};\
+           NR > 1 {print $0}' ${INI} > $scratch
+      mv $scratch ${INI}
+endif
+if ( $?rcore ) then
+	awk 'NR ==  1 {print $1,$2,$3,$4,"'${rcore}'",$6,$7,$8,$9};\
+           NR > 1 {print $0}' ${INI} > $scratch
+      mv $scratch ${INI}
+endif
+@ N = 1
+while ( $N < 5 ) 
+
+	if ( ${OPTIONT[$N]} !~ "x" ) then
+
+		(head -${IWC} $INI ; \
+		      awk 'BEGIN {g = 0; l = '$N'-1} \
+	     		NR > '"${IWC}"' {if ($1 == l) {print l,$2,$3,"'${OPTIONT[$N]}'"; g = 1} else {print $0} } \
+            	END {if (g == 0) {print l,"0.0","0.0","'${OPTIONT[$N]}'"}}' $INI ) >! $scratch
+		mv $scratch $INI
+
+	endif
+
+	if ( ${OPTIONR[$N]} !~ "x" ) then
+
+		(head -${IWC} $INI ; \
+		      awk 'BEGIN {g = 0; l = '$N'-1} \
+	     		NR > '"${IWC}"' {if ($1 == l) {print l,"'${OPTIONR[$N]}'",$3,$4; g = 1} else {print $0} } \
+            	END {if (g == 0) {print l,"'${OPTIONR[$N]}'","0.0","'${PP_TYPE}'"}}' $INI ) >! $scratch
+		mv $scratch $INI
+
+	endif
+
+@ N++
+end
+
+if ( $?CORE_FILE ) then
+	testinput $CORE_FILE NOINPUT
+      cp $CORE_FILE fort.18
+endif
+if ( $?INITIAL_POTENTIAL ) then
+      testinput $INITIAL_POTENTIAL NOINPUT
+      cp $INITIAL_POTENTIAL fort.36
+endif
+
+set LINE_1 = (.t. .f.  : TDOPSP TNRL)
+set LINE_2 = (.f.      : TSPIN)
+if ( $?ONLYATOM )        set LINE_1[1] = ".f."
+if ( $?NONRELATIVISTIC ) set LINE_1[2] = ".t."
+if ( $?SPINPOLARIZED )   set LINE_2[1] = ".t."
+(echo ${LINE_1} ; echo ${LINE_2}) >! fort.20
+
+
+if ( $?EDIT ) $EDITOR   ${INI}
+if ( $?VIEW ) more      ${INI}
+
+cat ${INI} | sed s/" t"/" 't'"/ | sed s/" h"/" 'h'"/ | \
+             sed s/" T"/" 't'"/ | sed s/" H"/" 'h'"/     >! fort.22
+
+if ( -e $PROGRAM ) then
+	${PROGRAM}
+else
+	echo $0 "- executable not found:" $PROGRAM
+	goto INTERRUPT 
+endif
+
+onintr -
+cp ${INI} $$.input
+rm -f ${OUT}.* xv.${OUT}.* >& $scratch 
+mv $$.input ${INI}
+onintr INTERRUPT
+
+# output
+
+set DAT = ${OUT}.dat
+set STAMP = "$OUT `date +'"'%T %h %d %Y'"'` $USER"
+
+(echo "#info $0 $STAMP"; cat fort.23) >! ${DAT}
+if(-e fort.19) cp fort.19   ${OUT}.fc
+if(-e fort.24) fgrep -v "p " fort.24 >>! ${DAT}
+if(-e fort.37) cp fort.37   ${OUT}.aep
+
+#                     ======= begin graphics ========
+
+# plot - all electron wavefunctions --------------------------------------------------------------
+set GRAPHICS_TOPIC = ae_wfct
+get_graphics_template
+get_graphics_output
+
+if(! $?NO_XMGRACE ) then
+
+( cat ${GRAPHICS_TEMPLATE} ;\
+  echo "@ title" '"'"Radial Wavefunctions  \s\S"${STAMP}"\N\N"'"' ;\
+  awk < fort.38 'BEGIN {g = 0} \
+			{if ($1 == "#" && NR == 1) {print "@ legend string",g,"\""$2"\"";g++} \
+			else if ($1 == "#") {print "@ legend string",g,"\""$2"\"";print "&";g++}\
+			else {printf "%12.6e %12.6e \n", $1,$2} }' \
+) >! ${GRAPHICS_OUTPUT}
+
+if ( $?ONLYATOM ) goto TERMINATE
+
+# plot - ionic pseudopotentials ------------------------------------------------------------------
+set GRAPHICS_TOPIC = pspot_i
+get_graphics_template
+get_graphics_output
+
+( cat ${GRAPHICS_TEMPLATE} ;\
+  echo "@ title" '"'"Ionic Pseudopotentials  \s\S"${STAMP}"\N\N"'"'  ;\
+  grep "y range plot" ${DAT} | \
+  awk '{printf "@ world ymin %4.2f\n",$(NF-2);   printf "@ world ymax %4.2f\n",$(NF-1) \
+        printf "@ yaxis tick major %4.2f\n",$NF; printf "@ yaxis tick minor %4.2f\n", $NF/4}' \
+) >! ${GRAPHICS_OUTPUT}
+foreach PSEUDOPOTENTIAL ( fort.4[0-4] ) 
+
+   awk < $PSEUDOPOTENTIAL '{if (NR == 1) {print "@ legend string",$4,"\""$4,"\\6r\\sc\\N\\4="substr($5,1,5),"\""} \
+                            else {printf "%12.6e %12.6e \n",$2,$4}} END {print "&"}' >>! ${GRAPHICS_OUTPUT}
+#                           else {printf "%20.12e %20.12e \n",$2,$4}} END {print "&"}' >>! ${GRAPHICS_OUTPUT}
+
+end
+
+# plot - screened pseudopotentials ---------------------------------------------------------------
+set GRAPHICS_TOPIC = pspot_s
+get_graphics_template
+get_graphics_output
+
+( cat ${GRAPHICS_TEMPLATE} ;\
+  echo "@ title" '"'"Screened Pseudopotentials  \s\S"${STAMP}"\N\N"'"' ;\
+  grep "y range plot" ${DAT} | \
+  awk '{printf "@ world ymin %4.2f\n",$(NF-2);   printf "@ world ymax %4.2f\n",$(NF-1) \
+        printf "@ yaxis tick major %4.2f\n",$NF; printf "@ yaxis tick minor %4.2f\n", $NF/4}' \
+) >! ${GRAPHICS_OUTPUT}
+foreach PSEUDOPOTENTIAL ( fort.4[5-9] ) 
+
+   awk < $PSEUDOPOTENTIAL '{if (NR == 1) {print "@ legend string",$4,"\""$4,"\\6r\\sc\\N\\4="substr($5,1,5),"\""} \
+                           else {printf "%12.6e %12.6e \n",$2,$4}} END {print "&"}' >>! ${GRAPHICS_OUTPUT}
+
+end
+
+# plot - pseudo vs all electron wavefunctions  ---------------------------------------------------
+set GRAPHICS_TOPIC = ps_ae_wfct
+get_graphics_template
+get_graphics_output
+
+( cat ${GRAPHICS_TEMPLATE} ;\
+  echo "@ title" '"'"Pseudo vs All-Electron Wavefunctions  \s\S"${STAMP}"\N\N"'"'; \
+  awk < fort.39 'BEGIN {g = 0}; {if ($1 == "##" ) \
+				{{if (g > 0) print "&"} print "@ legend string",g,"\""$2,"\\6r\\sc\\N\\4="$NF,"\"";g++} \
+                   	  else if ($1 == "#") {print "&"; print "@ legend string",g,"\""$2,"\"";g++} \
+                   		   else {printf "%12.6e %12.6e \n", $1,$2}}' \
+)>! ${GRAPHICS_OUTPUT}
+
+# plot - core and valence densities --------------------------------------------------------------
+set GRAPHICS_TOPIC = density
+get_graphics_template
+get_graphics_output
+
+( cat ${GRAPHICS_TEMPLATE} ;\
+  echo "@ title" '"'"Radial Densities \s\S"${STAMP}"\N\N"'"' ; \
+  awk 'BEGIN {print "@ legend string 0 \"pseudo valence\""} \
+		{printf "%12.6e %12.6e \n", $1,$2*$1^2} END {print "&"}' fort.25 ; \
+  if(-e fort.19) \
+  awk 'BEGIN {print "@ legend string 1 \"true core\""} \
+		NR > 1 {printf "%12.6e %12.6e \n", $1,$2*$1^2} END {print "&"}' fort.19 ; \
+  if(-e fort.27) \
+  awk 'BEGIN {print "@ legend string 2 \"model core\""} \
+		{printf "%12.6e %12.6e \n", $1,$2*$1^2} END {print "&"}' fort.27 \
+) >! ${GRAPHICS_OUTPUT}
+
+# plot - unsreening potentials -------------------------------------------------------------------
+set GRAPHICS_TOPIC = unscreen
+get_graphics_template
+get_graphics_output
+
+( cat ${GRAPHICS_TEMPLATE} ; \
+awk < fort.28 'BEGIN {print "@WITH G0"; print "@G0 ON"} {printf "%12.6e %12.6e \n",$1,-$4} END {print "&"}' ; \
+awk < fort.28 '{printf "%12.6e %12.6e \n",$1,$5} END {print "&"; print "@WITH G1"; print "@G1 ON"}' ; \
+echo "@ title" '"'"Unscreening potentials  \s\S"${STAMP}"\N\N"'"' ; \
+awk < fort.28 '{print $1,$2} END {print "&"}' ; \
+awk < fort.28 '{print $1,$3} END {print "&"}' \
+) >! ${GRAPHICS_OUTPUT}
+
+endif
+
+#                     ======= done with graphics ========
+
+if ( $?ONLYATOM ) goto TERMINATE
+
+#                     ======= fhi94md output ======
+
+#    VALENCE total valence charge          NOOFPOT number of pseudopotentials present
+echo `head -1 fort.40 | awk '{print $NF}'` " " `ls fort.4[0-4] | wc -l` >! ${OUT}.cpi
+cat << unused_fit_parameters >>! ${OUT}.cpi
+  0.0000    0.0000    0.0000   0.0000
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+  0.0000    .00e+00   .00e+00
+unused_fit_parameters
+
+foreach PSEUDOPOTENTIAL ( fort.4[0-4] )
+
+	(head -1 $PSEUDOPOTENTIAL | awk '{print $2," "$3}' ;\
+	 tail +2 $PSEUDOPOTENTIAL ) >>! ${OUT}.cpi
+
+end
+if (-e fort.27) cat fort.27 >>! ${OUT}.cpi 	# append pseudocore 
+
+#                     ======= done with fhi94md output ======
+
+# hardcopies
+       
+if( $?SAVE ) then
+   if(! -d ${RESULTS}) mkdir ${RESULTS}
+   echo "psgen - copying results to" ${RESULTS}
+   foreach i ( *${OUT}* )
+	cp -i $i ${RESULTS}
+   end
+   pushd ${RESULTS} >& $scratch ; chmod u-w *${OUT}* ; popd >& ${WORKDIR}/$scratch 
+endif
+
+TERMINATE:
+if (! $?DEBUG) rm -f fort.* 
+echo $0 - done: output
+ls >& $scratch
+rm -f $scratch 
+ls -t -1  | awk '{if ($0  ~ /'$marker'/) {exit} else {print $0}'} | sort
+rm -f *${marker} 
+exit 0
+
+INTERRUPT:
+rm -f fort.* $scratch
+echo $0 - quit: output
+ls -t -1  | awk '{if ($0  ~ /'$marker'/) {exit 0} else {print $0}'}
+rm -f *${marker}
+exit 1
+
+NOINPUT:
+echo $0 - missing input file $INFO
+rm -f *${marker}
+exit 0 
+
+SHORTHELP:
+cat << SYNTAX
+$0 -h -g -xv -e -v -s -ao [-xc Number] -S [-rc Number] [-r(spdf) Number] [-t(spdf) String] [-T String]
+[-fc File] [-ip File] [-o String] File
+SYNTAX
+exit 0 
+
+LONGHELP:
+more << INFO
+program    $0
+
+tool       generate Hamann or Troullier-Martins pseudopotentials 
+	      	
+options    -h		help
+           -g           do not cleanup (debugging)
+           -xv          skip graphics output
+           -e           edit input file
+           -v           display input file
+           -s           take a hardcopy of the output
+           -ao          perform all-electron calculation only
+           -xc  number  exchange(X)-correlation(C) type
+                         1  LDA   Wigner
+                         2  LDA   Hedin/Lundqvist
+                         3  LDA   Ceperley/Alder Perdew/Zunger (1980)           
+                         4  GGA   Perdew/Wang (1991)
+                         5  GGA   Becke (1988) X, Perdew (1986) C
+                         6  GGA   Perdew/Burke/Ernzerhof (1996)
+                         7  LDA   like 8 + MacDonald/Vosko relativistic correction
+                         8  LDA   Ceperley/Alder Perdew/Wang (1991)
+                         9  GGA   Becke (1988) X, Lee/Yang/Parr (1988) C
+                        10  GGA   Perdew/Wang (1991) X, Lee/Yang/Parr (1988) C
+                        11  LDA   exchange only
+                       [12] OEP   exact exchange in Krieger/Li/Iafrate manner  
+                       [13] OEP   like 12 + core polarization potential
+                        14  GGA   Hammer/Norskov RPBE X, PBE C
+                        15  GGA   Zhang/Wang revPBE X, PBE C
+                       [16] GGA   like 6, but energy in MGGA by Perdew/Kurth/Zupan/Blaha 
+                    
+                       [] = these options are in development and not tested
+
+           -S           assume spin-polarized calculation
+
+           -rc  number  cutoff radius for pseudocore 
+                         = 0      linearized core-valence XC, no core
+                         > 0      nonlinear core-valence XC, pseudo core inside cutoff radius
+
+           -rs  number  cutoff radius for s-like pseudopotential, pdf channels likewise
+
+           -ts  string  pseudopotential type for s-like pseudopotential, pdf channel likewise
+                         h   Hamann scheme
+                         t   Troullier-Martins scheme
+
+           -T   string  default pseudopotential type, see above
+
+           -fc  file    frozen core calculation, core density read from file
+           -ip  file    initial potential read from file
+
+           -o   string  identifying prefix for output files
+           -get string  search database for input files that match string
+
+input           file    initialization file, generic format:
+                        14.0 3 2 8 0.0 : z nc nv iexc rnlc
+                         1   0  2.0    : n l f
+                         2   0  2.0
+                         2   1  6.0
+                         3   0  2.0
+                         3   1  2.0
+                        2 h            : lmax s_pp_def
+                        1 1.5 0.0 h    : l rct et s_pp_type (optional)
+
+                        spin-polarized case:
+                        14.0 3 2 8 0.0   : z nc nv iexc rnlc
+                         1   0  1.0  1.0 : n l fup fdown
+                         2   0  1.0  1.0
+                         2   1  3.0  3.0
+                         3   0  1.0  1.0
+                         3   1  2.0  0.0
+                        (further lines, specific to pseudopotential, are not processed)
+                        
+author     Martin Fuchs
+           Abteilung Theorie
+           Fritz-Haber-Institut der MPG
+           E-Mail: fuchs@fhi-berlin.mpg.de
+
+INFO
+exit 0
