@@ -1,0 +1,46 @@
+#info ./pswatch ncpp 12:58:30 Nov 25 2021 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** USE FINE MESH IN DEFAULT.H *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         2.20000000000000     
+ icut:               747
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           3
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref: -3.5333 (  -96.147 eV) u_ref(icut):  7.020E-02 norm(r<rc): 0.9990
+n,l: 2 1 => occ:   6.00 eref: -2.2842 (  -62.157 eV) u_ref(icut): -1.187E-01 norm(r<rc): 0.9965
+n,l: 3 2 => occ:   5.90 eref: -0.3503 (   -9.531 eV) u_ref(icut):  3.381E-01 norm(r<rc): 0.9296
+n,l: 2 0 => occ:   1.90 eref: -0.2479 (   -6.746 eV) u_ref(icut): -6.349E-01 norm(r<rc): 0.2822
+n,l: 3 1 => occ:   0.00 eref: -0.0914 (   -2.487 eV) u_ref(icut):  4.321E-01 norm(r<rc): 0.1030
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  1.00E-01
+    orb  4:  1.00E-01
+    orb  5:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =           12     M =           20
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  1.97757D+00    |proj g|=  2.06242D+00
+iter:   0 task=NEW_X, fcost:  4.196E-01  eig_match:  4.196E-01 |g|:  9.925E-01
+iter:   1 task=NEW_X, fcost:  6.522E-03  eig_match:  6.522E-03 |g|:  8.427E-03
+iter:   2 task=NEW_X, fcost:  6.477E-03  eig_match:  6.477E-03 |g|:  3.812E-03
+iter:   3 task=NEW_X, fcost:  6.462E-03  eig_match:  6.462E-03 |g|:  1.611E-03
+iter:   4 task=NEW_X, fcost:  6.456E-03  eig_match:  6.456E-03 |g|:  1.863E-03
+iter:   5 task=NEW_X, fcost:  6.414E-03  eig_match:  6.414E-03 |g|:  5.113E-03

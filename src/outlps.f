@@ -124,8 +124,8 @@
         write(111,'(a,L2)')'# use_poly: ',use_poly
         write(111,'(a,I2)')'# vtype: ',vtype
         write(111,'(a,I2)')'# iorb_start: ',iorb_start
-        write(111,'(a,f12.6)')'# r(icut):',r(icut)
-        write(111,'(a,f12.6)')'# rcut:   ',rcut
+        write(111,'(a,f12.6)') '# r(icut):',r(icut)
+        write(111,'(a,f12.6)') '# rcut:   ',rcut
         write(111,'(a,es13.6)')'# pcoeff: ',pcoeff
         do i=1,norb
           write(111,'(a,es20.12)')'# wfopt: ',wfopt(i)

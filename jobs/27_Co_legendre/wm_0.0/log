@@ -1,0 +1,275 @@
+#info ./pswatch ncpp 15:14:32 Oct 24 2022 chuang3
+
+fhi pseudopotential tool pslp - version rev270603B
+
+ 
+  ***** use fine mesh in default.h *****
+ 
+  *** read total system KS potential from vks.dat *** 
+ rcut:         2.30000000000000     
+ icut:               753
+ pcoeff:      0.000000000000000E+000
+ iorb_start:           3
+ mag_fit:               1
+ mag_weight:   0.000000000000000E+000
+ mag_energy:  -0.113830000000000     
+ occ_sp (up):   1.00000000000000        3.00000000000000     
+   5.00000000000000        1.00000000000000       0.000000000000000E+000
+ occ_sp (dn):   1.00000000000000        3.00000000000000     
+   1.50000000000000        1.00000000000000       0.000000000000000E+000
+ === legendre polynomial, v'(0)=0 & v''(0)=0 ===
+  *** loaded AE-valence wf from wfval.dat ***
+  *** loaded AE-valence density from rhoval.dat ***
+ orbital   1 vanish at     3.7561
+ orbital   2 vanish at     4.4031
+ orbital   3 vanish at     8.9474
+ orbital   4 vanish at    12.7545
+ orbital   5 vanish at    18.4053
+
+---- reference eigenvalues and wavefunction ----
+n,l: 1 0 => occ:   2.00 eref: -4.0320 ( -109.718 eV) u_ref(icut):  4.408E-02 norm(r<rc): 0.9996
+n,l: 2 1 => occ:   6.00 eref: -2.6777 (  -72.865 eV) u_ref(icut): -8.009E-02 norm(r<rc): 0.9985
+n,l: 3 2 => occ:   6.50 eref: -0.5522 (  -15.026 eV) u_ref(icut):  2.701E-01 norm(r<rc): 0.9619
+n,l: 2 0 => occ:   2.00 eref: -0.3578 (   -9.738 eV) u_ref(icut): -6.744E-01 norm(r<rc): 0.3920
+n,l: 3 1 => occ:   0.00 eref: -0.1705 (   -4.639 eV) u_ref(icut):  5.274E-01 norm(r<rc): 0.1798
+ 
+  --- orbital opt. weights (wfopt) ---
+    orb  1:  0.00E+00
+    orb  2:  0.00E+00
+    orb  3:  1.00E-02
+    orb  4:  1.00E-02
+    orb  5:  0.00E+00
+ 
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  6.71021D-11    |proj g|=  2.25703D-06
+iter:   0 NEW_X, fcost: 6.512E-11  eig_match: 6.51E-11 |g|: 8.70E-08 dE_mag:  -0.119195 (  -0.113830)
+iter:   1 NEW_X, fcost: 6.510E-11  eig_match: 6.51E-11 |g|: 7.37E-08 dE_mag:  -0.119195 (  -0.113830)
+iter:   2 NEW_X, fcost: 6.503E-11  eig_match: 6.50E-11 |g|: 1.70E-08 dE_mag:  -0.119195 (  -0.113830)
+iter:   3 NEW_X, fcost: 6.503E-11  eig_match: 6.50E-11 |g|: 1.66E-08 dE_mag:  -0.119195 (  -0.113830)
+iter:   4 NEW_X, fcost: 6.500E-11  eig_match: 6.50E-11 |g|: 8.49E-09 dE_mag:  -0.119195 (  -0.113830)
+iter:   5 NEW_X, fcost: 6.500E-11  eig_match: 6.50E-11 |g|: 1.08E-10 dE_mag:  -0.119195 (  -0.113830)
+iter:   6 NEW_X, fcost: 6.500E-11  eig_match: 6.50E-11 |g|: 3.96E-12 dE_mag:  -0.119195 (  -0.113830)
+iter:   7 NEW_X, fcost: 6.500E-11  eig_match: 6.50E-11 |g|: 3.94E-12 dE_mag:  -0.119195 (  -0.113830)
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    5      8     15      1     0     0   2.910D-12   6.500D-11
+  F =  6.499712585661441E-011
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+
+ Cauchy                time 1.788E-05 seconds.
+ Subspace minimization time 8.583E-05 seconds.
+ Line search           time 4.763E+01 seconds.
+
+ Total User time 5.086E+01 seconds.
+
+ exit BFGS. task: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  last call to cost():
+
+ *** fcost:      6.4997E-11 ***
+
+ *** penalty:    0.0000E+00 ***
+ *** wf_match:   6.4498E-11 ***
+
+ ------ final param ------
+c( 1): -1.279213E+01
+c( 2):  1.247231E+00
+c( 3):  1.332051E+01
+c( 4): -1.606024E+01
+c( 5):  7.386283E+00
+c( 6):  5.065431E+00
+c( 7): -1.006364E+01
+c( 8):  3.171649E+00
+c( 9):  2.760559E+00
+c(10): -1.506786E+00
+ 
+ >>> optimization is done <<< 
+
+*** final psatom_chen calc. with vlpsp *** 
+
+  >>> vks.dat is written <<<
+n,l:  1 0 => occ:    2.000 eig:  -6.18244 eref:  -4.03205 dE: -5.85E+01 eV
+n,l:  2 1 => occ:    6.000 eig:  -3.98862 eref:  -2.67771 dE: -3.57E+01 eV
+n,l:  3 2 => occ:    6.500 eig:  -0.55220 eref:  -0.55220 dE: -5.98E-07 eV
+n,l:  2 0 => occ:    2.000 eig:  -0.35785 eref:  -0.35785 dE: -1.92E-05 eV
+n,l:  3 1 => occ:    0.000 eig:  -0.17048 eref:  -0.17048 dE: -6.28E-09 eV
+ 
+orb: 1  u(icut):  1.388E-02 u(ref):  4.408E-02  norm(r<rc):  1.0000 (ref: 0.9996)
+orb: 2  u(icut):  3.473E-02 u(ref): -8.009E-02  norm(r<rc):  0.9998 (ref: 0.9985)
+orb: 3  u(icut):  2.701E-01 u(ref):  2.701E-01  norm(r<rc):  0.9619 (ref: 0.9619)
+orb: 4  u(icut): -6.742E-01 u(ref): -6.744E-01  norm(r<rc):  0.3920 (ref: 0.3920)
+orb: 5  u(icut): -5.279E-01 u(ref):  5.274E-01  norm(r<rc):  0.1778 (ref: 0.1798)
+ 
+*** rcut:    2.28  ***
+*** Coulomb tail starts at    2.25   rmax:  78.84 ***
+  >>> vlps.dat is written <<<
+  >>> set vorb=vloc, vbare=vloc, uu=ups <<<
+ 
+ enter outlps()
+ outlps() ==> use_poly:  F 
+ outlps() ==> interpolate use pchip 
+ leave outlps()
+ 
+   >>> continue pswatch <<<
+ 
+               chemical symbol  Co      
+                nuclear charge  27.00
+   number of valence electrons  16.50
+      number of valence states   5
+    exchange-correlation model   6  GGA Perdew/Burke/Ernzerhof              
+        parameters radial mesh  1043    1.012300   0.231481E-03
+  input pseudopotentials up to   f
+
+          === pseudo atom (Hartree a.u.) ===
+
+<        n     l   occupation  eigenvalue(eV)  potential energy
+<  1     1     0      2.0000     -168.2342       -24.70510
+<  2     2     1      6.0000     -108.5367       -23.95756
+<  3     3     2      6.5000      -15.0262       -19.38803
+<  4     2     0      2.0000       -9.7376        -7.27950
+<  5     3     1      0.0000       -4.6389         0.00000
+ 
+                  total energy    -154.66874
+                kinetic energy      75.41918
+  ionic pseudopotential energy    -333.73676
+                hartree energy     118.46045
+                     xc energy     -14.81161
+        local potential energy    -333.73676
+           xc potential energy     -19.20491
+    integrated valence density      16.50000
+          number of iterations            24   convergence  0.0E+00
+                  y range plot       -31   9  10
+ 
+ pslp - pseudoatom done - now testing
+
+ --- assuming scalar-relativistic all-electron atom ---
+
+ --- f component taken as local potential ---
+ --- input wavefunctions used for kb potentials ---
+
+ --- kb potentials: spectrum of bound states (eV) ---
+
+            l          e0            e1            e2
+semilocal   0     -168.2337       -9.7353       -1.5433
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    0     -168.2337       -9.7353       -1.5433
+semilocal   1     -108.5359       -4.6377       -0.4706
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    1     -108.5359       -4.6377       -0.4706
+semilocal   2      -15.0244       -0.4593        0.0000
+ & klbyii - warning: eigenvalues not converged
+ & klbyii - he(i)           0           0           0           0
+nonlocal    2      -15.0244       -0.4593        0.0000
+
+ --- analysis of kb potentials: s waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate     -168.2342 eV    eloc0
+        dto. 1st excited state       -9.7376 eV    eloc1
+              reference energy     -168.2342 eV     eref
+
+ --- analysis of kb potentials: p waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate     -108.5367 eV    eloc0
+        dto. 1st excited state       -4.6389 eV    eloc1
+              reference energy       -9.7376 eV     eref
+
+ --- analysis of kb potentials: d waves  ---
+
+ * one or more ghosts (ekb < 0, eref > eloc0)
+ 
+                     kb cosine           NaN
+                     kb energy           NaN eV      ekb
+   local potential groundstate      -15.0262 eV    eloc0
+        dto. 1st excited state       -0.6119 eV    eloc1
+              reference energy       -4.6389 eV     eref
+
+ --- logarithmic derivatives: at radius = 2.9057 ---
+
+ --- nonlocal potentials ---
+ --- all-electron potential ---
+ --- semilocal potentials ---
+
+ --- kinetic energy convergence in momentum space ---
+
+     l  n  bracket   cutoff    norm   kinet. energy   cutoff
+            (eV)      (Ry)               (Hartree)    (eV)
+ck   0     1.0E+00    111   0.999425   0.316688E+01   1514
+ck   0     1.0E-01    161   0.999959   0.319990E+01   2194
+ck   0     1.0E-02    192   0.999997   0.320301E+01   2610
+ck   0     1.0E-03    306   1.000000   0.320331E+01   4167
+cx   0  1                   1.000000   0.320334E+01
+
+ck   0     1.0E+00     27   0.998533   0.387860E+00    361
+ck   0     1.0E-01     81   0.999933   0.420981E+00   1102
+ck   0     1.0E-02    154   0.999996   0.424091E+00   2092
+ck   0     1.0E-03    199   1.000000   0.424418E+00   2705
+cx   0  2                   1.000000   0.424451E+00
+
+ck   1     1.0E+00     96   0.999320   0.503156E+01   1307
+ck   1     1.0E-01    177   0.999961   0.506275E+01   2407
+ck   1     1.0E-02    227   0.999997   0.506605E+01   3082
+ck   1     1.0E-03    261   1.000000   0.506637E+01   3549
+cx   1  2                   1.000000   0.506641E+01
+
+ck   2     1.0E+00    109   0.999359   0.577410E+01   1486
+ck   2     1.0E-01    143   0.999953   0.580643E+01   1943
+ck   2     1.0E-02    233   0.999997   0.580966E+01   3164
+ck   2     1.0E-03    287   1.000000   0.580999E+01   3909
+cx   2  3                   1.000000   0.581002E+01
+
+ --- coulomb tail of pseudopotentials ---
+     Tolerance 1.0E-03 is met for
+     l= 1 at radii >   2.248
+     l= 2 at radii >   2.248
+     l= 3 at radii >   2.248
+     l= 4 at radii >   2.248
+
+ --- done & exiting ---
+./pswatch - done: output
+log
+xv.ncpp.lder_fh.agr
+xv.ncpp.lder_sd.agr
+ncpp.test
+vlps.cpi
+orb5.dat
+orb4.dat
+orb3.dat
+orb2.dat
+orb1.dat
+rho_val.dat
+vhxc.dat
+vlps.dat
+rho_lps.dat
+vks.dat
+iterate.dat

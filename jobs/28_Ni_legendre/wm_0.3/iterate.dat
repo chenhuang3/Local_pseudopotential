@@ -1,0 +1,77 @@
+RUNNING THE L-BFGS-B CODE
+
+it    = iteration number
+nf    = number of function evaluations
+nseg  = number of segments explored during the Cauchy search
+nact  = number of active bounds at the generalized Cauchy point
+sub   = manner in which the subspace minimization terminated:
+        con = converged, bnd = a bound was reached
+itls  = number of iterations performed in the line search
+stepl = step length used
+tstep = norm of the displacement (total step)
+projg = norm of the projected gradient
+f     = function value
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+
+   it   nf  nseg  nact  sub  itls  stepl    tstep     projg        f
+    0    1     -     -   -     -     -        -     1.510D-05  1.491D-06
+    1    3     1     0  ---    1  1.8D+00  4.1D-05  2.985D-05  1.490D-06
+    2    4     0     0  con    0  1.0D+00  1.4D-05  1.086D-05  1.490D-06
+    3    5     0     0  con    0  1.0D+00  2.6D-05  1.101D-05  1.490D-06
+    4    6     0     0  con    0  1.0D+00  1.2D-04  2.412D-05  1.489D-06
+    5    7     0     0  con    0  1.0D+00  2.1D-04  3.667D-05  1.487D-06
+    6    8     0     0  con    0  1.0D+00  2.9D-04  2.830D-05  1.486D-06
+    7    9     0     0  con    0  1.0D+00  4.2D-04  1.355D-05  1.483D-06
+    8   10     0     0  con    0  1.0D+00  8.9D-04  2.233D-05  1.479D-06
+    9   11     0     0  con    0  1.0D+00  7.2D-04  3.813D-05  1.476D-06
+   10   12     0     0  con    0  1.0D+00  6.3D-04  2.612D-05  1.474D-06
+   11   13     0     0  con    0  1.0D+00  1.3D-04  4.652D-06  1.473D-06
+   12   14     0     0  con    0  1.0D+00  5.8D-05  3.006D-06  1.473D-06
+   13   15     0     0  con    0  1.0D+00  2.8D-05  4.915D-06  1.473D-06
+   14   16     0     0  con    0  1.0D+00  8.2D-05  9.552D-06  1.473D-06
+   15   17     0     0  con    0  1.0D+00  1.5D-04  1.543D-05  1.473D-06
+   16   18     0     0  con    0  1.0D+00  3.7D-04  2.723D-05  1.472D-06
+   17   19     0     0  con    0  1.0D+00  9.5D-04  4.232D-05  1.471D-06
+   18   20     0     0  con    0  1.0D+00  2.5D-03  7.060D-05  1.468D-06
+   19   21     0     0  con    0  1.0D+00  6.7D-03  1.112D-04  1.459D-06
+   20   22     0     0  con    0  1.0D+00  1.7D-02  1.773D-04  1.437D-06
+   21   23     0     0  con    0  1.0D+00  3.9D-02  2.579D-04  1.389D-06
+   22   24     0     0  con    0  1.0D+00  7.2D-02  3.980D-04  1.305D-06
+   23   25     0     0  con    0  1.0D+00  9.1D-02  3.562D-04  1.176D-06
+   24   27     0     0  con    1  5.3D-02  1.9D-02  5.065D-04  1.152D-06
+   25   28     0     0  con    0  1.0D+00  7.7D-02  2.978D-04  9.416D-07
+   26   29     0     0  con    0  1.0D+00  6.7D-02  5.990D-05  8.145D-07
+   27   30     0     0  con    0  1.0D+00  1.0D-01  1.499D-04  7.637D-07
+   28   31     0     0  con    0  1.0D+00  5.3D-02  2.977D-05  6.974D-07
+   29   32     0     0  con    0  1.0D+00  8.8D-02  6.334D-05  6.661D-07
+   30   33     0     0  con    0  1.0D+00  1.4D-02  3.344D-05  6.570D-07
+   31   34     0     0  con    0  1.0D+00  1.5D-02  1.388D-05  6.559D-07
+   32   35     0     0  con    0  1.0D+00  2.2D-03  5.437D-06  6.559D-07
+   33   36     0     0  con    0  1.0D+00  6.3D-04  2.652D-06  6.558D-07
+   34   37     0     0  con    0  1.0D+00  2.3D-03  4.262D-07  6.558D-07
+   35   38     0     0  con    0  1.0D+00  4.6D-04  1.080D-07  6.558D-07
+   36   39     0     0  con    0  1.0D+00  5.6D-05  4.442D-08  6.558D-07
+   37   40     0     0  con    0  1.0D+00  3.2D-05  1.030D-07  6.558D-07
+   38   41     0     0  con    0  1.0D+00  1.0D-05  3.226D-07  6.558D-07
+   39   42     0     0  con    0  1.0D+00  6.9D-05  6.466D-07  6.558D-07
+   40   43     0     0  con    0  1.0D+00  8.3D-05  1.108D-06  6.558D-07
+   41   44     0     0  con    0  1.0D+00  1.8D-04  1.999D-06  6.558D-07
+   42   45     0     0  con    0  1.0D+00  2.0D-04  3.235D-06  6.558D-07
+   43   46     0     0  con    0  1.0D+00  4.6D-04  5.518D-06  6.558D-07
+   44   47     0     0  con    0  1.0D+00  8.8D-04  8.686D-06  6.558D-07
+   45   48     0     0  con    0  1.0D+00  2.3D-03  1.307D-05  6.557D-07
+   46   49     0     0  con    0  1.0D+00  5.1D-03  1.862D-05  6.555D-07
+   47   50     0     0  con    0  1.0D+00  1.0D-02  2.226D-05  6.552D-07
+   48   51     0     0  con    0  1.0D+00  2.1D-02  2.761D-05  6.545D-07
+   49   52     0     0  con    0  1.0D+00  6.4D-02  7.737D-06  6.534D-07
+   50   53     0     0  con    0  1.0D+00  4.3D-02  1.461D-05  4.812D-07
+   51   58     0     0  con    4  0.0D+00  0.0D+00  1.461D-05  6.510D-07
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+
+ Total User time 1.789E+02 seconds.
+
